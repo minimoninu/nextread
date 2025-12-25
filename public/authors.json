@@ -1,0 +1,1498 @@
+{
+  "Rosa Montero": {
+    "name": "Rosa Montero",
+    "years": "1951–",
+    "nationality": "Española",
+    "photo": null,
+    "bio": "Periodista y escritora madrileña, una de las voces más reconocidas de la literatura española contemporánea. Ha trabajado durante décadas en El País, donde sus entrevistas y columnas la convirtieron en referente del periodismo español.",
+    "importance": "Montero ha sabido combinar el periodismo de investigación con una narrativa que explora la condición humana, el feminismo y la ciencia ficción. Su obra trasciende géneros y conecta con lectores de todas las generaciones.",
+    "awards": [
+      "Premio Nacional de las Letras 2017",
+      "Premio de la Crítica de Madrid"
+    ],
+    "notable_works": [
+      "La ridícula idea de no volver a verte",
+      "La buena suerte",
+      "Te trataré como a una reina"
+    ]
+  },
+  "Saul Bellow": {
+    "name": "Saul Bellow",
+    "years": "1915–2005",
+    "nationality": "Estadounidense (nacido en Canadá)",
+    "photo": null,
+    "bio": "Novelista judío-estadounidense considerado uno de los gigantes de la literatura del siglo XX. Su prosa combina la tradición intelectual europea con la vitalidad del Nuevo Mundo.",
+    "importance": "Bellow revolucionó la novela americana al introducir un protagonista pensante y neurótico que reflexiona sobre la vida mientras la vive. Su influencia en escritores como Philip Roth y Martin Amis es incalculable.",
+    "awards": [
+      "Premio Nobel de Literatura 1976",
+      "Tres veces Premio Nacional del Libro",
+      "Premio Pulitzer 1976"
+    ],
+    "notable_works": [
+      "Herzog",
+      "El legado de Humboldt",
+      "Las aventuras de Augie March"
+    ]
+  },
+  "Pierre Lemaitre": {
+    "name": "Pierre Lemaitre",
+    "years": "1951–",
+    "nationality": "Francés",
+    "photo": null,
+    "bio": "Escritor francés que comenzó en el género negro antes de dar el salto a la novela histórica. Su trilogía sobre las guerras mundiales lo consagró como maestro de la narrativa épica contemporánea.",
+    "importance": "Lemaitre demostró que el thriller literario puede tener la profundidad de los grandes clásicos. Su capacidad para retratar la Francia del siglo XX lo convierte en el Balzac de nuestro tiempo.",
+    "awards": [
+      "Premio Goncourt 2013",
+      "Premio CWA International Dagger"
+    ],
+    "notable_works": [
+      "Nos vemos allá arriba",
+      "Alex",
+      "Recursos inhumanos"
+    ]
+  },
+  "Roald Dahl": {
+    "name": "Roald Dahl",
+    "years": "1916–1990",
+    "nationality": "Británico (galés)",
+    "photo": null,
+    "bio": "Escritor galés famoso por sus libros infantiles llenos de humor negro y sus relatos cortos para adultos con giros inesperados. Fue piloto de combate en la Segunda Guerra Mundial.",
+    "importance": "Dahl creó un universo literario donde la crueldad y la magia coexisten, influyendo en generaciones de escritores. Sus villanos memorables y héroes infantiles desafiaron las convenciones de la literatura para niños.",
+    "awards": [
+      "World Fantasy Award",
+      "Edgar Allan Poe Award"
+    ],
+    "notable_works": [
+      "Charlie y la fábrica de chocolate",
+      "Matilda",
+      "Relatos de lo inesperado"
+    ]
+  },
+  "Donald E. Westlake": {
+    "name": "Donald E. Westlake",
+    "years": "1933–2008",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Prolífico autor de novela negra y comedias criminales, considerado el maestro del heist cómico. Escribió bajo múltiples seudónimos, siendo Richard Stark el más famoso.",
+    "importance": "Westlake demostró que el crimen podía ser hilarante sin perder tensión. Su serie de Dortmunder estableció el modelo de la comedia criminal que sigue vigente hoy.",
+    "awards": [
+      "Tres premios Edgar Allan Poe",
+      "Grand Master de los Mystery Writers of America"
+    ],
+    "notable_works": [
+      "El ladrón de joyas",
+      "Atraco perfecto",
+      "La serie de Parker (como Richard Stark)"
+    ]
+  },
+  "Patrick Modiano": {
+    "name": "Patrick Modiano",
+    "years": "1945–",
+    "nationality": "Francés",
+    "photo": null,
+    "bio": "Novelista francés obsesionado con la memoria, la identidad y la Ocupación nazi de París. Su prosa lírica y fragmentaria explora las huellas que el pasado deja en el presente.",
+    "importance": "Modiano ha creado un universo literario único donde París es tanto escenario como personaje. Su exploración de la memoria colectiva francesa durante Vichy lo convierte en la conciencia literaria de su generación.",
+    "awards": [
+      "Premio Nobel de Literatura 2014",
+      "Premio Goncourt 1978"
+    ],
+    "notable_works": [
+      "Calle de las tiendas oscuras",
+      "Dora Bruder",
+      "En el café de la juventud perdida"
+    ]
+  },
+  "Agatha Christie": {
+    "name": "Agatha Christie",
+    "years": "1890–1976",
+    "nationality": "Británica",
+    "photo": null,
+    "bio": "La reina del crimen, autora más vendida de todos los tiempos después de Shakespeare y la Biblia. Creadora de Hercule Poirot y Miss Marple, definió las reglas del whodunit clásico.",
+    "importance": "Christie no solo entretuvo a millones: estableció la estructura del misterio moderno y demostró que las mujeres podían dominar géneros considerados masculinos. Sus tramas siguen siendo estudiadas como modelos de construcción narrativa.",
+    "awards": [
+      "Dama del Imperio Británico",
+      "Grand Master de los Mystery Writers of America"
+    ],
+    "notable_works": [
+      "Asesinato en el Orient Express",
+      "Diez negritos",
+      "El asesinato de Roger Ackroyd"
+    ]
+  },
+  "Yukio Mishima": {
+    "name": "Yukio Mishima",
+    "years": "1925–1970",
+    "nationality": "Japonés",
+    "photo": null,
+    "bio": "Escritor japonés nominado tres veces al Nobel, considerado uno de los más importantes del siglo XX. Su vida y muerte ritual (seppuku) lo convirtieron en figura mítica de la literatura mundial.",
+    "importance": "Mishima exploró la tensión entre tradición y modernidad japonesa con una intensidad sin precedentes. Su prosa combina la estética clásica japonesa con influencias occidentales, creando una obra universalmente relevante.",
+    "awards": [
+      "Premio Shincho",
+      "Nominado al Nobel tres veces"
+    ],
+    "notable_works": [
+      "El pabellón de oro",
+      "Confesiones de una máscara",
+      "El mar de la fertilidad"
+    ]
+  },
+  "Raymond Chandler": {
+    "name": "Raymond Chandler",
+    "years": "1888–1959",
+    "nationality": "Estadounidense (nacido en Inglaterra)",
+    "photo": null,
+    "bio": "El poeta del hard-boiled, creador de Philip Marlowe. Llegó tarde a la escritura pero transformó el detective pulp en literatura seria con su prosa lírica y su retrato del Los Ángeles noir.",
+    "importance": "Chandler elevó la novela negra a arte literario. Sus metáforas memorables y su detective con código moral propio influyeron en todo el género posterior, desde Ross Macdonald hasta James Ellroy.",
+    "awards": [
+      "Edgar Allan Poe Award"
+    ],
+    "notable_works": [
+      "El sueño eterno",
+      "El largo adiós",
+      "Adiós, muñeca"
+    ]
+  },
+  "Don DeLillo": {
+    "name": "Don DeLillo",
+    "years": "1936–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista neoyorquino considerado el cronista definitivo de la paranoia americana. Su obra explora el terrorismo, los medios de comunicación y la América postmoderna.",
+    "importance": "DeLillo anticipó literariamente fenómenos como el 11-S, las teorías conspirativas y la saturación mediática. Es el escritor que mejor ha capturado el ruido blanco de la vida contemporánea.",
+    "awards": [
+      "National Book Award",
+      "Premio Jerusalem",
+      "Library of Congress Prize"
+    ],
+    "notable_works": [
+      "Ruido blanco",
+      "Libra",
+      "Submundo"
+    ]
+  },
+  "Ian McEwan": {
+    "name": "Ian McEwan",
+    "years": "1948–",
+    "nationality": "Británico",
+    "photo": null,
+    "bio": "Novelista inglés conocido por su prosa precisa y sus exploraciones de la moralidad. Comenzó con relatos perturbadores antes de convertirse en uno de los novelistas más respetados de su generación.",
+    "importance": "McEwan combina la tradición de la novela inglesa con preocupaciones contemporáneas sobre ciencia, ética y relaciones humanas. Su capacidad para crear tensión moral lo distingue en el panorama literario actual.",
+    "awards": [
+      "Premio Booker 1998",
+      "Premio Jerusalem",
+      "Premio Shakespeare"
+    ],
+    "notable_works": [
+      "Expiación",
+      "Sábado",
+      "En las nubes"
+    ]
+  },
+  "Javier Marías": {
+    "name": "Javier Marías",
+    "years": "1951–2022",
+    "nationality": "Español",
+    "photo": null,
+    "bio": "Novelista madrileño, uno de los escritores en español más importantes de su generación. Su prosa digresiva y filosófica explora la memoria, el tiempo y la imposibilidad de conocer realmente a los demás.",
+    "importance": "Marías creó un estilo inconfundible de largas oraciones que imitan el pensamiento. Su influencia en la narrativa española es comparable a la de Proust en la francesa. Fue miembro de la Real Academia Española.",
+    "awards": [
+      "Premio Rómulo Gallegos",
+      "Premio Nacional de Narrativa",
+      "Premio de la Crítica"
+    ],
+    "notable_works": [
+      "Tu rostro mañana",
+      "Corazón tan blanco",
+      "Mañana en la batalla piensa en mí"
+    ]
+  },
+  "Graham Greene": {
+    "name": "Graham Greene",
+    "years": "1904–1991",
+    "nationality": "Británico",
+    "photo": null,
+    "bio": "Novelista y dramaturgo británico que dividió su obra entre 'entertainments' y novelas serias. Viajero incansable, trabajó para el MI6 y ambientó sus historias en los rincones más conflictivos del mundo.",
+    "importance": "Greene exploró la culpa católica, la traición y la redención en escenarios que iban de México a Vietnam. Su capacidad para convertir thrillers en meditaciones morales lo hace único en la literatura inglesa.",
+    "awards": [
+      "Nominado al Nobel múltiples veces",
+      "Orden del Mérito",
+      "Premio Jerusalem"
+    ],
+    "notable_works": [
+      "El poder y la gloria",
+      "El americano impasible",
+      "El tercer hombre"
+    ]
+  },
+  "Jonathan Franzen": {
+    "name": "Jonathan Franzen",
+    "years": "1959–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista americano que revitalizó la tradición de la gran novela social. Sus retratos de familias disfuncionales de clase media capturan las ansiedades de la América contemporánea.",
+    "importance": "Franzen demostró que la novela ambiciosa podía seguir siendo relevante en la era digital. Su ensayo contra la ironía posmoderna influyó en toda una generación de escritores que buscan la sinceridad.",
+    "awards": [
+      "National Book Award 2001",
+      "Premio James Tait Black"
+    ],
+    "notable_works": [
+      "Las correcciones",
+      "Libertad",
+      "Pureza"
+    ]
+  },
+  "Amin Maalouf": {
+    "name": "Amin Maalouf",
+    "years": "1949–",
+    "nationality": "Libanés-francés",
+    "photo": null,
+    "bio": "Escritor libanés que escribe en francés, es miembro de la Academia Francesa. Su obra explora el encuentro entre Oriente y Occidente a través de la historia y la ficción.",
+    "importance": "Maalouf es una voz esencial para entender el mundo árabe y mediterráneo. Sus novelas históricas y sus ensayos sobre identidad ofrecen puentes entre culturas en una época de polarización.",
+    "awards": [
+      "Premio Goncourt 1993",
+      "Premio Príncipe de Asturias de las Letras 2010"
+    ],
+    "notable_works": [
+      "León el Africano",
+      "Samarcanda",
+      "Las identidades asesinas"
+    ]
+  },
+  "Truman Capote": {
+    "name": "Truman Capote",
+    "years": "1924–1984",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Escritor y socialité americano que revolucionó el periodismo con 'A sangre fría'. Niño prodigio de las letras, se convirtió en figura central de la vida cultural neoyorquina.",
+    "importance": "Capote inventó la 'novela de no ficción', fusionando técnicas novelísticas con reportaje periodístico. Su influencia en el Nuevo Periodismo y en toda la narrativa posterior es incalculable.",
+    "awards": [
+      "O. Henry Award",
+      "Edgar Allan Poe Award"
+    ],
+    "notable_works": [
+      "A sangre fría",
+      "Desayuno en Tiffany's",
+      "Otras voces, otros ámbitos"
+    ]
+  },
+  "John Fante": {
+    "name": "John Fante",
+    "years": "1909–1983",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Escritor italoamericano redescubierto gracias a Charles Bukowski. Su alter ego Arturo Bandini narra la vida de un aspirante a escritor en el Los Ángeles de la Depresión.",
+    "importance": "Fante escribió sobre la experiencia inmigrante y las ambiciones literarias con una honestidad brutal que anticipó a Bukowski y toda la literatura confesional posterior. Es el poeta del fracaso con esperanza.",
+    "awards": [
+      "Reconocimiento póstumo como clásico americano"
+    ],
+    "notable_works": [
+      "Pregúntale al polvo",
+      "Espera a la primavera, Bandini",
+      "Camino de Los Ángeles"
+    ]
+  },
+  "J. M. Coetzee": {
+    "name": "J. M. Coetzee",
+    "years": "1940–",
+    "nationality": "Sudafricano-australiano",
+    "photo": null,
+    "bio": "Novelista y crítico sudafricano, uno de los escritores más respetados del mundo. Su obra austera y filosófica explora la violencia, la culpa colonial y los límites del lenguaje.",
+    "importance": "Coetzee ha llevado la novela a territorios incómodos sobre raza, poder y animalidad con una prosa despojada hasta lo esencial. Es el único autor en ganar dos veces el Booker Prize.",
+    "awards": [
+      "Premio Nobel de Literatura 2003",
+      "Dos veces Premio Booker"
+    ],
+    "notable_works": [
+      "Desgracia",
+      "Esperando a los bárbaros",
+      "Vida y época de Michael K"
+    ]
+  },
+  "Stephen King": {
+    "name": "Stephen King",
+    "years": "1947–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "El rey del terror, autor más prolífico y exitoso del género. Ha publicado más de 60 novelas que exploran los miedos de la América suburbana con un oído perfecto para la voz coloquial.",
+    "importance": "King dignificó el terror como literatura seria sin perder a su público masivo. Su influencia va más allá del género: es uno de los grandes narradores americanos, comparable a Dickens en su conexión con los lectores.",
+    "awards": [
+      "National Book Foundation Medal",
+      "O. Henry Award",
+      "World Fantasy Award"
+    ],
+    "notable_works": [
+      "It",
+      "El resplandor",
+      "Misery"
+    ]
+  },
+  "Javier Cercas": {
+    "name": "Javier Cercas",
+    "years": "1962–",
+    "nationality": "Español",
+    "photo": null,
+    "bio": "Novelista y columnista extremeño afincado en Barcelona. Su obra explora la Guerra Civil española y la memoria histórica combinando ficción y ensayo.",
+    "importance": "Cercas ha creado un nuevo género que él llama 'relato real', donde la investigación histórica se convierte en aventura narrativa. Es el escritor que más ha hecho por revisar la memoria de la Guerra Civil para nuevas generaciones.",
+    "awards": [
+      "Premio Planeta 2019",
+      "Premio Nacional de Narrativa"
+    ],
+    "notable_works": [
+      "Soldados de Salamina",
+      "Anatomía de un instante",
+      "El impostor"
+    ]
+  },
+  "Julian Barnes": {
+    "name": "Julian Barnes",
+    "years": "1946–",
+    "nationality": "Británico",
+    "photo": null,
+    "bio": "Novelista y ensayista inglés conocido por su ingenio, su francofilia y su exploración de la historia y la memoria. Ha escrito también como Dan Kavanagh novelas de género.",
+    "importance": "Barnes representa lo mejor de la novela inglesa contemporánea: inteligente, irónica pero emotiva, formalmente innovadora. Su ensayo sobre la muerte, 'Nada que temer', es un clásico moderno.",
+    "awards": [
+      "Premio Booker 2011",
+      "Premio Médicis",
+      "Premio Femina"
+    ],
+    "notable_works": [
+      "El sentido de un final",
+      "El loro de Flaubert",
+      "Nada que temer"
+    ]
+  },
+  "Charles Bukowski": {
+    "name": "Charles Bukowski",
+    "years": "1920–1994",
+    "nationality": "Estadounidense (nacido en Alemania)",
+    "photo": null,
+    "bio": "Poeta y novelista de culto conocido como el 'laureado de la vida baja americana'. Su alter ego Henry Chinaski narra una existencia de alcohol, mujeres y trabajos miserables con humor brutal.",
+    "importance": "Bukowski democratizó la poesía, haciéndola accesible sin sacrificar autenticidad. Su influencia en la cultura alternativa y en generaciones de escritores que rechazan el establishment literario es enorme.",
+    "awards": [
+      "Culto póstumo masivo"
+    ],
+    "notable_works": [
+      "Cartero",
+      "Factótum",
+      "Mujeres"
+    ]
+  },
+  "Alessandro Baricco": {
+    "name": "Alessandro Baricco",
+    "years": "1958–",
+    "nationality": "Italiano",
+    "photo": null,
+    "bio": "Novelista, músico y presentador de televisión italiano. Fundó una escuela de escritura en Turín y es conocido por su prosa lírica y sus novelas breves pero intensas.",
+    "importance": "Baricco ha llevado la novela italiana a un público global con historias que combinan la fábula con la reflexión filosófica. Su capacidad para crear belleza en la brevedad lo hace único.",
+    "awards": [
+      "Premio Viareggio",
+      "Prix Médicis étranger"
+    ],
+    "notable_works": [
+      "Seda",
+      "Océano mar",
+      "Novecento"
+    ]
+  },
+  "Antonio Muñoz Molina": {
+    "name": "Antonio Muñoz Molina",
+    "years": "1956–",
+    "nationality": "Español",
+    "photo": null,
+    "bio": "Novelista andaluz y miembro de la Real Academia Española. Su obra combina la memoria personal con la historia española del siglo XX en novelas de largo aliento.",
+    "importance": "Muñoz Molina es uno de los grandes arquitectos de la novela española contemporánea. Su capacidad para entrelazar historias personales con la Historia lo convierte en el cronista de varias generaciones.",
+    "awards": [
+      "Premio Planeta",
+      "Premio Nacional de Literatura",
+      "Premio Príncipe de Asturias"
+    ],
+    "notable_works": [
+      "El jinete polaco",
+      "Sefarad",
+      "La noche de los tiempos"
+    ]
+  },
+  "John Steinbeck": {
+    "name": "John Steinbeck",
+    "years": "1902–1968",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista californiano que retrató la América rural durante la Gran Depresión. Su empatía por los desposeídos y los trabajadores migrantes definió una época de la literatura americana.",
+    "importance": "Steinbeck dio voz a los sin voz: okies, trabajadores del campo, marginados. Su combinación de realismo social y lirismo creó algunas de las imágenes más perdurables de la América del siglo XX.",
+    "awards": [
+      "Premio Nobel de Literatura 1962",
+      "Premio Pulitzer 1940"
+    ],
+    "notable_works": [
+      "Las uvas de la ira",
+      "De ratones y hombres",
+      "Al este del Edén"
+    ]
+  },
+  "Thomas Pynchon": {
+    "name": "Thomas Pynchon",
+    "years": "1937–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista recluso considerado el maestro del postmodernismo americano. Sus novelas enciclopédicas mezclan paranoia, ciencia, historia y cultura pop en tramas laberínticas.",
+    "importance": "Pynchon expandió los límites de lo que una novela puede contener. Su influencia en escritores como David Foster Wallace y en toda la ficción experimental es comparable a la de Joyce.",
+    "awards": [
+      "National Book Award 1974",
+      "Nominado múltiples veces al Pulitzer"
+    ],
+    "notable_works": [
+      "El arco iris de gravedad",
+      "La subasta del lote 49",
+      "Contraluz"
+    ]
+  },
+  "Bret Easton Ellis": {
+    "name": "Bret Easton Ellis",
+    "years": "1964–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista que definió la generación X literaria con retratos de jóvenes ricos, vacíos y a menudo violentos. Su estilo minimalista y su tono plano se convirtieron en marca de época.",
+    "importance": "Ellis capturó la superficialidad y el nihilismo de los años 80 mejor que nadie. American Psycho sigue siendo la sátira definitiva del capitalismo yuppie y su violencia subyacente.",
+    "awards": [
+      "Influencia cultural masiva"
+    ],
+    "notable_works": [
+      "American Psycho",
+      "Menos que cero",
+      "Las leyes de la atracción"
+    ]
+  },
+  "Hilary Mantel": {
+    "name": "Hilary Mantel",
+    "years": "1952–2022",
+    "nationality": "Británica",
+    "photo": null,
+    "bio": "Novelista inglesa que revolucionó la ficción histórica con su trilogía sobre Thomas Cromwell. Luchó contra enfermedades crónicas toda su vida mientras producía una obra extraordinaria.",
+    "importance": "Mantel demostró que la novela histórica puede ser tan innovadora y literaria como cualquier ficción experimental. Su Cromwell es uno de los grandes personajes de la literatura del siglo XXI.",
+    "awards": [
+      "Dos veces Premio Booker (única mujer)",
+      "Dama del Imperio Británico"
+    ],
+    "notable_works": [
+      "En la corte del lobo",
+      "Una reina en el estrado",
+      "El espejo y la luz"
+    ]
+  },
+  "Joyce Carol Oates": {
+    "name": "Joyce Carol Oates",
+    "years": "1938–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Prolífica novelista americana con más de 50 novelas publicadas. Su obra explora la violencia americana, las dinámicas familiares y la psicología femenina con intensidad gótica.",
+    "importance": "Oates es una fuerza de la naturaleza literaria. Su productividad es legendaria, pero más importante es su capacidad para reinventarse y explorar los rincones más oscuros de la experiencia americana.",
+    "awards": [
+      "National Book Award",
+      "O. Henry Award",
+      "Nominada al Pulitzer"
+    ],
+    "notable_works": [
+      "Blonde",
+      "Ellos",
+      "Hermana mía, mi amor"
+    ]
+  },
+  "Thomas Mann": {
+    "name": "Thomas Mann",
+    "years": "1875–1955",
+    "nationality": "Alemán",
+    "photo": null,
+    "bio": "Novelista alemán considerado uno de los más importantes del siglo XX. Su obra explora la decadencia de la burguesía europea y la tensión entre arte y vida.",
+    "importance": "Mann es el novelista de la ironía y la ambigüedad. Sus reflexiones sobre el artista en la sociedad burguesa y sobre Alemania anticiparon las catástrofes del siglo XX.",
+    "awards": [
+      "Premio Nobel de Literatura 1929"
+    ],
+    "notable_works": [
+      "La montaña mágica",
+      "Los Buddenbrook",
+      "Muerte en Venecia"
+    ]
+  },
+  "Jhumpa Lahiri": {
+    "name": "Jhumpa Lahiri",
+    "years": "1967–",
+    "nationality": "Estadounidense (nacida en Inglaterra, de origen indio)",
+    "photo": null,
+    "bio": "Escritora que explora la experiencia de los inmigrantes indios en América. Recientemente ha comenzado a escribir en italiano, reinventándose completamente.",
+    "importance": "Lahiri da voz a la experiencia entre culturas con una prosa exquisita. Su decisión de cambiar de idioma es un acto radical de renovación artística que pocos escritores se atreven a hacer.",
+    "awards": [
+      "Premio Pulitzer 2000",
+      "PEN/Hemingway Award"
+    ],
+    "notable_works": [
+      "El intérprete del dolor",
+      "El buen nombre",
+      "En otras palabras"
+    ]
+  },
+  "John Updike": {
+    "name": "John Updike",
+    "years": "1932–2009",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista, poeta y crítico americano conocido por su prosa elegante y sus retratos de la clase media suburbana. La saga de Rabbit es su obra maestra sobre el hombre americano común.",
+    "importance": "Updike fue el cronista de la América blanca de clase media con una prosa de precisión casi científica. Su influencia en escritores como Jonathan Franzen es directa.",
+    "awards": [
+      "Dos premios Pulitzer",
+      "National Book Award",
+      "National Book Critics Circle Award"
+    ],
+    "notable_works": [
+      "Corre, conejo",
+      "Las brujas de Eastwick",
+      "Parejas"
+    ]
+  },
+  "Juan Marsé": {
+    "name": "Juan Marsé",
+    "years": "1933–2020",
+    "nationality": "Español",
+    "photo": null,
+    "bio": "Novelista barcelonés que retrató la posguerra española desde los barrios populares de su ciudad. Autodidacta, trabajó como joyero mientras construía una de las obras más importantes de la literatura española.",
+    "importance": "Marsé inventó el 'realismo mágico' barcelonés: historias donde la memoria, el cine y los sueños transforman la realidad gris de la dictadura. Es el novelista esencial para entender la Barcelona del siglo XX.",
+    "awards": [
+      "Premio Cervantes 2008",
+      "Premio Planeta",
+      "Premio de la Crítica"
+    ],
+    "notable_works": [
+      "Si te dicen que caí",
+      "El embrujo de Shanghai",
+      "Rabos de lagartija"
+    ]
+  },
+  "Louis-Ferdinand Céline": {
+    "name": "Louis-Ferdinand Céline",
+    "years": "1894–1961",
+    "nationality": "Francés",
+    "photo": null,
+    "bio": "Novelista y médico francés cuya primera novela revolucionó la prosa del siglo XX. Su antisemitismo durante la guerra manchó su legado pero no borró su influencia literaria.",
+    "importance": "Céline inventó una nueva manera de escribir: el monólogo oral, caótico, furioso. Su influencia en escritores como Bukowski, Kerouac y muchos otros es innegable, aunque su persona sea repudiable.",
+    "awards": [
+      "Premio Renaudot 1932"
+    ],
+    "notable_works": [
+      "Viaje al fin de la noche",
+      "Muerte a crédito",
+      "De un castillo a otro"
+    ]
+  },
+  "Michael Chabon": {
+    "name": "Michael Chabon",
+    "years": "1963–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista americano que mezcla géneros populares (cómics, ciencia ficción, detective) con ambición literaria. Defensor de la ficción de género como literatura seria.",
+    "importance": "Chabon demostró que amar los cómics y la literatura pulp no excluye escribir gran literatura. Su ensayo 'Maps and Legends' es un manifiesto para la ficción del siglo XXI.",
+    "awards": [
+      "Premio Pulitzer 2001",
+      "Hugo Award",
+      "Nebula Award"
+    ],
+    "notable_works": [
+      "Las asombrosas aventuras de Kavalier y Clay",
+      "El sindicato de policía yiddish",
+      "Chicos prodigiosos"
+    ]
+  },
+  "Leonardo Padura": {
+    "name": "Leonardo Padura",
+    "years": "1955–",
+    "nationality": "Cubano",
+    "photo": null,
+    "bio": "Novelista y periodista cubano, el escritor más importante de la isla en las últimas décadas. Su detective Mario Conde retrata La Habana con amor crítico.",
+    "importance": "Padura ha logrado algo casi imposible: escribir sobre Cuba con honestidad brutal mientras permanece en la isla. Sus novelas son crónica social disfrazada de género negro.",
+    "awards": [
+      "Premio Princesa de Asturias de las Letras 2015",
+      "Premio Nacional de Literatura de Cuba"
+    ],
+    "notable_works": [
+      "El hombre que amaba a los perros",
+      "La novela de mi vida",
+      "La serie de Mario Conde"
+    ]
+  },
+  "Kate Atkinson": {
+    "name": "Kate Atkinson",
+    "years": "1951–",
+    "nationality": "Británica",
+    "photo": null,
+    "bio": "Novelista inglesa que comenzó con ficción literaria antes de crear al detective Jackson Brodie. Su novela 'Vida tras vida' la consagró como una de las mejores escritoras británicas contemporáneas.",
+    "importance": "Atkinson demuestra que se puede ser popular y literariamente sofisticada. Su capacidad para experimentar con la estructura temporal mientras cuenta historias absorbentes es única.",
+    "awards": [
+      "Costa Novel Award",
+      "Premio Whitbread"
+    ],
+    "notable_works": [
+      "Vida tras vida",
+      "Detrás de las escenas en el museo",
+      "La serie de Jackson Brodie"
+    ]
+  },
+  "Fred Vargas": {
+    "name": "Fred Vargas",
+    "years": "1957–",
+    "nationality": "Francesa",
+    "photo": null,
+    "bio": "Novelista y arqueóloga francesa, creadora del comisario Adamsberg. Sus novelas policíacas combinan el misterio con una sensibilidad casi onírica y personajes excéntricos.",
+    "importance": "Vargas reinventó el polar francés con historias que rozan lo fantástico sin abandonar la lógica deductiva. Su estilo único ha creado escuela en toda Europa.",
+    "awards": [
+      "Cuatro premios CWA International Dagger",
+      "Premio Princesa de Asturias de las Letras 2018"
+    ],
+    "notable_works": [
+      "Huye rápido, vete lejos",
+      "El hombre de los círculos azules",
+      "Tiempos de hielo"
+    ]
+  },
+  "Delphine de Vigan": {
+    "name": "Delphine de Vigan",
+    "years": "1966–",
+    "nationality": "Francesa",
+    "photo": null,
+    "bio": "Novelista francesa que explora las dinámicas familiares tóxicas y los traumas personales. Su obra más conocida narra su relación con su madre, que sufría trastorno de personalidad.",
+    "importance": "De Vigan ha convertido el dolor familiar en literatura universal. Su valentía para explorar la enfermedad mental y el abuso emocional ha resonado con millones de lectores.",
+    "awards": [
+      "Premio Renaudot",
+      "Premio Goncourt de los Estudiantes"
+    ],
+    "notable_works": [
+      "Nada se opone a la noche",
+      "Basada en hechos reales",
+      "Las gratitudes"
+    ]
+  },
+  "Larry McMurtry": {
+    "name": "Larry McMurtry",
+    "years": "1936–2021",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista tejano y guionista que retrató el Oeste americano con nostalgia y realismo. Su saga de Lonesome Dove es considerada la gran épica del Western literario.",
+    "importance": "McMurtry desmitificó el Oeste mientras celebraba su grandeza. Sus cowboys son humanos, falibles y memorables. Es el puente entre el Western clásico y la literatura seria.",
+    "awards": [
+      "Premio Pulitzer 1986",
+      "Óscar al Mejor Guion Adaptado"
+    ],
+    "notable_works": [
+      "Lonesome Dove",
+      "La última película",
+      "Términos de cariño"
+    ]
+  },
+  "C. S. Lewis": {
+    "name": "C. S. Lewis",
+    "years": "1898–1963",
+    "nationality": "Británico (irlandés)",
+    "photo": null,
+    "bio": "Académico, novelista y apologista cristiano. Amigo de Tolkien, creó las Crónicas de Narnia mientras enseñaba en Oxford y Cambridge. Su conversión del ateísmo al cristianismo marcó su obra.",
+    "importance": "Lewis demostró que la fantasía puede transmitir verdades profundas. Su capacidad para hacer la teología accesible y sus ficciones alegóricas han influido en generaciones de lectores y escritores.",
+    "awards": [
+      "Carnegie Medal"
+    ],
+    "notable_works": [
+      "Las crónicas de Narnia",
+      "Cartas del diablo a su sobrino",
+      "Trilogía cósmica"
+    ]
+  },
+  "Luis Landero": {
+    "name": "Luis Landero",
+    "years": "1948–",
+    "nationality": "Español",
+    "photo": null,
+    "bio": "Novelista extremeño que irrumpió tardíamente en la literatura con 'Juegos de la edad tardía'. Sus novelas exploran personajes soñadores que escapan de la mediocridad mediante la fantasía.",
+    "importance": "Landero es el novelista de los quijotes contemporáneos: hombres grises que construyen mundos imaginarios para sobrevivir. Su prosa combina humor y melancolía de manera única.",
+    "awards": [
+      "Premio Nacional de Narrativa",
+      "Premio de la Crítica"
+    ],
+    "notable_works": [
+      "Juegos de la edad tardía",
+      "El guitarrista",
+      "Lluvia fina"
+    ]
+  },
+  "Ignacio Martínez de Pisón": {
+    "name": "Ignacio Martínez de Pisón",
+    "years": "1960–",
+    "nationality": "Español",
+    "photo": null,
+    "bio": "Novelista zaragozano que ha explorado la Guerra Civil y la posguerra española con rigor histórico y emoción narrativa. También es guionista de cine.",
+    "importance": "Martínez de Pisón ha sabido narrar la historia española reciente sin sentimentalismo ni maniqueísmo. Sus novelas recuperan vidas olvidadas con respeto y precisión.",
+    "awards": [
+      "Premio Nacional de Narrativa 2015",
+      "Premio de la Crítica"
+    ],
+    "notable_works": [
+      "Enterrar a los muertos",
+      "Dientes de leche",
+      "Derecho natural"
+    ]
+  },
+  "Eric Hobsbawm": {
+    "name": "Eric Hobsbawm",
+    "years": "1917–2012",
+    "nationality": "Británico (nacido en Egipto)",
+    "photo": null,
+    "bio": "Historiador marxista británico, uno de los más influyentes del siglo XX. Su tetralogía sobre el 'largo siglo XIX' es lectura obligada para entender la era moderna.",
+    "importance": "Hobsbawm hizo la historia accesible sin sacrificar rigor. Su concepto de 'tradiciones inventadas' cambió cómo entendemos el nacionalismo y la identidad.",
+    "awards": [
+      "Companion of Honour"
+    ],
+    "notable_works": [
+      "La era de la revolución",
+      "La era del capital",
+      "Historia del siglo XX"
+    ]
+  },
+  "Lorenzo Silva": {
+    "name": "Lorenzo Silva",
+    "years": "1966–",
+    "nationality": "Español",
+    "photo": null,
+    "bio": "Novelista madrileño creador de los guardias civiles Bevilacqua y Chamorro. Ha convertido a la Benemérita en protagonista de una saga que retrata la España contemporánea.",
+    "importance": "Silva ha dignificado el género negro español mientras ofrece un retrato social del país. Sus guardias civiles humanos han cambiado la imagen del cuerpo en la ficción.",
+    "awards": [
+      "Premio Planeta 2012",
+      "Premio Nadal"
+    ],
+    "notable_works": [
+      "El lejano país de los estanques",
+      "La serie de Bevilacqua",
+      "Castellano"
+    ]
+  },
+  "Colleen McCullough": {
+    "name": "Colleen McCullough",
+    "years": "1937–2015",
+    "nationality": "Australiana",
+    "photo": null,
+    "bio": "Novelista y neurocientífica australiana conocida por 'El pájaro espino' y su serie sobre la Roma antigua. Vendió más de 30 millones de ejemplares de su obra.",
+    "importance": "McCullough demostró que la novela histórica épica podía conquistar al gran público sin perder rigor. Su Roma es tan vívida como cualquier recreación cinematográfica.",
+    "awards": [
+      "Éxito comercial masivo"
+    ],
+    "notable_works": [
+      "El pájaro espino",
+      "Los amos de Roma (serie)",
+      "Tim"
+    ]
+  },
+  "Marcel Proust": {
+    "name": "Marcel Proust",
+    "years": "1871–1922",
+    "nationality": "Francés",
+    "photo": null,
+    "bio": "Novelista francés autor de 'En busca del tiempo perdido', considerada una de las obras cumbre de la literatura universal. Asmático y recluido, dedicó su vida a esta novela río.",
+    "importance": "Proust revolucionó la novela al convertir la memoria y la introspección en materia narrativa. Su influencia en toda la literatura del siglo XX es inmensa e ineludible.",
+    "awards": [
+      "Premio Goncourt 1919"
+    ],
+    "notable_works": [
+      "En busca del tiempo perdido (7 volúmenes)",
+      "Los placeres y los días"
+    ]
+  },
+  "John Dos Passos": {
+    "name": "John Dos Passos",
+    "years": "1896–1970",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista modernista americano que experimentó con técnicas cinematográficas y collage en sus novelas. Su trilogía USA es un retrato caleidoscópico de América.",
+    "importance": "Dos Passos inventó nuevas técnicas narrativas que influyeron en Sartre y en toda la novela experimental. Su mezcla de noticieros, biografías y ficción anticipó la era multimedia.",
+    "awards": [
+      "Reconocimiento como innovador formal"
+    ],
+    "notable_works": [
+      "Manhattan Transfer",
+      "Trilogía USA",
+      "El paralelo 42"
+    ]
+  },
+  "David Peace": {
+    "name": "David Peace",
+    "years": "1967–",
+    "nationality": "Británico",
+    "photo": null,
+    "bio": "Novelista inglés que vive en Japón, conocido por sus novelas negras experimentales y obsesivas. Su prosa rítmica y repetitiva crea una atmósfera de pesadilla.",
+    "importance": "Peace ha reinventado el noir británico con un estilo que es casi música. Su Red Riding Quartet es una de las obras más oscuras y originales del género.",
+    "awards": [
+      "Premio James Tait Black"
+    ],
+    "notable_works": [
+      "Red Riding Quartet",
+      "GB84",
+      "Tokyo Year Zero"
+    ]
+  },
+  "Miranda July": {
+    "name": "Miranda July",
+    "years": "1974–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Artista multimedia, cineasta y escritora americana. Su obra explora la soledad, la conexión humana y lo extraño de la vida cotidiana con humor y ternura.",
+    "importance": "July representa una nueva generación de artistas que cruzan medios libremente. Su sensibilidad peculiar ha definido una estética indie que va del cine a la literatura.",
+    "awards": [
+      "Camera d'Or en Cannes",
+      "Frank O'Connor Award"
+    ],
+    "notable_works": [
+      "Nadie es más de aquí que tú",
+      "El primer hombre malo",
+      "Me and You and Everyone We Know (película)"
+    ]
+  },
+  "Richard Ford": {
+    "name": "Richard Ford",
+    "years": "1944–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista del sur americano conocido por su personaje Frank Bascombe, un escritor deportivo que reflexiona sobre la vida americana con melancolía e ironía.",
+    "importance": "Ford es el heredero de Updike en el retrato de la masculinidad americana. Su prosa limpia y su capacidad para encontrar lo extraordinario en lo ordinario lo definen.",
+    "awards": [
+      "Premio Pulitzer 1996",
+      "PEN/Faulkner Award"
+    ],
+    "notable_works": [
+      "El periodista deportivo",
+      "El día de la independencia",
+      "Acción de gracias"
+    ]
+  },
+  "Donald Westlake": {
+    "name": "Donald Westlake",
+    "years": "1933–2008",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Prolífico autor de novela negra y comedias criminales, considerado el maestro del heist cómico. Escribió bajo múltiples seudónimos, siendo Richard Stark el más famoso.",
+    "importance": "Westlake demostró que el crimen podía ser hilarante sin perder tensión. Su serie de Dortmunder estableció el modelo de la comedia criminal que sigue vigente hoy.",
+    "awards": [
+      "Tres premios Edgar Allan Poe",
+      "Grand Master de los Mystery Writers of America"
+    ],
+    "notable_works": [
+      "El ladrón de joyas",
+      "Atraco perfecto",
+      "La serie de Parker (como Richard Stark)"
+    ]
+  },
+  "Alice Sebold": {
+    "name": "Alice Sebold",
+    "years": "1963–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Escritora americana conocida por 'Desde mi cielo', narrada por una niña asesinada desde el más allá. Su memoir 'Lucky' cuenta su propia experiencia de violación.",
+    "importance": "Sebold abordó el trauma y la pérdida desde perspectivas inesperadas, conectando con millones de lectores que encontraron en sus libros una forma de procesar el dolor.",
+    "awards": [
+      "American Booksellers Association Book of the Year"
+    ],
+    "notable_works": [
+      "Desde mi cielo",
+      "Lucky",
+      "Casi la luna"
+    ]
+  },
+  "Margaret Atwood": {
+    "name": "Margaret Atwood",
+    "years": "1939–",
+    "nationality": "Canadiense",
+    "photo": null,
+    "bio": "Prolífica novelista, poeta y ensayista canadiense. Su obra distópica y feminista ha ganado relevancia en años recientes con la adaptación de 'El cuento de la criada'.",
+    "importance": "Atwood es la voz literaria feminista más influyente del mundo anglófono. Sus distopías no son fantasías: son advertencias que cada vez parecen más proféticas.",
+    "awards": [
+      "Premio Booker (dos veces)",
+      "Premio Príncipe de Asturias"
+    ],
+    "notable_works": [
+      "El cuento de la criada",
+      "Alias Grace",
+      "Trilogía MaddAddam"
+    ]
+  },
+  "Joseph Heller": {
+    "name": "Joseph Heller",
+    "years": "1923–1999",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista americano cuya primera novela, 'Trampa-22', se convirtió en la sátira definitiva de la guerra y la burocracia. El título pasó al lenguaje común como expresión del absurdo.",
+    "importance": "Heller demostró que se podía reír de la guerra sin trivializarla. Su humor negro influyó en generaciones de escritores y su novela sigue siendo relevante en cualquier época de locura institucional.",
+    "awards": [
+      "Influencia cultural duradera"
+    ],
+    "notable_works": [
+      "Trampa-22",
+      "Algo pasó",
+      "Tan bueno como el oro"
+    ]
+  },
+  "Aleksandr Solzhenitsyn": {
+    "name": "Aleksandr Solzhenitsyn",
+    "years": "1918–2008",
+    "nationality": "Ruso",
+    "photo": null,
+    "bio": "Novelista e historiador ruso que sobrevivió al Gulag y dedicó su obra a denunciar el sistema soviético. Su expulsión de la URSS lo convirtió en símbolo de la disidencia.",
+    "importance": "Solzhenitsyn hizo visible el horror del totalitarismo soviético para el mundo. Su obra es testimonio histórico y literatura a la vez, imposible de ignorar.",
+    "awards": [
+      "Premio Nobel de Literatura 1970"
+    ],
+    "notable_works": [
+      "Archipiélago Gulag",
+      "Un día en la vida de Iván Denísovich",
+      "El primer círculo"
+    ]
+  },
+  "Cormac McCarthy": {
+    "name": "Cormac McCarthy",
+    "years": "1933–2023",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista americano que retrató la violencia del Oeste y la frontera con una prosa bíblica. Recluso y parco, dio pocas entrevistas pero su obra habla por sí sola.",
+    "importance": "McCarthy es el último gran novelista americano en la tradición de Faulkner y Melville. Su visión oscura de la humanidad está escrita con una belleza que quita el aliento.",
+    "awards": [
+      "Premio Pulitzer 2007",
+      "National Book Award"
+    ],
+    "notable_works": [
+      "Meridiano de sangre",
+      "No es país para viejos",
+      "La carretera"
+    ]
+  },
+  "Gabriel García Márquez": {
+    "name": "Gabriel García Márquez",
+    "years": "1927–2014",
+    "nationality": "Colombiano",
+    "photo": null,
+    "bio": "El padre del realismo mágico, Gabo transformó la literatura latinoamericana y mundial. Periodista de formación, convirtió el Caribe colombiano en mito universal.",
+    "importance": "García Márquez demostró que la realidad latinoamericana requiere su propia estética. Macondo es ahora parte del imaginario global, y su influencia en la narrativa mundial es incalculable.",
+    "awards": [
+      "Premio Nobel de Literatura 1982"
+    ],
+    "notable_works": [
+      "Cien años de soledad",
+      "El amor en los tiempos del cólera",
+      "Crónica de una muerte anunciada"
+    ]
+  },
+  "Jorge Luis Borges": {
+    "name": "Jorge Luis Borges",
+    "years": "1899–1986",
+    "nationality": "Argentino",
+    "photo": null,
+    "bio": "Poeta, ensayista y cuentista argentino, ciego desde la mediana edad. Sus ficciones breves exploran laberintos, infinitos y paradojas con precisión de relojero.",
+    "importance": "Borges inventó universos en pocas páginas. Su influencia en la literatura postmoderna, en la ciencia ficción y en la forma de pensar la ficción es omnipresente.",
+    "awards": [
+      "Premio Cervantes 1979",
+      "Nunca recibió el Nobel (escándalo literario)"
+    ],
+    "notable_works": [
+      "Ficciones",
+      "El Aleph",
+      "El libro de arena"
+    ]
+  },
+  "Julio Cortázar": {
+    "name": "Julio Cortázar",
+    "years": "1914–1984",
+    "nationality": "Argentino",
+    "photo": null,
+    "bio": "Escritor argentino del Boom latinoamericano. Maestro del cuento fantástico y experimental, su Rayuela propuso una nueva forma de leer y escribir novelas.",
+    "importance": "Cortázar hizo que lo fantástico irrumpiera en lo cotidiano. Su espíritu lúdico y su compromiso político convivieron en una obra que sigue sorprendiendo.",
+    "awards": [
+      "Premio Médicis étranger"
+    ],
+    "notable_works": [
+      "Rayuela",
+      "Bestiario",
+      "Las armas secretas"
+    ]
+  },
+  "Mario Vargas Llosa": {
+    "name": "Mario Vargas Llosa",
+    "years": "1936–",
+    "nationality": "Peruano-español",
+    "photo": null,
+    "bio": "Novelista, ensayista y político peruano. Figura central del Boom, ha combinado la experimentación formal con novelas totalizantes sobre la realidad latinoamericana.",
+    "importance": "Vargas Llosa es el gran constructor de estructuras novelísticas del español. Su teoría de los 'demonios' del escritor ha influido en cómo entendemos la creación literaria.",
+    "awards": [
+      "Premio Nobel de Literatura 2010",
+      "Premio Cervantes 1994"
+    ],
+    "notable_works": [
+      "La ciudad y los perros",
+      "Conversación en La Catedral",
+      "La fiesta del Chivo"
+    ]
+  },
+  "Roberto Bolaño": {
+    "name": "Roberto Bolaño",
+    "years": "1953–2003",
+    "nationality": "Chileno",
+    "photo": null,
+    "bio": "Poeta y novelista chileno que vivió en México y España. Su muerte prematura lo convirtió en leyenda, y sus novelas póstumas confirmaron su genio.",
+    "importance": "Bolaño es el escritor latinoamericano más influyente de su generación. Su mezcla de detective, poesía y horror ante la historia creó un nuevo lenguaje narrativo.",
+    "awards": [
+      "Premio Rómulo Gallegos",
+      "Premio Herralde"
+    ],
+    "notable_works": [
+      "Los detectives salvajes",
+      "2666",
+      "Estrella distante"
+    ]
+  },
+  "Haruki Murakami": {
+    "name": "Haruki Murakami",
+    "years": "1949–",
+    "nationality": "Japonés",
+    "photo": null,
+    "bio": "Novelista japonés que mezcla la cultura pop occidental con elementos surreales. Sus protagonistas solitarios buscan significado en mundos que se vuelven extraños.",
+    "importance": "Murakami ha internacionalizado la literatura japonesa contemporánea. Su estilo accesible y sus atmósferas oníricas han creado un fenómeno global de lectores devotos.",
+    "awards": [
+      "Premio Franz Kafka",
+      "Premio Jerusalem"
+    ],
+    "notable_works": [
+      "Tokio blues",
+      "Kafka en la orilla",
+      "1Q84"
+    ]
+  },
+  "Kazuo Ishiguro": {
+    "name": "Kazuo Ishiguro",
+    "years": "1954–",
+    "nationality": "Británico (nacido en Japón)",
+    "photo": null,
+    "bio": "Novelista británico de origen japonés conocido por su prosa contenida y sus exploraciones de la memoria y el arrepentimiento. Sus narradores poco fiables ocultan más de lo que revelan.",
+    "importance": "Ishiguro ha perfeccionado el arte de la sugerencia. Lo que sus personajes no dicen es tan importante como lo que dicen, creando una tensión emocional única.",
+    "awards": [
+      "Premio Nobel de Literatura 2017",
+      "Premio Booker 1989"
+    ],
+    "notable_works": [
+      "Lo que queda del día",
+      "Nunca me abandones",
+      "El gigante enterrado"
+    ]
+  },
+  "Elena Ferrante": {
+    "name": "Elena Ferrante",
+    "years": "Desconocido",
+    "nationality": "Italiana",
+    "photo": null,
+    "bio": "Seudónimo de una escritora italiana que ha mantenido su anonimato a pesar del éxito mundial. Sus novelas napolitanas han sido un fenómeno literario global.",
+    "importance": "Ferrante ha demostrado que el anonimato no impide la conexión profunda con los lectores. Su exploración de la amistad femenina es una de las grandes sagas contemporáneas.",
+    "awards": [
+      "Éxito crítico y comercial mundial"
+    ],
+    "notable_works": [
+      "La amiga estupenda (tetralogía)",
+      "Los días del abandono",
+      "La hija oscura"
+    ]
+  },
+  "Paul Auster": {
+    "name": "Paul Auster",
+    "years": "1947–2024",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista y cineasta neoyorquino cuya obra explora el azar, la identidad y la escritura misma. Sus novelas son juegos metaficticios accesibles y emocionantes.",
+    "importance": "Auster hizo la metaficción popular. Sus historias sobre escritores, coincidencias y Nueva York han influido en toda una generación de novelistas que quieren pensar mientras narran.",
+    "awards": [
+      "Premio Príncipe de Asturias de las Letras 2006"
+    ],
+    "notable_works": [
+      "La trilogía de Nueva York",
+      "4 3 2 1",
+      "El palacio de la luna"
+    ]
+  },
+  "Donna Tartt": {
+    "name": "Donna Tartt",
+    "years": "1963–",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista americana conocida por escribir solo tres novelas en treinta años, cada una un evento literario. Su perfeccionismo y su prosa clásica la distinguen.",
+    "importance": "Tartt ha demostrado que la novela ambiciosa y dickensiana puede seguir existiendo. Su paciencia y su negativa a seguir modas la convierten en una figura única.",
+    "awards": [
+      "Premio Pulitzer 2014"
+    ],
+    "notable_works": [
+      "El secreto",
+      "El jilguero",
+      "Un juego de niños"
+    ]
+  },
+  "Zadie Smith": {
+    "name": "Zadie Smith",
+    "years": "1975–",
+    "nationality": "Británica",
+    "photo": null,
+    "bio": "Novelista y ensayista británica que irrumpió a los 25 años con 'Dientes blancos'. Su obra explora la identidad multicultural en la Londres contemporánea.",
+    "importance": "Smith es la voz de la Gran Bretaña multicultural del siglo XXI. Su inteligencia crítica y su oído para las voces la convierten en una de las escritoras más importantes de su generación.",
+    "awards": [
+      "Orange Prize",
+      "Anisfield-Wolf Book Award"
+    ],
+    "notable_works": [
+      "Dientes blancos",
+      "Sobre la belleza",
+      "Tiempos de swing"
+    ]
+  },
+  "Alice Munro": {
+    "name": "Alice Munro",
+    "years": "1931–2024",
+    "nationality": "Canadiense",
+    "photo": null,
+    "bio": "Maestra del cuento contemporáneo, conocida como la Chéjov canadiense. Sus relatos sobre mujeres en la Ontario rural son obras maestras de precisión psicológica.",
+    "importance": "Munro elevó el cuento a la categoría de la novela. Demostró que en treinta páginas cabe toda una vida, y que la vida de mujeres 'corrientes' merece la gran literatura.",
+    "awards": [
+      "Premio Nobel de Literatura 2013",
+      "Man Booker International Prize"
+    ],
+    "notable_works": [
+      "Escapada",
+      "Demasiada felicidad",
+      "Mi vida querida"
+    ]
+  },
+  "Virginia Woolf": {
+    "name": "Virginia Woolf",
+    "years": "1882–1941",
+    "nationality": "Británica",
+    "photo": null,
+    "bio": "Novelista y ensayista inglesa, figura central del modernismo. Su técnica de flujo de conciencia revolucionó la novela del siglo XX.",
+    "importance": "Woolf demostró que la vida interior podía ser el verdadero escenario de la novela. Su feminismo literario y sus ensayos siguen siendo fundamentales.",
+    "awards": [
+      "Reconocimiento póstumo universal"
+    ],
+    "notable_works": [
+      "La señora Dalloway",
+      "Al faro",
+      "Una habitación propia"
+    ]
+  },
+  "Franz Kafka": {
+    "name": "Franz Kafka",
+    "years": "1883–1924",
+    "nationality": "Checo (escribía en alemán)",
+    "photo": null,
+    "bio": "Escritor de Praga cuya obra define lo 'kafkiano': la pesadilla burocrática, la culpa inexplicable, la metamorfosis absurda. Murió joven y pidió quemar su obra.",
+    "importance": "Kafka anticipó el siglo XX: totalitarismo, alienación, absurdo. Su influencia es tan profunda que su nombre se convirtió en adjetivo.",
+    "awards": [
+      "Influencia universal póstuma"
+    ],
+    "notable_works": [
+      "La metamorfosis",
+      "El proceso",
+      "El castillo"
+    ]
+  },
+  "Albert Camus": {
+    "name": "Albert Camus",
+    "years": "1913–1960",
+    "nationality": "Francés (nacido en Argelia)",
+    "photo": null,
+    "bio": "Novelista, ensayista y dramaturgo del absurdo. Su obra explora la condición humana ante un universo sin sentido, pero con una afirmación vital frente al nihilismo.",
+    "importance": "Camus ofreció una alternativa al existencialismo pesimista: el absurdo como punto de partida para la rebeldía y la solidaridad humana.",
+    "awards": [
+      "Premio Nobel de Literatura 1957"
+    ],
+    "notable_works": [
+      "El extranjero",
+      "La peste",
+      "El mito de Sísifo"
+    ]
+  },
+  "Fyodor Dostoevsky": {
+    "name": "Fyodor Dostoevsky",
+    "years": "1821–1881",
+    "nationality": "Ruso",
+    "photo": null,
+    "bio": "Novelista ruso que exploró las profundidades del alma humana. Condenado a muerte y perdonado en el último momento, su vida fue tan dramática como su obra.",
+    "importance": "Dostoevsky inventó la novela psicológica moderna. Sus personajes atormentados anticiparon a Freud y siguen siendo espejos de nuestra condición.",
+    "awards": [
+      "Reconocimiento universal como uno de los más grandes"
+    ],
+    "notable_works": [
+      "Crimen y castigo",
+      "Los hermanos Karamázov",
+      "El idiota"
+    ]
+  },
+  "Leo Tolstoy": {
+    "name": "Leo Tolstoy",
+    "years": "1828–1910",
+    "nationality": "Ruso",
+    "photo": null,
+    "bio": "Novelista ruso autor de las que muchos consideran las mayores novelas jamás escritas. Aristócrata que se convirtió en anarquista cristiano, su vida fue tan épica como su obra.",
+    "importance": "Tolstoy estableció el estándar de la novela totalizadora. Nadie ha capturado mejor la textura de la vida y la sociedad en todas sus dimensiones.",
+    "awards": [
+      "Considerado por muchos el más grande novelista"
+    ],
+    "notable_works": [
+      "Guerra y paz",
+      "Anna Karénina",
+      "La muerte de Iván Ilich"
+    ]
+  },
+  "Ernest Hemingway": {
+    "name": "Ernest Hemingway",
+    "years": "1899–1961",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista y periodista que revolucionó la prosa americana con su estilo minimalista. Su vida de aventuras (guerras, safaris, corridas) fue tan famosa como su obra.",
+    "importance": "Hemingway demostró que menos es más. Su 'teoría del iceberg' (lo no dicho es tan importante como lo dicho) cambió para siempre la escritura en inglés.",
+    "awards": [
+      "Premio Nobel de Literatura 1954",
+      "Premio Pulitzer 1953"
+    ],
+    "notable_works": [
+      "El viejo y el mar",
+      "Por quién doblan las campanas",
+      "Fiesta"
+    ]
+  },
+  "William Faulkner": {
+    "name": "William Faulkner",
+    "years": "1897–1962",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista del sur americano que creó el condado ficticio de Yoknapatawpha. Su experimentación con el tiempo narrativo y el flujo de conciencia influyó en toda la literatura posterior.",
+    "importance": "Faulkner demostró que el sur profundo de EE.UU. era un tema universal. Su influencia en García Márquez y todo el Boom latinoamericano es directa.",
+    "awards": [
+      "Premio Nobel de Literatura 1949",
+      "Dos premios Pulitzer"
+    ],
+    "notable_works": [
+      "El ruido y la furia",
+      "Mientras agonizo",
+      "¡Absalón, Absalón!"
+    ]
+  },
+  "James Joyce": {
+    "name": "James Joyce",
+    "years": "1882–1941",
+    "nationality": "Irlandés",
+    "photo": null,
+    "bio": "Novelista irlandés cuyo Ulises es considerado la novela más importante del siglo XX. Vivió exiliado en Trieste, Zúrich y París, recreando Dublín desde la distancia.",
+    "importance": "Joyce reinventó lo que una novela puede hacer. El flujo de conciencia, los juegos lingüísticos, la mitología cotidiana: todo empieza con él.",
+    "awards": [
+      "Reconocimiento universal como revolucionario literario"
+    ],
+    "notable_works": [
+      "Ulises",
+      "Dublineses",
+      "Retrato del artista adolescente"
+    ]
+  },
+  "Oscar Wilde": {
+    "name": "Oscar Wilde",
+    "years": "1854–1900",
+    "nationality": "Irlandés",
+    "photo": null,
+    "bio": "Dramaturgo, poeta y conversador legendario. Su ingenio era su arma, hasta que su homosexualidad lo llevó a la cárcel y la ruina. Murió en París, pobre y exiliado.",
+    "importance": "Wilde demostró que el estilo es sustancia. Sus aforismos y sus comedias siguen siendo brillantes, y su vida es una advertencia sobre la hipocresía social.",
+    "awards": [
+      "Influencia cultural perdurable"
+    ],
+    "notable_works": [
+      "El retrato de Dorian Gray",
+      "La importancia de llamarse Ernesto",
+      "De profundis"
+    ]
+  },
+  "Isabel Allende": {
+    "name": "Isabel Allende",
+    "years": "1942–",
+    "nationality": "Chilena",
+    "photo": null,
+    "bio": "Novelista chilena, la escritora en español vivo más leída del mundo. Sobrina de Salvador Allende, su exilio tras el golpe marcó su vida y su obra.",
+    "importance": "Allende llevó el realismo mágico a millones de lectores. Sus sagas familiares conectan la historia latinoamericana con el presente global.",
+    "awards": [
+      "Premio Nacional de Literatura de Chile",
+      "Hans Christian Andersen Award"
+    ],
+    "notable_works": [
+      "La casa de los espíritus",
+      "Paula",
+      "El cuaderno de Maya"
+    ]
+  },
+  "Milan Kundera": {
+    "name": "Milan Kundera",
+    "years": "1929–2023",
+    "nationality": "Checo-francés",
+    "photo": null,
+    "bio": "Novelista que huyó de la Checoslovaquia comunista para escribir en Francia. Sus novelas filosóficas exploran la identidad, la memoria y el peso de la historia.",
+    "importance": "Kundera fusionó novela y ensayo de manera original. Sus reflexiones sobre el kitsch, la ligereza del ser y Europa Central son ya clásicas.",
+    "awards": [
+      "Premio Jerusalem",
+      "Reconocimiento mundial"
+    ],
+    "notable_works": [
+      "La insoportable levedad del ser",
+      "La broma",
+      "El libro de la risa y el olvido"
+    ]
+  },
+  "Umberto Eco": {
+    "name": "Umberto Eco",
+    "years": "1932–2016",
+    "nationality": "Italiano",
+    "photo": null,
+    "bio": "Semiólogo y novelista que convirtió la erudición medieval en bestseller. Sus novelas son laberintos intelectuales que también funcionan como thrillers.",
+    "importance": "Eco demostró que la novela erudita podía ser popular. Su teoría de la lectura abierta y sus ficciones enciclopédicas definieron el postmodernismo accesible.",
+    "awards": [
+      "Múltiples doctorados honoris causa",
+      "Strega Prize"
+    ],
+    "notable_works": [
+      "El nombre de la rosa",
+      "El péndulo de Foucault",
+      "El cementerio de Praga"
+    ]
+  },
+  "Italo Calvino": {
+    "name": "Italo Calvino",
+    "years": "1923–1985",
+    "nationality": "Italiano",
+    "photo": null,
+    "bio": "Novelista italiano que evolucionó del neorrealismo a la experimentación combinatoria. Sus ciudades invisibles y sus juegos narrativos son únicos en la literatura.",
+    "importance": "Calvino hizo de la literatura un juego infinito. Su ensayo 'Seis propuestas para el próximo milenio' es un testamento literario para nuestro tiempo.",
+    "awards": [
+      "Italian PEN Prize",
+      "Reconocimiento mundial"
+    ],
+    "notable_works": [
+      "Las ciudades invisibles",
+      "Si una noche de invierno un viajero",
+      "El barón rampante"
+    ]
+  },
+  "George Orwell": {
+    "name": "George Orwell",
+    "years": "1903–1950",
+    "nationality": "Británico",
+    "photo": null,
+    "bio": "Novelista y ensayista cuyas distopías definieron el siglo XX. Luchó en la Guerra Civil española y denunció el totalitarismo tanto de derecha como de izquierda.",
+    "importance": "Orwell inventó el lenguaje con el que hablamos de la opresión: 'Gran Hermano', 'doblepensar', 'neolengua'. Sus advertencias son más relevantes que nunca.",
+    "awards": [
+      "Influencia cultural permanente"
+    ],
+    "notable_works": [
+      "1984",
+      "Rebelión en la granja",
+      "Homenaje a Cataluña"
+    ]
+  },
+  "Clarice Lispector": {
+    "name": "Clarice Lispector",
+    "years": "1920–1977",
+    "nationality": "Brasileña (nacida en Ucrania)",
+    "photo": null,
+    "bio": "Novelista brasileña de prosa hipnótica y existencial. Su escritura explora el instante, la identidad femenina y los límites del lenguaje con intensidad mística.",
+    "importance": "Lispector es la Virginia Woolf latinoamericana. Su influencia en escritoras posteriores y en la literatura brasileña es inmensa.",
+    "awards": [
+      "Reconocimiento como figura única de las letras brasileñas"
+    ],
+    "notable_works": [
+      "La pasión según G.H.",
+      "La hora de la estrella",
+      "Agua viva"
+    ]
+  },
+  "Simone de Beauvoir": {
+    "name": "Simone de Beauvoir",
+    "years": "1908–1986",
+    "nationality": "Francesa",
+    "photo": null,
+    "bio": "Filósofa, novelista y feminista existencialista. Su ensayo 'El segundo sexo' es fundacional para el feminismo moderno. Compañera de vida de Sartre.",
+    "importance": "Beauvoir definió el feminismo intelectual del siglo XX. 'No se nace mujer, se llega a serlo' cambió cómo pensamos el género.",
+    "awards": [
+      "Premio Goncourt 1954",
+      "Premio Jerusalem"
+    ],
+    "notable_works": [
+      "El segundo sexo",
+      "Los mandarines",
+      "Memorias de una joven formal"
+    ]
+  },
+  "Flannery O'Connor": {
+    "name": "Flannery O'Connor",
+    "years": "1925–1964",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Cuentista y novelista del sur gótico americano. Católica devota, escribió sobre la gracia irrumpiendo violentamente en vidas grotescas. Murió joven de lupus.",
+    "importance": "O'Connor demostró que lo grotesco puede ser vehículo de lo espiritual. Sus cuentos son perfectos y su influencia en el sur literario es fundamental.",
+    "awards": [
+      "National Book Award",
+      "O. Henry Award"
+    ],
+    "notable_works": [
+      "Sangre sabia",
+      "Un hombre bueno es difícil de encontrar",
+      "Todo lo que asciende debe converger"
+    ]
+  },
+  "Philip Roth": {
+    "name": "Philip Roth",
+    "years": "1933–2018",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista judío-americano que exploró la identidad, el sexo y la política con una energía incansable. Su alter ego Nathan Zuckerman protagonizó muchas de sus mejores novelas.",
+    "importance": "Roth es el gran novelista de la experiencia judía americana y del deseo masculino. Su productividad y su ambición lo colocan entre los más grandes.",
+    "awards": [
+      "Premio Pulitzer",
+      "Man Booker International Prize",
+      "PEN/Faulkner Award"
+    ],
+    "notable_works": [
+      "Pastoral americana",
+      "El lamento de Portnoy",
+      "La conjura contra América"
+    ]
+  },
+  "Toni Morrison": {
+    "name": "Toni Morrison",
+    "years": "1931–2019",
+    "nationality": "Estadounidense",
+    "photo": null,
+    "bio": "Novelista afroamericana que exploró la experiencia negra en Estados Unidos con una prosa lírica y poderosa. Primera mujer negra en ganar el Nobel de Literatura.",
+    "importance": "Morrison dio voz literaria a la experiencia afroamericana. Su obra sobre la esclavitud y sus secuelas es esencial para entender América.",
+    "awards": [
+      "Premio Nobel de Literatura 1993",
+      "Premio Pulitzer 1988"
+    ],
+    "notable_works": [
+      "Beloved",
+      "Ojos azules",
+      "La canción de Salomón"
+    ]
+  },
+  "Chimamanda Ngozi Adichie": {
+    "name": "Chimamanda Ngozi Adichie",
+    "years": "1977–",
+    "nationality": "Nigeriana",
+    "photo": null,
+    "bio": "Novelista y ensayista nigeriana que se ha convertido en una de las voces más influyentes de la literatura mundial y del feminismo contemporáneo.",
+    "importance": "Adichie ha globalizado la perspectiva africana con novelas que hablan al mundo entero. Su charla TED sobre el feminismo se volvió viral.",
+    "awards": [
+      "Orange Prize",
+      "National Book Critics Circle Award"
+    ],
+    "notable_works": [
+      "Americanah",
+      "Medio sol amarillo",
+      "Todos deberíamos ser feministas"
+    ]
+  }
+}
