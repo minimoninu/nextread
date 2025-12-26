@@ -7906,5 +7906,3674 @@
       "Usted",
       "Poema de la mujer"
     ]
+  },
+  "Pascal Quignard": {
+    "bio": "Francés, escritor del silencio y la música antigua. Quignard ganó el Goncourt con 'Las sombras errantes'. Escribe sobre el origen del lenguaje, Roma, el deseo. Difícil, hermoso, inclasificable.",
+    "nationality": "Francés",
+    "born": 1948,
+    "genres": [
+      "ficción",
+      "ensayo",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Las sombras errantes",
+      "Todas las mañanas del mundo",
+      "Vida secreta"
+    ],
+    "awards": [
+      "Premio Goncourt 2002"
+    ]
+  },
+  "Hernán Rivera Letelier": {
+    "bio": "Chileno del desierto de Atacama, novelista de las salitreras. Rivera Letelier escribe sobre mineros, burdeles y la pampa con humor y ternura. 'La reina Isabel cantaba rancheras' es su novela más conocida. La voz del norte chileno.",
+    "nationality": "Chileno",
+    "born": 1950,
+    "genres": [
+      "ficción",
+      "social",
+      "chileno"
+    ],
+    "notable_works": [
+      "La reina Isabel cantaba rancheras",
+      "El arte de la resurrección",
+      "Santa María de las flores negras"
+    ]
+  },
+  "Paul Lynch": {
+    "bio": "Irlandés, Booker 2023 por 'El canto del profeta'. Lynch escribe sobre Irlanda, la inmigración y un futuro distópico con prosa poética. Una voz nueva y poderosa.",
+    "nationality": "Irlandés",
+    "born": 1977,
+    "genres": [
+      "ficción",
+      "distopía",
+      "literario"
+    ],
+    "notable_works": [
+      "El canto del profeta",
+      "Grace",
+      "Beyond the Sea"
+    ],
+    "awards": [
+      "Booker Prize 2023"
+    ]
+  },
+  "Ferdinand von Schirach": {
+    "bio": "Alemán, abogado penalista, escritor de casos criminales. Von Schirach escribe relatos breves sobre crímenes reales con precisión quirúrgica. 'Crímenes' fue un fenómeno. El derecho como literatura.",
+    "nationality": "Alemán",
+    "born": 1964,
+    "genres": [
+      "ficción",
+      "criminal",
+      "cuento"
+    ],
+    "notable_works": [
+      "Crímenes",
+      "Culpa",
+      "El caso Collini"
+    ]
+  },
+  "Paul Bowles": {
+    "bio": "Americano que vivió en Tánger, escritor del desierto y la otredad. Bowles escribió 'El cielo protector': americanos perdidos en el Sahara. También compositor. El expatriado definitivo.",
+    "nationality": "Estadounidense",
+    "born": 1910,
+    "died": 1999,
+    "genres": [
+      "ficción",
+      "viajes",
+      "existencial"
+    ],
+    "notable_works": [
+      "El cielo protector",
+      "Déjala que caiga",
+      "La casa de la araña"
+    ]
+  },
+  "Amy Tan": {
+    "bio": "Americana de origen chino, novelista de madres e hijas. Tan escribió 'El club de la buena estrella': inmigrantes chinas en San Francisco y sus historias. Bestseller y película. La experiencia chino-americana.",
+    "nationality": "Estadounidense",
+    "born": 1952,
+    "genres": [
+      "ficción",
+      "familiar",
+      "multicultural"
+    ],
+    "notable_works": [
+      "El club de la buena estrella",
+      "La esposa del dios del fuego",
+      "Los cien sentidos secretos"
+    ]
+  },
+  "Alice Walker": {
+    "bio": "Americana, Pulitzer 1983 por 'El color púrpura'. Walker escribió sobre mujeres negras del Sur con fuerza y ternura. También poeta y activista. Una voz fundamental de la literatura afroamericana.",
+    "nationality": "Estadounidense",
+    "born": 1944,
+    "genres": [
+      "ficción",
+      "feminismo",
+      "afroamericano"
+    ],
+    "notable_works": [
+      "El color púrpura",
+      "En posesión del secreto de la alegría",
+      "El templo de mis amigos"
+    ],
+    "awards": [
+      "Premio Pulitzer 1983"
+    ]
+  },
+  "Doris Lessing": {
+    "bio": "Británica nacida en Persia, criada en Rodesia, Nobel 2007. Lessing escribió sobre África, feminismo, política y ciencia ficción. 'El cuaderno dorado' es su obra maestra. Longeva, prolífica, indomable.",
+    "nationality": "Británica",
+    "born": 1919,
+    "died": 2013,
+    "genres": [
+      "ficción",
+      "ciencia ficción",
+      "feminismo"
+    ],
+    "notable_works": [
+      "El cuaderno dorado",
+      "La buena terrorista",
+      "Hijos de la violencia"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2007"
+    ]
+  },
+  "Javier Castillo": {
+    "bio": "Malagueño, fenómeno del thriller español. Castillo empezó autopublicándose y ahora vende millones. 'El día que se perdió la cordura' lo lanzó. Thrillers adictivos que conquistan lectores.",
+    "nationality": "Español",
+    "born": 1987,
+    "genres": [
+      "thriller",
+      "misterio",
+      "suspense"
+    ],
+    "notable_works": [
+      "El día que se perdió la cordura",
+      "Todo lo que sucedió con Miranda Huff",
+      "La chica de nieve"
+    ]
+  },
+  "Bernard Malamud": {
+    "bio": "Americano, novelista de la experiencia judía. Malamud escribía sobre perdedores con dignidad y humor. 'El reparador' ganó el Pulitzer. Uno de los grandes de la literatura judío-americana junto a Bellow y Roth.",
+    "nationality": "Estadounidense",
+    "born": 1914,
+    "died": 1986,
+    "genres": [
+      "ficción",
+      "judío",
+      "literario"
+    ],
+    "notable_works": [
+      "El reparador",
+      "El asistente",
+      "El natural"
+    ],
+    "awards": [
+      "Premio Pulitzer 1967"
+    ]
+  },
+  "Fernando Vallejo": {
+    "bio": "Colombiano-mexicano, provocador profesional, estilista furioso. Vallejo escribe autobiografía novelada sobre Medellín, la muerte, la religión y los perros con rabia lírica. 'La virgen de los sicarios' es devastadora. No deja títere con cabeza.",
+    "nationality": "Colombiano-Mexicano",
+    "born": 1942,
+    "genres": [
+      "autoficción",
+      "polémico",
+      "literario"
+    ],
+    "notable_works": [
+      "La virgen de los sicarios",
+      "El desbarrancadero",
+      "El río del tiempo"
+    ]
+  },
+  "Ambrose Bierce": {
+    "bio": "Americano, satírico, desaparecido en México. Bierce escribió cuentos de terror y guerra, y 'El diccionario del diablo': definiciones cínicas que siguen mordiendo. Desapareció en 1914 buscando a Pancho Villa. Un misterio.",
+    "nationality": "Estadounidense",
+    "born": 1842,
+    "died": 1914,
+    "genres": [
+      "cuento",
+      "terror",
+      "satírico"
+    ],
+    "notable_works": [
+      "El diccionario del diablo",
+      "Cuentos de soldados y civiles",
+      "Un suceso en el puente de Owl Creek"
+    ]
+  },
+  "Adam Tooze": {
+    "bio": "Historiador británico de la economía global. Tooze escribió sobre la economía nazi, la crisis de 2008 y la pandemia con rigor y claridad. 'El diluvio' cambió cómo entendemos el siglo XX. Historia económica que importa.",
+    "nationality": "Británico",
+    "born": 1967,
+    "genres": [
+      "historia",
+      "economía",
+      "político"
+    ],
+    "notable_works": [
+      "El diluvio",
+      "Crash",
+      "La economía de la destrucción"
+    ]
+  },
+  "Ruth Ozeki": {
+    "bio": "Americana de origen japonés, novelista y monja zen. Ozeki escribe sobre comida, ecología y budismo con humor y profundidad. 'Un cuento contado por el tiempo' fue finalista del Booker. Única.",
+    "nationality": "Estadounidense",
+    "born": 1956,
+    "genres": [
+      "ficción",
+      "ecológico",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Un cuento contado por el tiempo",
+      "Mi año de carnes",
+      "The Book of Form and Emptiness"
+    ]
+  },
+  "Pablo de Santis": {
+    "bio": "Argentino, novelista de misterios y detectivos imposibles. De Santis ganó el Planeta con 'El enigma de París'. Escribe sobre investigadores, crímenes y mundos paralelos. El noir argentino con fantasía.",
+    "nationality": "Argentino",
+    "born": 1963,
+    "genres": [
+      "misterio",
+      "fantástico",
+      "noir"
+    ],
+    "notable_works": [
+      "El enigma de París",
+      "La traducción",
+      "El calígrafo de Voltaire"
+    ]
+  },
+  "Masha Gessen": {
+    "bio": "Ruso-americana, periodista y biógrafa del poder. Gessen ha escrito sobre Putin, la Rusia de hoy y los derechos LGBTQ+. 'El futuro es historia' ganó el National Book Award. Periodismo valiente.",
+    "nationality": "Ruso-Estadounidense",
+    "born": 1967,
+    "genres": [
+      "no ficción",
+      "político",
+      "periodismo"
+    ],
+    "notable_works": [
+      "El futuro es historia",
+      "El hombre sin rostro",
+      "Sobrevivir a la autocracia"
+    ],
+    "awards": [
+      "National Book Award 2017"
+    ]
+  },
+  "Louise Erdrich": {
+    "bio": "Americana de origen ojibwe, novelista de la experiencia nativa. Erdrich escribe sagas familiares sobre reservas indígenas con magia y realismo. 'La casa redonda' ganó el National Book Award. Una de las grandes voces americanas.",
+    "nationality": "Estadounidense",
+    "born": 1954,
+    "genres": [
+      "ficción",
+      "nativo americano",
+      "saga"
+    ],
+    "notable_works": [
+      "La casa redonda",
+      "Love Medicine",
+      "LaRose"
+    ],
+    "awards": [
+      "National Book Award 2012",
+      "Premio Pulitzer 2021"
+    ]
+  },
+  "Ralph Ellison": {
+    "bio": "Americano, autor de una sola novela que es una de las más importantes del siglo XX. 'El hombre invisible' cuenta la experiencia negra en América con furia y virtuosismo. Trabajó 40 años en una segunda novela que nunca terminó.",
+    "nationality": "Estadounidense",
+    "born": 1914,
+    "died": 1994,
+    "genres": [
+      "ficción",
+      "afroamericano",
+      "literario"
+    ],
+    "notable_works": [
+      "El hombre invisible"
+    ]
+  },
+  "Alfredo Bryce Echenique": {
+    "bio": "Peruano, novelista del humor y la melancolía. Bryce Echenique escribe sobre peruanos en Europa, amores imposibles y la vida bohemia. 'Un mundo para Julius' es su obra maestra. El Quijote limeño.",
+    "nationality": "Peruano",
+    "born": 1939,
+    "genres": [
+      "ficción",
+      "humor",
+      "autobiográfico"
+    ],
+    "notable_works": [
+      "Un mundo para Julius",
+      "La vida exagerada de Martín Romaña",
+      "Tantas veces Pedro"
+    ]
+  },
+  "Viet Thanh Nguyen": {
+    "bio": "Vietnamita-americano, Pulitzer 2016 por 'El simpatizante'. Nguyen escribió la novela definitiva sobre Vietnam desde el lado perdedor: un espía doble en Saigón y Los Ángeles. Brillante y necesaria.",
+    "nationality": "Vietnamita-Estadounidense",
+    "born": 1971,
+    "genres": [
+      "ficción",
+      "bélico",
+      "político"
+    ],
+    "notable_works": [
+      "El simpatizante",
+      "The Committed",
+      "Los refugiados"
+    ],
+    "awards": [
+      "Premio Pulitzer 2016"
+    ]
+  },
+  "Ben Lerner": {
+    "bio": "Americano, poeta y novelista de la autoficción. Lerner escribe sobre escribir, sobre el arte, sobre ser un intelectual americano. 'Leaving the Atocha Station' es sobre un poeta en Madrid. Meta, inteligente, a veces irritante.",
+    "nationality": "Estadounidense",
+    "born": 1979,
+    "genres": [
+      "ficción",
+      "autoficción",
+      "poesía"
+    ],
+    "notable_works": [
+      "Saliendo de la estación de Atocha",
+      "10:04",
+      "The Topeka School"
+    ]
+  },
+  "Cristina Rivera Garza": {
+    "bio": "Mexicana, novelista y ensayista experimental. Rivera Garza escribe sobre violencia, género y la frontera con inventiva formal. 'El invencible verano de Liliana' ganó el Pulitzer. Una de las voces más importantes de México.",
+    "nationality": "Mexicana",
+    "born": 1964,
+    "genres": [
+      "ficción",
+      "ensayo",
+      "experimental"
+    ],
+    "notable_works": [
+      "El invencible verano de Liliana",
+      "Nadie me verá llorar",
+      "La muerte me da"
+    ],
+    "awards": [
+      "Premio Pulitzer 2024"
+    ]
+  },
+  "Stefania Auci": {
+    "bio": "Siciliana, novelista de sagas familiares. Auci escribió 'Los leones de Sicilia' sobre la familia Florio: de comerciantes a magnates. Bestseller en Italia y el mundo. Historia familiar épica.",
+    "nationality": "Italiana",
+    "born": 1959,
+    "genres": [
+      "ficción histórica",
+      "saga",
+      "italiano"
+    ],
+    "notable_works": [
+      "Los leones de Sicilia",
+      "El invierno de los leones"
+    ]
+  },
+  "Frances Hodgson Burnett": {
+    "bio": "Anglo-americana, autora de clásicos infantiles. Burnett escribió 'El jardín secreto' y 'El pequeño Lord': historias de niños que transforman mundos. Siguen encantando más de un siglo después.",
+    "nationality": "Anglo-Estadounidense",
+    "born": 1849,
+    "died": 1924,
+    "genres": [
+      "infantil",
+      "ficción",
+      "clásico"
+    ],
+    "notable_works": [
+      "El jardín secreto",
+      "La princesita",
+      "El pequeño Lord"
+    ]
+  },
+  "Orson Scott Card": {
+    "bio": "Americano, autor de 'El juego de Ender'. Card escribió una de las novelas de ciencia ficción más influyentes: niños entrenados para la guerra interestelar. Prolífico y controvertido por sus opiniones políticas.",
+    "nationality": "Estadounidense",
+    "born": 1951,
+    "genres": [
+      "ciencia ficción",
+      "fantasía",
+      "juvenil"
+    ],
+    "notable_works": [
+      "El juego de Ender",
+      "La voz de los muertos",
+      "Speaker for the Dead"
+    ]
+  },
+  "Deborah Harkness": {
+    "bio": "Americana, historiadora y novelista. Harkness escribió 'El descubrimiento de las brujas': vampiros, brujas y academia en una saga romántica que conquistó lectores. Historia y fantasía para adultos.",
+    "nationality": "Estadounidense",
+    "born": 1965,
+    "genres": [
+      "fantasía",
+      "romance",
+      "paranormal"
+    ],
+    "notable_works": [
+      "El descubrimiento de las brujas",
+      "La sombra de la noche",
+      "El libro de la vida"
+    ]
+  },
+  "Emilio Salgari": {
+    "bio": "Italiano, padre de la aventura. Salgari creó a Sandokán y escribió decenas de novelas de piratas, selvas y mares sin salir de su casa en Turín. Se suicidó pobre. Sus libros siguen siendo pura aventura.",
+    "nationality": "Italiano",
+    "born": 1862,
+    "died": 1911,
+    "genres": [
+      "aventura",
+      "juvenil",
+      "piratas"
+    ],
+    "notable_works": [
+      "Los tigres de Mompracem",
+      "El corsario negro",
+      "Sandokán"
+    ]
+  },
+  "Ricardo Menéndez Salmón": {
+    "bio": "Asturiano, novelista del mal y la historia. Menéndez Salmón escribe sobre el nazismo, el arte y la violencia con prosa exigente. 'La ofensa' es una meditación sobre el horror. Ambicioso e incómodo.",
+    "nationality": "Español",
+    "born": 1971,
+    "genres": [
+      "ficción",
+      "filosófico",
+      "histórico"
+    ],
+    "notable_works": [
+      "La ofensa",
+      "El sistema",
+      "Medusa"
+    ]
+  },
+  "Juan Gómez Bárcena": {
+    "bio": "Santanderino, novelista ambicioso. Gómez Bárcena escribe sobre el tiempo, la historia y los límites de la ficción. 'Ni siquiera los muertos' es una odisea de 500 años. Una de las voces más interesantes de su generación.",
+    "nationality": "Español",
+    "born": 1984,
+    "genres": [
+      "ficción",
+      "histórico",
+      "experimental"
+    ],
+    "notable_works": [
+      "Ni siquiera los muertos",
+      "Kanada",
+      "El cielo de Lima"
+    ]
+  },
+  "Carmen Kurtz": {
+    "bio": "Barcelonesa, novelista de posguerra. Kurtz ganó el Planeta 1956 y escribió novela realista y literatura infantil. 'El desconocido' la consagró. Una voz importante de su generación.",
+    "nationality": "Española",
+    "born": 1911,
+    "died": 1999,
+    "genres": [
+      "ficción",
+      "infantil",
+      "realismo"
+    ],
+    "notable_works": [
+      "El desconocido",
+      "Óscar, espía atómico",
+      "Color de fuego"
+    ]
+  },
+  "Louise Kennedy": {
+    "bio": "Irlandesa, debut tardío y brillante. Kennedy publicó 'La isla de Trespie' a los 55: el Conflicto de Irlanda del Norte visto a través de un romance prohibido. Tensa, emotiva, aplaudida.",
+    "nationality": "Irlandesa",
+    "born": 1966,
+    "genres": [
+      "ficción",
+      "histórico",
+      "irlandés"
+    ],
+    "notable_works": [
+      "La isla de Trespie"
+    ]
+  },
+  "Neal Shusterman": {
+    "bio": "Americano, maestro de la ciencia ficción juvenil. Shusterman escribe distopías inteligentes para adolescentes. 'Siega' sobre un mundo sin muerte conquistó lectores. Ideas grandes para lectores jóvenes.",
+    "nationality": "Estadounidense",
+    "born": 1962,
+    "genres": [
+      "ciencia ficción",
+      "juvenil",
+      "distopía"
+    ],
+    "notable_works": [
+      "Siega",
+      "Everlost",
+      "Unwind"
+    ]
+  },
+  "Janice Hallett": {
+    "bio": "Británica, inventora del thriller epistolar moderno. Hallett escribe misterios contados a través de emails, mensajes y documentos. 'The Appeal' fue sensación. Formato fresco para el whodunit.",
+    "nationality": "Británica",
+    "genres": [
+      "thriller",
+      "misterio",
+      "epistolar"
+    ],
+    "notable_works": [
+      "The Appeal",
+      "The Twyford Code",
+      "The Mysterious Case of the Alperton Angels"
+    ]
+  },
+  "Hjalmar Söderberg": {
+    "bio": "Sueco, maestro de la novela breve. Söderberg escribió 'Doctor Glas' en 1905: un médico contempla un asesinato. Psicológico, moderno, inquietante. Un clásico escandinavo redescubierto.",
+    "nationality": "Sueco",
+    "born": 1869,
+    "died": 1941,
+    "genres": [
+      "ficción",
+      "psicológico",
+      "clásico"
+    ],
+    "notable_works": [
+      "Doctor Glas",
+      "El juego serio",
+      "Martin Bircks ungdom"
+    ]
+  },
+  "Cornelius Ryan": {
+    "bio": "Irlandés-americano, periodista de guerra, historiador del Día D. Ryan escribió 'El día más largo' y 'Un puente lejano': historia militar narrativa de primer nivel. Base para películas épicas.",
+    "nationality": "Irlandés-Estadounidense",
+    "born": 1920,
+    "died": 1974,
+    "genres": [
+      "historia",
+      "bélico",
+      "periodismo"
+    ],
+    "notable_works": [
+      "El día más largo",
+      "Un puente lejano",
+      "La última batalla"
+    ]
+  },
+  "Jordi Amat": {
+    "bio": "Catalán, historiador y biógrafo. Amat escribe sobre la Cataluña del siglo XX, el procés y figuras como Pujol. 'El hijo del chófer' es una biografía devastadora. Historia reciente sin anestesia.",
+    "nationality": "Español (Catalán)",
+    "born": 1978,
+    "genres": [
+      "historia",
+      "biografía",
+      "político"
+    ],
+    "notable_works": [
+      "El hijo del chófer",
+      "La conjura de los irresponsables",
+      "El llarg procés"
+    ]
+  },
+  "Thomas Erikson": {
+    "bio": "Sueco, experto en comunicación. Erikson escribió 'Rodeados de idiotas' sobre tipos de personalidad con colores. Bestseller de autoayuda y management. Psicología pop accesible.",
+    "nationality": "Sueco",
+    "born": 1965,
+    "genres": [
+      "autoayuda",
+      "psicología",
+      "negocios"
+    ],
+    "notable_works": [
+      "Rodeados de idiotas",
+      "Rodeados de psicópatas"
+    ]
+  },
+  "Christina Stead": {
+    "bio": "Australiana, novelista redescubierta. Stead escribió 'El hombre que amaba a los niños': una familia disfuncional retratada con ferocidad. Ignorada en vida, ahora considerada una de las grandes.",
+    "nationality": "Australiana",
+    "born": 1902,
+    "died": 1983,
+    "genres": [
+      "ficción",
+      "familiar",
+      "literario"
+    ],
+    "notable_works": [
+      "El hombre que amaba a los niños",
+      "For Love Alone",
+      "Letty Fox: Her Luck"
+    ]
+  },
+  "Javier Calvo": {
+    "bio": "Barcelonés, traductor y novelista. Calvo ha traducido a Foster Wallace y escribe novelas sobre Barcelona, el crimen y lo extraño. 'El jardín colgante' ganó el Biblioteca Breve. Culto y pop.",
+    "nationality": "Español",
+    "born": 1973,
+    "genres": [
+      "ficción",
+      "noir",
+      "urbano"
+    ],
+    "notable_works": [
+      "El jardín colgante",
+      "Corona de flores",
+      "Mundo maravilloso"
+    ]
+  },
+  "Liz Moore": {
+    "bio": "Americana, novelista de familias rotas y ciudades heridas. Moore escribe sobre Filadelfia, adicción y comunidad. 'Long Bright River' fue bestseller. Thriller literario con corazón.",
+    "nationality": "Estadounidense",
+    "born": 1983,
+    "genres": [
+      "ficción",
+      "thriller",
+      "literario"
+    ],
+    "notable_works": [
+      "Long Bright River",
+      "Heft",
+      "The Unseen World"
+    ]
+  },
+  "Ben Fountain": {
+    "bio": "Americano, novelista de la guerra de Irak. 'Billy Lynn's Long Halftime Walk' es una sátira sobre soldados en un partido de fútbol americano. Ganó el National Book Critics Circle. América en guerra consigo misma.",
+    "nationality": "Estadounidense",
+    "born": 1958,
+    "genres": [
+      "ficción",
+      "satírico",
+      "bélico"
+    ],
+    "notable_works": [
+      "Billy Lynn's Long Halftime Walk",
+      "Brief Encounters with Che Guevara"
+    ]
+  },
+  "Philippe Lançon": {
+    "bio": "Francés, periodista de Charlie Hebdo, superviviente del atentado. 'El colgajo' es su memoir sobre el ataque y la reconstrucción facial. Brutal, hermoso, necesario. Premio Femina 2018.",
+    "nationality": "Francés",
+    "born": 1963,
+    "genres": [
+      "memorias",
+      "periodismo",
+      "testimonio"
+    ],
+    "notable_works": [
+      "El colgajo"
+    ],
+    "awards": [
+      "Premio Femina 2018"
+    ]
+  },
+  "Tom Reiss": {
+    "bio": "Americano, biógrafo y periodista. Reiss ganó el Pulitzer con 'El conde negro': la vida del padre de Dumas, un general negro en la Francia napoleónica. Historia que parece novela.",
+    "nationality": "Estadounidense",
+    "genres": [
+      "biografía",
+      "historia",
+      "no ficción"
+    ],
+    "notable_works": [
+      "El conde negro",
+      "The Orientalist"
+    ],
+    "awards": [
+      "Premio Pulitzer 2013"
+    ]
+  },
+  "Mijaíl Bulgákov": {
+    "bio": "Ruso, autor de 'El maestro y Margarita', una de las novelas más originales del siglo XX. Bulgákov escribió sobre el diablo visitando Moscú con sátira y fantasía. Censurado en vida, ahora es un clásico absoluto.",
+    "nationality": "Ruso",
+    "born": 1891,
+    "died": 1940,
+    "genres": [
+      "ficción",
+      "fantástico",
+      "satírico"
+    ],
+    "notable_works": [
+      "El maestro y Margarita",
+      "Corazón de perro",
+      "La guardia blanca"
+    ]
+  },
+  "Michael Connelly": {
+    "bio": "Americano, creador de Harry Bosch, el detective de Los Ángeles. Connelly fue periodista de crímenes antes de novelista. Sus thrillers son precisos, adictivos, cinematográficos. El rey del procedural americano.",
+    "nationality": "Estadounidense",
+    "born": 1956,
+    "genres": [
+      "thriller",
+      "noir",
+      "policial"
+    ],
+    "notable_works": [
+      "El eco negro",
+      "El poeta",
+      "Deuda de sangre",
+      "El abogado del Lincoln"
+    ]
+  },
+  "Simon Sebag Montefiore": {
+    "bio": "Historiador británico, biógrafo del poder. Montefiore ha escrito sobre Stalin, los Romanov y Jerusalén con rigor y narrativa de bestseller. Historia épica para el gran público.",
+    "nationality": "Británico",
+    "born": 1965,
+    "genres": [
+      "historia",
+      "biografía",
+      "político"
+    ],
+    "notable_works": [
+      "Stalin",
+      "Los Romanov",
+      "Jerusalén: La biografía"
+    ]
+  },
+  "Nathan Hill": {
+    "bio": "Americano, novelista del debut espectacular. 'El Nix' es una saga familiar americana de 600 páginas: política, videojuegos, 1968 y el presente. Ambicioso y adictivo. Uno de los debuts de la década.",
+    "nationality": "Estadounidense",
+    "born": 1975,
+    "genres": [
+      "ficción",
+      "familiar",
+      "político"
+    ],
+    "notable_works": [
+      "El Nix",
+      "Wellness"
+    ]
+  },
+  "Angie Thomas": {
+    "bio": "Americana, autora de 'El odio que das'. Thomas escribió sobre un tiroteo policial y Black Lives Matter para jóvenes. Fenómeno juvenil y político. La voz de una generación.",
+    "nationality": "Estadounidense",
+    "born": 1988,
+    "genres": [
+      "juvenil",
+      "contemporáneo",
+      "político"
+    ],
+    "notable_works": [
+      "El odio que das",
+      "On the Come Up",
+      "Concrete Rose"
+    ]
+  },
+  "Guillermo Saccomanno": {
+    "bio": "Argentino, novelista del sur de Buenos Aires. Saccomanno escribe sobre Villa Gesell, la dictadura y la clase trabajadora con prosa nerviosa. '77' y 'Cámara Gesell' son sus obras mayores. Durísimo.",
+    "nationality": "Argentino",
+    "born": 1948,
+    "genres": [
+      "ficción",
+      "social",
+      "político"
+    ],
+    "notable_works": [
+      "77",
+      "Cámara Gesell",
+      "El oficinista"
+    ]
+  },
+  "Raymond Aron": {
+    "bio": "Francés, filósofo liberal, crítico del marxismo. Aron fue el contrapeso intelectual de Sartre durante décadas. 'El opio de los intelectuales' es su obra más famosa. Razón contra utopía.",
+    "nationality": "Francés",
+    "born": 1905,
+    "died": 1983,
+    "genres": [
+      "filosofía",
+      "política",
+      "ensayo"
+    ],
+    "notable_works": [
+      "El opio de los intelectuales",
+      "Las etapas del pensamiento sociológico",
+      "Memorias"
+    ]
+  },
+  "Abraham Verghese": {
+    "bio": "Etíope-americano, médico y novelista. Verghese escribió 'Hijos del ancho mundo': una saga etíope de gemelos, medicina y amor. 800 páginas que vuelan. El médico como humanista.",
+    "nationality": "Etíope-Estadounidense",
+    "born": 1955,
+    "genres": [
+      "ficción",
+      "médico",
+      "saga"
+    ],
+    "notable_works": [
+      "Hijos del ancho mundo",
+      "The Covenant of Water",
+      "My Own Country"
+    ]
+  },
+  "T. C. Boyle": {
+    "bio": "Americano, novelista prolífico y satírico. Boyle escribe sobre América con humor negro: comunas, inmigración, ecología, obsesiones. Virtuoso del cuento y la novela. Siempre interesante.",
+    "nationality": "Estadounidense",
+    "born": 1948,
+    "genres": [
+      "ficción",
+      "satírico",
+      "cuento"
+    ],
+    "notable_works": [
+      "Los amigos de los amigos",
+      "The Road to Wellville",
+      "The Tortilla Curtain"
+    ]
+  },
+  "John Barth": {
+    "bio": "Americano, postmodernista, experimentador. Barth escribió novelas larguísimas y metaficcionales. 'El plantador de tabaco' es una parodia del siglo XVIII. Para lectores muy pacientes.",
+    "nationality": "Estadounidense",
+    "born": 1930,
+    "died": 2024,
+    "genres": [
+      "ficción",
+      "postmoderno",
+      "experimental"
+    ],
+    "notable_works": [
+      "El plantador de tabaco",
+      "Giles Goat-Boy",
+      "Lost in the Funhouse"
+    ]
+  },
+  "Pat Conroy": {
+    "bio": "Americano del Sur, novelista de familias disfuncionales. Conroy escribió sobre padres militares, el Sur y los secretos familiares. 'El príncipe de las mareas' fue película con Streisand. Emotivo y sureño.",
+    "nationality": "Estadounidense",
+    "born": 1945,
+    "died": 2016,
+    "genres": [
+      "ficción",
+      "familiar",
+      "sureño"
+    ],
+    "notable_works": [
+      "El príncipe de las mareas",
+      "El gran Santini",
+      "Crónica de una muerte anunciada"
+    ]
+  },
+  "Jerzy Kosinski": {
+    "bio": "Polaco-americano, novelista controvertido. Kosinski escribió 'El pájaro pintado': un niño en la Europa del Holocausto. También 'Desde el jardín'. Acusado de plagio, se suicidó en 1991. Polémico hasta el final.",
+    "nationality": "Polaco-Estadounidense",
+    "born": 1933,
+    "died": 1991,
+    "genres": [
+      "ficción",
+      "Holocausto",
+      "satírico"
+    ],
+    "notable_works": [
+      "El pájaro pintado",
+      "Desde el jardín",
+      "Steps"
+    ]
+  },
+  "Alex Ross": {
+    "bio": "Americano, crítico musical del New Yorker. Ross escribió 'El ruido eterno': historia del siglo XX a través de su música. Divulgación musical de primer nivel. Hace que quieras escuchar todo.",
+    "nationality": "Estadounidense",
+    "born": 1968,
+    "genres": [
+      "música",
+      "historia",
+      "ensayo"
+    ],
+    "notable_works": [
+      "El ruido eterno",
+      "Escucha esto",
+      "Wagnerism"
+    ]
+  },
+  "Geoffrey Parker": {
+    "bio": "Historiador británico, experto en historia militar y el Imperio Español. Parker ha escrito sobre Felipe II, la guerra de los 80 años y la crisis del siglo XVII. Erudición al servicio de la narrativa.",
+    "nationality": "Británico",
+    "born": 1943,
+    "genres": [
+      "historia",
+      "militar",
+      "español"
+    ],
+    "notable_works": [
+      "Felipe II",
+      "La revolución militar",
+      "El siglo maldito"
+    ]
+  },
+  "Juan Manuel de Prada": {
+    "bio": "Zamorano, novelista y polemista. De Prada ganó el Planeta con 'La tempestad' a los 26. Escribe novela, columnas y ensayo con prosa barroca. Católico, provocador, talentoso.",
+    "nationality": "Español",
+    "born": 1970,
+    "genres": [
+      "ficción",
+      "ensayo",
+      "polémico"
+    ],
+    "notable_works": [
+      "La tempestad",
+      "Las máscaras del héroe",
+      "Morir bajo tu cielo"
+    ]
+  },
+  "John Vaillant": {
+    "bio": "Canadiense, periodista de la naturaleza salvaje. Vaillant escribe sobre tigres siberianos, incendios forestales y el hombre contra la naturaleza. 'El tigre' es fascinante. Aventura real.",
+    "nationality": "Canadiense",
+    "born": 1962,
+    "genres": [
+      "no ficción",
+      "naturaleza",
+      "aventura"
+    ],
+    "notable_works": [
+      "El tigre",
+      "Fire Weather",
+      "The Golden Spruce"
+    ]
+  },
+  "Isaac Rosa": {
+    "bio": "Sevillano, novelista de la memoria y la crisis. Rosa escribe sobre la Guerra Civil, el trabajo precario y la España contemporánea. 'El vano ayer' experimenta con la forma. Comprometido y exigente.",
+    "nationality": "Español",
+    "born": 1974,
+    "genres": [
+      "ficción",
+      "político",
+      "experimental"
+    ],
+    "notable_works": [
+      "El vano ayer",
+      "La habitación oscura",
+      "Feliz final"
+    ]
+  },
+  "Domenico Starnone": {
+    "bio": "Napolitano, novelista de la familia y el matrimonio. Starnone escribe novelas breves y afiladas sobre relaciones. Se rumorea que es Elena Ferrante (su esposa Anita Raja). 'Lazos' es brillante.",
+    "nationality": "Italiano",
+    "born": 1943,
+    "genres": [
+      "ficción",
+      "familiar",
+      "literario"
+    ],
+    "notable_works": [
+      "Lazos",
+      "Confidenza",
+      "Via Gemito"
+    ]
+  },
+  "James Fenimore Cooper": {
+    "bio": "Americano del siglo XIX, creador del western literario. Cooper escribió 'El último mohicano' y las novelas de Leatherstocking. Fundó la novela americana de frontera. Un clásico del género.",
+    "nationality": "Estadounidense",
+    "born": 1789,
+    "died": 1851,
+    "genres": [
+      "aventura",
+      "western",
+      "clásico"
+    ],
+    "notable_works": [
+      "El último mohicano",
+      "El cazador de ciervos",
+      "La pradera"
+    ]
+  },
+  "Owen Wister": {
+    "bio": "Americano, padre de la novela del Oeste. Wister escribió 'El virginiano' en 1902 y definió el género western para siempre. El cowboy silencioso, el código de honor, todo empieza aquí.",
+    "nationality": "Estadounidense",
+    "born": 1860,
+    "died": 1938,
+    "genres": [
+      "western",
+      "aventura",
+      "clásico"
+    ],
+    "notable_works": [
+      "El virginiano"
+    ]
+  },
+  "Lyman Frank Baum": {
+    "bio": "Americano, creador del Mago de Oz. Baum escribió 14 novelas sobre Oz y creó uno de los mundos fantásticos más queridos. La película de 1939 lo hizo inmortal. Magia americana.",
+    "nationality": "Estadounidense",
+    "born": 1856,
+    "died": 1919,
+    "genres": [
+      "fantasía",
+      "infantil",
+      "clásico"
+    ],
+    "notable_works": [
+      "El maravilloso mago de Oz",
+      "El país de Oz",
+      "Ozma de Oz"
+    ]
+  },
+  "André Pieyre de Mandiargues": {
+    "bio": "Francés, surrealista erótico. Mandiargues escribía relatos donde el deseo y lo extraño se mezclan. 'La motocicleta' fue película escandalosa. Culto, elegante, transgresor.",
+    "nationality": "Francés",
+    "born": 1909,
+    "died": 1991,
+    "genres": [
+      "ficción",
+      "surrealista",
+      "erótico"
+    ],
+    "notable_works": [
+      "La motocicleta",
+      "El margen",
+      "La marea"
+    ]
+  },
+  "Fernando Trías de Bes": {
+    "bio": "Barcelonés, economista y escritor de negocios. Trías de Bes escribe sobre innovación, creatividad y emprendimiento. Coautor con Kotler. Ideas de negocio accesibles.",
+    "nationality": "Español",
+    "born": 1967,
+    "genres": [
+      "negocios",
+      "innovación",
+      "autoayuda"
+    ],
+    "notable_works": [
+      "La buena suerte",
+      "El libro negro del emprendedor",
+      "Marketing Lateral"
+    ]
+  },
+  "Mark Lilla": {
+    "bio": "Americano, historiador de las ideas, provocador intelectual. Lilla escribe sobre la mente reaccionaria, la izquierda identitaria y la historia del pensamiento. Polémico y estimulante.",
+    "nationality": "Estadounidense",
+    "born": 1956,
+    "genres": [
+      "ensayo",
+      "filosofía",
+      "político"
+    ],
+    "notable_works": [
+      "La mente naufragada",
+      "El regreso liberal",
+      "The Reckless Mind"
+    ]
+  },
+  "S. C. Gwynne": {
+    "bio": "Americano, historiador narrativo del Oeste. Gwynne escribió 'Imperio de la luna de agosto' sobre los comanches: historia que lee como thriller. También biografía de Stonewall Jackson.",
+    "nationality": "Estadounidense",
+    "genres": [
+      "historia",
+      "western",
+      "biografía"
+    ],
+    "notable_works": [
+      "Imperio de la luna de agosto",
+      "Rebel Yell"
+    ]
+  },
+  "Tawni O'Dell": {
+    "bio": "Americana, novelista del cinturón del óxido. O'Dell escribe sobre la clase trabajadora de Pensilvania con empatía. 'Mina de carbón' fue selección de Oprah. Drama familiar americano.",
+    "nationality": "Estadounidense",
+    "born": 1964,
+    "genres": [
+      "ficción",
+      "drama",
+      "americano"
+    ],
+    "notable_works": [
+      "Mina de carbón",
+      "Sister Mine"
+    ]
+  },
+  "Jean-Philippe Postel": {
+    "bio": "Francés, médico y escritor. Postel ha escrito sobre arte, medicina y la vida interior con elegancia. Ensayo literario francés.",
+    "nationality": "Francés",
+    "genres": [
+      "ensayo",
+      "arte",
+      "memorias"
+    ],
+    "notable_works": [
+      "L'Affaire Arnolfini"
+    ]
+  },
+  "Elaine Vilar Madruga": {
+    "bio": "Cubana, escritora de ciencia ficción y fantasía. Vilar Madruga representa la nueva generación de autoras cubanas de género. Imaginación caribeña.",
+    "nationality": "Cubana",
+    "born": 1989,
+    "genres": [
+      "ciencia ficción",
+      "fantasía",
+      "cuento"
+    ],
+    "notable_works": [
+      "Las malas hierbas"
+    ]
+  },
+  "Alberto Bevilacqua": {
+    "bio": "Italiano, novelista y poeta. Bevilacqua ganó el Strega y el Campiello. Escribía sobre la Italia de posguerra, el deseo y la memoria. Una voz importante de las letras italianas.",
+    "nationality": "Italiano",
+    "born": 1934,
+    "died": 2013,
+    "genres": [
+      "ficción",
+      "poesía",
+      "italiano"
+    ],
+    "notable_works": [
+      "La Califfa",
+      "El ojo del gato",
+      "Una città in amore"
+    ]
+  },
+  "J. Ryan Stradal": {
+    "bio": "Americano, novelista del Midwest. Stradal escribe sobre familias, comida y comunidades pequeñas. 'Kitchens of the Great Midwest' mezcla gastronomía y saga familiar. Cálido y original.",
+    "nationality": "Estadounidense",
+    "born": 1978,
+    "genres": [
+      "ficción",
+      "familiar",
+      "gastronomía"
+    ],
+    "notable_works": [
+      "Kitchens of the Great Midwest",
+      "The Lager Queen of Minnesota",
+      "Saturday Night at the Lakeside Supper Club"
+    ]
+  },
+  "Michael Huemer": {
+    "bio": "Filósofo americano, libertario, provocador académico. Huemer escribe sobre ética, política y epistemología con claridad y argumentos afilados. Filosofía analítica accesible.",
+    "nationality": "Estadounidense",
+    "born": 1969,
+    "genres": [
+      "filosofía",
+      "política",
+      "ética"
+    ],
+    "notable_works": [
+      "The Problem of Political Authority",
+      "Ethical Intuitionism"
+    ]
+  },
+  "Vardis Fisher": {
+    "bio": "Americano, novelista del Oeste profundo. Fisher escribió una saga de 12 novelas sobre la historia de la humanidad. También novelas sobre mormones y el Idaho salvaje. Ambicioso y olvidado.",
+    "nationality": "Estadounidense",
+    "born": 1895,
+    "died": 1968,
+    "genres": [
+      "ficción",
+      "histórico",
+      "western"
+    ],
+    "notable_works": [
+      "Mountain Man",
+      "Children of God",
+      "Testament of Man"
+    ]
+  },
+  "Jacqueline Susann": {
+    "bio": "Americana, reina del bestseller de los 60. Susann escribió 'El valle de las muñecas': sexo, drogas y Hollywood que vendió 30 millones de copias. Trash glorioso.",
+    "nationality": "Estadounidense",
+    "born": 1918,
+    "died": 1974,
+    "genres": [
+      "ficción",
+      "romance",
+      "drama"
+    ],
+    "notable_works": [
+      "El valle de las muñecas",
+      "The Love Machine",
+      "Once Is Not Enough"
+    ]
+  },
+  "Hans Jakob Christoffel von Grimmelshausen": {
+    "bio": "Alemán del siglo XVII, autor de 'Simplicissimus': la gran novela de la Guerra de los Treinta Años. Picaresca alemana, brutal y viva. Un clásico de la literatura europea.",
+    "nationality": "Alemán",
+    "born": 1621,
+    "died": 1676,
+    "genres": [
+      "ficción",
+      "picaresca",
+      "clásico"
+    ],
+    "notable_works": [
+      "El aventurero Simplicissimus"
+    ]
+  },
+  "John Warrillow": {
+    "bio": "Canadiense, empresario y autor de negocios. Warrillow escribe sobre cómo construir empresas que se puedan vender. Práctico y directo. Emprendimiento con estrategia de salida.",
+    "nationality": "Canadiense",
+    "genres": [
+      "negocios",
+      "emprendimiento",
+      "autoayuda"
+    ],
+    "notable_works": [
+      "Built to Sell",
+      "The Automatic Customer"
+    ]
+  },
+  "Sören Kierkegaard": {
+    "bio": "Danés, padre del existencialismo. Kierkegaard escribió sobre la angustia, la fe y la existencia individual con pasión y ironía. Filósofo religioso que influyó en ateos. El primer existencialista.",
+    "nationality": "Danés",
+    "born": 1813,
+    "died": 1855,
+    "genres": [
+      "filosofía",
+      "religión",
+      "existencialismo"
+    ],
+    "notable_works": [
+      "Temor y temblor",
+      "El concepto de la angustia",
+      "O lo uno o lo otro"
+    ]
+  },
+  "Soren Kierkegaard": {
+    "bio": "Danés, padre del existencialismo. Kierkegaard escribió sobre la angustia, la fe y la existencia individual con pasión y ironía. Filósofo religioso que influyó en ateos. El primer existencialista.",
+    "nationality": "Danés",
+    "born": 1813,
+    "died": 1855,
+    "genres": [
+      "filosofía",
+      "religión",
+      "existencialismo"
+    ],
+    "notable_works": [
+      "Temor y temblor",
+      "El concepto de la angustia",
+      "O lo uno o lo otro"
+    ]
+  },
+  "Ivo Andric": {
+    "bio": "Yugoslavo (bosnio), Nobel 1961, el novelista de los Balcanes. Andrić escribió 'Un puente sobre el Drina': cuatro siglos de historia bosnia a través de un puente. Épico, humano, imprescindible.",
+    "nationality": "Yugoslavo (Bosnio)",
+    "born": 1892,
+    "died": 1975,
+    "genres": [
+      "ficción",
+      "histórico",
+      "épico"
+    ],
+    "notable_works": [
+      "Un puente sobre el Drina",
+      "Crónica de Travnik",
+      "La señorita"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1961"
+    ]
+  },
+  "Ruth L. Ozeki": {
+    "bio": "Americana de origen japonés, novelista y monja zen. Ozeki escribe sobre comida, ecología y budismo con humor y profundidad. 'Un cuento contado por el tiempo' fue finalista del Booker. Única.",
+    "nationality": "Estadounidense",
+    "born": 1956,
+    "genres": [
+      "ficción",
+      "ecológico",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Un cuento contado por el tiempo",
+      "Mi año de carnes",
+      "The Book of Form and Emptiness"
+    ]
+  },
+  "Anne Rice": {
+    "bio": "Americana, reina de los vampiros. Rice reinvento el genero con Entrevista con el vampiro. Millones de copias, peliculas, culto. La madre de los vampiros modernos.",
+    "nationality": "Estadounidense",
+    "born": 1941,
+    "died": 2021,
+    "genres": [
+      "terror",
+      "gotico",
+      "fantastico"
+    ],
+    "notable_works": [
+      "Entrevista con el vampiro",
+      "Lestat el vampiro"
+    ]
+  },
+  "Diana Gabaldon": {
+    "bio": "Americana, creadora de Outlander. Gabaldon mezcla romance, historia y viajes en el tiempo en sagas adictivas. Claire y Jamie Fraser conquistaron lectores y despues Netflix.",
+    "nationality": "Estadounidense",
+    "born": 1952,
+    "genres": [
+      "romance",
+      "historico",
+      "fantastico"
+    ],
+    "notable_works": [
+      "Forastera",
+      "Atrapada en el tiempo",
+      "Viajera"
+    ]
+  },
+  "Arthur Miller": {
+    "bio": "Americano, dramaturgo de la conciencia americana. Miller escribio La muerte de un viajante y Las brujas de Salem. Casado con Marilyn Monroe. Un gigante del teatro.",
+    "nationality": "Estadounidense",
+    "born": 1915,
+    "died": 2005,
+    "genres": [
+      "teatro",
+      "drama",
+      "politico"
+    ],
+    "notable_works": [
+      "La muerte de un viajante",
+      "Las brujas de Salem"
+    ]
+  },
+  "Johann Wolfgang von Goethe": {
+    "bio": "Aleman, el genio universal. Goethe escribio Fausto y Las penas del joven Werther. Poeta, cientifico, ministro. El escritor mas importante de la lengua alemana.",
+    "nationality": "Aleman",
+    "born": 1749,
+    "died": 1832,
+    "genres": [
+      "poesia",
+      "teatro",
+      "ficcion"
+    ],
+    "notable_works": [
+      "Fausto",
+      "Las penas del joven Werther"
+    ]
+  },
+  "Ted Chiang": {
+    "bio": "Americano de origen chino, maestro del cuento de ciencia ficcion. Chiang publica poco pero cada relato es una joya filosofica. La historia de tu vida fue la pelicula Arrival.",
+    "nationality": "Estadounidense",
+    "born": 1967,
+    "genres": [
+      "ciencia ficcion",
+      "cuento",
+      "filosofico"
+    ],
+    "notable_works": [
+      "La historia de tu vida",
+      "Exhalacion"
+    ]
+  },
+  "John Cheever": {
+    "bio": "Americano, el Chejov de los suburbios. Cheever escribio cuentos sobre la clase media americana, sus matrimonios y sus silencios. El nadador es perfecto.",
+    "nationality": "Estadounidense",
+    "born": 1912,
+    "died": 1982,
+    "genres": [
+      "cuento",
+      "ficcion",
+      "suburbano"
+    ],
+    "notable_works": [
+      "El nadador",
+      "Cronica de los Wapshot",
+      "Falconer"
+    ]
+  },
+  "Dolores Redondo": {
+    "bio": "Donostiarra, reina del thriller espanol. Redondo creo la trilogia del Baztan: Amaia Salazar, folklore vasco y crimenes en el valle. Millones de lectores.",
+    "nationality": "Espanola",
+    "born": 1969,
+    "genres": [
+      "thriller",
+      "misterio",
+      "noir"
+    ],
+    "notable_works": [
+      "El guardian invisible",
+      "Legado en los huesos",
+      "Todo esto te dare"
+    ]
+  },
+  "Elena Armas": {
+    "bio": "Espanola, fenomeno del romance contemporaneo. Armas escribio The Spanish Love Deception en ingles y conquisto BookTok. Romance con humor y quimica.",
+    "nationality": "Espanola",
+    "genres": [
+      "romance",
+      "contemporaneo",
+      "humor"
+    ],
+    "notable_works": [
+      "The Spanish Love Deception",
+      "The American Roommate Experiment"
+    ]
+  },
+  "Chris Whitaker": {
+    "bio": "Britanico, novelista de tragedias y redencion. Whitaker escribe thrillers emotivos sobre gente rota. Empezamos por el final fue bestseller sorpresa.",
+    "nationality": "Britanico",
+    "born": 1978,
+    "genres": [
+      "thriller",
+      "drama",
+      "literario"
+    ],
+    "notable_works": [
+      "Empezamos por el final",
+      "All the Wicked Girls"
+    ]
+  },
+  "William H. Gass": {
+    "bio": "Americano, estilista extremo, experimental. Gass escribia novelas donde el lenguaje es el protagonista. El tunel le tomo 30 anos. Dificil, brillante.",
+    "nationality": "Estadounidense",
+    "born": 1924,
+    "died": 2017,
+    "genres": [
+      "ficcion",
+      "experimental",
+      "literario"
+    ],
+    "notable_works": [
+      "El tunel",
+      "In the Heart of the Heart of the Country"
+    ]
+  },
+  "Karen Joy Fowler": {
+    "bio": "Americana, novelista inclasificable. Fowler escribe sobre familias, simios y clubs de lectura. El club de lectura de Jane Austen fue bestseller.",
+    "nationality": "Estadounidense",
+    "born": 1950,
+    "genres": [
+      "ficcion",
+      "literario",
+      "fantastico"
+    ],
+    "notable_works": [
+      "El club de lectura de Jane Austen",
+      "Todos fuimos invitados"
+    ]
+  },
+  "Daniel Keyes": {
+    "bio": "Americano, autor de Flores para Algernon. Keyes escribio la historia de Charlie Gordon, cuya inteligencia aumenta y luego decrece. Un clasico de la ciencia ficcion emotiva.",
+    "nationality": "Estadounidense",
+    "born": 1927,
+    "died": 2014,
+    "genres": [
+      "ciencia ficcion",
+      "drama",
+      "literario"
+    ],
+    "notable_works": [
+      "Flores para Algernon",
+      "The Minds of Billy Milligan"
+    ]
+  },
+  "Esopo": {
+    "bio": "Griego antiguo, el fabulista original. Esopo escribio fabulas de animales con moralejas hace 2600 anos. La tortuga y la liebre, la zorra y las uvas.",
+    "nationality": "Griego",
+    "born": -620,
+    "died": -564,
+    "genres": [
+      "fabula",
+      "clasico",
+      "infantil"
+    ],
+    "notable_works": [
+      "Fabulas"
+    ]
+  },
+  "Publio Virgilio Maron": {
+    "bio": "Romano, el poeta de Roma. Virgilio escribio la Eneida: el poema fundacional de Roma y modelo de toda epica posterior. El Homero latino.",
+    "nationality": "Romano",
+    "born": -70,
+    "died": -19,
+    "genres": [
+      "poesia",
+      "epico",
+      "clasico"
+    ],
+    "notable_works": [
+      "Eneida",
+      "Bucolicas",
+      "Georgicas"
+    ]
+  },
+  "Mira Grant": {
+    "bio": "Americana, seudonimo de Seanan McGuire. Grant escribe sobre zombis, parasitos y apocalipsis con rigor cientifico. Feed inicio la saga Newsflesh.",
+    "nationality": "Estadounidense",
+    "born": 1978,
+    "genres": [
+      "ciencia ficcion",
+      "terror",
+      "thriller"
+    ],
+    "notable_works": [
+      "Feed",
+      "Parasite",
+      "Into the Drowning Deep"
+    ]
+  },
+  "Jose Luis Pardo": {
+    "bio": "Filosofo espanol, ensayista del presente. Pardo escribe sobre la vida contemporanea, la intimidad y la cultura con claridad. Premio Nacional de Ensayo.",
+    "nationality": "Espanol",
+    "born": 1954,
+    "genres": [
+      "filosofia",
+      "ensayo",
+      "cultural"
+    ],
+    "notable_works": [
+      "La intimidad",
+      "Esto no es musica",
+      "Estudios del malestar"
+    ]
+  },
+  "Isabel Burdiel": {
+    "bio": "Historiadora espanola, biografa de Isabel II. Burdiel ha escrito la biografia definitiva de la reina con rigor academico. Premio Nacional de Historia.",
+    "nationality": "Espanola",
+    "born": 1958,
+    "genres": [
+      "historia",
+      "biografia",
+      "espanol"
+    ],
+    "notable_works": [
+      "Isabel II",
+      "Emilia Pardo Bazan"
+    ]
+  },
+  "Mark Oliver Everett": {
+    "bio": "Americano, lider de Eels, memorista. Everett escribio Cosas que los nietos deberian saber: memorias de una familia destruida con humor y tristeza.",
+    "nationality": "Estadounidense",
+    "born": 1963,
+    "genres": [
+      "memorias",
+      "musica",
+      "autobiografico"
+    ],
+    "notable_works": [
+      "Cosas que los nietos deberian saber"
+    ]
+  },
+  "Elisabeth Roudinesco": {
+    "bio": "Francesa, historiadora del psicoanalisis. Roudinesco ha escrito sobre Freud, Lacan y la historia del movimiento psicoanalitico.",
+    "nationality": "Francesa",
+    "born": 1944,
+    "genres": [
+      "historia",
+      "psicoanalisis",
+      "biografia"
+    ],
+    "notable_works": [
+      "Sigmund Freud en su tiempo y el nuestro",
+      "Jacques Lacan"
+    ]
+  },
+  "Walter Murch": {
+    "bio": "Americano, legendario editor de cine. Murch edito Apocalypse Now y El paciente ingles. En el momento del parpadeo es su reflexion sobre el montaje.",
+    "nationality": "Estadounidense",
+    "born": 1943,
+    "genres": [
+      "cine",
+      "ensayo",
+      "tecnico"
+    ],
+    "notable_works": [
+      "En el momento del parpadeo"
+    ]
+  },
+  "Elliott Sober": {
+    "bio": "Filosofo americano de la biologia. Sober escribe sobre evolucion, diseno inteligente y filosofia de la ciencia. Rigor analitico aplicado a Darwin.",
+    "nationality": "Estadounidense",
+    "born": 1948,
+    "genres": [
+      "filosofia",
+      "ciencia",
+      "biologia"
+    ],
+    "notable_works": [
+      "Evidence and Evolution"
+    ]
+  },
+  "Nana Kwame Adjei-Brenyah": {
+    "bio": "Americano de origen ghanes, cuentista de la violencia americana. Adjei-Brenyah escribe sobre raza, consumismo y distopia. Friday Black fue revelacion.",
+    "nationality": "Estadounidense",
+    "born": 1990,
+    "genres": [
+      "cuento",
+      "ciencia ficcion",
+      "satirico"
+    ],
+    "notable_works": [
+      "Friday Black",
+      "Chain-Gang All-Stars"
+    ]
+  },
+  "Angela Becerra Acevedo": {
+    "bio": "Colombiana, novelista del amor y la pasion. Becerra escribe historias romanticas con sensualidad y emocion. Premio Planeta 2009.",
+    "nationality": "Colombiana",
+    "born": 1957,
+    "genres": [
+      "romance",
+      "ficcion",
+      "drama"
+    ],
+    "notable_works": [
+      "Memorias de un sinverguenza de siete suelas",
+      "El penultimo sueno"
+    ]
+  },
+  "Jose Varela Ortega": {
+    "bio": "Historiador espanol, experto en la Espana contemporanea. Varela Ortega ha escrito sobre la Restauracion y el caciquismo. Rigor y profundidad.",
+    "nationality": "Espanol",
+    "born": 1943,
+    "genres": [
+      "historia",
+      "politico",
+      "espanol"
+    ],
+    "notable_works": [
+      "Los amigos politicos",
+      "Espana: Un relato de grandeza y odio"
+    ]
+  },
+  "Douglas Adams": {
+    "bio": "Inglés, humorista cósmico. Adams escribió 'Guía del autoestopista galáctico': ciencia ficción absurda que se convirtió en culto. La respuesta es 42. Murió a los 49 dejando fans inconsolables y una toalla.",
+    "nationality": "Británico",
+    "born": 1952,
+    "died": 2001,
+    "genres": [
+      "ciencia ficción",
+      "humor",
+      "satírico"
+    ],
+    "notable_works": [
+      "Guía del autoestopista galáctico",
+      "El restaurante del fin del mundo",
+      "Dirk Gently"
+    ]
+  },
+  "Dennis Lehane": {
+    "bio": "Bostoniano, maestro del thriller oscuro. Lehane escribe sobre crimen en Boston con profundidad psicológica. 'Mystic River' y 'Shutter Island' fueron películas de Eastwood y Scorsese. El noir americano contemporáneo.",
+    "nationality": "Estadounidense",
+    "born": 1965,
+    "genres": [
+      "thriller",
+      "noir",
+      "misterio"
+    ],
+    "notable_works": [
+      "Mystic River",
+      "Shutter Island",
+      "Desapareció una noche"
+    ]
+  },
+  "Stephen Hawking": {
+    "bio": "Inglés, físico teórico, divulgador legendario. Hawking escribió 'Breve historia del tiempo' desde una silla de ruedas y lo vendió 10 millones de veces. Agujeros negros para todos. La mente más brillante en el cuerpo más frágil.",
+    "nationality": "Británico",
+    "born": 1942,
+    "died": 2018,
+    "genres": [
+      "divulgación",
+      "ciencia",
+      "cosmología"
+    ],
+    "notable_works": [
+      "Breve historia del tiempo",
+      "El universo en una cáscara de nuez",
+      "Brevísima historia del tiempo"
+    ]
+  },
+  "Alan Moore": {
+    "bio": "Inglés, mago del cómic, genio barbudo. Moore escribió 'Watchmen', 'V de Vendetta' y 'From Hell': cómics que son literatura. Odia las adaptaciones de Hollywood. El Shakespeare de las viñetas.",
+    "nationality": "Británico",
+    "born": 1953,
+    "genres": [
+      "cómic",
+      "novela gráfica",
+      "fantástico"
+    ],
+    "notable_works": [
+      "Watchmen",
+      "V de Vendetta",
+      "From Hell",
+      "La liga de los hombres extraordinarios"
+    ]
+  },
+  "Jack Weatherford": {
+    "bio": "Antropólogo americano, experto en Genghis Khan. Weatherford escribió la biografía definitiva del conquistador mongol con trabajo de campo en Mongolia. Historia que lee como aventura.",
+    "nationality": "Estadounidense",
+    "born": 1945,
+    "genres": [
+      "historia",
+      "biografía",
+      "antropología"
+    ],
+    "notable_works": [
+      "Genghis Khan y el inicio del mundo moderno",
+      "The Secret History of the Mongol Queens"
+    ]
+  },
+  "Colin Barrett": {
+    "bio": "Irlandés, cuentista del oeste de Irlanda. Barrett escribe sobre jóvenes en pueblos deprimidos con oído perfecto para el diálogo y la violencia contenida. 'Glanbeigh' lo consagró. Una nueva voz irlandesa.",
+    "nationality": "Irlandés",
+    "born": 1982,
+    "genres": [
+      "cuento",
+      "ficción",
+      "irlandés"
+    ],
+    "notable_works": [
+      "Glanbeigh",
+      "Homesickness"
+    ]
+  },
+  "William Taubman": {
+    "bio": "Historiador americano, biógrafo de líderes soviéticos. Taubman escribió la biografía definitiva de Khrushchev (Pulitzer) y de Gorbachov. Historia de la Guerra Fría de primera mano.",
+    "nationality": "Estadounidense",
+    "born": 1940,
+    "genres": [
+      "biografía",
+      "historia",
+      "político"
+    ],
+    "notable_works": [
+      "Khrushchev: The Man and His Era",
+      "Gorbachev: His Life and Times"
+    ],
+    "awards": [
+      "Premio Pulitzer 2004"
+    ]
+  },
+  "Miguel Delibes de Castro": {
+    "bio": "Biólogo español, hijo del novelista, experto en fauna ibérica. Delibes de Castro ha escrito sobre linces, lobos y conservación. Divulgación científica con compromiso ecológico.",
+    "nationality": "Español",
+    "born": 1947,
+    "genres": [
+      "divulgación",
+      "naturaleza",
+      "ecología"
+    ],
+    "notable_works": [
+      "La tierra herida",
+      "Vida: la naturaleza en peligro"
+    ]
+  },
+  "Tomi Adeyemi": {
+    "bio": "Nigeriana-americana, autora de fantasía inspirada en África. Adeyemi escribió 'Hijos de sangre y hueso': magia yoruba, opresión y revolución. Conquistó el YA con representación africana. El futuro de la fantasía.",
+    "nationality": "Nigeriana-Estadounidense",
+    "born": 1993,
+    "genres": [
+      "fantasía",
+      "juvenil",
+      "africano"
+    ],
+    "notable_works": [
+      "Hijos de sangre y hueso",
+      "Children of Virtue and Vengeance"
+    ]
+  },
+  "John Hersey": {
+    "bio": "Americano, periodista que escribió 'Hiroshima': el reportaje sobre la bomba atómica que cambió el periodismo. Ocupó un número entero del New Yorker. También novelista. Periodismo como testimonio moral.",
+    "nationality": "Estadounidense",
+    "born": 1914,
+    "died": 1993,
+    "genres": [
+      "periodismo",
+      "no ficción",
+      "histórico"
+    ],
+    "notable_works": [
+      "Hiroshima",
+      "The Wall",
+      "A Bell for Adano"
+    ],
+    "awards": [
+      "Premio Pulitzer 1945"
+    ]
+  },
+  "J. M. Roberts": {
+    "bio": "Historiador britanico, autor de historias universales. Roberts escribio la Historia del mundo en un solo volumen y la historia de Europa. Sintesis magistral.",
+    "nationality": "Britanico",
+    "born": 1928,
+    "died": 2003,
+    "genres": [
+      "historia",
+      "universal",
+      "divulgacion"
+    ],
+    "notable_works": [
+      "Historia del mundo",
+      "Historia de Europa"
+    ]
+  },
+  "Adam Haslett": {
+    "bio": "Americano, novelista de familias rotas y enfermedad mental. 'Imagínate esto' sobre una familia con trastorno bipolar fue finalista del Pulitzer. Profundo y compasivo.",
+    "nationality": "Estadounidense",
+    "born": 1970,
+    "genres": [
+      "ficción",
+      "drama",
+      "psicológico"
+    ],
+    "notable_works": [
+      "Imagínate esto",
+      "Union Atlantic"
+    ]
+  },
+  "Dorothy M. Johnson": {
+    "bio": "Americana, cuentista del Oeste. Johnson escribió westerns que se convirtieron en películas clásicas: 'El hombre que mató a Liberty Valance', 'Un hombre llamado Caballo'. El Oeste con humanidad.",
+    "nationality": "Estadounidense",
+    "born": 1905,
+    "died": 1984,
+    "genres": [
+      "western",
+      "cuento",
+      "histórico"
+    ],
+    "notable_works": [
+      "El hombre que mató a Liberty Valance",
+      "Un hombre llamado Caballo"
+    ]
+  },
+  "Gonzalo Hidalgo Bayal": {
+    "bio": "Extremeño, novelista de culto. Hidalgo Bayal escribe novelas exigentes y originales alejadas de las modas. 'El espíritu áspero' y 'Paradoja del interventor' son para lectores pacientes. Un secreto bien guardado.",
+    "nationality": "Español",
+    "born": 1950,
+    "genres": [
+      "ficción",
+      "literario",
+      "experimental"
+    ],
+    "notable_works": [
+      "El espíritu áspero",
+      "Paradoja del interventor",
+      "Campo de amapolas blancas"
+    ]
+  },
+  "Victor Gomez Pin": {
+    "bio": "Filosofo espanol, especialista en Aristoteles y filosofia de la ciencia. Gomez Pin escribe sobre metafisica, ciencia y toros con rigor y pasion.",
+    "nationality": "Espanol",
+    "born": 1944,
+    "genres": [
+      "filosofia",
+      "ensayo",
+      "ciencia"
+    ],
+    "notable_works": [
+      "El drama de la ciudad ideal",
+      "Filosofia: Interrogaciones que a todos conciernen"
+    ]
+  },
+  "el Inca Garcilaso de la Vega": {
+    "bio": "Peruano mestizo del siglo XVI, primer escritor latinoamericano. Garcilaso escribio los Comentarios Reales sobre el Peru incaico. Puente entre dos mundos.",
+    "nationality": "Peruano",
+    "born": 1539,
+    "died": 1616,
+    "genres": [
+      "historia",
+      "cronica",
+      "clasico"
+    ],
+    "notable_works": [
+      "Comentarios Reales de los Incas",
+      "La Florida del Inca"
+    ]
+  },
+  "Azahara Alonso": {
+    "bio": "Espanola, poeta y editora. Alonso escribe poesia y dirige la editorial Letraherida. Una voz de la nueva poesia espanola.",
+    "nationality": "Espanola",
+    "genres": [
+      "poesia",
+      "lirico"
+    ],
+    "notable_works": [
+      "Bajas presiones"
+    ]
+  },
+  "Leland M. Roth": {
+    "bio": "Historiador de arquitectura americano. Roth ha escrito manuales fundamentales sobre arquitectura americana. Referencia académica para estudiantes.",
+    "nationality": "Estadounidense",
+    "genres": [
+      "arquitectura",
+      "historia",
+      "académico"
+    ],
+    "notable_works": [
+      "Understanding Architecture",
+      "American Architecture"
+    ]
+  },
+  "Alison Belsham": {
+    "bio": "Británica, autora de thrillers oscuros. Belsham escribe sobre asesinos y secretos con atmósfera siniestra. 'El tatuador de Auschwitz' es perturbador. Suspense que inquieta.",
+    "nationality": "Británica",
+    "genres": [
+      "thriller",
+      "misterio",
+      "oscuro"
+    ],
+    "notable_works": [
+      "The Tattoo Thief",
+      "Her Last Breath"
+    ]
+  },
+  "Juan Francisco Fuentes": {
+    "bio": "Historiador espanol, experto en historia de los conceptos y la Espana contemporanea. Fuentes escribe sobre ideas politicas y su evolucion.",
+    "nationality": "Espanol",
+    "genres": [
+      "historia",
+      "politico",
+      "espanol"
+    ],
+    "notable_works": [
+      "Historia de Espana",
+      "Adolfo Suarez"
+    ]
+  },
+  "Francesc Gasco": {
+    "bio": "Valenciano, paleontologo y divulgador cientifico. Gasco escribe y habla sobre dinosaurios con pasion y rigor. Ciencia accesible para todos.",
+    "nationality": "Espanol",
+    "genres": [
+      "divulgacion",
+      "ciencia",
+      "paleontologia"
+    ],
+    "notable_works": [
+      "Esas cosas de dinosaurios"
+    ]
+  },
+  "Ángela Becerra Acevedo": {
+    "bio": "Colombiana, novelista de bestsellers románticos. Becerra escribe historias de amor con ambientación exótica y personajes apasionados. Premio Planeta 2009. Romance latino de calidad.",
+    "nationality": "Colombiana",
+    "born": 1957,
+    "genres": [
+      "romance",
+      "ficción",
+      "drama"
+    ],
+    "notable_works": [
+      "El penúltimo sueño",
+      "Memorias de un sinvergüenza de siete suelas"
+    ]
+  },
+  "Élisabeth Roudinesco": {
+    "bio": "Francesa, historiadora del psicoanálisis. Roudinesco ha escrito la biografía definitiva de Lacan y la historia del psicoanálisis en Francia. Rigurosa y polémica. La gran historiadora de Freud y sus herederos.",
+    "nationality": "Francesa",
+    "born": 1944,
+    "genres": [
+      "ensayo",
+      "biografía",
+      "psicoanálisis"
+    ],
+    "notable_works": [
+      "Lacan: Esbozo de una vida",
+      "Historia del psicoanálisis en Francia"
+    ]
+  },
+  "Víctor Gómez Pin": {
+    "bio": "Filosofo espanol, especialista en Aristoteles y filosofia de la ciencia. Gomez Pin escribe sobre metafisica, ciencia y toros con rigor.",
+    "nationality": "Espanol",
+    "born": 1944,
+    "genres": [
+      "filosofia",
+      "ensayo",
+      "ciencia"
+    ],
+    "notable_works": [
+      "El drama de la ciudad ideal"
+    ]
+  },
+  "Adolfo Bioy Casares": {
+    "bio": "Argentino, amigo de Borges, maestro de la fantasía. Bioy escribió 'La invención de Morel': una isla, una máquina, un amor imposible. También escribió con Borges bajo seudónimo. Elegante y perfecto.",
+    "nationality": "Argentino",
+    "born": 1914,
+    "died": 1999,
+    "genres": [
+      "ficción",
+      "fantástico",
+      "ciencia ficción"
+    ],
+    "notable_works": [
+      "La invención de Morel",
+      "El sueño de los héroes",
+      "Diario de la guerra del cerdo"
+    ]
+  },
+  "Barbara Kingsolver": {
+    "bio": "Americana, novelista del sur profundo y la naturaleza. Kingsolver escribe sobre ecología, política y familias con pasión. 'La biblia envenenada' es épica. Pulitzer 2023 por 'Demon Copperhead'. Comprometida y poderosa.",
+    "nationality": "Estadounidense",
+    "born": 1955,
+    "genres": [
+      "ficción",
+      "ecológico",
+      "social"
+    ],
+    "notable_works": [
+      "La biblia envenenada",
+      "Demon Copperhead",
+      "El árbol de los frijoles"
+    ],
+    "awards": [
+      "Premio Pulitzer 2023"
+    ]
+  },
+  "Susan Orlean": {
+    "bio": "Americana, periodista del New Yorker, maestra de la crónica. Orlean escribe sobre temas extraños con elegancia: 'El ladrón de orquídeas' se convirtió en película de Kaufman. Curiosidad convertida en arte.",
+    "nationality": "Estadounidense",
+    "born": 1955,
+    "genres": [
+      "no ficción",
+      "periodismo",
+      "crónica"
+    ],
+    "notable_works": [
+      "El ladrón de orquídeas",
+      "La biblioteca en llamas",
+      "Rin Tin Tin"
+    ]
+  },
+  "Delia Owens": {
+    "bio": "Americana, zoóloga que escribió una novela a los 70 y vendió 15 millones de copias. 'Donde cantan los cangrejos' es sobre una chica sola en los pantanos de Carolina. Fenómeno editorial tardío.",
+    "nationality": "Estadounidense",
+    "born": 1949,
+    "genres": [
+      "ficción",
+      "misterio",
+      "naturaleza"
+    ],
+    "notable_works": [
+      "Donde cantan los cangrejos"
+    ]
+  },
+  "William Styron": {
+    "bio": "Sureño, novelista del peso de la historia. Styron escribió 'La decisión de Sophie' sobre el Holocausto y 'Las confesiones de Nat Turner' sobre la esclavitud. También memorias sobre la depresión. Profundo y valiente.",
+    "nationality": "Estadounidense",
+    "born": 1925,
+    "died": 2006,
+    "genres": [
+      "ficción",
+      "histórico",
+      "memorias"
+    ],
+    "notable_works": [
+      "La decisión de Sophie",
+      "Las confesiones de Nat Turner",
+      "Esa visible oscuridad"
+    ],
+    "awards": [
+      "Premio Pulitzer 1968"
+    ]
+  },
+  "Andrea Camilleri": {
+    "bio": "Siciliano, creador del comisario Montalbano. Camilleri escribió más de 100 novelas policiacas con humor mediterráneo y gastronomía. Empezó a publicar a los 70. Un fenómeno italiano que murió a los 93.",
+    "nationality": "Italiano",
+    "born": 1925,
+    "died": 2019,
+    "genres": [
+      "noir",
+      "misterio",
+      "humor"
+    ],
+    "notable_works": [
+      "La forma del agua",
+      "El perro de terracota",
+      "La voz del violín"
+    ]
+  },
+  "Marqués de Sade": {
+    "bio": "Francés, aristócrata, libertino, prisionero. Sade escribió sobre sexo y violencia extrema que escandalizó y fascinó. Pasó 30 años en prisiones y manicomios. 'Sadismo' viene de su nombre. Transgresor absoluto.",
+    "nationality": "Francés",
+    "born": 1740,
+    "died": 1814,
+    "genres": [
+      "ficción",
+      "erótico",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Justine",
+      "Los 120 días de Sodoma",
+      "La filosofía en el tocador"
+    ]
+  },
+  "Fernando de Rojas": {
+    "bio": "Castellano del siglo XV, autor de 'La Celestina'. Rojas escribió una de las obras maestras de la literatura española: tragedia, alcahuetería, amor y muerte. Converso, enigmático, genial.",
+    "nationality": "Español",
+    "born": 1470,
+    "died": 1541,
+    "genres": [
+      "teatro",
+      "clásico",
+      "tragedia"
+    ],
+    "notable_works": [
+      "La Celestina"
+    ]
+  },
+  "Percival Everett": {
+    "bio": "Americano, novelista prolífico y versátil. Everett escribe sobre raza, identidad y el Oeste con inteligencia y humor. 'Erasure' (base de 'American Fiction') es sátira brillante. Merece más reconocimiento.",
+    "nationality": "Estadounidense",
+    "born": 1956,
+    "genres": [
+      "ficción",
+      "satírico",
+      "literario"
+    ],
+    "notable_works": [
+      "Erasure",
+      "The Trees",
+      "James"
+    ]
+  },
+  "Ali Hazelwood": {
+    "bio": "Italiana-americana, neurocientífica y reina del romance STEM. Hazelwood escribe comedias románticas sobre científicas que conquistan BookTok. 'La hipótesis del amor' fue fenómeno. Ciencia y corazones.",
+    "nationality": "Italiana-Estadounidense",
+    "genres": [
+      "romance",
+      "contemporáneo",
+      "humor"
+    ],
+    "notable_works": [
+      "La hipótesis del amor",
+      "Love on the Brain",
+      "Bride"
+    ]
+  },
+  "Cho Nam-joo": {
+    "bio": "Coreana, autora del fenómeno feminista asiático. 'Kim Ji-young, nacida en 1982' cuenta la vida de una mujer coreana ordinaria y se convirtió en manifiesto generacional. Vendió millones en Asia.",
+    "nationality": "Surcoreana",
+    "born": 1978,
+    "genres": [
+      "ficción",
+      "feminismo",
+      "social"
+    ],
+    "notable_works": [
+      "Kim Ji-young, nacida en 1982"
+    ]
+  },
+  "Nicola Lagioia": {
+    "bio": "Italiano, novelista y editor del Salón del Libro de Turín. Lagioia escribe sobre el sur de Italia con ambición literaria. 'La ferocidad' ganó el Strega. Una voz importante de la narrativa italiana contemporánea.",
+    "nationality": "Italiano",
+    "born": 1973,
+    "genres": [
+      "ficción",
+      "literario",
+      "italiano"
+    ],
+    "notable_works": [
+      "La ferocidad",
+      "La ciudad de los vivos"
+    ],
+    "awards": [
+      "Premio Strega 2015"
+    ]
+  },
+  "Karin Boye": {
+    "bio": "Sueca, poeta y novelista. Boye escribió 'Kallocaína': una distopía sobre un estado totalitario antes de Orwell. También poesía lírica y conflictos personales. Murió joven, se suicidó en 1941.",
+    "nationality": "Sueca",
+    "born": 1900,
+    "died": 1941,
+    "genres": [
+      "ficción",
+      "distopía",
+      "poesía"
+    ],
+    "notable_works": [
+      "Kallocaína",
+      "Crisis"
+    ]
+  },
+  "Nita Prose": {
+    "bio": "Canadiense, editora que debutó con éxito masivo. 'La camarera' es un misterio con protagonista neurodivergente que conquistó clubes de lectura. Encantador y adictivo.",
+    "nationality": "Canadiense",
+    "genres": [
+      "misterio",
+      "ficción",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "La camarera",
+      "The Mystery Guest"
+    ]
+  },
+  "David Deutsch": {
+    "bio": "Físico británico, pionero de la computación cuántica. Deutsch escribe sobre física, conocimiento y realidad con ambición filosófica. 'La estructura de la realidad' es ciencia dura para mentes curiosas.",
+    "nationality": "Británico",
+    "born": 1953,
+    "genres": [
+      "divulgación",
+      "física",
+      "filosofía"
+    ],
+    "notable_works": [
+      "La estructura de la realidad",
+      "El comienzo del infinito"
+    ]
+  },
+  "Publio Virgilio Marón": {
+    "bio": "Romano, el poeta de Roma. Virgilio escribió la 'Eneida': la fundación mítica de Roma que rivalizó con Homero. También las 'Bucólicas' y las 'Geórgicas'. El poeta latino por excelencia, leído durante 2000 años.",
+    "nationality": "Romano",
+    "born": -70,
+    "died": -19,
+    "genres": [
+      "poesía",
+      "épico",
+      "clásico"
+    ],
+    "notable_works": [
+      "Eneida",
+      "Bucólicas",
+      "Geórgicas"
+    ]
+  },
+  "Inca Garcilaso de la Vega": {
+    "bio": "Peruano mestizo, primer escritor latinoamericano. El Inca Garcilaso escribió los 'Comentarios Reales': la historia del imperio incaico contada por un hijo de conquistador y princesa inca. Puente entre dos mundos.",
+    "nationality": "Peruano",
+    "born": 1539,
+    "died": 1616,
+    "genres": [
+      "historia",
+      "crónica",
+      "colonial"
+    ],
+    "notable_works": [
+      "Comentarios Reales de los Incas",
+      "La Florida del Inca"
+    ]
+  },
+  "José Luis Pardo": {
+    "bio": "Filósofo español, ensayista sobre la modernidad. Pardo escribe sobre estética, política y cultura contemporánea con claridad. 'La intimidad' y 'Esto no es música' son ensayos brillantes.",
+    "nationality": "Español",
+    "born": 1954,
+    "genres": [
+      "filosofía",
+      "ensayo",
+      "estética"
+    ],
+    "notable_works": [
+      "La intimidad",
+      "Esto no es música",
+      "Estudios del malestar"
+    ]
+  },
+  "Helen Hoang": {
+    "bio": "Vietnamita-americana con autismo, autora de romance contemporáneo. Hoang escribe protagonistas neurodivergentes con humor y sensualidad. 'El beso del cociente' conquistó lectores buscando representación.",
+    "nationality": "Vietnamita-Estadounidense",
+    "genres": [
+      "romance",
+      "contemporáneo",
+      "diversidad"
+    ],
+    "notable_works": [
+      "El beso del cociente",
+      "The Bride Test",
+      "The Heart Principle"
+    ]
+  },
+  "Tess Gunty": {
+    "bio": "Americana, debut deslumbrante. 'El conejo de piedra' ganó el National Book Award: un edificio de apartamentos en Indiana, vidas cruzadas, América contemporánea. Nueva voz a seguir.",
+    "nationality": "Estadounidense",
+    "born": 1993,
+    "genres": [
+      "ficción",
+      "contemporáneo",
+      "coral"
+    ],
+    "notable_works": [
+      "El conejo de piedra"
+    ],
+    "awards": [
+      "National Book Award 2022"
+    ]
+  },
+  "Namwali Serpell": {
+    "bio": "Zambiana-americana, novelista ambiciosa. 'The Old Drift' cuenta 200 años de historia de Zambia con realismo mágico. Ganó el Arthur C. Clarke. Una voz africana imprescindible.",
+    "nationality": "Zambiana-Estadounidense",
+    "born": 1980,
+    "genres": [
+      "ficción",
+      "histórico",
+      "realismo mágico"
+    ],
+    "notable_works": [
+      "The Old Drift",
+      "The Furrows"
+    ],
+    "awards": [
+      "Arthur C. Clarke Award"
+    ]
+  },
+  "Francesca Giannone": {
+    "bio": "Italiana, debut tardío y exitoso. 'La portalettere' sobre una cartera en la Italia de posguerra vendió cientos de miles de copias. Historia de mujeres y secretos.",
+    "nationality": "Italiana",
+    "genres": [
+      "ficción",
+      "histórico",
+      "drama"
+    ],
+    "notable_works": [
+      "La portalettere"
+    ]
+  },
+  "Olivier Truc": {
+    "bio": "Francés, corresponsal en Escandinavia, novelista polar. Truc escribe thrillers ambientados en Laponia con la policía de los renos sami. Frío, atmósfera y crimen nórdico auténtico.",
+    "nationality": "Francés",
+    "born": 1964,
+    "genres": [
+      "thriller",
+      "nórdico",
+      "misterio"
+    ],
+    "notable_works": [
+      "El último lapón",
+      "Cuarenta días sin sombra"
+    ]
+  },
+  "Francesc Gascó": {
+    "bio": "Paleontólogo español, divulgador de dinosaurios. Gascó (conocido como 'El Pakozoico') hace accesible la paleontología para todas las edades. Ciencia con entusiasmo.",
+    "nationality": "Español",
+    "genres": [
+      "divulgación",
+      "ciencia",
+      "paleontología"
+    ],
+    "notable_works": [
+      "Eso no estaba en mi libro de historia de los dinosaurios"
+    ]
+  },
+  "Hunter S. Thompson": {
+    "bio": "Americano, inventor del periodismo gonzo. Thompson escribio Miedo y asco en Las Vegas: drogas, paranoia y el sueno americano hecho pesadilla. Iconico, influyente, se pego un tiro en 2005.",
+    "nationality": "Estadounidense",
+    "born": 1937,
+    "died": 2005,
+    "genres": [
+      "periodismo",
+      "contracultura",
+      "autobiografico"
+    ],
+    "notable_works": [
+      "Miedo y asco en Las Vegas",
+      "Los Angeles del Infierno"
+    ]
+  },
+  "Simone Weil": {
+    "bio": "Francesa, filosofa mistica y activista. Weil trabajo en fabricas, lucho en la Guerra Civil espanola y escribio sobre la gracia y la desdicha. Murio a los 34. Intensa, radical, unica.",
+    "nationality": "Francesa",
+    "born": 1909,
+    "died": 1943,
+    "genres": [
+      "filosofia",
+      "religion",
+      "politico"
+    ],
+    "notable_works": [
+      "La gravedad y la gracia",
+      "Echar raices",
+      "A la espera de Dios"
+    ]
+  },
+  "Murasaki Shikibu": {
+    "bio": "Japonesa del siglo XI, autora de la primera novela de la historia. La historia de Genji es una obra maestra de la literatura mundial escrita hace mil anos. El origen de todo.",
+    "nationality": "Japonesa",
+    "born": 978,
+    "died": 1014,
+    "genres": [
+      "ficcion",
+      "clasico",
+      "japones"
+    ],
+    "notable_works": [
+      "La historia de Genji"
+    ]
+  },
+  "Leila Guerriero": {
+    "bio": "Argentina, cronista de largo aliento. Guerriero escribe perfiles y reportajes que son literatura. Una historia sencilla sobre el malembro es perfecta. La mejor cronista latinoamericana.",
+    "nationality": "Argentina",
+    "born": 1967,
+    "genres": [
+      "periodismo",
+      "cronica",
+      "no ficcion"
+    ],
+    "notable_works": [
+      "Una historia sencilla",
+      "Plano americano",
+      "Los suicidas del fin del mundo"
+    ]
+  },
+  "Brit Bennett": {
+    "bio": "Americana, novelista de la identidad racial. Bennett escribio La mitad evanescente: gemelas negras que toman caminos opuestos. Bestseller y fenomeno. Una voz importante.",
+    "nationality": "Estadounidense",
+    "born": 1990,
+    "genres": [
+      "ficcion",
+      "familiar",
+      "afroamericano"
+    ],
+    "notable_works": [
+      "La mitad evanescente",
+      "Las madres"
+    ]
+  },
+  "M. L. Stedman": {
+    "bio": "Australiana, autora de La luz entre los oceanos. Stedman escribio sobre un farero y su esposa que encuentran un bebe. Bestseller y pelicula. Drama emotivo.",
+    "nationality": "Australiana",
+    "born": 1971,
+    "genres": [
+      "ficcion",
+      "drama",
+      "historico"
+    ],
+    "notable_works": [
+      "La luz entre los oceanos"
+    ]
+  },
+  "Alana Portero": {
+    "bio": "Espanola, novelista trans del extrarradio madrileno. Portero escribio La mala costumbre: crecer trans en un barrio obrero. Debut poderoso y celebrado.",
+    "nationality": "Espanola",
+    "born": 1978,
+    "genres": [
+      "ficcion",
+      "LGBTQ",
+      "social"
+    ],
+    "notable_works": [
+      "La mala costumbre"
+    ]
+  },
+  "Jennifer Lynn Barnes": {
+    "bio": "Americana, autora de thrillers juveniles. Barnes escribe misterios para adolescentes con ritmo y giros. The Inheritance Games fue fenomeno de BookTok.",
+    "nationality": "Estadounidense",
+    "born": 1984,
+    "genres": [
+      "juvenil",
+      "thriller",
+      "misterio"
+    ],
+    "notable_works": [
+      "The Inheritance Games",
+      "The Hawthorne Legacy"
+    ]
+  },
+  "Olga Merino": {
+    "bio": "Catalana, novelista y periodista. Merino escribe novelas sobre la Espana rural y la memoria. Perros que duermen es su obra mas reciente.",
+    "nationality": "Espanola",
+    "born": 1965,
+    "genres": [
+      "ficcion",
+      "rural",
+      "periodismo"
+    ],
+    "notable_works": [
+      "Perros que duermen",
+      "Cenizas rojas",
+      "Espuelas de papel"
+    ]
+  },
+  "Michael E. Gerber": {
+    "bio": "Americano, guru de pequenos negocios. Gerber escribio El mito del emprendedor: por que fracasan las pequenas empresas. Clasico del management.",
+    "nationality": "Estadounidense",
+    "born": 1936,
+    "genres": [
+      "negocios",
+      "emprendimiento",
+      "autoayuda"
+    ],
+    "notable_works": [
+      "El mito del emprendedor",
+      "The E-Myth Revisited"
+    ]
+  },
+  "Israel Yehoshua Singer": {
+    "bio": "Polaco, novelista yidis, hermano mayor de Isaac Bashevis. Singer escribio Los hermanos Ashkenazi: saga judia en Lodz. Olvidado injustamente junto a su hermano Nobel.",
+    "nationality": "Polaco",
+    "born": 1893,
+    "died": 1944,
+    "genres": [
+      "ficcion",
+      "judio",
+      "historico"
+    ],
+    "notable_works": [
+      "Los hermanos Ashkenazi",
+      "La familia Karnowsky"
+    ]
+  },
+  "Roman Mars": {
+    "bio": "Americano, creador del podcast 99% Invisible. Mars escribe y habla sobre diseno, arquitectura y el mundo construido. Hacer visible lo invisible.",
+    "nationality": "Estadounidense",
+    "born": 1974,
+    "genres": [
+      "divulgacion",
+      "diseno",
+      "arquitectura"
+    ],
+    "notable_works": [
+      "The 99% Invisible City"
+    ]
+  },
+  "Gareth Stedman-Jones": {
+    "bio": "Historiador britanico, biografo de Marx. Stedman-Jones escribio Karl Marx: Grandeza e ilusion, la biografia definitiva. Historia intelectual de primer nivel.",
+    "nationality": "Britanico",
+    "born": 1942,
+    "died": 2022,
+    "genres": [
+      "historia",
+      "biografia",
+      "politico"
+    ],
+    "notable_works": [
+      "Karl Marx: Grandeza e ilusion"
+    ]
+  },
+  "Manuel Mejía Vallejo": {
+    "bio": "Colombiano, novelista del campo antioqueño. Mejía Vallejo escribió sobre la violencia rural y la Colombia profunda. 'La casa de las dos palmas' es su obra más conocida. Un clásico colombiano.",
+    "nationality": "Colombiano",
+    "born": 1923,
+    "died": 1998,
+    "genres": [
+      "ficción",
+      "rural",
+      "colombiano"
+    ],
+    "notable_works": [
+      "La casa de las dos palmas",
+      "El día señalado"
+    ]
+  },
+  "Jackie Polzin": {
+    "bio": "Americana, debut íntimo. 'Bruja' es una novela sobre una mujer, sus gallinas y el duelo. Mínimo, preciso, emotivo. Una pequeña joya para lectores pacientes.",
+    "nationality": "Estadounidense",
+    "genres": [
+      "ficción",
+      "literario",
+      "intimista"
+    ],
+    "notable_works": [
+      "Bruja"
+    ]
+  },
+  "Joan Chase": {
+    "bio": "Americana, novelista de Ohio. 'Durante la estación del jabalí' es sobre una familia disfuncional en el Medio Oeste: ganó el PEN/Hemingway. Un clásico oculto de los 80.",
+    "nationality": "Estadounidense",
+    "born": 1936,
+    "died": 2020,
+    "genres": [
+      "ficción",
+      "drama",
+      "americano"
+    ],
+    "notable_works": [
+      "Durante la estación del jabalí"
+    ]
+  },
+  "Mar García Puig": {
+    "bio": "Española, política y escritora. García Puig ha escrito sobre maternidad, política y cuerpo. Voz feminista desde la experiencia personal y pública.",
+    "nationality": "Española",
+    "born": 1977,
+    "genres": [
+      "ensayo",
+      "memorias",
+      "feminismo"
+    ],
+    "notable_works": [
+      "La historia de los vertebrados"
+    ]
+  },
+  "Hannah Rothschild": {
+    "bio": "Británica, heredera de la dinastía bancaria, novelista y documentalista. Rothschild ha escrito sobre su familia y ficción. 'El imposteur' mezcla arte, falsificación y dinero.",
+    "nationality": "Británica",
+    "born": 1962,
+    "genres": [
+      "ficción",
+      "no ficción",
+      "arte"
+    ],
+    "notable_works": [
+      "El imposteur",
+      "The Baroness"
+    ]
+  },
+  "Martin Filler": {
+    "bio": "Crítico de arquitectura americano, escribe para el New York Review of Books. Filler analiza edificios y arquitectos con erudición y opinión. Arquitectura para lectores cultos.",
+    "nationality": "Estadounidense",
+    "born": 1948,
+    "genres": [
+      "arquitectura",
+      "crítica",
+      "ensayo"
+    ],
+    "notable_works": [
+      "Makers of Modern Architecture"
+    ]
+  },
+  "Adam Sharr": {
+    "bio": "Arquitecto británico, académico. Sharr ha escrito sobre arquitectura con profundidad teórica. 'La cabaña de Heidegger' explora filosofía y espacio. Pensamiento arquitectónico.",
+    "nationality": "Británico",
+    "genres": [
+      "arquitectura",
+      "filosofía",
+      "ensayo"
+    ],
+    "notable_works": [
+      "La cabaña de Heidegger"
+    ]
+  },
+  "José Varela Ortega": {
+    "bio": "Historiador español, experto en la Restauración. Varela Ortega ha escrito sobre España contemporánea, elecciones y caciquismo. Historia política rigurosa.",
+    "nationality": "Español",
+    "born": 1944,
+    "genres": [
+      "historia",
+      "político",
+      "ensayo"
+    ],
+    "notable_works": [
+      "Los amigos políticos",
+      "España: un relato de grandeza y odio"
+    ]
+  },
+  "Kim Ho-yeon": {
+    "bio": "Coreano, poeta y novelista. Ha escrito sobre la vida cotidiana en Corea con sensibilidad. Voz de la literatura coreana contemporánea.",
+    "nationality": "Surcoreano",
+    "genres": [
+      "poesía",
+      "ficción",
+      "coreano"
+    ],
+    "notable_works": []
+  },
+  "Pedro de Silva": {
+    "bio": "Político y escritor español, ex presidente de Asturias. De Silva ha escrito ensayo y ficción. Voz del socialismo español.",
+    "nationality": "Español",
+    "born": 1945,
+    "genres": [
+      "ensayo",
+      "política",
+      "memorias"
+    ],
+    "notable_works": []
+  },
+  "Susana Constante": {
+    "bio": "Escritora argentina de narrativa erótica. Constante ha explorado el deseo con libertad. Una voz del erotismo en español.",
+    "nationality": "Argentina",
+    "genres": [
+      "ficción",
+      "erótico",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "La educación sentimental de la señorita Sonia"
+    ]
+  },
+  "Tennessee Williams": {
+    "bio": "Sureño, el gran dramaturgo americano del siglo XX. Williams escribió 'Un tranvía llamado Deseo' y 'La gata sobre el tejado de zinc caliente': pasión, represión y el Sur profundo. Dos Pulitzers. Torturado y genial.",
+    "nationality": "Estadounidense",
+    "born": 1911,
+    "died": 1983,
+    "genres": [
+      "teatro",
+      "drama",
+      "sureño"
+    ],
+    "notable_works": [
+      "Un tranvía llamado Deseo",
+      "La gata sobre el tejado de zinc caliente",
+      "El zoo de cristal"
+    ],
+    "awards": [
+      "Premio Pulitzer 1948",
+      "Premio Pulitzer 1955"
+    ]
+  },
+  "Elizabeth Bowen": {
+    "bio": "Anglo-irlandesa, maestra del relato psicológico. Bowen escribía sobre la alta sociedad inglesa e irlandesa con una prosa elegante y perturbadora. 'El calor del día' es su obra maestra. Una de las grandes del siglo XX.",
+    "nationality": "Anglo-Irlandesa",
+    "born": 1899,
+    "died": 1973,
+    "genres": [
+      "ficción",
+      "psicológico",
+      "literario"
+    ],
+    "notable_works": [
+      "El calor del día",
+      "La muerte del corazón",
+      "The House in Paris"
+    ]
+  },
+  "Willa Cather": {
+    "bio": "Americana, novelista de las praderas. Cather escribió sobre los pioneros del Medio Oeste con una prosa límpida y nostálgica. 'Mi Ántonia' y 'Death Comes for the Archbishop' son clásicos americanos. Pulitzer 1923.",
+    "nationality": "Estadounidense",
+    "born": 1873,
+    "died": 1947,
+    "genres": [
+      "ficción",
+      "americano",
+      "histórico"
+    ],
+    "notable_works": [
+      "Mi Ántonia",
+      "Death Comes for the Archbishop",
+      "O Pioneers!"
+    ],
+    "awards": [
+      "Premio Pulitzer 1923"
+    ]
+  },
+  "Muriel Spark": {
+    "bio": "Escocesa, maestra de la novela corta y mordaz. Spark escribió 'La plenitud de la señorita Brodie': una profesora carismática en Edimburgo. Católica conversa, irónica, brillante. Una de las grandes estilistas en inglés.",
+    "nationality": "Británica",
+    "born": 1918,
+    "died": 2006,
+    "genres": [
+      "ficción",
+      "satírico",
+      "literario"
+    ],
+    "notable_works": [
+      "La plenitud de la señorita Brodie",
+      "Memento Mori",
+      "The Girls of Slender Means"
+    ]
+  },
+  "Joel Dicker": {
+    "bio": "Suizo, fenomeno del thriller. Dicker escribio La verdad sobre el caso Harry Quebert: misterio literario que vendio millones. Thrillers adictivos y bestsellers globales.",
+    "nationality": "Suizo",
+    "born": 1985,
+    "genres": [
+      "thriller",
+      "misterio",
+      "literario"
+    ],
+    "notable_works": [
+      "La verdad sobre el caso Harry Quebert",
+      "El libro de los Baltimore",
+      "La desaparicion de Stephanie Mailer"
+    ]
+  },
+  "Svetlana Aleksievich": {
+    "bio": "Bielorrusa, Nobel 2015, creadora de la 'novela de voces'. Aleksiévich entrevista a cientos de personas y teje sus testimonios en libros devastadores sobre Chernóbil, la guerra de Afganistán, el colapso soviético. Periodismo que es literatura.",
+    "nationality": "Bielorrusa",
+    "born": 1948,
+    "genres": [
+      "no ficción",
+      "testimonial",
+      "histórico"
+    ],
+    "notable_works": [
+      "Voces de Chernóbil",
+      "La guerra no tiene rostro de mujer",
+      "El fin del Homo sovieticus"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2015"
+    ]
+  },
+  "Paolo Giordano": {
+    "bio": "Italiano, físico y novelista. Giordano escribió 'La soledad de los números primos' a los 26: dos personas dañadas que no logran conectar. Strega a los 27. Ciencia y literatura entrelazadas.",
+    "nationality": "Italiano",
+    "born": 1982,
+    "genres": [
+      "ficción",
+      "literario",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "La soledad de los números primos",
+      "El cuerpo humano",
+      "Tasmania"
+    ],
+    "awards": [
+      "Premio Strega 2008"
+    ]
+  },
+  "Victoria Aveyard": {
+    "bio": "Americana, autora de fantasía juvenil. Aveyard escribió la saga 'La reina roja': magia, revolución y romance en un mundo dividido por la sangre. Éxito juvenil con millones de lectores.",
+    "nationality": "Estadounidense",
+    "born": 1990,
+    "genres": [
+      "fantasía",
+      "juvenil",
+      "distopía"
+    ],
+    "notable_works": [
+      "La reina roja",
+      "La espada de cristal",
+      "Corona cruel"
+    ]
+  },
+  "Caroline Criado Perez": {
+    "bio": "Britanica, periodista feminista. Criado Perez escribio La mujer invisible: como el mundo esta disenado para hombres. Datos que cambian perspectivas.",
+    "nationality": "Britanica",
+    "born": 1984,
+    "genres": [
+      "ensayo",
+      "feminismo",
+      "divulgacion"
+    ],
+    "notable_works": [
+      "La mujer invisible",
+      "Do It Like a Woman"
+    ]
+  },
+  "Merlin Sheldrake": {
+    "bio": "Biólogo británico, el hombre de los hongos. Sheldrake escribió 'La red oculta de la vida' sobre los hongos y cómo conectan el mundo. Divulgación fascinante sobre un reino ignorado.",
+    "nationality": "Británico",
+    "born": 1988,
+    "genres": [
+      "divulgación",
+      "biología",
+      "naturaleza"
+    ],
+    "notable_works": [
+      "La red oculta de la vida"
+    ]
+  },
+  "Mar Garcia Puig": {
+    "bio": "Espanola, escritora y politica. Garcia Puig ha escrito sobre maternidad, cuerpo y salud mental. Una voz nueva del ensayo espanol.",
+    "nationality": "Espanola",
+    "genres": [
+      "ensayo",
+      "autobiografico",
+      "feminismo"
+    ],
+    "notable_works": [
+      "La historia de los vertebrados"
+    ]
+  },
+  "Deborah Garcia Bello": {
+    "bio": "Gallega, quimica y divulgadora. Garcia Bello escribe sobre ciencia cotidiana con claridad y pasion. Divulgacion cientifica para todos.",
+    "nationality": "Espanola",
+    "genres": [
+      "divulgacion",
+      "ciencia",
+      "quimica"
+    ],
+    "notable_works": [
+      "Que arde el universo",
+      "No tocar"
+    ]
+  },
+  "Kurt Kohlstedt": {
+    "bio": "Americano, coautor de The 99% Invisible City. Kohlstedt escribe sobre diseno urbano y arquitectura cotidiana junto a Roman Mars.",
+    "nationality": "Estadounidense",
+    "genres": [
+      "divulgacion",
+      "diseno",
+      "arquitectura"
+    ],
+    "notable_works": [
+      "The 99% Invisible City"
+    ]
+  },
+  "Vladimír Holan": {
+    "bio": "Checo, poeta del hermetismo. Holan escribió poesía densa y filosófica en el aislamiento de la Praga comunista. Difícil pero recompensador. Un grande de la poesía europea del siglo XX.",
+    "nationality": "Checo",
+    "born": 1905,
+    "died": 1980,
+    "genres": [
+      "poesía",
+      "filosófico",
+      "hermético"
+    ],
+    "notable_works": [
+      "Una noche con Hamlet",
+      "Dolor"
+    ]
+  },
+  "Pierre Klossowski": {
+    "bio": "Francés, hermano de Balthus, filósofo y novelista transgresivo. Klossowski escribió sobre Sade, Nietzsche y sus propias obsesiones con erudición perversa. Culto y difícil.",
+    "nationality": "Francés",
+    "born": 1905,
+    "died": 2001,
+    "genres": [
+      "filosofía",
+      "ficción",
+      "erótico"
+    ],
+    "notable_works": [
+      "Roberte esta noche",
+      "El Baphomet",
+      "Sade mi prójimo"
+    ]
+  },
+  "Luisa Castro": {
+    "bio": "Gallega, poeta y novelista. Castro escribe poesía en gallego y novela en español. 'El secreto de la lejía' es sobre la memoria familiar. Una voz importante de las letras gallegas.",
+    "nationality": "Española",
+    "born": 1966,
+    "genres": [
+      "poesía",
+      "ficción",
+      "gallego"
+    ],
+    "notable_works": [
+      "El secreto de la lejía",
+      "La fiebre amarilla",
+      "Los versos del eunuco"
+    ]
+  },
+  "Britney Spears": {
+    "bio": "Americana, icono del pop, superviviente. Spears escribio The Woman in Me: memorias de fama, control y liberacion. Bestseller instantaneo que conto su historia por primera vez.",
+    "nationality": "Estadounidense",
+    "born": 1981,
+    "genres": [
+      "memorias",
+      "autobiografico",
+      "pop"
+    ],
+    "notable_works": [
+      "The Woman in Me"
+    ]
+  },
+  "Joël Dicker": {
+    "bio": "Suizo, fenómeno de ventas. Dicker escribió 'La verdad sobre el caso Harry Quebert': un thriller adictivo que vendió millones. Joven, prolífico, hábil. El bestseller europeo de la década.",
+    "nationality": "Suizo",
+    "born": 1985,
+    "genres": [
+      "thriller",
+      "misterio",
+      "suspense"
+    ],
+    "notable_works": [
+      "La verdad sobre el caso Harry Quebert",
+      "El libro de los Baltimore",
+      "La desaparición de Stephanie Mailer"
+    ]
+  },
+  "Stephen Baxter": {
+    "bio": "Británico, maestro de la ciencia ficción dura. Baxter escribe sobre el futuro lejano, el espacio profundo y la física con rigor científico. Prolífico y ambicioso. Hard SF para lectores exigentes.",
+    "nationality": "Británico",
+    "born": 1957,
+    "genres": [
+      "ciencia ficción",
+      "hard SF",
+      "espacial"
+    ],
+    "notable_works": [
+      "Las naves del tiempo",
+      "Coalescent",
+      "Flood"
+    ]
+  },
+  "Rebecca Skloot": {
+    "bio": "Americana, periodista científica. Skloot escribió 'La vida inmortal de Henrietta Lacks': la mujer cuyas células revolucionaron la medicina sin que ella lo supiera. Ciencia, ética y raza en una historia fascinante.",
+    "nationality": "Estadounidense",
+    "born": 1972,
+    "genres": [
+      "no ficción",
+      "ciencia",
+      "periodismo"
+    ],
+    "notable_works": [
+      "La vida inmortal de Henrietta Lacks"
+    ]
+  },
+  "Arturo Uslar Pietri": {
+    "bio": "Venezolano, el gran intelectual del siglo XX venezolano. Uslar Pietri escribió novela, cuento, ensayo y fue político. 'Las lanzas coloradas' sobre la independencia es un clásico. Inventor del término 'realismo mágico'.",
+    "nationality": "Venezolano",
+    "born": 1906,
+    "died": 2001,
+    "genres": [
+      "ficción",
+      "ensayo",
+      "histórico"
+    ],
+    "notable_works": [
+      "Las lanzas coloradas",
+      "La isla de Róbinson",
+      "Oficio de difuntos"
+    ]
+  },
+  "Nikolái Gógol": {
+    "bio": "Ruso-ucraniano, maestro del absurdo y el grotesco. Gógol escribió 'Almas muertas' y 'El capote': Rusia como pesadilla cómica. Murió loco, quemando manuscritos. Fundador del realismo ruso más extraño.",
+    "nationality": "Ruso (nacido ucraniano)",
+    "born": 1809,
+    "died": 1852,
+    "genres": [
+      "ficción",
+      "satírico",
+      "fantástico"
+    ],
+    "notable_works": [
+      "Almas muertas",
+      "El capote",
+      "El inspector"
+    ]
+  },
+  "Charles Baudelaire": {
+    "bio": "Francés, poeta maldito, padre de la modernidad. Baudelaire escribió 'Las flores del mal': belleza, decadencia, spleen. Fue procesado por obscenidad. Murió a los 46. La poesía no volvió a ser la misma.",
+    "nationality": "Francés",
+    "born": 1821,
+    "died": 1867,
+    "genres": [
+      "poesía",
+      "ensayo",
+      "simbolismo"
+    ],
+    "notable_works": [
+      "Las flores del mal",
+      "El spleen de París",
+      "Los paraísos artificiales"
+    ]
+  },
+  "Camilla Lackberg": {
+    "bio": "Sueca, reina del thriller nordico. Lackberg escribe sobre crimenes en un pueblo costero con Erica Falck. Millones de copias. El noir sueco mas vendido despues de Larsson.",
+    "nationality": "Sueca",
+    "born": 1974,
+    "genres": [
+      "thriller",
+      "nordico",
+      "misterio"
+    ],
+    "notable_works": [
+      "La princesa de hielo",
+      "Los gritos del pasado",
+      "Las hijas del frio"
+    ]
+  },
+  "Michael Cunningham": {
+    "bio": "Americano, Pulitzer 1999 por 'Las horas'. Cunningham reescribió 'La señora Dalloway' para el siglo XXI: tres mujeres, tres épocas. También 'Una casa en el fin del mundo'. Prosa elegante sobre el tiempo y la pérdida.",
+    "nationality": "Estadounidense",
+    "born": 1952,
+    "genres": [
+      "ficción",
+      "literario",
+      "LGBTQ"
+    ],
+    "notable_works": [
+      "Las horas",
+      "Una casa en el fin del mundo",
+      "Specimen Days"
+    ],
+    "awards": [
+      "Premio Pulitzer 1999"
+    ]
+  },
+  "Robert Macfarlane": {
+    "bio": "Británico, escritor del paisaje. Macfarlane escribe sobre caminar, montañas, el mundo subterráneo con una prosa poética. 'Lugares perdidos' y 'Underland' son éxitos de la naturaleza literaria. El nuevo Thoreau.",
+    "nationality": "Británico",
+    "born": 1976,
+    "genres": [
+      "no ficción",
+      "naturaleza",
+      "viajes"
+    ],
+    "notable_works": [
+      "Montañas de la mente",
+      "Las viejas sendas",
+      "Underland"
+    ]
+  },
+  "T. J. Klune": {
+    "bio": "Americano, autor de fantasía reconfortante. Klune escribe sobre familias encontradas y aceptación. 'La casa en el mar Cerúleo' conquistó corazones. Fantasía queer y esperanzadora.",
+    "nationality": "Estadounidense",
+    "born": 1982,
+    "genres": [
+      "fantasía",
+      "romance",
+      "LGBTQ"
+    ],
+    "notable_works": [
+      "La casa en el mar Cerúleo",
+      "Under the Whispering Door"
+    ]
+  },
+  "Hallie Rubenhold": {
+    "bio": "Historiadora británica, reivindicadora de mujeres olvidadas. Rubenhold escribió 'Las cinco': las víctimas de Jack el Destripador tenían vidas antes de ser víctimas. Historia social feminista.",
+    "nationality": "Británica",
+    "genres": [
+      "historia",
+      "biografía",
+      "feminismo"
+    ],
+    "notable_works": [
+      "Las cinco",
+      "The Covent Garden Ladies"
+    ]
+  },
+  "Helen Rappaport": {
+    "bio": "Historiadora británica, especialista en Rusia. Rappaport ha escrito sobre las Romanov, la Revolución y mujeres en la historia con rigor y narrativa. Historia popular de calidad.",
+    "nationality": "Británica",
+    "genres": [
+      "historia",
+      "biografía",
+      "ruso"
+    ],
+    "notable_works": [
+      "Los últimos días de los Romanov",
+      "Atrapados en la revolución"
+    ]
+  },
+  "Greg Lukianoff": {
+    "bio": "Americano, abogado y activista de la libertad de expresion. Lukianoff coescribio La transformacion de la mente moderna sobre como las universidades estan danando a los jovenes.",
+    "nationality": "Estadounidense",
+    "born": 1974,
+    "genres": [
+      "ensayo",
+      "politico",
+      "educacion"
+    ],
+    "notable_works": [
+      "La transformacion de la mente moderna",
+      "Unlearning Liberty"
+    ]
+  },
+  "José Agustín": {
+    "bio": "Mexicano, padre de la literatura de la Onda. José Agustín escribió sobre jóvenes rebeldes en el México de los 60 con lenguaje coloquial y rock and roll. 'De perfil' es un clásico contracultural mexicano.",
+    "nationality": "Mexicano",
+    "born": 1944,
+    "died": 2024,
+    "genres": [
+      "ficción",
+      "juvenil",
+      "contracultural"
+    ],
+    "notable_works": [
+      "De perfil",
+      "Se está haciendo tarde",
+      "La tumba"
+    ]
+  },
+  "Mel Robbins": {
+    "bio": "Americana, coach y autora de autoayuda. Robbins creó 'La regla de los 5 segundos': actúa antes de que tu cerebro te detenga. Bestseller de motivación práctica.",
+    "nationality": "Estadounidense",
+    "born": 1968,
+    "genres": [
+      "autoayuda",
+      "motivación",
+      "psicología"
+    ],
+    "notable_works": [
+      "La regla de los 5 segundos",
+      "El hábito de la valentía"
+    ]
+  },
+  "Malika Oufkir": {
+    "bio": "Marroqui-francesa, superviviente de prision. Oufkir paso 20 anos encarcelada con su familia por orden del rey de Marruecos. La prisionera es su testimonio. Supervivencia extrema.",
+    "nationality": "Marroqui-Francesa",
+    "born": 1953,
+    "genres": [
+      "memorias",
+      "testimonio",
+      "politico"
+    ],
+    "notable_works": [
+      "La prisionera",
+      "La extrana"
+    ]
+  },
+  "Francesco Pecoraro": {
+    "bio": "Italiano, novelista tardio. Pecoraro escribio La vita in tempo di pace: un hombre en la Italia de posguerra. Debut a los 60 anos, muy celebrado.",
+    "nationality": "Italiano",
+    "born": 1945,
+    "genres": [
+      "ficcion",
+      "literario",
+      "italiano"
+    ],
+    "notable_works": [
+      "La vita in tempo di pace",
+      "Lo stradone"
+    ]
+  },
+  "Tom Crewe": {
+    "bio": "Britanico, historiador y novelista. Crewe escribio The New Life sobre homosexualidad en la Inglaterra victoriana. Historia y ficcion con rigor.",
+    "nationality": "Britanico",
+    "born": 1989,
+    "genres": [
+      "ficcion",
+      "historico",
+      "LGBTQ"
+    ],
+    "notable_works": [
+      "The New Life"
+    ]
+  },
+  "David Ucles": {
+    "bio": "Espanol, novelista joven. Ucles escribe sobre la Espana contemporanea con ambicion. Una voz emergente.",
+    "nationality": "Espanol",
+    "genres": [
+      "ficcion",
+      "contemporaneo",
+      "espanol"
+    ],
+    "notable_works": [
+      "El don de la fiebre"
+    ]
+  },
+  "Deborah García Bello": {
+    "bio": "Gallega, química y divulgadora. García Bello hace accesible la química cotidiana con humor y claridad. 'Todo es cuestión de química' explica el mundo molecular. Ciencia para todos.",
+    "nationality": "Española",
+    "genres": [
+      "divulgación",
+      "química",
+      "ciencia"
+    ],
+    "notable_works": [
+      "Todo es cuestión de química",
+      "¡Eso no estaba en mi libro de historia de la química!"
+    ]
+  },
+  "Natalia Ginzburg": {
+    "bio": "Italiana, novelista de la familia y la Italia del siglo XX. Ginzburg escribía con una sencillez que engaña: 'Léxico familiar' es una obra maestra de la memoria. También ensayista y traductora. Una de las grandes voces italianas.",
+    "nationality": "Italiana",
+    "born": 1916,
+    "died": 1991,
+    "genres": [
+      "ficción",
+      "memorias",
+      "ensayo"
+    ],
+    "notable_works": [
+      "Léxico familiar",
+      "Las pequeñas virtudes",
+      "Todos nuestros ayeres"
+    ]
+  },
+  "Camilla Läckberg": {
+    "bio": "Sueca, reina del noir nórdico. Läckberg escribe thrillers ambientados en un pueblo pesquero sueco: crímenes, secretos familiares y pasados oscuros. Millones de lectores. El crimen escandinavo más popular.",
+    "nationality": "Sueca",
+    "born": 1974,
+    "genres": [
+      "thriller",
+      "nórdico",
+      "misterio"
+    ],
+    "notable_works": [
+      "La princesa de hielo",
+      "Los gritos del pasado",
+      "Las huellas imborrables"
+    ]
+  },
+  "Gueorgui Gospodínov": {
+    "bio": "Búlgaro, Booker International 2023. Gospodínov escribe sobre la memoria, la nostalgia y los Balcanes con inventiva y melancolía. 'Las tempestades de agosto' es su obra maestra. La gran voz búlgara contemporánea.",
+    "nationality": "Búlgaro",
+    "born": 1968,
+    "genres": [
+      "ficción",
+      "literario",
+      "europeo"
+    ],
+    "notable_works": [
+      "Las tempestades de agosto",
+      "Novela natural",
+      "Física de la tristeza"
+    ],
+    "awards": [
+      "International Booker Prize 2023"
+    ]
+  },
+  "Bonnie Garmus": {
+    "bio": "Americana, debut tardío y masivo. 'Lecciones de química' sobre una científica en los años 60 que acaba presentando un programa de cocina conquistó lectores. Feminismo, humor y ciencia.",
+    "nationality": "Estadounidense",
+    "genres": [
+      "ficción",
+      "histórico",
+      "feminismo"
+    ],
+    "notable_works": [
+      "Lecciones de química"
+    ]
+  },
+  "Caroline Criado Pérez": {
+    "bio": "Británica, activista y escritora feminista. Criado Pérez escribió 'La mujer invisible': cómo el mundo está diseñado para hombres. Datos que cambian cómo ves todo. Feminismo con evidencia.",
+    "nationality": "Británica",
+    "born": 1984,
+    "genres": [
+      "ensayo",
+      "feminismo",
+      "divulgación"
+    ],
+    "notable_works": [
+      "La mujer invisible",
+      "Do It Like a Woman"
+    ]
+  },
+  "Gabriela Cabezón Cámara": {
+    "bio": "Argentina, novelista del margen. Cabezón Cámara escribe sobre violencia, género y los olvidados con una prosa salvaje y poética. 'Las aventuras de la China Iron' reinventa el Martín Fierro. Radical y brillante.",
+    "nationality": "Argentina",
+    "born": 1968,
+    "genres": [
+      "ficción",
+      "LGBTQ",
+      "experimental"
+    ],
+    "notable_works": [
+      "Las aventuras de la China Iron",
+      "La Virgen Cabeza",
+      "Romance de la negra rubia"
+    ]
+  },
+  "Serhii Plokhy": {
+    "bio": "Ucraniano-americano, historiador de Ucrania y la Guerra Fría. Plokhy ha escrito la historia de Chernóbil y de Ucrania con urgencia. Sus libros se volvieron esenciales desde 2022.",
+    "nationality": "Ucraniano-Estadounidense",
+    "born": 1957,
+    "genres": [
+      "historia",
+      "político",
+      "europeo"
+    ],
+    "notable_works": [
+      "Chernóbil",
+      "Las puertas de Europa",
+      "El último imperio"
+    ]
+  },
+  "Emilia Hart": {
+    "bio": "Australiana, debut gótico y feminista. 'Weyward' conecta tres mujeres a través de siglos y brujería. Atmosférico y emotivo. Nuevo éxito del gótico contemporáneo.",
+    "nationality": "Australiana",
+    "genres": [
+      "ficción",
+      "gótico",
+      "histórico"
+    ],
+    "notable_works": [
+      "Weyward"
+    ]
+  },
+  "Cristina Morales": {
+    "bio": "Granadina, Premio Herralde y Nacional. Morales escribió 'Lectura fácil': cuatro mujeres con discapacidad intelectual que no se callan. Punk, feminista, incómoda. La escritora española más radical de su generación.",
+    "nationality": "Española",
+    "born": 1985,
+    "genres": [
+      "ficción",
+      "experimental",
+      "feminismo"
+    ],
+    "notable_works": [
+      "Lectura fácil",
+      "Terroristas modernos",
+      "Introducción a Teresa de Jesús"
+    ],
+    "awards": [
+      "Premio Herralde 2018",
+      "Premio Nacional de Narrativa 2019"
+    ]
+  },
+  "Junot Díaz": {
+    "bio": "Dominicano-americano, Pulitzer 2008. Díaz escribe sobre la experiencia inmigrante con spanglish, nerds y la historia brutal de República Dominicana. 'La maravillosa vida breve de Óscar Wao' es única. Voz esencial latina.",
+    "nationality": "Dominicano-Estadounidense",
+    "born": 1968,
+    "genres": [
+      "ficción",
+      "latino",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "La maravillosa vida breve de Óscar Wao",
+      "Así es como la pierdes",
+      "Los boys"
+    ],
+    "awards": [
+      "Premio Pulitzer 2008"
+    ]
+  },
+  "Margaret Mitchell": {
+    "bio": "Sureña, autora de una sola novela que lo cambió todo. 'Lo que el viento se llevó' sobre la Guerra Civil americana vendió millones y fue la película más taquillera de la historia. Mitchell murió atropellada. Una novela bastó.",
+    "nationality": "Estadounidense",
+    "born": 1900,
+    "died": 1949,
+    "genres": [
+      "ficción",
+      "histórico",
+      "romance"
+    ],
+    "notable_works": [
+      "Lo que el viento se llevó"
+    ],
+    "awards": [
+      "Premio Pulitzer 1937"
+    ]
+  },
+  "Elizabeth Gaskell": {
+    "bio": "Victoriana, novelista social. Gaskell escribió sobre la industrialización inglesa y sus víctimas con compasión. 'Norte y Sur' y 'Esposas e hijas' son clásicos. También biógrafa de Charlotte Brontë.",
+    "nationality": "Británica",
+    "born": 1810,
+    "died": 1865,
+    "genres": [
+      "ficción",
+      "victoriano",
+      "social"
+    ],
+    "notable_works": [
+      "Norte y Sur",
+      "Esposas e hijas",
+      "Cranford"
+    ]
+  },
+  "Aristófanes": {
+    "bio": "Ateniense, padre de la comedia. Aristófanes escribió obras que se burlaban de políticos, filósofos y dioses hace 2400 años. 'Las nubes', 'Lisístrata' y 'Las aves' siguen siendo divertidas. El primer comediante.",
+    "nationality": "Griego antiguo",
+    "born": -446,
+    "died": -386,
+    "genres": [
+      "teatro",
+      "comedia",
+      "clásico"
+    ],
+    "notable_works": [
+      "Las nubes",
+      "Lisístrata",
+      "Las aves",
+      "Las ranas"
+    ]
+  },
+  "Alan Paton": {
+    "bio": "Sudafricano, novelista del apartheid. Paton escribió 'Llora, tierra amada' en 1948: un pastor zulú busca a su hijo en Johannesburgo. Denuncia del racismo que sigue siendo poderosa.",
+    "nationality": "Sudafricano",
+    "born": 1903,
+    "died": 1988,
+    "genres": [
+      "ficción",
+      "político",
+      "africano"
+    ],
+    "notable_works": [
+      "Llora, tierra amada",
+      "Ah, But Your Land Is Beautiful"
+    ]
+  },
+  "Scott Westerfeld": {
+    "bio": "Americano, autor de ciencia ficción juvenil. Westerfeld escribió la saga 'Uglies' sobre una sociedad que obliga a operarse a los 16. También 'Leviathan'. Distopía YA inteligente.",
+    "nationality": "Estadounidense",
+    "born": 1963,
+    "genres": [
+      "ciencia ficción",
+      "juvenil",
+      "distopía"
+    ],
+    "notable_works": [
+      "Uglies",
+      "Leviathan",
+      "Zeroes"
+    ]
+  },
+  "James Dickey": {
+    "bio": "Sureño, poeta y novelista. Dickey escribió 'Deliverance' (película con Burt Reynolds): cuatro hombres en un río que se convierte en pesadilla. También poeta importante. El Sur salvaje.",
+    "nationality": "Estadounidense",
+    "born": 1923,
+    "died": 1997,
+    "genres": [
+      "ficción",
+      "poesía",
+      "thriller"
+    ],
+    "notable_works": [
+      "Deliverance",
+      "Buckdancer's Choice"
+    ]
+  },
+  "Lea Ypi": {
+    "bio": "Albanesa-británica, filósofa y memorialista. Ypi escribió 'Libre': crecer en Albania comunista y ver el colapso. Memorias que son también filosofía política. Brillante y emotivo.",
+    "nationality": "Albanesa-Británica",
+    "born": 1979,
+    "genres": [
+      "memorias",
+      "filosofía",
+      "político"
+    ],
+    "notable_works": [
+      "Libre"
+    ]
+  },
+  "Alia Trabucco Zerán": {
+    "bio": "Chilena, novelista de la memoria. Trabucco Zerán escribe sobre los hijos de la dictadura y la herencia del trauma. 'La resta' fue muy celebrada. Nueva voz chilena importante.",
+    "nationality": "Chilena",
+    "born": 1983,
+    "genres": [
+      "ficción",
+      "político",
+      "memoria"
+    ],
+    "notable_works": [
+      "La resta",
+      "Las homicidas",
+      "Limpia"
+    ]
+  },
+  "Santiago Lorenzo": {
+    "bio": "Madrileño, cineasta y novelista de culto. Lorenzo escribe sobre inadaptados que huyen de la sociedad. 'Los asquerosos' es sobre un tipo que se esconde en un pueblo abandonado. Humor negro y misantropía.",
+    "nationality": "Español",
+    "born": 1964,
+    "genres": [
+      "ficción",
+      "humor",
+      "satírico"
+    ],
+    "notable_works": [
+      "Los asquerosos",
+      "Los huerfanitos",
+      "Verm"
+    ]
+  },
+  "Laura Ferrero": {
+    "bio": "Barcelonesa, novelista de familias rotas. Ferrero escribe sobre padres ausentes, secretos y la memoria con delicadeza. 'Qué vas a hacer con el resto de tu vida' fue muy leída.",
+    "nationality": "Española",
+    "born": 1984,
+    "genres": [
+      "ficción",
+      "contemporáneo",
+      "familiar"
+    ],
+    "notable_works": [
+      "Qué vas a hacer con el resto de tu vida",
+      "El amor después del amor"
+    ]
+  },
+  "Sara Barquinero": {
+    "bio": "Zaragozana, novelista de fantasía y ficción histórica. Barquinero mezcla lo fantástico con lo literario. 'Los escorpiones' ganó el Biblioteca Breve. Nueva voz prometedora.",
+    "nationality": "Española",
+    "born": 1994,
+    "genres": [
+      "ficción",
+      "fantasía",
+      "histórico"
+    ],
+    "notable_works": [
+      "Los escorpiones",
+      "Ecos del tiempo"
+    ],
+    "awards": [
+      "Premio Biblioteca Breve 2024"
+    ]
+  },
+  "Esther García Llovet": {
+    "bio": "Malagueña, novelista del Madrid nocturno. García Llovet escribe sobre la ciudad, la noche y personajes al margen. 'Cómo dejar de escribir' es metacción irónica. Voz urbana singular.",
+    "nationality": "Española",
+    "born": 1963,
+    "genres": [
+      "ficción",
+      "urbano",
+      "noir"
+    ],
+    "notable_works": [
+      "Cómo dejar de escribir",
+      "Submáquina",
+      "Sánchez"
+    ]
+  },
+  "Kiley Reid": {
+    "bio": "Afroamericana, debut sobre raza y clase. 'Aquí no te queremos' es sobre una niñera negra y su empleadora blanca bien intencionada. Incómodo y necesario. Nueva voz americana.",
+    "nationality": "Estadounidense",
+    "born": 1987,
+    "genres": [
+      "ficción",
+      "contemporáneo",
+      "social"
+    ],
+    "notable_works": [
+      "Aquí no te queremos",
+      "Come and Get It"
+    ]
+  },
+  "Laura Dave": {
+    "bio": "Americana, novelista de misterio familiar. Dave escribió 'Lo último que me dijo': una mujer descubre que su marido no era quien decía. Bestseller y serie de Apple TV.",
+    "nationality": "Estadounidense",
+    "genres": [
+      "ficción",
+      "thriller",
+      "drama"
+    ],
+    "notable_works": [
+      "Lo último que me dijo",
+      "Eight Hundred Grapes"
+    ]
+  },
+  "Deirdre N. McCloskey": {
+    "bio": "Economista americana, historiadora del capitalismo. McCloskey ha escrito sobre la burguesía y cómo las ideas cambiaron el mundo. También memorias de su transición de género. Erudita y provocadora.",
+    "nationality": "Estadounidense",
+    "born": 1942,
+    "genres": [
+      "economía",
+      "historia",
+      "memorias"
+    ],
+    "notable_works": [
+      "Las virtudes burguesas",
+      "Crossing: A Memoir"
+    ]
+  },
+  "Carlos Pardo": {
+    "bio": "Madrileño, poeta y novelista. Pardo escribe poesía premiada y novelas sobre la España contemporánea. 'Lejos de Kakania' mezcla viaje y reflexión. Una voz literaria importante.",
+    "nationality": "Español",
+    "born": 1975,
+    "genres": [
+      "poesía",
+      "ficción",
+      "ensayo"
+    ],
+    "notable_works": [
+      "Lejos de Kakania",
+      "El viaje a pie de Johann Sebastian"
+    ]
+  },
+  "David Uclés": {
+    "bio": "Jiennense, poeta y novelista de la España rural. Uclés escribe sobre el campo andaluz con lirismo y crudeza. 'Nadie nunca duerme' ganó el Tusquets. Voz emergente.",
+    "nationality": "Español",
+    "born": 1990,
+    "genres": [
+      "ficción",
+      "poesía",
+      "rural"
+    ],
+    "notable_works": [
+      "Nadie nunca duerme"
+    ],
+    "awards": [
+      "Premio Tusquets"
+    ]
+  },
+  "Marco Vitruvio Polión": {
+    "bio": "Romano del siglo I a.C., arquitecto e ingeniero. Vitruvio escribió 'De Architectura': el único tratado de arquitectura antiguo que sobrevive. Define firmitas, utilitas, venustas. Base de toda la arquitectura occidental.",
+    "nationality": "Romano",
+    "born": -80,
+    "died": -15,
+    "genres": [
+      "arquitectura",
+      "técnico",
+      "clásico"
+    ],
+    "notable_works": [
+      "De Architectura"
+    ]
+  },
+  "Terence Ranger": {
+    "bio": "Historiador británico, especialista en África. Ranger escribió sobre Zimbabwe, la invención de la tradición y el colonialismo. Académico comprometido con la descolonización.",
+    "nationality": "Británico",
+    "born": 1929,
+    "died": 2015,
+    "genres": [
+      "historia",
+      "africano",
+      "académico"
+    ],
+    "notable_works": [
+      "La invención de la tradición",
+      "Voices from the Rocks"
+    ]
+  },
+  "Matteo Strukul": {
+    "bio": "Italiano, novelista histórico de los Médici y los Borgia. Strukul escribe sagas sobre las grandes familias italianas del Renacimiento. Historia con sangre y poder.",
+    "nationality": "Italiano",
+    "born": 1973,
+    "genres": [
+      "ficción histórica",
+      "thriller",
+      "italiano"
+    ],
+    "notable_works": [
+      "Los Médici",
+      "Los Borgia"
+    ]
+  },
+  "Sally Gardner": {
+    "bio": "Británica, autora de literatura infantil y juvenil. Gardner escribe fantasía y distopía para jóvenes. 'Maggot Moon' ganó la Carnegie Medal. Imaginación al servicio de los lectores jóvenes.",
+    "nationality": "Británica",
+    "born": 1954,
+    "genres": [
+      "juvenil",
+      "infantil",
+      "fantasía"
+    ],
+    "notable_works": [
+      "Maggot Moon",
+      "I, Coriander"
+    ],
+    "awards": [
+      "Carnegie Medal 2013"
+    ]
+  },
+  "Isabel Mellén": {
+    "bio": "Escritora española contemporánea. Mellén escribe ficción que explora la identidad y las relaciones.",
+    "nationality": "Española",
+    "genres": [
+      "ficción",
+      "contemporáneo"
+    ],
+    "notable_works": []
   }
 }
