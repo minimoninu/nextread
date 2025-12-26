@@ -213,6 +213,50 @@ def get_calibre_books_from_metadata(calibre_path):
     return books
 
 
+def fetch_pages_from_api(title, authors):
+    """Busca páginas en Open Library y Google Books"""
+    import urllib.request
+    import urllib.parse
+    
+    author = authors[0] if authors else ''
+    
+    # Intentar Open Library primero
+    try:
+        query = f'{title} {author}'.strip()
+        encoded_query = urllib.parse.quote(query)
+        url = f'https://openlibrary.org/search.json?q={encoded_query}&limit=1&fields=number_of_pages_median'
+        
+        req = urllib.request.Request(url, headers={'User-Agent': 'CalibreSync/1.0'})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode('utf-8'))
+        
+        if data.get('docs') and data['docs'][0].get('number_of_pages_median'):
+            return data['docs'][0]['number_of_pages_median']
+    except:
+        pass
+    
+    # Intentar Google Books
+    try:
+        query = f'intitle:"{title}"'
+        if author:
+            query += f'+inauthor:"{author}"'
+        encoded_query = urllib.parse.quote(query, safe=':+"')
+        url = f'https://www.googleapis.com/books/v1/volumes?q={encoded_query}&maxResults=1'
+        
+        req = urllib.request.Request(url, headers={'User-Agent': 'CalibreSync/1.0'})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode('utf-8'))
+        
+        if data.get('items'):
+            pages = data['items'][0].get('volumeInfo', {}).get('pageCount')
+            if pages:
+                return pages
+    except:
+        pass
+    
+    return 0
+
+
 def parse_opf_metadata(opf_path, book_dir):
     """Parsea un archivo metadata.opf de Calibre"""
     try:
@@ -250,12 +294,20 @@ def parse_opf_metadata(opf_path, book_dir):
         # Serie (metadata de Calibre)
         series = None
         series_index = None
+        pages_from_calibre = 0
+        
         for meta in root.findall('.//opf:meta', ns):
             if meta.get('name') == 'calibre:series':
                 series = meta.get('content')
             if meta.get('name') == 'calibre:series_index':
                 try:
                     series_index = float(meta.get('content'))
+                except:
+                    pass
+            # Buscar páginas en custom columns de Calibre
+            if 'pages' in meta.get('name', '').lower() or 'paginas' in meta.get('name', '').lower():
+                try:
+                    pages_from_calibre = int(meta.get('content', 0))
                 except:
                     pass
         
@@ -266,15 +318,26 @@ def parse_opf_metadata(opf_path, book_dir):
                 cover_path = str(f)
                 break
         
-        # Buscar número de páginas en los formatos
-        pages = 0
-        for f in book_dir.iterdir():
-            if f.suffix.lower() == '.epub':
-                pages = estimate_pages_from_epub(f)
-                break
-            elif f.suffix.lower() == '.pdf':
-                pages = estimate_pages_from_pdf(f)
-                break
+        # Páginas: prioridad Calibre > API > Estimación
+        pages = pages_from_calibre
+        
+        if not pages:
+            # Intentar desde API (solo si no hay muchos libros para no saturar)
+            print(f"    🔍 Buscando páginas para: {title[:40]}...")
+            pages = fetch_pages_from_api(title, authors)
+        
+        if not pages:
+            # Fallback: estimar desde archivo
+            for f in book_dir.iterdir():
+                if f.suffix.lower() == '.epub':
+                    pages = estimate_pages_from_epub(f)
+                    break
+                elif f.suffix.lower() == '.pdf':
+                    pages = estimate_pages_from_pdf(f)
+                    break
+        
+        if not pages:
+            pages = 250  # Default final
         
         return {
             'calibre_id': int(book_dir.name.split('(')[-1].rstrip(')')) if '(' in book_dir.name else 0,
