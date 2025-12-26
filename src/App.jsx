@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useCallback, useRef, memo } from 'react';
+import { ClickableChip, RelatedBooks, AwardBadge } from './InterconnectedComponents.jsx';
 
 // =============================================================================
 // CONFIGURACIÓN
@@ -1520,9 +1521,138 @@ const CollectionDetailView = ({ collection, books, onBookClick, onBack, theme, g
 };
 
 // =============================================================================
+// COMPONENTE: RelatedBooksSection - Libros relacionados inline
+// =============================================================================
+const RelatedBooksSection = memo(({ currentBook, books, hooks, onBookClick, theme, t }) => {
+  const currentHook = hooks[String(currentBook.id)];
+  
+  // Encontrar libros relacionados por múltiples criterios
+  const relatedBooks = useMemo(() => {
+    if (!currentHook) return [];
+    
+    const scores = {};
+    const currentThemes = new Set(currentHook.themes || []);
+    const currentExperience = currentHook.experience;
+    const currentAuthors = new Set(currentBook.a || []);
+    
+    books.forEach(book => {
+      if (book.id === currentBook.id) return;
+      
+      let score = 0;
+      const bookHook = hooks[String(book.id)];
+      
+      // Mismo autor: +10
+      (book.a || []).forEach(author => {
+        if (currentAuthors.has(author)) score += 10;
+      });
+      
+      // Mismos temas: +3 por tema
+      if (bookHook?.themes) {
+        bookHook.themes.forEach(thm => {
+          if (currentThemes.has(thm)) score += 3;
+        });
+      }
+      
+      // Misma experiencia: +5
+      if (bookHook?.experience === currentExperience) score += 5;
+      
+      // Mismo vibe: +2
+      const currentVibes = new Set(currentBook.v || []);
+      (book.v || []).forEach(vibe => {
+        if (currentVibes.has(vibe)) score += 2;
+      });
+      
+      if (score > 0) {
+        scores[book.id] = { book, score };
+      }
+    });
+    
+    return Object.values(scores)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 8)
+      .map(item => item.book);
+  }, [currentBook, books, hooks, currentHook]);
+  
+  if (relatedBooks.length === 0) return null;
+  
+  return (
+    <div>
+      <h3 style={{
+        fontSize: '13px',
+        fontWeight: 600,
+        color: t.text.secondary,
+        marginBottom: '12px',
+        textTransform: 'uppercase',
+        letterSpacing: '0.5px'
+      }}>
+        Si te gusta este, también...
+      </h3>
+      
+      <div style={{
+        display: 'flex',
+        gap: '12px',
+        overflowX: 'auto',
+        paddingBottom: '8px',
+        marginLeft: '-24px',
+        marginRight: '-24px',
+        paddingLeft: '24px',
+        paddingRight: '24px',
+        scrollbarWidth: 'none'
+      }}>
+        {relatedBooks.map(book => (
+          <div
+            key={book.id}
+            onClick={() => onBookClick(book)}
+            style={{
+              flexShrink: 0,
+              width: '72px',
+              cursor: 'pointer'
+            }}
+          >
+            <div style={{
+              width: '72px',
+              height: '108px',
+              borderRadius: '6px',
+              overflow: 'hidden',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+              marginBottom: '6px',
+              transition: 'transform 0.15s ease',
+              background: t.bg.tertiary
+            }}>
+              <img 
+                src={`/portadas/${book.id}.jpg`}
+                alt={book.t}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                onError={(e) => { 
+                  e.target.style.display = 'none';
+                }}
+              />
+            </div>
+            <p style={{
+              fontSize: '10px',
+              color: t.text.secondary,
+              textAlign: 'center',
+              lineHeight: 1.2,
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden'
+            }}>
+              {book.t}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+});
+
+RelatedBooksSection.displayName = 'RelatedBooksSection';
+
+// =============================================================================
 // COMPONENTE: BookModal
 // =============================================================================
-const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAuthorClick, bookHook }) => {
+const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAuthorClick, onThemeClick, onExperienceClick, onBookClick, bookHook, books, hooks }) => {
   const [imgError, setImgError] = useState(false);
   const [synopsisExpanded, setSynopsisExpanded] = useState(false);
   const t = THEMES[theme];
@@ -1749,18 +1879,34 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                 </span>
               )}
               
-              {/* Experiencia */}
+              {/* Experiencia - Clickeable */}
               {bookHook.experience && (
-                <span style={{
-                  fontSize: '12px',
-                  padding: '4px 10px',
-                  borderRadius: '12px',
-                  background: t.accentMuted,
-                  color: t.accent,
-                  fontWeight: 500
-                }}>
+                <button 
+                  onClick={(e) => { e.stopPropagation(); onExperienceClick?.(bookHook.experience); }}
+                  style={{
+                    fontSize: '12px',
+                    padding: '4px 10px',
+                    borderRadius: '12px',
+                    background: t.accentMuted,
+                    color: t.accent,
+                    fontWeight: 500,
+                    border: 'none',
+                    cursor: 'pointer',
+                    transition: 'all 0.15s ease'
+                  }}
+                  onMouseEnter={e => { 
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.background = t.accent;
+                    e.target.style.color = t.bg.primary;
+                  }}
+                  onMouseLeave={e => { 
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.background = t.accentMuted;
+                    e.target.style.color = t.accent;
+                  }}
+                >
                   ✨ {bookHook.experience}
-                </span>
+                </button>
               )}
             </div>
             
@@ -1779,16 +1925,33 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             {/* Temas */}
             {bookHook.themes && bookHook.themes.length > 0 && (
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '12px' }}>
-                {bookHook.themes.map(theme => (
-                  <span key={theme} style={{
-                    fontSize: '11px',
-                    padding: '3px 8px',
-                    borderRadius: '10px',
-                    border: `1px solid ${t.border.subtle}`,
-                    color: t.text.tertiary
-                  }}>
-                    {theme}
-                  </span>
+                {bookHook.themes.map(thm => (
+                  <button 
+                    key={thm} 
+                    onClick={(e) => { e.stopPropagation(); onThemeClick?.(thm); }}
+                    style={{
+                      fontSize: '11px',
+                      padding: '3px 8px',
+                      borderRadius: '10px',
+                      border: `1px solid ${t.border.subtle}`,
+                      background: 'transparent',
+                      color: t.text.tertiary,
+                      cursor: 'pointer',
+                      transition: 'all 0.15s ease'
+                    }}
+                    onMouseEnter={e => { 
+                      e.target.style.background = t.accentMuted; 
+                      e.target.style.color = t.accent;
+                      e.target.style.borderColor = t.accent;
+                    }}
+                    onMouseLeave={e => { 
+                      e.target.style.background = 'transparent'; 
+                      e.target.style.color = t.text.tertiary;
+                      e.target.style.borderColor = t.border.subtle;
+                    }}
+                  >
+                    {thm}
+                  </button>
                 ))}
               </div>
             )}
@@ -1902,6 +2065,23 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                 {synopsisExpanded ? '← Ver menos' : 'Ver más →'}
               </button>
             )}
+          </div>
+        )}
+        
+        {/* Libros relacionados */}
+        {books && books.length > 0 && (
+          <div style={{ padding: '0 24px 20px' }}>
+            <RelatedBooksSection 
+              currentBook={book}
+              books={books}
+              hooks={hooks}
+              onBookClick={(relatedBook) => {
+                onClose();
+                setTimeout(() => onBookClick?.(relatedBook), 100);
+              }}
+              theme={theme}
+              t={t}
+            />
           </div>
         )}
         
@@ -2410,7 +2590,7 @@ const StatsModal = ({ books, onClose, theme }) => {
 // =============================================================================
 // COMPONENTE: AuthorModal
 // =============================================================================
-const AuthorModal = ({ authorName, authorData, books, onClose, onBookClick, theme }) => {
+const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClick, onThemeClick, theme }) => {
   const t = THEMES[theme];
   
   // Obtener libros de este autor
@@ -2606,17 +2786,82 @@ const AuthorModal = ({ authorName, authorData, books, onClose, onBookClick, them
           
           {/* Libros en tu biblioteca */}
           {authorBooks.length > 0 && (
-            <div>
-              <h3 style={{ 
-                fontSize: '11px', 
-                fontWeight: 600, 
-                textTransform: 'uppercase', 
-                letterSpacing: '0.5px',
-                color: t.text.tertiary, 
-                marginBottom: '12px' 
-              }}>
-                En tu biblioteca ({authorBooks.length})
-              </h3>
+            <>
+              {/* Temas que explora este autor */}
+              {(() => {
+                const authorThemes = {};
+                authorBooks.forEach(book => {
+                  const bookHook = hooks?.[String(book.id)];
+                  if (bookHook?.themes) {
+                    bookHook.themes.forEach(thm => {
+                      authorThemes[thm] = (authorThemes[thm] || 0) + 1;
+                    });
+                  }
+                });
+                const topThemes = Object.entries(authorThemes)
+                  .sort((a, b) => b[1] - a[1])
+                  .slice(0, 6)
+                  .map(([name]) => name);
+                
+                if (topThemes.length === 0) return null;
+                
+                return (
+                  <div style={{ marginBottom: '20px' }}>
+                    <h3 style={{ 
+                      fontSize: '11px', 
+                      fontWeight: 600, 
+                      textTransform: 'uppercase', 
+                      letterSpacing: '0.5px',
+                      color: t.text.tertiary, 
+                      marginBottom: '8px' 
+                    }}>
+                      Temas que explora
+                    </h3>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                      {topThemes.map(thm => (
+                        <button 
+                          key={thm}
+                          onClick={() => onThemeClick?.(thm)}
+                          style={{
+                            fontSize: '12px',
+                            padding: '4px 10px',
+                            borderRadius: '12px',
+                            background: 'transparent',
+                            border: `1px solid ${t.border.default}`,
+                            color: t.text.secondary,
+                            cursor: 'pointer',
+                            transition: 'all 0.15s ease'
+                          }}
+                          onMouseEnter={e => { 
+                            e.target.style.background = t.accentMuted; 
+                            e.target.style.color = t.accent;
+                            e.target.style.borderColor = t.accent;
+                          }}
+                          onMouseLeave={e => { 
+                            e.target.style.background = 'transparent'; 
+                            e.target.style.color = t.text.secondary;
+                            e.target.style.borderColor = t.border.default;
+                          }}
+                        >
+                          {thm}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()}
+              
+              <div>
+                <h3 style={{ 
+                  fontSize: '11px', 
+                  fontWeight: 600, 
+                  textTransform: 'uppercase', 
+                  letterSpacing: '0.5px',
+                  color: t.text.tertiary, 
+                  marginBottom: '12px' 
+                }}>
+                  En tu biblioteca ({authorBooks.length})
+                </h3>
               <div style={{ 
                 display: 'flex', 
                 gap: '12px', 
@@ -2673,6 +2918,342 @@ const AuthorModal = ({ authorName, authorData, books, onClose, onBookClick, them
               </div>
             </div>
           )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// =============================================================================
+// COMPONENTE: ThemeModal - Libros por tema
+// =============================================================================
+const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienceClick, theme }) => {
+  const t = THEMES[theme];
+  
+  const themeEmojis = {
+    amor: '❤️', muerte: '💀', familia: '👨‍👩‍👧', memoria: '🧠', identidad: '🪞',
+    guerra: '⚔️', poder: '👑', soledad: '🌙', viaje: '🧭', tiempo: '⏳',
+    naturaleza: '🌿', arte: '🎨', música: '🎵', política: '🏛️', ciencia: '🔬',
+    religión: '✝️', locura: '🌀', venganza: '🔥', infancia: '🧒', vejez: '👴',
+    amistad: '🤝', traición: '🗡️', libertad: '🕊️', supervivencia: '🏕️', obsesión: '👁️',
+    pérdida: '🥀', redención: '🌅', destino: '⭐', violencia: '💥', escritura: '✍️',
+    América: '🇺🇸', España: '🇪🇸', juventud: '🌱', historia: '📜', vida: '🌻'
+  };
+  
+  // Encontrar libros con este tema
+  const themeBooks = useMemo(() => {
+    return books.filter(book => {
+      const bookHook = hooks[String(book.id)];
+      return bookHook?.themes?.includes(themeName);
+    }).slice(0, 40);
+  }, [books, hooks, themeName]);
+  
+  // Agrupar por experiencia
+  const experienceGroups = useMemo(() => {
+    const groups = {};
+    themeBooks.forEach(book => {
+      const bookHook = hooks[String(book.id)];
+      const exp = bookHook?.experience || 'otros';
+      if (!groups[exp]) groups[exp] = [];
+      groups[exp].push(book);
+    });
+    return Object.entries(groups).sort((a, b) => b[1].length - a[1].length);
+  }, [themeBooks, hooks]);
+  
+  if (!themeName) return null;
+  
+  return (
+    <div 
+      onClick={onClose}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 110,
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        background: t.overlay,
+        animation: 'fadeIn 0.2s ease'
+      }}
+    >
+      <div 
+        onClick={e => e.stopPropagation()}
+        style={{
+          width: '100%',
+          maxWidth: '500px',
+          maxHeight: '85vh',
+          borderRadius: '24px 24px 0 0',
+          background: t.bg.primary,
+          overflow: 'hidden',
+          animation: 'slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+        }}
+      >
+        {/* Handle */}
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '12px' }}>
+          <div style={{ width: '36px', height: '4px', borderRadius: '2px', background: t.border.strong }} />
+        </div>
+        
+        {/* Header */}
+        <div style={{ padding: '0 24px 20px', textAlign: 'center' }}>
+          <span style={{ fontSize: '40px', marginBottom: '8px', display: 'block' }}>
+            {themeEmojis[themeName] || '📚'}
+          </span>
+          <h2 style={{
+            fontFamily: 'Georgia, serif',
+            fontSize: '24px',
+            fontWeight: 600,
+            color: t.text.primary,
+            marginBottom: '4px',
+            textTransform: 'capitalize'
+          }}>
+            {themeName}
+          </h2>
+          <p style={{ fontSize: '14px', color: t.text.tertiary }}>
+            {themeBooks.length} libros en tu biblioteca
+          </p>
+        </div>
+        
+        {/* Lista agrupada por experiencia */}
+        <div style={{ padding: '0 24px 32px', maxHeight: '60vh', overflowY: 'auto' }}>
+          {experienceGroups.map(([experience, expBooks]) => (
+            <div key={experience} style={{ marginBottom: '24px' }}>
+              <div 
+                onClick={() => experience !== 'otros' && onExperienceClick?.(experience)}
+                style={{ 
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  marginBottom: '12px',
+                  cursor: experience !== 'otros' ? 'pointer' : 'default'
+                }}
+              >
+                <span style={{ fontSize: '12px', color: t.accent, fontWeight: 600, textTransform: 'capitalize' }}>
+                  ✨ {experience}
+                </span>
+                <span style={{ fontSize: '11px', color: t.text.muted }}>({expBooks.length})</span>
+                {experience !== 'otros' && <span style={{ fontSize: '14px', color: t.text.muted, marginLeft: 'auto' }}>›</span>}
+              </div>
+              
+              {/* Scroll horizontal de covers */}
+              <div style={{
+                display: 'flex',
+                gap: '12px',
+                overflowX: 'auto',
+                paddingBottom: '8px',
+                marginLeft: '-24px',
+                marginRight: '-24px',
+                paddingLeft: '24px',
+                paddingRight: '24px',
+                scrollbarWidth: 'none'
+              }}>
+                {expBooks.slice(0, 10).map(book => (
+                  <div
+                    key={book.id}
+                    onClick={() => onBookClick(book)}
+                    style={{ flexShrink: 0, width: '80px', cursor: 'pointer' }}
+                  >
+                    <div style={{
+                      width: '80px',
+                      height: '120px',
+                      borderRadius: '8px',
+                      overflow: 'hidden',
+                      boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                      marginBottom: '6px',
+                      background: t.bg.tertiary
+                    }}>
+                      <img 
+                        src={`/portadas/${book.id}.jpg`}
+                        alt={book.t}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                      />
+                    </div>
+                    <p style={{
+                      fontSize: '11px',
+                      color: t.text.secondary,
+                      textAlign: 'center',
+                      lineHeight: 1.2,
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden'
+                    }}>
+                      {book.t}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// =============================================================================
+// COMPONENTE: ExperienceModal - Libros por experiencia
+// =============================================================================
+const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAuthorClick, theme }) => {
+  const t = THEMES[theme];
+  
+  const experienceEmojis = {
+    devastador: '💔', perturbador: '😰', melancólico: '🌧️', nostálgico: '🕰️',
+    épico: '⚔️', monumental: '🏛️', absorbente: '🌀', hipnótico: '👁️',
+    tenso: '😬', vertiginoso: '🎢', brutal: '💀', desgarrador: '😢',
+    conmovedor: '🥺', íntimo: '💭', reflexivo: '🤔', filosófico: '🧠',
+    sardónico: '😏', irónico: '🎭', divertido: '😄', luminoso: '☀️',
+    onírico: '🌙', misterioso: '🔮', aterrador: '😱', inquietante: '👻',
+    agridulce: '🍋', contemplativo: '🧘', sombrío: '🌑', visceral: '💥'
+  };
+  
+  const experienceDescriptions = {
+    devastador: 'Te dejará sin aliento. Prepárate para sentir.',
+    perturbador: 'Inquietante de la mejor manera. Te hará pensar días después.',
+    melancólico: 'Belleza triste. Para momentos contemplativos.',
+    nostálgico: 'Te transportará a otros tiempos.',
+    épico: 'Grande en escala y ambición.',
+    monumental: 'Obras que definen generaciones.',
+    absorbente: 'Imposible de soltar.',
+    hipnótico: 'Caerás en su ritmo.',
+    tenso: 'Mantendrá tu pulso acelerado.',
+    vertiginoso: 'Velocidad narrativa que atrapa.',
+    brutal: 'Sin concesiones. Honesto hasta doler.',
+    desgarrador: 'Romperá algo dentro de ti.',
+    conmovedor: 'Tocará tu corazón.',
+    íntimo: 'Como leer el diario de alguien.',
+    reflexivo: 'Para pensar profundamente.',
+    filosófico: 'Grandes preguntas, sin respuestas fáciles.',
+    sardónico: 'Ironía inteligente y mordaz.',
+    onírico: 'Entre el sueño y la realidad.',
+    aterrador: 'Para quien busca miedo de verdad.'
+  };
+  
+  // Encontrar libros con esta experiencia
+  const experienceBooks = useMemo(() => {
+    return books.filter(book => {
+      const bookHook = hooks[String(book.id)];
+      return bookHook?.experience === experience;
+    }).slice(0, 40);
+  }, [books, hooks, experience]);
+  
+  if (!experience) return null;
+  
+  return (
+    <div 
+      onClick={onClose}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 110,
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        background: t.overlay,
+        animation: 'fadeIn 0.2s ease'
+      }}
+    >
+      <div 
+        onClick={e => e.stopPropagation()}
+        style={{
+          width: '100%',
+          maxWidth: '500px',
+          maxHeight: '85vh',
+          borderRadius: '24px 24px 0 0',
+          background: t.bg.primary,
+          overflow: 'hidden',
+          animation: 'slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+        }}
+      >
+        {/* Handle */}
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '12px' }}>
+          <div style={{ width: '36px', height: '4px', borderRadius: '2px', background: t.border.strong }} />
+        </div>
+        
+        {/* Header */}
+        <div style={{ 
+          padding: '0 24px 24px',
+          textAlign: 'center',
+          borderBottom: `1px solid ${t.border.subtle}`
+        }}>
+          <span style={{ fontSize: '48px', marginBottom: '12px', display: 'block' }}>
+            {experienceEmojis[experience] || '✨'}
+          </span>
+          <h2 style={{
+            fontFamily: 'Georgia, serif',
+            fontSize: '26px',
+            fontWeight: 600,
+            color: t.text.primary,
+            marginBottom: '8px',
+            textTransform: 'capitalize'
+          }}>
+            {experience}
+          </h2>
+          <p style={{ 
+            fontSize: '14px', 
+            color: t.text.secondary,
+            maxWidth: '300px',
+            margin: '0 auto 8px'
+          }}>
+            {experienceDescriptions[experience] || 'Una experiencia de lectura única.'}
+          </p>
+          <p style={{ fontSize: '13px', color: t.text.tertiary }}>
+            {experienceBooks.length} libros
+          </p>
+        </div>
+        
+        {/* Grid de libros */}
+        <div style={{ padding: '24px', maxHeight: '55vh', overflowY: 'auto' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '16px'
+          }}>
+            {experienceBooks.map(book => {
+              const authors = (book.a || []).slice(0, 1);
+              
+              return (
+                <div key={book.id} onClick={() => onBookClick(book)} style={{ cursor: 'pointer' }}>
+                  <div style={{
+                    aspectRatio: '2/3',
+                    borderRadius: '8px',
+                    overflow: 'hidden',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                    marginBottom: '8px',
+                    background: t.bg.tertiary
+                  }}>
+                    <img 
+                      src={`/portadas/${book.id}.jpg`}
+                      alt={book.t}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                    />
+                  </div>
+                  <p style={{
+                    fontSize: '12px',
+                    fontWeight: 500,
+                    color: t.text.primary,
+                    lineHeight: 1.2,
+                    marginBottom: '2px',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden'
+                  }}>
+                    {book.t}
+                  </p>
+                  {authors[0] && (
+                    <p 
+                      onClick={(e) => { e.stopPropagation(); onAuthorClick?.(authors[0]); }}
+                      style={{ fontSize: '11px', color: t.text.tertiary, cursor: 'pointer' }}
+                    >
+                      {authors[0]}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
@@ -3337,6 +3918,8 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [selectedBook, setSelectedBook] = useState(null);
   const [selectedAuthor, setSelectedAuthor] = useState(null);
+  const [selectedTheme, setSelectedTheme] = useState(null);
+  const [selectedExperience, setSelectedExperience] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showWizard, setShowWizard] = useState(false);
@@ -4116,8 +4699,13 @@ export default function App() {
           theme={theme}
           currentList={getListStatus(selectedBook.id)}
           onListChange={handleListChange}
-          onAuthorClick={(author) => setSelectedAuthor(author)}
+          onAuthorClick={(author) => { setSelectedBook(null); setTimeout(() => setSelectedAuthor(author), 150); }}
+          onThemeClick={(thm) => { setSelectedBook(null); setTimeout(() => setSelectedTheme(thm), 150); }}
+          onExperienceClick={(exp) => { setSelectedBook(null); setTimeout(() => setSelectedExperience(exp), 150); }}
+          onBookClick={(book) => { setSelectedBook(null); setTimeout(() => setSelectedBook(book), 150); }}
           bookHook={hooks[String(selectedBook.id)]}
+          books={books}
+          hooks={hooks}
         />
       )}
       
@@ -4126,8 +4714,36 @@ export default function App() {
           authorName={selectedAuthor}
           authorData={authorsData[selectedAuthor]}
           books={books}
+          hooks={hooks}
           onClose={() => setSelectedAuthor(null)}
-          onBookClick={setSelectedBook}
+          onBookClick={(book) => { setSelectedAuthor(null); setTimeout(() => setSelectedBook(book), 150); }}
+          onThemeClick={(thm) => { setSelectedAuthor(null); setTimeout(() => setSelectedTheme(thm), 150); }}
+          theme={theme}
+        />
+      )}
+      
+      {/* Modal de Tema */}
+      {selectedTheme && (
+        <ThemeModal
+          themeName={selectedTheme}
+          books={books}
+          hooks={hooks}
+          onBookClick={(book) => { setSelectedTheme(null); setTimeout(() => setSelectedBook(book), 150); }}
+          onExperienceClick={(exp) => { setSelectedTheme(null); setTimeout(() => setSelectedExperience(exp), 150); }}
+          onClose={() => setSelectedTheme(null)}
+          theme={theme}
+        />
+      )}
+      
+      {/* Modal de Experiencia */}
+      {selectedExperience && (
+        <ExperienceModal
+          experience={selectedExperience}
+          books={books}
+          hooks={hooks}
+          onBookClick={(book) => { setSelectedExperience(null); setTimeout(() => setSelectedBook(book), 150); }}
+          onAuthorClick={(author) => { setSelectedExperience(null); setTimeout(() => setSelectedAuthor(author), 150); }}
+          onClose={() => setSelectedExperience(null)}
           theme={theme}
         />
       )}
