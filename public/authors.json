@@ -86,20 +86,21 @@
     ]
   },
   "Patrick Modiano": {
-    "name": "Patrick Modiano",
-    "years": "1945–",
+    "bio": "Francés, Nobel 2014, arqueólogo de la memoria. Modiano escribe novelas breves sobre la ocupación nazi, identidades perdidas y el París que ya no existe. Siempre parece estar buscando a alguien. Discreto y obsesivo.",
     "nationality": "Francés",
-    "photo": null,
-    "bio": "Novelista francés obsesionado con la memoria, la identidad y la Ocupación nazi de París. Su prosa lírica y fragmentaria explora las huellas que el pasado deja en el presente.",
-    "importance": "Modiano ha creado un universo literario único donde París es tanto escenario como personaje. Su exploración de la memoria colectiva francesa durante Vichy lo convierte en la conciencia literaria de su generación.",
-    "awards": [
-      "Premio Nobel de Literatura 2014",
-      "Premio Goncourt 1978"
+    "born": 1945,
+    "genres": [
+      "ficción",
+      "memoria",
+      "histórico"
     ],
     "notable_works": [
+      "En el café de la juventud perdida",
       "Calle de las tiendas oscuras",
-      "Dora Bruder",
-      "En el café de la juventud perdida"
+      "Villa Triste"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2014"
     ]
   },
   "Agatha Christie": {
@@ -189,7 +190,7 @@
     ]
   },
   "Javier Marías": {
-    "bio": "Madrileño, eterno candidato al Nobel, estilista obsesivo. Marías escribía frases larguísimas que te hipnotizan. Sus novelas son meditaciones sobre el tiempo, los secretos, lo que no se dice. Murió en 2022 dejando una de las obras más originales de la literatura española.",
+    "bio": "Madrileño, estilista supremo, traducido a 40 idiomas. Marías escribía frases larguísimas sobre el tiempo, los secretos y la memoria. 'Corazón tan blanco' y 'Tu rostro mañana' son obras maestras. Murió en 2022 sin el Nobel que merecía.",
     "nationality": "Español",
     "born": 1951,
     "died": 2022,
@@ -388,21 +389,21 @@
     ]
   },
   "Antonio Muñoz Molina": {
-    "name": "Antonio Muñoz Molina",
-    "years": "1956–",
+    "bio": "Jiennense, Premio Cervantes, novelista de la memoria. Muñoz Molina escribe sobre la Guerra Civil, Nueva York, el jazz y el tiempo con prosa cuidadísima. 'El jinete polaco' y 'Sefarad' son imprescindibles.",
     "nationality": "Español",
-    "photo": null,
-    "bio": "Novelista andaluz y miembro de la Real Academia Española. Su obra combina la memoria personal con la historia española del siglo XX en novelas de largo aliento.",
-    "importance": "Muñoz Molina es uno de los grandes arquitectos de la novela española contemporánea. Su capacidad para entrelazar historias personales con la Historia lo convierte en el cronista de varias generaciones.",
-    "awards": [
-      "Premio Planeta",
-      "Premio Nacional de Literatura",
-      "Premio Príncipe de Asturias"
+    "born": 1956,
+    "genres": [
+      "ficción",
+      "histórico",
+      "memorias"
     ],
     "notable_works": [
       "El jinete polaco",
       "Sefarad",
-      "La noche de los tiempos"
+      "El viento de la luna"
+    ],
+    "awards": [
+      "Premio Cervantes"
     ]
   },
   "John Steinbeck": {
@@ -476,37 +477,38 @@
     ]
   },
   "Joyce Carol Oates": {
-    "name": "Joyce Carol Oates",
-    "years": "1938–",
+    "bio": "Americana, máquina de escribir, exploradora de la violencia. Oates ha publicado más de 50 novelas sobre familias rotas, crímenes y la América oscura. Prolífica hasta lo imposible. Finalista del Nobel año tras año.",
     "nationality": "Estadounidense",
-    "photo": null,
-    "bio": "Prolífica novelista americana con más de 50 novelas publicadas. Su obra explora la violencia americana, las dinámicas familiares y la psicología femenina con intensidad gótica.",
-    "importance": "Oates es una fuerza de la naturaleza literaria. Su productividad es legendaria, pero más importante es su capacidad para reinventarse y explorar los rincones más oscuros de la experiencia americana.",
-    "awards": [
-      "National Book Award",
-      "O. Henry Award",
-      "Nominada al Pulitzer"
+    "born": 1938,
+    "genres": [
+      "ficción",
+      "gótico",
+      "psicológico"
     ],
     "notable_works": [
       "Blonde",
       "Ellos",
-      "Hermana mía, mi amor"
+      "Un jardín de placeres terrenales"
     ]
   },
   "Thomas Mann": {
-    "name": "Thomas Mann",
-    "years": "1875–1955",
+    "bio": "Alemán, Nobel 1929, novelista de la decadencia burguesa. Mann escribió 'La montaña mágica' y 'Los Buddenbrook': largas meditaciones sobre Europa, enfermedad, arte y muerte. Huyó del nazismo. Profundo, exigente, imprescindible.",
     "nationality": "Alemán",
-    "photo": null,
-    "bio": "Novelista alemán considerado uno de los más importantes del siglo XX. Su obra explora la decadencia de la burguesía europea y la tensión entre arte y vida.",
-    "importance": "Mann es el novelista de la ironía y la ambigüedad. Sus reflexiones sobre el artista en la sociedad burguesa y sobre Alemania anticiparon las catástrofes del siglo XX.",
-    "awards": [
-      "Premio Nobel de Literatura 1929"
+    "born": 1875,
+    "died": 1955,
+    "genres": [
+      "ficción",
+      "filosófico",
+      "literario"
     ],
     "notable_works": [
       "La montaña mágica",
       "Los Buddenbrook",
+      "Doctor Faustus",
       "Muerte en Venecia"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1929"
     ]
   },
   "Jhumpa Lahiri": {
@@ -545,21 +547,22 @@
     ]
   },
   "Juan Marsé": {
-    "name": "Juan Marsé",
-    "years": "1933–2020",
+    "bio": "Barcelonés, cronista del Carmelo y la posguerra. Marsé escribió novelas sobre la Barcelona de barrio con una mezcla de realismo y ensoñación. 'Últimas tardes con Teresa' es un clásico. Premio Cervantes 2008.",
     "nationality": "Español",
-    "photo": null,
-    "bio": "Novelista barcelonés que retrató la posguerra española desde los barrios populares de su ciudad. Autodidacta, trabajó como joyero mientras construía una de las obras más importantes de la literatura española.",
-    "importance": "Marsé inventó el 'realismo mágico' barcelonés: historias donde la memoria, el cine y los sueños transforman la realidad gris de la dictadura. Es el novelista esencial para entender la Barcelona del siglo XX.",
-    "awards": [
-      "Premio Cervantes 2008",
-      "Premio Planeta",
-      "Premio de la Crítica"
+    "born": 1933,
+    "died": 2020,
+    "genres": [
+      "ficción",
+      "social",
+      "urbano"
     ],
     "notable_works": [
+      "Últimas tardes con Teresa",
       "Si te dicen que caí",
-      "El embrujo de Shanghai",
-      "Rabos de lagartija"
+      "El embrujo de Shanghai"
+    ],
+    "awards": [
+      "Premio Cervantes 2008"
     ]
   },
   "Louis-Ferdinand Céline": {
@@ -698,20 +701,18 @@
     ]
   },
   "Luis Landero": {
-    "name": "Luis Landero",
-    "years": "1948–",
+    "bio": "Extremeño, novelista de perdedores encantadores. Landero escribe sobre soñadores que fracasan con humor y ternura. 'Juegos de la edad tardía' fue un debut deslumbrante. El Cervantes de los antihéroes.",
     "nationality": "Español",
-    "photo": null,
-    "bio": "Novelista extremeño que irrumpió tardíamente en la literatura con 'Juegos de la edad tardía'. Sus novelas exploran personajes soñadores que escapan de la mediocridad mediante la fantasía.",
-    "importance": "Landero es el novelista de los quijotes contemporáneos: hombres grises que construyen mundos imaginarios para sobrevivir. Su prosa combina humor y melancolía de manera única.",
-    "awards": [
-      "Premio Nacional de Narrativa",
-      "Premio de la Crítica"
+    "born": 1948,
+    "genres": [
+      "ficción",
+      "humor",
+      "literario"
     ],
     "notable_works": [
       "Juegos de la edad tardía",
       "El guitarrista",
-      "Lluvia fina"
+      "El huerto de Emerson"
     ]
   },
   "Ignacio Martínez de Pisón": {
@@ -748,19 +749,17 @@
     ]
   },
   "Lorenzo Silva": {
-    "name": "Lorenzo Silva",
-    "years": "1966–",
+    "bio": "Madrileño, creador de Bevilacqua y Chamorro. Silva escribe novela negra española con pareja de guardias civiles. También novela histórica y ensayo. Premio Planeta 2012. El noir español de calidad.",
     "nationality": "Español",
-    "photo": null,
-    "bio": "Novelista madrileño creador de los guardias civiles Bevilacqua y Chamorro. Ha convertido a la Benemérita en protagonista de una saga que retrata la España contemporánea.",
-    "importance": "Silva ha dignificado el género negro español mientras ofrece un retrato social del país. Sus guardias civiles humanos han cambiado la imagen del cuerpo en la ficción.",
-    "awards": [
-      "Premio Planeta 2012",
-      "Premio Nadal"
+    "born": 1966,
+    "genres": [
+      "noir",
+      "thriller",
+      "histórico"
     ],
     "notable_works": [
-      "El lejano país de los estanques",
-      "La serie de Bevilacqua",
+      "El alquimista impaciente",
+      "La marca del meridiano",
       "Castellano"
     ]
   },
@@ -781,7 +780,7 @@
     ]
   },
   "Marcel Proust": {
-    "bio": "Francés, enfermo, genio del tiempo. 'En busca del tiempo perdido' son 3000 páginas sobre la memoria, el amor, el arte, todo. Proust vivía en una habitación forrada de corcho, escribiendo de noche. Sus frases duran párrafos. Es difícil y recompensa infinitamente.",
+    "bio": "Francés, arquitecto de la memoria. Proust escribió 'En busca del tiempo perdido': 3000 páginas sobre el tiempo, el amor, los celos y una magdalena mojada en té. Lo escribió en cama, enfermo, obsesivo. La novela más ambiciosa jamás escrita.",
     "nationality": "Francés",
     "born": 1871,
     "died": 1922,
@@ -897,20 +896,19 @@
     ]
   },
   "Margaret Atwood": {
-    "name": "Margaret Atwood",
-    "years": "1939–",
+    "bio": "Canadiense, visionaria, incansable. Atwood escribió 'El cuento de la criada' décadas antes de que fuera serie. También poeta y crítica. Sigue escribiendo a los 80. La gran dama de las letras canadienses y la distopía feminista.",
     "nationality": "Canadiense",
-    "photo": null,
-    "bio": "Prolífica novelista, poeta y ensayista canadiense. Su obra distópica y feminista ha ganado relevancia en años recientes con la adaptación de 'El cuento de la criada'.",
-    "importance": "Atwood es la voz literaria feminista más influyente del mundo anglófono. Sus distopías no son fantasías: son advertencias que cada vez parecen más proféticas.",
-    "awards": [
-      "Premio Booker (dos veces)",
-      "Premio Príncipe de Asturias"
+    "born": 1939,
+    "genres": [
+      "ficción",
+      "distopía",
+      "feminismo"
     ],
     "notable_works": [
       "El cuento de la criada",
+      "Los testamentos",
       "Alias Grace",
-      "Trilogía MaddAddam"
+      "El asesino ciego"
     ]
   },
   "Joseph Heller": {
@@ -965,7 +963,7 @@
     ]
   },
   "Gabriel García Márquez": {
-    "bio": "Colombiano, Nobel 1982, padre del realismo mágico. 'Cien años de soledad' cambió la literatura en español y en cualquier idioma. Gabo era periodista, cuentista, novelista. Macondo es ya geografía universal. El escritor latinoamericano más importante de la historia.",
+    "bio": "Colombiano, Nobel 1982, padre del realismo mágico. Gabo escribió 'Cien años de soledad', la novela latinoamericana más leída de la historia. También periodista y cuentista genial. Cambió la forma de contar historias para siempre.",
     "nationality": "Colombiano",
     "born": 1927,
     "died": 2014,
@@ -984,14 +982,14 @@
     ]
   },
   "Jorge Luis Borges": {
-    "bio": "Argentino, el escritor de escritores. Borges inventaba mundos en pocas páginas: laberintos, bibliotecas infinitas, tigres que son palabras. Fue ciego y su erudición era infinita. Sus cuentos son filosofía hecha literatura. Nunca le dieron el Nobel; el Nobel perdió.",
+    "bio": "Argentino, ciego, bibliotecario, infinito. Borges escribió cuentos y ensayos sobre laberintos, espejos, tigres y bibliotecas imposibles. Inventó mundos en pocas páginas. Nunca ganó el Nobel (escándalo). El escritor de escritores.",
     "nationality": "Argentino",
     "born": 1899,
     "died": 1986,
     "genres": [
       "cuento",
-      "poesía",
-      "ensayo"
+      "ensayo",
+      "fantástico"
     ],
     "notable_works": [
       "Ficciones",
@@ -1000,24 +998,23 @@
     ]
   },
   "Julio Cortázar": {
-    "bio": "Argentino-francés, mago del cuento, inventor de Rayuela. Cortázar jugaba con la forma: su novela se puede leer en cualquier orden. Sus cuentos mezclan lo fantástico con lo cotidiano. Era alto, joven eterno, cronopia. El escritor más divertido del boom.",
+    "bio": "Argentino, mago del cuento y la novela experimental. Cortázar escribió 'Rayuela', que se puede leer de muchas formas, y cuentos perfectos sobre lo fantástico en lo cotidiano. Vivió en París, apoyó revoluciones, fue amado por generaciones. El cronopio mayor.",
     "nationality": "Argentino",
     "born": 1914,
     "died": 1984,
     "genres": [
-      "cuento",
-      "novela",
-      "fantástico"
+      "ficción",
+      "fantástico",
+      "experimental"
     ],
     "notable_works": [
       "Rayuela",
       "Bestiario",
-      "Final del juego",
-      "Historias de cronopios y de famas"
+      "Final del juego"
     ]
   },
   "Mario Vargas Llosa": {
-    "bio": "Peruano, Nobel 2010, el arquitecto de novelas totales. Vargas Llosa escribe libros enormes y perfectamente construidos: 'La casa verde', 'Conversación en La Catedral'. También es ensayista y polemista. El último gran novelista del boom.",
+    "bio": "Peruano, Nobel 2010, novelista total. Vargas Llosa ha escrito novelas sobre dictadores, puritanismo, utopías y la historia del Perú con ambición y maestría técnica. También ensayista y político. Uno de los grandes vivos.",
     "nationality": "Peruano",
     "born": 1936,
     "genres": [
@@ -1035,14 +1032,14 @@
     ]
   },
   "Roberto Bolaño": {
-    "bio": "Chileno, mito literario, muerto demasiado joven. 'Los detectives salvajes' y '2666' son monumentos de la literatura en español. Bolaño era poeta antes que novelista, vivió de todo, escribió febrilmente al final. Es el escritor latinoamericano más influyente desde el boom.",
+    "bio": "Chileno, vagabundo, leyenda. Bolaño escribió 'Los detectives salvajes' y '2666': novelas inmensas sobre literatura, violencia y búsqueda. Murió joven, en 2003, y desde entonces su fama no para de crecer. El último gran novelista latinoamericano.",
     "nationality": "Chileno",
     "born": 1953,
     "died": 2003,
     "genres": [
       "ficción",
-      "poesía",
-      "literario"
+      "literario",
+      "experimental"
     ],
     "notable_works": [
       "Los detectives salvajes",
@@ -1149,48 +1146,50 @@
     ]
   },
   "Alice Munro": {
-    "name": "Alice Munro",
-    "years": "1931–2024",
+    "bio": "Canadiense, Nobel 2013, la maestra del cuento. Munro escribió relatos sobre mujeres en pueblos de Ontario que contienen novelas enteras en 30 páginas. Su precisión es legendaria. La mejor cuentista en inglés de su generación.",
     "nationality": "Canadiense",
-    "photo": null,
-    "bio": "Maestra del cuento contemporáneo, conocida como la Chéjov canadiense. Sus relatos sobre mujeres en la Ontario rural son obras maestras de precisión psicológica.",
-    "importance": "Munro elevó el cuento a la categoría de la novela. Demostró que en treinta páginas cabe toda una vida, y que la vida de mujeres 'corrientes' merece la gran literatura.",
-    "awards": [
-      "Premio Nobel de Literatura 2013",
-      "Man Booker International Prize"
+    "born": 1931,
+    "died": 2024,
+    "genres": [
+      "cuento",
+      "literario",
+      "drama"
     ],
     "notable_works": [
       "Escapada",
       "Demasiada felicidad",
       "Mi vida querida"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2013"
     ]
   },
   "Virginia Woolf": {
-    "bio": "Inglesa, modernista, feminista, genio. Woolf reinventó la novela con el flujo de conciencia. 'La señora Dalloway' transcurre en un día; 'Al faro' en años. Luchó contra la enfermedad mental y se quitó la vida. Su legado es inmenso.",
+    "bio": "Inglesa, pionera del modernismo, exploradora de la conciencia. Woolf escribió novelas donde el tiempo se dilata y los pensamientos fluyen como ríos. 'La señora Dalloway' y 'Al faro' son obras maestras. También ensayista feminista brillante. Una de las grandes.",
     "nationality": "Británica",
     "born": 1882,
     "died": 1941,
     "genres": [
       "ficción",
       "modernismo",
-      "feminismo"
+      "ensayo"
     ],
     "notable_works": [
       "La señora Dalloway",
       "Al faro",
-      "Orlando",
+      "Las olas",
       "Una habitación propia"
     ]
   },
   "Franz Kafka": {
-    "bio": "Praguense, judío, funcionario de seguros, visionario. Kafka escribió sobre la alienación moderna antes de que existiera el término. 'La metamorfosis' convierte a un hombre en insecto. Pidió que quemaran su obra; por suerte no le hicieron caso. El escritor más influyente del siglo XX.",
+    "bio": "Checo de lengua alemana, profeta del absurdo moderno. Kafka escribió sobre burocracias incomprensibles, metamorfosis y procesos sin sentido. Murió joven, pidió que quemaran sus manuscritos. Su amigo no lo hizo. 'Kafkiano' es ahora un adjetivo universal.",
     "nationality": "Checo (Imperio Austrohúngaro)",
     "born": 1883,
     "died": 1924,
     "genres": [
       "ficción",
-      "surrealismo",
-      "existencialismo"
+      "absurdo",
+      "existencial"
     ],
     "notable_works": [
       "La metamorfosis",
@@ -1199,8 +1198,8 @@
     ]
   },
   "Albert Camus": {
-    "bio": "Francés nacido en Argelia, Nobel 1957. Camus escribió sobre el absurdo de la existencia con prosa cristalina. 'El extranjero' es perfecto. También fue resistente, periodista, dramaturgo. Murió en accidente de coche a los 46. Sigue siendo el existencialista más legible.",
-    "nationality": "Francés",
+    "bio": "Francés de Argelia, Nobel 1957, filósofo del absurdo. Camus escribió 'El extranjero' y 'La peste': novelas sobre el sinsentido de la existencia y cómo vivirla con dignidad. También periodista y resistente. Murió en accidente de coche a los 46.",
+    "nationality": "Francés (nacido en Argelia)",
     "born": 1913,
     "died": 1960,
     "genres": [
@@ -1218,23 +1217,24 @@
     ]
   },
   "Fyodor Dostoevsky": {
-    "name": "Fyodor Dostoevsky",
-    "years": "1821–1881",
+    "bio": "Ruso, titán de la novela, explorador del alma. Dostoievski escribió sobre crimen, redención, fe y locura con una intensidad que todavía abruma. 'Los hermanos Karamázov' y 'Crimen y castigo' son cumbres de la literatura universal. Imprescindible.",
     "nationality": "Ruso",
-    "photo": null,
-    "bio": "Novelista ruso que exploró las profundidades del alma humana. Condenado a muerte y perdonado en el último momento, su vida fue tan dramática como su obra.",
-    "importance": "Dostoevsky inventó la novela psicológica moderna. Sus personajes atormentados anticiparon a Freud y siguen siendo espejos de nuestra condición.",
-    "awards": [
-      "Reconocimiento universal como uno de los más grandes"
+    "born": 1821,
+    "died": 1881,
+    "genres": [
+      "ficción",
+      "filosófico",
+      "psicológico"
     ],
     "notable_works": [
       "Crimen y castigo",
       "Los hermanos Karamázov",
-      "El idiota"
+      "El idiota",
+      "Demonios"
     ]
   },
   "Leo Tolstoy": {
-    "bio": "Ruso, conde, moralista, titán. 'Guerra y paz' y 'Anna Karenina' son quizá las dos mejores novelas jamás escritas. Tolstói lo sabía todo sobre la vida humana. Al final se volvió asceta y renunció a su fortuna. Un gigante que todavía intimida.",
+    "bio": "Ruso, aristócrata, genio. Tolstói escribió 'Guerra y paz' y 'Anna Karénina', probablemente las dos mejores novelas de la historia. También fue moralista, vegetariano y anarquista cristiano. A los 80 huyó de su casa y murió en una estación de tren. Una vida y una obra inmensas.",
     "nationality": "Ruso",
     "born": 1828,
     "died": 1910,
@@ -1245,50 +1245,52 @@
     ],
     "notable_works": [
       "Guerra y paz",
-      "Anna Karenina",
+      "Anna Karénina",
       "La muerte de Iván Ilich"
     ]
   },
   "Ernest Hemingway": {
-    "bio": "Americano, macho, minimalista. Hemingway escribía frases cortas sobre hombres que no hablan de sus sentimientos. 'El viejo y el mar' le dio el Nobel. Fue corresponsal de guerra, cazador, bebedor. Se pegó un tiro. Su influencia es inmensa y a veces tóxica.",
+    "bio": "Americano, macho, minimalista. Hemingway escribía frases cortas sobre guerra, pesca, toros y amor con una economía que cambió la prosa del siglo XX. Nobel 1954. Se pegó un tiro en 1961. Un mito americano.",
     "nationality": "Estadounidense",
     "born": 1899,
     "died": 1961,
     "genres": [
       "ficción",
-      "guerra",
-      "aventura"
+      "bélico",
+      "literario"
     ],
     "notable_works": [
       "El viejo y el mar",
+      "Fiesta",
       "Por quién doblan las campanas",
-      "Fiesta"
+      "Adiós a las armas"
     ],
     "awards": [
       "Premio Nobel de Literatura 1954"
     ]
   },
   "William Faulkner": {
-    "bio": "Americano del Sur, Nobel 1949, genio del laberinto narrativo. Faulkner creó el condado de Yoknapatawpha y lo pobló de familias malditas. Sus frases duran páginas. 'El ruido y la furia' es difícil y recompensa. El novelista americano más influyente del siglo XX.",
+    "bio": "Sureño, Nobel 1949, inventor del condado de Yoknapatawpha. Faulkner escribía frases larguísimas sobre el Sur profundo, la raza y la decadencia. 'El ruido y la furia' y 'Absalón, Absalón!' son obras maestras difíciles. El más grande novelista americano del siglo XX.",
     "nationality": "Estadounidense",
     "born": 1897,
     "died": 1962,
     "genres": [
       "ficción",
-      "gótico sureño",
+      "sureño",
       "modernismo"
     ],
     "notable_works": [
       "El ruido y la furia",
       "Mientras agonizo",
-      "Absalom, Absalom!"
+      "Absalón, Absalón!",
+      "Luz de agosto"
     ],
     "awards": [
       "Premio Nobel de Literatura 1949"
     ]
   },
   "James Joyce": {
-    "bio": "Irlandés, revolucionario, difícil. Joyce reinventó la novela con 'Ulises': un día en Dublín que contiene todo. 'Finnegans Wake' es casi ilegible y genial. Vivió exiliado en Trieste, París, Zúrich. Nadie ha ido más lejos en lo que puede hacer el lenguaje.",
+    "bio": "Irlandés, revolucionario del lenguaje. Joyce escribió 'Ulises', que cuenta un día en Dublín con todas las técnicas narrativas inventadas y por inventar. También 'Finnegans Wake', que casi nadie entiende. Difícil, genial, inevitable.",
     "nationality": "Irlandés",
     "born": 1882,
     "died": 1941,
@@ -1300,17 +1302,18 @@
     "notable_works": [
       "Ulises",
       "Dublineses",
-      "Retrato del artista adolescente"
+      "Retrato del artista adolescente",
+      "Finnegans Wake"
     ]
   },
   "Oscar Wilde": {
-    "bio": "Irlandés, dandy, mártir. Wilde era el hombre más ingenioso de su época. 'El retrato de Dorian Gray' es una fábula sobre la belleza y la corrupción. Lo encarcelaron por homosexualidad y murió en París, arruinado. Sus obras de teatro siguen siendo divertidísimas.",
+    "bio": "Irlandés, dandy, genio del aforismo. Wilde escribió comedias perfectas, cuentos, ensayos y 'El retrato de Dorian Gray'. Fue a prisión por homosexualidad y murió en París a los 46. Su ingenio sigue siendo insuperable.",
     "nationality": "Irlandés",
     "born": 1854,
     "died": 1900,
     "genres": [
-      "ficción",
       "teatro",
+      "ficción",
       "ensayo"
     ],
     "notable_works": [
@@ -1320,47 +1323,45 @@
     ]
   },
   "Isabel Allende": {
-    "name": "Isabel Allende",
-    "years": "1942–",
+    "bio": "Chilena, la autora en español más leída del mundo. Allende empezó con 'La casa de los espíritus' y no ha parado: novelas históricas, sagas familiares, memorias. Escribe para emocionar y lo logra. Millones de lectores no se equivocan.",
     "nationality": "Chilena",
-    "photo": null,
-    "bio": "Novelista chilena, la escritora en español vivo más leída del mundo. Sobrina de Salvador Allende, su exilio tras el golpe marcó su vida y su obra.",
-    "importance": "Allende llevó el realismo mágico a millones de lectores. Sus sagas familiares conectan la historia latinoamericana con el presente global.",
-    "awards": [
-      "Premio Nacional de Literatura de Chile",
-      "Hans Christian Andersen Award"
+    "born": 1942,
+    "genres": [
+      "ficción",
+      "histórico",
+      "saga"
     ],
     "notable_works": [
       "La casa de los espíritus",
-      "Paula",
-      "El cuaderno de Maya"
+      "Eva Luna",
+      "Paula"
     ]
   },
   "Milan Kundera": {
-    "bio": "Checo-francés, novelista filósofo. 'La insoportable levedad del ser' explora el amor, el destino y el kitsch. Kundera escribía novelas-ensayo: la trama es excusa para pensar. Exiliado de Chequia, adoptado por Francia. Un estilista del pensamiento.",
-    "nationality": "Francés (nacido checo)",
+    "bio": "Checo-francés, novelista del exilio y la memoria. Kundera escribió 'La insoportable levedad del ser': amor, política y filosofía en la Praga de 1968. También ensayista sobre la novela. Uno de los grandes del siglo XX.",
+    "nationality": "Checo-Francés",
     "born": 1929,
     "died": 2023,
     "genres": [
       "ficción",
       "filosófico",
-      "ensayo"
+      "político"
     ],
     "notable_works": [
       "La insoportable levedad del ser",
       "La broma",
-      "El libro de la risa y el olvido"
+      "El arte de la novela"
     ]
   },
   "Umberto Eco": {
-    "bio": "Italiano, semiólogo, novelista medieval. 'El nombre de la rosa' es un thriller en un monasterio del siglo XIV lleno de erudición. Eco era profesor, ensayista, coleccionista de libros raros. Escribía novelas densas y adictivas. Un gigante del siglo XX.",
+    "bio": "Italiano, semiólogo, novelista erudito. Eco escribió 'El nombre de la rosa': un thriller medieval sobre libros y venenos que vendió millones. También ensayos sobre cultura, medios y signos. Un intelectual que era también entretenido.",
     "nationality": "Italiano",
     "born": 1932,
     "died": 2016,
     "genres": [
       "ficción",
-      "histórico",
-      "misterio"
+      "ensayo",
+      "histórico"
     ],
     "notable_works": [
       "El nombre de la rosa",
@@ -1369,15 +1370,14 @@
     ]
   },
   "Italo Calvino": {
-    "name": "Italo Calvino",
-    "years": "1923–1985",
+    "bio": "Italiano, fabulista, experimentador. Calvino escribía cuentos fantásticos, novelas combinatorias y reflexiones sobre literatura. 'Las ciudades invisibles' y 'Si una noche de invierno un viajero' son únicas. El escritor como mago.",
     "nationality": "Italiano",
-    "photo": null,
-    "bio": "Novelista italiano que evolucionó del neorrealismo a la experimentación combinatoria. Sus ciudades invisibles y sus juegos narrativos son únicos en la literatura.",
-    "importance": "Calvino hizo de la literatura un juego infinito. Su ensayo 'Seis propuestas para el próximo milenio' es un testamento literario para nuestro tiempo.",
-    "awards": [
-      "Italian PEN Prize",
-      "Reconocimiento mundial"
+    "born": 1923,
+    "died": 1985,
+    "genres": [
+      "ficción",
+      "fantástico",
+      "experimental"
     ],
     "notable_works": [
       "Las ciudades invisibles",
@@ -1403,14 +1403,14 @@
     ]
   },
   "Clarice Lispector": {
-    "bio": "Brasileña nacida en Ucrania, mística de lo cotidiano. Lispector escribía sobre lo interior: epifanías en la cocina, existencialismo doméstico. Su prosa es única, hipnótica, a veces impenetrable. Es la escritora que las escritoras adoran. Un universo propio.",
+    "bio": "Brasileña de origen ucraniano, mística y modernista. Lispector escribía novelas y cuentos sobre la conciencia, el ser, lo inefable. 'La pasión según G.H.' es una experiencia mística en forma de novela. Única, difícil, deslumbrante.",
     "nationality": "Brasileña",
     "born": 1920,
     "died": 1977,
     "genres": [
       "ficción",
-      "cuento",
-      "existencialismo"
+      "experimental",
+      "filosófico"
     ],
     "notable_works": [
       "La pasión según G.H.",
@@ -1419,15 +1419,14 @@
     ]
   },
   "Simone de Beauvoir": {
-    "bio": "Francesa, madre del feminismo moderno. 'El segundo sexo' es el libro que cambió todo. Beauvoir también escribía novelas y memorias extraordinarias. Fue pareja de Sartre pero con vida propia. Intelectual total y modelo de libertad.",
+    "bio": "Francesa, filósofa, feminista fundacional. Beauvoir escribió 'El segundo sexo', que cambió el feminismo para siempre. También novelista y memorialista brillante. Compañera de Sartre, pensadora independiente. Imprescindible.",
     "nationality": "Francesa",
     "born": 1908,
     "died": 1986,
     "genres": [
       "filosofía",
-      "ficción",
-      "memorias",
-      "feminismo"
+      "feminismo",
+      "ficción"
     ],
     "notable_works": [
       "El segundo sexo",
@@ -1454,22 +1453,23 @@
     ]
   },
   "Toni Morrison": {
-    "bio": "Afroamericana, Nobel 1993, voz de los silenciados. Morrison escribió sobre la experiencia negra en América con prosa lírica y poder moral. 'Beloved' es desgarradora: una madre esclava que mata a su hija para salvarla. Morrison es imprescindible, difícil, necesaria.",
+    "bio": "Americana, Nobel 1993, la voz de la experiencia negra en América. Morrison escribía prosa lírica sobre la esclavitud, el racismo y la familia con una belleza feroz. 'Beloved' es una de las grandes novelas americanas. Imprescindible.",
     "nationality": "Estadounidense",
     "born": 1931,
     "died": 2019,
     "genres": [
       "ficción",
-      "histórico",
-      "afroamericano"
+      "literario",
+      "histórico"
     ],
     "notable_works": [
       "Beloved",
-      "Song of Solomon",
-      "Ojos azules"
+      "Ojos azules",
+      "La canción de Salomón"
     ],
     "awards": [
-      "Premio Nobel de Literatura 1993"
+      "Premio Nobel de Literatura 1993",
+      "Premio Pulitzer 1988"
     ]
   },
   "Chimamanda Ngozi Adichie": {
@@ -1764,7 +1764,7 @@
     ]
   },
   "Enrique Vila-Matas": {
-    "bio": "Barcelonés, eterno candidato al Nobel, escritor de escritores. Vila-Matas difumina las fronteras entre ficción y ensayo, entre él y sus personajes. Sus libros hablan de literatura, de fracaso, de la imposibilidad de escribir. Es divertido, erudito y único. Si te gusta Borges pero quieres algo más contemporáneo y europeo, aquí está tu autor.",
+    "bio": "Barcelonés, escritor de escritores. Vila-Matas escribe novelas sobre la literatura, los que no escriben, los que desaparecen. 'Bartleby y compañía' es sobre los que prefieren no hacerlo. Metaliterario, divertido, único.",
     "nationality": "Español",
     "born": 1948,
     "genres": [
@@ -1775,7 +1775,7 @@
     "notable_works": [
       "Bartleby y compañía",
       "El mal de Montano",
-      "París no se acaba nunca"
+      "Doctor Pasavento"
     ]
   },
   "Heinrich Böll": {
@@ -1940,14 +1940,14 @@
     ]
   },
   "Almudena Grandes": {
-    "bio": "Madrileña que hizo de la memoria histórica literatura popular. Grandes escribía novelas largas, generosas, llenas de personajes que respiran. Su serie 'Episodios de una guerra interminable' rescató la historia de los vencidos de la Guerra Civil. Murió en 2021 dejando una obra que es crónica sentimental de España. Para leerla es para quererla.",
+    "bio": "Madrileña, novelista de la memoria histórica y el deseo. Grandes escribió sobre la Guerra Civil, la posguerra y el amor con ambición y pasión. 'Las edades de Lulú' la hizo famosa; los 'Episodios de una guerra interminable' son su legado. Murió en 2021.",
     "nationality": "Española",
     "born": 1960,
     "died": 2021,
     "genres": [
       "ficción",
       "histórico",
-      "romántico"
+      "erótico"
     ],
     "notable_works": [
       "Las edades de Lulú",
@@ -1956,19 +1956,19 @@
     ]
   },
   "Rafael Chirbes": {
-    "bio": "Valenciano, cronista furioso de la España del pelotazo. Chirbes escribía novelas densas y devastadoras sobre la corrupción moral de un país. 'Crematorio' y 'En la orilla' son retratos despiadados de la burbuja inmobiliaria y sus víctimas. No era complaciente ni fácil, pero era necesario. El mejor novelista español de la crisis.",
+    "bio": "Valenciano, el novelista de la crisis española. Chirbes escribió sobre el franquismo, la transición y el pelotazo inmobiliario con una rabia lúcida. 'En la orilla' es devastadora. Murió en 2015, demasiado pronto.",
     "nationality": "Español",
     "born": 1949,
     "died": 2015,
     "genres": [
       "ficción",
-      "crítica social",
-      "realismo"
+      "social",
+      "político"
     ],
     "notable_works": [
-      "Crematorio",
       "En la orilla",
-      "La buena letra"
+      "Crematorio",
+      "La larga marcha"
     ]
   },
   "Marian Keyes": {
@@ -2487,20 +2487,19 @@
     ]
   },
   "Aldous Huxley": {
-    "bio": "Inglés, visionario del control social. 'Un mundo feliz' imaginó una distopía de placer y conformidad que hoy parece profecía. Huxley era intelectual, místico, experimentador. Sus ensayos sobre percepción y drogas influyeron en generaciones. El otro profeta del futuro oscuro, junto a Orwell.",
+    "bio": "Inglés, visionario, explorador de la mente. Huxley escribió 'Un mundo feliz': la distopía del placer que compite con Orwell. También ensayos sobre drogas, percepción y misticismo. Murió el mismo día que Kennedy y C.S. Lewis.",
     "nationality": "Británico",
     "born": 1894,
     "died": 1963,
     "genres": [
       "ficción",
       "distopía",
-      "ensayo",
-      "filosófico"
+      "ensayo"
     ],
     "notable_works": [
       "Un mundo feliz",
       "Las puertas de la percepción",
-      "La isla"
+      "Contrapunto"
     ]
   },
   "Clara Usón": {
@@ -2536,7 +2535,7 @@
     ]
   },
   "Honoré de Balzac": {
-    "bio": "Francés, monstruo de la literatura. Balzac escribió casi cien novelas que forman 'La comedia humana': un fresco total de la sociedad francesa. Trabajaba de noche, bebía litros de café, moría de agotamiento. Es excesivo, brillante, inagotable. El novelista que intentó escribirlo todo.",
+    "bio": "Francés, monstruo de la productividad, creador de 'La comedia humana'. Balzac escribió casi 100 novelas que retratan toda la sociedad francesa. Trabajaba de noche, bebía litros de café, murió exhausto a los 51. El novelista total.",
     "nationality": "Francés",
     "born": 1799,
     "died": 1850,
@@ -2548,7 +2547,8 @@
     "notable_works": [
       "Papá Goriot",
       "Eugenia Grandet",
-      "Las ilusiones perdidas"
+      "Las ilusiones perdidas",
+      "La piel de zapa"
     ]
   },
   "Jeffrey Eugenides": {
@@ -2602,19 +2602,19 @@
     ]
   },
   "V. S. Naipaul": {
-    "bio": "Trinitario-británico, Nobel 2001, escritor incómodo. Naipaul escribía sobre el colonialismo y sus heridas con una mirada que irritaba a todos. Era difícil como persona y brillante como prosista. 'Una casa para el señor Biswas' es su obra maestra. Controversial hasta el final.",
+    "bio": "Trinitense-británico, Nobel 2001, maestro de la prosa y la controversia. Naipaul escribió sobre el colonialismo, el Islam y el Tercer Mundo con una mirada implacable que enfurecía a muchos. 'Una casa para el señor Biswas' es su obra maestra. Genio difícil.",
     "nationality": "Británico (nacido en Trinidad)",
     "born": 1932,
     "died": 2018,
     "genres": [
       "ficción",
-      "viajes",
-      "ensayo"
+      "no ficción",
+      "viajes"
     ],
     "notable_works": [
       "Una casa para el señor Biswas",
       "Un recodo en el río",
-      "El enigma de la llegada"
+      "India: A Million Mutinies Now"
     ],
     "awards": [
       "Premio Nobel de Literatura 2001"
@@ -2668,7 +2668,7 @@
     ]
   },
   "Hermann Hesse": {
-    "bio": "Alemán-suizo, Nobel 1946, gurú de generaciones. 'Siddhartha' y 'El lobo estepario' fueron biblias de la contracultura. Hesse escribía sobre la búsqueda espiritual, el conflicto entre instinto y sociedad. Puede sonar anticuado pero sigue tocando algo esencial.",
+    "bio": "Alemán-suizo, Nobel 1946, gurú de los buscadores espirituales. Hesse escribió 'Siddhartha', 'El lobo estepario' y 'El juego de los abalorios': novelas sobre la búsqueda interior. Fue ídolo de los hippies. Sigue hablando a quien busca sentido.",
     "nationality": "Alemán-Suizo",
     "born": 1877,
     "died": 1962,
@@ -2680,7 +2680,8 @@
     "notable_works": [
       "Siddhartha",
       "El lobo estepario",
-      "El juego de los abalorios"
+      "El juego de los abalorios",
+      "Demian"
     ],
     "awards": [
       "Premio Nobel de Literatura 1946"
@@ -2772,7 +2773,7 @@
     ]
   },
   "Émile Zola": {
-    "bio": "Francés, padre del naturalismo, escritor comprometido. Zola documentó la Francia del XIX con rigor científico: mineros, prostitutas, alcohólicos. También fue el héroe del caso Dreyfus con su 'Yo acuso'. Veinte novelas de Los Rougon-Macquart forman un fresco épico de su época.",
+    "bio": "Francés, padre del naturalismo, activista. Zola escribió los Rougon-Macquart: 20 novelas sobre una familia a través de generaciones. También defendió a Dreyfus con 'Yo acuso'. Literatura como ciencia y como arma política.",
     "nationality": "Francés",
     "born": 1840,
     "died": 1902,
@@ -2783,7 +2784,7 @@
     ],
     "notable_works": [
       "Germinal",
-      "Naná",
+      "Nana",
       "La bestia humana"
     ]
   },
@@ -3419,14 +3420,14 @@
     ]
   },
   "F. Scott Fitzgerald": {
-    "bio": "Americano, cronista de la Era del Jazz. 'El gran Gatsby' es la gran novela americana: riqueza, amor, destrucción. Fitzgerald vivió la fiesta de los años 20 y su resaca. Murió joven, olvidado, alcohólico. Ahora es inmortal.",
+    "bio": "Americano, cronista de la era del jazz. Fitzgerald escribió 'El gran Gatsby': la gran novela americana sobre el sueño y la desilusión. Vivió rápido, murió a los 44, fue redescubierto después. La prosa más bella de su generación.",
     "nationality": "Estadounidense",
     "born": 1896,
     "died": 1940,
     "genres": [
       "ficción",
-      "americano",
-      "jazz age"
+      "social",
+      "literario"
     ],
     "notable_works": [
       "El gran Gatsby",
@@ -3435,35 +3436,36 @@
     ]
   },
   "Carlos Fuentes": {
-    "bio": "Mexicano, cosmopolita, central en el boom. Fuentes escribía sobre México con ambición totalizadora. 'La muerte de Artemio Cruz' es su obra maestra: un hombre moribundo repasa su vida. Era diplomático, intelectual público, novelista prolífico.",
+    "bio": "Mexicano, cosmopolita, arquitecto de la novela mexicana moderna. Fuentes escribió 'La muerte de Artemio Cruz' y 'Terra Nostra': historia, mito y experimentación. Amigo del boom, diplomático, incansable. Una carrera inmensa.",
     "nationality": "Mexicano",
     "born": 1928,
     "died": 2012,
     "genres": [
       "ficción",
       "histórico",
-      "político"
+      "experimental"
     ],
     "notable_works": [
       "La muerte de Artemio Cruz",
       "Terra Nostra",
-      "Aura"
+      "Aura",
+      "La región más transparente"
     ]
   },
   "José Saramago": {
-    "bio": "Portugués, Nobel 1998, comunista hasta el final. Saramago escribía sin puntos y coma, en párrafos infinitos que fluyen como ríos. 'Ensayo sobre la ceguera' es una fábula devastadora. Era tardío (empezó a publicar novelas a los 60) pero dejó una obra enorme.",
+    "bio": "Portugués, Nobel 1998, comunista, ateo, genio. Saramago escribía novelas sin puntos, con comas infinitas, sobre cegueras, elefantes y Jesús. 'Ensayo sobre la ceguera' es una parábola brutal. El gran escritor en portugués del siglo XX.",
     "nationality": "Portugués",
     "born": 1922,
     "died": 2010,
     "genres": [
       "ficción",
-      "alegoría",
+      "alegórico",
       "político"
     ],
     "notable_works": [
       "Ensayo sobre la ceguera",
       "El evangelio según Jesucristo",
-      "Todos los nombres"
+      "Memorial del convento"
     ],
     "awards": [
       "Premio Nobel de Literatura 1998"
@@ -3487,13 +3489,13 @@
     ]
   },
   "Jean-Paul Sartre": {
-    "bio": "Francés, existencialista jefe, comprometido. Sartre rechazó el Nobel. Escribía filosofía, novela, teatro, ensayo político. 'La náusea' es la novela existencialista por excelencia. Fue pareja de Beauvoir y modelo del intelectual público. Divisivo pero ineludible.",
+    "bio": "Francés, existencialista, comprometido. Sartre escribió filosofía, novela, teatro y mucho más. 'La náusea' es la novela existencialista por excelencia. Rechazó el Nobel. Vivió con Simone de Beauvoir toda su vida. El intelectual público del siglo XX.",
     "nationality": "Francés",
     "born": 1905,
     "died": 1980,
     "genres": [
-      "ficción",
       "filosofía",
+      "ficción",
       "teatro"
     ],
     "notable_works": [
@@ -3773,19 +3775,22 @@
     ]
   },
   "Marguerite Duras": {
-    "bio": "Francesa nacida en Indochina, minimalista del deseo. Duras escribía frases cortas cargadas de ausencia. 'El amante' es autobiográfica, erótica, devastadora. También hacía cine. Su obra es repetitiva y obsesiva, como el amor del que siempre habla.",
+    "bio": "Francesa nacida en Indochina, escritora del deseo y la ausencia. Duras escribía frases cortas sobre amores imposibles. 'El amante' ganó el Goncourt y la hizo famosa a los 70. También cineasta. Hipnótica.",
     "nationality": "Francesa",
     "born": 1914,
     "died": 1996,
     "genres": [
       "ficción",
-      "guion",
-      "autobiografía"
+      "autobiográfico",
+      "experimental"
     ],
     "notable_works": [
       "El amante",
       "Hiroshima mon amour",
       "El arrebato de Lol V. Stein"
+    ],
+    "awards": [
+      "Premio Goncourt 1984"
     ]
   },
   "J. R. R. Tolkien": {
@@ -3837,7 +3842,7 @@
     ]
   },
   "Juan José Millás": {
-    "bio": "Madrileño nacido en Valencia, maestro de lo extraño cotidiano. Millás escribe columnas, cuentos y novelas donde lo real se vuelve inquietante sin aviso. Mezcla humor, neurosis y una mirada única. Uno de los escritores españoles más originales de su generación.",
+    "bio": "Madrileño nacido en Valencia, maestro de lo extraño cotidiano. Millás escribe columnas, cuentos y novelas donde lo real se vuelve inquietante. Mezcla humor, neurosis y una mirada única. Uno de los más originales.",
     "nationality": "Español",
     "born": 1946,
     "genres": [
@@ -4699,6 +4704,3207 @@
       "La policía de la memoria",
       "El embarazo de mi hermana",
       "La fórmula preferida del profesor"
+    ]
+  },
+  "John Grinder": {
+    "bio": "Americano, lingüista, cocreador de la Programación Neurolingüística (PNL) junto a Richard Bandler. Grinder aplicó la lingüística transformacional al estudio de terapeutas exitosos. Sus libros son manuales de comunicación y cambio personal. Controvertido pero influyente.",
+    "nationality": "Estadounidense",
+    "born": 1940,
+    "genres": [
+      "psicología",
+      "autoayuda",
+      "comunicación"
+    ],
+    "notable_works": [
+      "La estructura de la magia",
+      "De sapos a príncipes",
+      "Trance-Fórmate"
+    ]
+  },
+  "Richard Bandler": {
+    "bio": "Americano, matemático y programador, cocreador de la PNL. Bandler es el más carismático y polémico de los fundadores. Sus seminarios llenan auditorios; sus técnicas se usan en terapia, ventas y coaching. Genio o charlatán según a quién preguntes.",
+    "nationality": "Estadounidense",
+    "born": 1950,
+    "genres": [
+      "psicología",
+      "autoayuda",
+      "comunicación"
+    ],
+    "notable_works": [
+      "La estructura de la magia",
+      "Use su cabeza para variar",
+      "Ingeniería del convencimiento"
+    ]
+  },
+  "George A. Akerlof": {
+    "bio": "Economista americano, Nobel 2001, esposo de Janet Yellen. Akerlof es famoso por 'El mercado de los limones': cómo la información asimétrica arruina los mercados. Economía conductual antes de que tuviera nombre. Riguroso y accesible.",
+    "nationality": "Estadounidense",
+    "born": 1940,
+    "genres": [
+      "economía",
+      "ensayo",
+      "académico"
+    ],
+    "notable_works": [
+      "Animal Spirits",
+      "Phishing for Phools"
+    ],
+    "awards": [
+      "Premio Nobel de Economía 2001"
+    ]
+  },
+  "Robert J. Shiller": {
+    "bio": "Economista americano, Nobel 2013, profeta de las burbujas. Shiller predijo la crisis de 2008 y la burbuja puntocom. Sus libros explican por qué los mercados enloquecen con claridad y datos. Economía que importa para tu cartera.",
+    "nationality": "Estadounidense",
+    "born": 1946,
+    "genres": [
+      "economía",
+      "finanzas",
+      "divulgación"
+    ],
+    "notable_works": [
+      "Exuberancia irracional",
+      "Animal Spirits",
+      "Narrative Economics"
+    ],
+    "awards": [
+      "Premio Nobel de Economía 2013"
+    ]
+  },
+  "Aixa de la Cruz": {
+    "bio": "Vasca, novelista de la generación post-ETA. De la Cruz escribe sobre memoria, violencia y los silencios familiares en el País Vasco. 'La línea del frente' ganó el Biblioteca Breve. Prosa inteligente sobre heridas que no cierran.",
+    "nationality": "Española",
+    "born": 1988,
+    "genres": [
+      "ficción",
+      "político",
+      "memoria"
+    ],
+    "notable_works": [
+      "La línea del frente",
+      "Cambiar de idea",
+      "Las herederas"
+    ]
+  },
+  "Pilar Quintana": {
+    "bio": "Colombiana, premio Alfaguara 2021. Quintana escribe sobre mujeres en paisajes salvajes: la selva del Pacífico, la maternidad como territorio hostil. 'Los abismos' es dura y hermosa. Una voz potente de la literatura latinoamericana.",
+    "nationality": "Colombiana",
+    "born": 1972,
+    "genres": [
+      "ficción",
+      "naturaleza",
+      "feminismo"
+    ],
+    "notable_works": [
+      "La perra",
+      "Los abismos",
+      "Caperucita se come al lobo"
+    ],
+    "awards": [
+      "Premio Alfaguara 2021"
+    ]
+  },
+  "Robert Kurson": {
+    "bio": "Americano, periodista de aventuras reales. Kurson escribe no ficción que lee como thriller: 'Sombra divers' sobre buzos que encuentran un submarino nazi es adictiva. Historia y aventura para devoradores de páginas.",
+    "nationality": "Estadounidense",
+    "born": 1963,
+    "genres": [
+      "no ficción",
+      "aventura",
+      "historia"
+    ],
+    "notable_works": [
+      "Shadow Divers",
+      "Rocket Men",
+      "Pirate Hunters"
+    ]
+  },
+  "Frederick Forsyth": {
+    "bio": "Inglés, ex periodista, maestro del thriller de espionaje. Forsyth escribió 'Chacal' basándose en fuentes reales y definió el género. Sus novelas son meticulosamente documentadas y trepidantes. El padre del thriller político moderno.",
+    "nationality": "Británico",
+    "born": 1938,
+    "genres": [
+      "thriller",
+      "espionaje",
+      "político"
+    ],
+    "notable_works": [
+      "Chacal",
+      "El cuarto protocolo",
+      "Odessa"
+    ]
+  },
+  "David Foenkinos": {
+    "bio": "Francés, novelista de éxitos sensibles. Foenkinos escribe historias de amor, pérdida y redención que conquistan lectores. 'La delicadeza' fue bestseller y película. Accesible, emotivo, a veces cursi, siempre efectivo.",
+    "nationality": "Francés",
+    "born": 1974,
+    "genres": [
+      "ficción",
+      "romance",
+      "drama"
+    ],
+    "notable_works": [
+      "La delicadeza",
+      "Charlotte",
+      "Hacia la belleza"
+    ]
+  },
+  "Khaled Hosseini": {
+    "bio": "Afgano-americano, el novelista que hizo que el mundo mirara a Afganistán. 'Cometas en el cielo' vendió millones contando una amistad rota por la guerra. Hosseini escribe sobre culpa, redención y un país destrozado con emoción universal.",
+    "nationality": "Estadounidense (nacido afgano)",
+    "born": 1965,
+    "genres": [
+      "ficción",
+      "drama",
+      "histórico"
+    ],
+    "notable_works": [
+      "Cometas en el cielo",
+      "Mil soles espléndidos",
+      "Y las montañas hablaron"
+    ]
+  },
+  "Dolores Reyes": {
+    "bio": "Argentina del conurbano, voz de los márgenes. 'Cometierra' es sobre una chica que come tierra y ve a los muertos: realismo mágico de la pobreza. Reyes escribe con furia y ternura sobre violencia de género y desaparecidos.",
+    "nationality": "Argentina",
+    "born": 1978,
+    "genres": [
+      "ficción",
+      "realismo mágico",
+      "social"
+    ],
+    "notable_works": [
+      "Cometierra",
+      "Miseria"
+    ]
+  },
+  "Robert M. Sapolsky": {
+    "bio": "Neurocientífico americano, divulgador brillante. Sapolsky estudia el estrés en babuinos y humanos, y lo cuenta con humor y profundidad. 'Compórtate' es una obra maestra sobre por qué hacemos lo que hacemos. Ciencia del comportamiento accesible.",
+    "nationality": "Estadounidense",
+    "born": 1957,
+    "genres": [
+      "divulgación",
+      "neurociencia",
+      "biología"
+    ],
+    "notable_works": [
+      "Compórtate",
+      "¿Por qué las cebras no tienen úlcera?",
+      "Memorias de un primate"
+    ]
+  },
+  "Celeste Ng": {
+    "bio": "Americana de origen chino, novelista de secretos familiares. Ng escribe sobre madres e hijas, raza y pertenencia en la América suburbana. 'Pequeños fuegos por todas partes' fue serie de éxito. Dramas domésticos que arden lentamente.",
+    "nationality": "Estadounidense",
+    "born": 1980,
+    "genres": [
+      "ficción",
+      "drama familiar",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "Todo lo que no te conté",
+      "Pequeños fuegos por todas partes",
+      "Nuestras almas perdidas"
+    ]
+  },
+  "Mark Helprin": {
+    "bio": "Americano, novelista de prosa suntuosa y mundos propios. 'El cuento de invierno' es una fantasía épica sobre Nueva York que desafía descripción. Helprin escribe largo, hermoso y ambicioso. Para lectores pacientes.",
+    "nationality": "Estadounidense",
+    "born": 1947,
+    "genres": [
+      "ficción",
+      "fantasía",
+      "literario"
+    ],
+    "notable_works": [
+      "El cuento de invierno",
+      "Un soldado del Gran Guerra",
+      "In Sunlight and in Shadow"
+    ]
+  },
+  "Emilia Pardo Bazán": {
+    "bio": "Gallega, condesa, feminista avant la lettre. Pardo Bazán introdujo el naturalismo en España y luchó por los derechos de las mujeres en el siglo XIX. 'Los pazos de Ulloa' es un clásico. Escritora, crítica, pionera.",
+    "nationality": "Española",
+    "born": 1851,
+    "died": 1921,
+    "genres": [
+      "ficción",
+      "naturalismo",
+      "cuento"
+    ],
+    "notable_works": [
+      "Los pazos de Ulloa",
+      "La madre naturaleza",
+      "Insolación"
+    ]
+  },
+  "Jodi Picoult": {
+    "bio": "Americana, máquina de bestsellers con dilemas morales. Picoult escribe sobre temas difíciles —eutanasia, racismo, tiroteos escolares— con personajes que enganchan. Sus novelas generan debates. Entretenimiento con sustancia.",
+    "nationality": "Estadounidense",
+    "born": 1966,
+    "genres": [
+      "ficción",
+      "drama",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "La hija única",
+      "Diecinueve minutos",
+      "Pequeñas grandes cosas"
+    ]
+  },
+  "A. M. Homes": {
+    "bio": "Americana, maestra de la incomodidad suburbana. Homes escribe sobre familias disfuncionales, deseos oscuros y la América que no sale en las postales. 'Música para incendios' ganó el Women's Prize. Perturbadora y brillante.",
+    "nationality": "Estadounidense",
+    "born": 1961,
+    "genres": [
+      "ficción",
+      "satírico",
+      "oscuro"
+    ],
+    "notable_works": [
+      "Música para incendios",
+      "El fin de Alice",
+      "Jack"
+    ],
+    "awards": [
+      "Women's Prize 2013"
+    ]
+  },
+  "Djuna Barnes": {
+    "bio": "Americana, figura del modernismo de París. Barnes escribió 'El bosque de la noche', una novela oscura y lírica sobre amor lésbico que T.S. Eliot adoraba. Vivió recluida 40 años en Greenwich Village. Culto y olvidada, merece redescubrimiento.",
+    "nationality": "Estadounidense",
+    "born": 1892,
+    "died": 1982,
+    "genres": [
+      "ficción",
+      "modernismo",
+      "experimental"
+    ],
+    "notable_works": [
+      "El bosque de la noche",
+      "Ryder",
+      "Ladies Almanack"
+    ]
+  },
+  "D. H. Lawrence": {
+    "bio": "Inglés, escandaloso en su tiempo, profeta del deseo. Lawrence escribía sobre sexo y naturaleza cuando era tabú. 'El amante de Lady Chatterley' fue prohibido durante décadas. También poeta y viajero. Intenso, vitalista, a veces insoportable.",
+    "nationality": "Británico",
+    "born": 1885,
+    "died": 1930,
+    "genres": [
+      "ficción",
+      "poesía",
+      "erótico"
+    ],
+    "notable_works": [
+      "El amante de Lady Chatterley",
+      "Hijos y amantes",
+      "Mujeres enamoradas"
+    ]
+  },
+  "Patrick White": {
+    "bio": "Australiano, Nobel 1973, el único novelista australiano con el premio. White escribía novelas densas sobre la soledad y el paisaje australiano. 'Voss' es una épica del desierto. Difícil pero recompensador. El gigante de las letras australianas.",
+    "nationality": "Australiano",
+    "born": 1912,
+    "died": 1990,
+    "genres": [
+      "ficción",
+      "literario",
+      "australiano"
+    ],
+    "notable_works": [
+      "Voss",
+      "El vivisector",
+      "El ojo de la tormenta"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1973"
+    ]
+  },
+  "Tracy Chevalier": {
+    "bio": "Americana que vive en Londres, novelista histórica. Chevalier imagina las vidas detrás de obras de arte: 'La joven de la perla' sobre Vermeer fue bestseller y película. Historia accesible con ojo para el detalle sensorial.",
+    "nationality": "Estadounidense",
+    "born": 1962,
+    "genres": [
+      "ficción histórica",
+      "arte",
+      "drama"
+    ],
+    "notable_works": [
+      "La joven de la perla",
+      "La dama y el unicornio",
+      "Dos chicas de Shaker Heights"
+    ]
+  },
+  "Mary Karr": {
+    "bio": "Tejana, poeta y memorialista feroz. 'El club de los mentirosos' reinventó las memorias americanas: infancia caótica en Texas contada con humor y brutalidad. Karr escribe sobre alcoholismo, trauma y redención como nadie.",
+    "nationality": "Estadounidense",
+    "born": 1955,
+    "genres": [
+      "memorias",
+      "poesía",
+      "autobiográfico"
+    ],
+    "notable_works": [
+      "El club de los mentirosos",
+      "Cherry",
+      "Lit"
+    ]
+  },
+  "Mark Haddon": {
+    "bio": "Inglés, autor de 'El curioso incidente del perro a medianoche'. Haddon escribió una novela narrada por un adolescente con autismo que se convirtió en fenómeno mundial. También escribe para niños y adultos. Versátil y empático.",
+    "nationality": "Británico",
+    "born": 1962,
+    "genres": [
+      "ficción",
+      "juvenil",
+      "drama"
+    ],
+    "notable_works": [
+      "El curioso incidente del perro a medianoche",
+      "A Spot of Bother",
+      "The Red House"
+    ]
+  },
+  "Rebecca Makkai": {
+    "bio": "Americana, finalista del Pulitzer con 'Los grandes creyentes'. Makkai escribió la gran novela sobre la crisis del SIDA en Chicago: épica, emotiva, necesaria. También escribe cuentos precisos. Una voz importante.",
+    "nationality": "Estadounidense",
+    "born": 1978,
+    "genres": [
+      "ficción",
+      "histórico",
+      "LGBTQ"
+    ],
+    "notable_works": [
+      "Los grandes creyentes",
+      "I Have Some Questions for You",
+      "The Borrower"
+    ]
+  },
+  "Eleanor Catton": {
+    "bio": "Neozelandesa, la más joven en ganar el Booker (a los 28). 'Las luminarias' es un monstruo victoriano de 800 páginas estructurado como carta astral. Ambiciosa, virtuosa, única. Catton no escribe libros pequeños.",
+    "nationality": "Neozelandesa",
+    "born": 1985,
+    "genres": [
+      "ficción",
+      "histórico",
+      "experimental"
+    ],
+    "notable_works": [
+      "Las luminarias",
+      "The Rehearsal",
+      "Birnam Wood"
+    ],
+    "awards": [
+      "Man Booker Prize 2013"
+    ]
+  },
+  "Mary McCarthy": {
+    "bio": "Americana, intelectual de Nueva York, novelista y crítica feroz. McCarthy escribía sátiras de la vida intelectual americana con veneno elegante. 'El grupo' fue escandalosa en su día. Polemista, memorialista, una de las grandes.",
+    "nationality": "Estadounidense",
+    "born": 1912,
+    "died": 1989,
+    "genres": [
+      "ficción",
+      "ensayo",
+      "memorias"
+    ],
+    "notable_works": [
+      "El grupo",
+      "Memorias de una joven católica",
+      "Recuerdos de una educación católica"
+    ]
+  },
+  "Philipp Meyer": {
+    "bio": "Americano, novelista del Oeste violento y verdadero. 'El hijo' es una saga tejana de tres generaciones: indios, petróleo, imperio. Meyer escribe épica americana sin nostalgia, con sangre. Finalista del Pulitzer.",
+    "nationality": "Estadounidense",
+    "born": 1974,
+    "genres": [
+      "ficción",
+      "histórico",
+      "western"
+    ],
+    "notable_works": [
+      "El hijo",
+      "American Rust"
+    ]
+  },
+  "Alfred Bester": {
+    "bio": "Americano, pionero de la ciencia ficción literaria. Bester escribió 'El hombre demolido' y 'Las estrellas, mi destino' en los 50: novelas que siguen siendo modernas. Influyó en el cyberpunk antes de que existiera. Un adelantado.",
+    "nationality": "Estadounidense",
+    "born": 1913,
+    "died": 1987,
+    "genres": [
+      "ciencia ficción",
+      "noir",
+      "experimental"
+    ],
+    "notable_works": [
+      "El hombre demolido",
+      "Las estrellas, mi destino"
+    ]
+  },
+  "Emily St. John Mandel": {
+    "bio": "Canadiense, novelista de apocalipsis elegantes. 'Estación Once' es una pandemia contada con belleza y esperanza. Mandel escribe ciencia ficción literaria sobre el arte, la memoria y lo que sobrevive. Delicada y poderosa.",
+    "nationality": "Canadiense",
+    "born": 1979,
+    "genres": [
+      "ciencia ficción",
+      "literario",
+      "distopía"
+    ],
+    "notable_works": [
+      "Estación Once",
+      "El mar de cristal",
+      "Los últimos días de la guerra"
+    ]
+  },
+  "DBC Pierre": {
+    "bio": "Australiano criado en México, Booker 2003 sorpresa. 'Vernon God Little' es una sátira salvaje sobre tiroteos escolares y medios de comunicación. Pierre es excéntrico, impredecible, brillante a ráfagas.",
+    "nationality": "Australiano",
+    "born": 1961,
+    "genres": [
+      "ficción",
+      "sátira",
+      "negro"
+    ],
+    "notable_works": [
+      "Vernon God Little",
+      "Ludmila's Broken English"
+    ],
+    "awards": [
+      "Man Booker Prize 2003"
+    ]
+  },
+  "Bernhard Schlink": {
+    "bio": "Alemán, jurista y novelista. 'El lector' es sobre un adolescente que tiene un affair con una mujer mayor que resulta ser nazi. Breve, perturbadora, se convirtió en fenómeno y película con Kate Winslet. Culpa alemana en forma de novela.",
+    "nationality": "Alemán",
+    "born": 1944,
+    "genres": [
+      "ficción",
+      "histórico",
+      "drama"
+    ],
+    "notable_works": [
+      "El lector",
+      "Olga",
+      "La nieta"
+    ]
+  },
+  "Sándor Márai": {
+    "bio": "Húngaro, redescubierto tarde, uno de los grandes del siglo XX. Márai escribió 'El último encuentro': dos viejos amigos, un secreto de 40 años, una noche. Prosa elegante sobre el honor, la traición y el tiempo. Murió en el exilio, olvidado. Ahora es un clásico.",
+    "nationality": "Húngaro",
+    "born": 1900,
+    "died": 1989,
+    "genres": [
+      "ficción",
+      "literario",
+      "psicológico"
+    ],
+    "notable_works": [
+      "El último encuentro",
+      "La mujer justa",
+      "La herencia de Eszter"
+    ]
+  },
+  "Christopher Clark": {
+    "bio": "Historiador australiano-británico, experto en Prusia y la Gran Guerra. 'Sonámbulos' cambió cómo entendemos el estallido de 1914: nadie quería la guerra, todos la causaron. Historia narrativa de primer nivel.",
+    "nationality": "Australiano-Británico",
+    "born": 1960,
+    "genres": [
+      "historia",
+      "ensayo",
+      "Europa"
+    ],
+    "notable_works": [
+      "Sonámbulos",
+      "El reino de hierro",
+      "Tiempo y poder"
+    ]
+  },
+  "Kristin Hannah": {
+    "bio": "Americana, reina del drama histórico emotivo. Hannah escribe novelas sobre mujeres en tiempos difíciles que hacen llorar a millones. 'El ruiseñor' sobre la Francia ocupada fue bestseller masivo. Para cuando quieres sentir mucho.",
+    "nationality": "Estadounidense",
+    "born": 1960,
+    "genres": [
+      "ficción",
+      "histórico",
+      "drama"
+    ],
+    "notable_works": [
+      "El ruiseñor",
+      "El gran cielo",
+      "Firefly Lane"
+    ]
+  },
+  "María Dueñas Vinuesa": {
+    "bio": "Murciana, profesora universitaria que se convirtió en superventas. 'El tiempo entre costuras' vendió millones: una modista española en el Marruecos de la Guerra Civil convertida en espía. Historia y romance que enganchan.",
+    "nationality": "Española",
+    "born": 1964,
+    "genres": [
+      "ficción histórica",
+      "romance",
+      "aventura"
+    ],
+    "notable_works": [
+      "El tiempo entre costuras",
+      "Misión Olvido",
+      "Las hijas del capitán"
+    ]
+  },
+  "Oliver Sacks": {
+    "bio": "Neurólogo británico-americano, el poeta del cerebro. Sacks escribía casos clínicos como si fueran cuentos: 'El hombre que confundió a su mujer con un sombrero' es un clásico. Compasivo, curioso, un humanista de la ciencia.",
+    "nationality": "Británico-Estadounidense",
+    "born": 1933,
+    "died": 2015,
+    "genres": [
+      "divulgación",
+      "neurología",
+      "memorias"
+    ],
+    "notable_works": [
+      "El hombre que confundió a su mujer con un sombrero",
+      "Despertares",
+      "Musicofilia"
+    ]
+  },
+  "Andrés Neuman": {
+    "bio": "Argentino-español, poeta y novelista de precisión. Neuman escribe novelas ambiciosas ('El viajero del siglo', Alfaguara) y microrrelatos perfectos. También traduce y reflexiona sobre la lengua. Un escritor para escritores.",
+    "nationality": "Argentino-Español",
+    "born": 1977,
+    "genres": [
+      "ficción",
+      "poesía",
+      "cuento"
+    ],
+    "notable_works": [
+      "El viajero del siglo",
+      "Hablar solos",
+      "Fractura"
+    ],
+    "awards": [
+      "Premio Alfaguara 2009"
+    ]
+  },
+  "Rainbow Rowell": {
+    "bio": "Americana, reina del romance young adult. Rowell escribe sobre nerds enamorados, fanfiction y primeros amores con humor y ternura. 'Fangirl' y 'Eleanor & Park' conquistaron adolescentes y adultos. Comfort reading puro.",
+    "nationality": "Estadounidense",
+    "born": 1973,
+    "genres": [
+      "juvenil",
+      "romance",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "Eleanor & Park",
+      "Fangirl",
+      "Carry On"
+    ]
+  },
+  "Gary Shteyngart": {
+    "bio": "Ruso-americano, satirista de la inmigración y el capitalismo. Shteyngart escribe novelas divertidísimas sobre ser judío ruso en América, sobre la decadencia y el dinero. 'Absurdistán' es hilarante. Humor con colmillos.",
+    "nationality": "Estadounidense (nacido ruso)",
+    "born": 1972,
+    "genres": [
+      "ficción",
+      "sátira",
+      "humor"
+    ],
+    "notable_works": [
+      "Absurdistán",
+      "Super Sad True Love Story",
+      "El manual del buen inmigrante ruso"
+    ]
+  },
+  "Gabrielle Zevin": {
+    "bio": "Americana, novelista y guionista. 'Mañana y mañana y mañana' sobre dos amigos que crean videojuegos se convirtió en fenómeno. Zevin escribe sobre amistad, creatividad y amor con inteligencia y emoción.",
+    "nationality": "Estadounidense",
+    "born": 1977,
+    "genres": [
+      "ficción",
+      "contemporáneo",
+      "drama"
+    ],
+    "notable_works": [
+      "Mañana y mañana y mañana",
+      "La librería de los corazones solitarios"
+    ]
+  },
+  "bell hooks": {
+    "bio": "Americana, teórica feminista y crítica cultural. hooks (minúsculas intencionales) escribió sobre raza, género y clase con claridad y pasión. 'El feminismo es para todo el mundo' es un manifiesto accesible. Murió en 2021 como referente del pensamiento crítico.",
+    "nationality": "Estadounidense",
+    "born": 1952,
+    "died": 2021,
+    "genres": [
+      "ensayo",
+      "feminismo",
+      "teoría crítica"
+    ],
+    "notable_works": [
+      "El feminismo es para todo el mundo",
+      "Todo sobre el amor",
+      "¿Acaso no soy yo una mujer?"
+    ]
+  },
+  "Paula Hawkins": {
+    "bio": "Británica de Zimbabue, autora del thriller que conquistó el mundo. 'La chica del tren' vendió 20 millones de copias: narradora poco fiable, obsesión y giros. Hawkins definió el thriller psicológico de la década de 2010.",
+    "nationality": "Británica",
+    "born": 1972,
+    "genres": [
+      "thriller",
+      "psicológico",
+      "suspense"
+    ],
+    "notable_works": [
+      "La chica del tren",
+      "Escrito en el agua",
+      "A Slow Fire Burning"
+    ]
+  },
+  "Marta Sanz": {
+    "bio": "Madrileña, novelista y poeta del cuerpo y la política. Sanz escribe sobre el cuerpo femenino, la enfermedad, el trabajo y el capitalismo con prosa afilada. 'Clavícula' es un ensayo-novela sobre el dolor. Incómoda y necesaria.",
+    "nationality": "Española",
+    "born": 1967,
+    "genres": [
+      "ficción",
+      "ensayo",
+      "feminismo"
+    ],
+    "notable_works": [
+      "Clavícula",
+      "Farándula",
+      "pequeñas mujeres rojas"
+    ]
+  },
+  "David Grossman": {
+    "bio": "Israelí, novelista de la complejidad. Grossman escribe sobre el conflicto palestino-israelí, el duelo (perdió a su hijo en la guerra del Líbano) y el amor con humanidad radical. 'Más allá del tiempo' es devastadora. Una voz moral imprescindible.",
+    "nationality": "Israelí",
+    "born": 1954,
+    "genres": [
+      "ficción",
+      "político",
+      "literario"
+    ],
+    "notable_works": [
+      "Véase: Amor",
+      "Más allá del tiempo",
+      "Un caballo entra en un bar"
+    ],
+    "awards": [
+      "Man Booker International 2017"
+    ]
+  },
+  "James A. Robinson": {
+    "bio": "Politólogo británico-americano, coautor de 'Por qué fracasan los países'. Robinson (con Acemoglu) explica la desigualdad global a través de las instituciones. Ciencia política que cambia cómo ves el mundo.",
+    "nationality": "Británico-Estadounidense",
+    "born": 1960,
+    "genres": [
+      "economía",
+      "política",
+      "ensayo"
+    ],
+    "notable_works": [
+      "Por qué fracasan los países",
+      "El pasillo estrecho"
+    ],
+    "awards": [
+      "Premio Nobel de Economía 2024"
+    ]
+  },
+  "Penelope Fitzgerald": {
+    "bio": "Inglesa que empezó a publicar a los 60 y escribió algunas de las mejores novelas breves del siglo XX. Fitzgerald era erudita, económica, sorprendente. 'La librería' y 'La flor azul' son joyas perfectas. Descubrimiento tardío, placer eterno.",
+    "nationality": "Británica",
+    "born": 1916,
+    "died": 2000,
+    "genres": [
+      "ficción",
+      "histórico",
+      "literario"
+    ],
+    "notable_works": [
+      "La librería",
+      "La flor azul",
+      "Offshore"
+    ],
+    "awards": [
+      "Man Booker Prize 1979"
+    ]
+  },
+  "Sarah Dessen": {
+    "bio": "Americana, reina del YA contemporáneo. Dessen escribe sobre adolescentes en verano, primeros amores y familias complicadas. Sus novelas son cálidas, reconfortantes y perfectas para la playa. Comfort food literario para jóvenes (y no tan jóvenes).",
+    "nationality": "Estadounidense",
+    "born": 1970,
+    "genres": [
+      "juvenil",
+      "romance",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "Simplemente escucha",
+      "Junto a ti",
+      "La verdad sobre siempre"
+    ]
+  },
+  "Fernando Aramburu": {
+    "bio": "Vasco, autor de 'Patria', la novela que España necesitaba sobre ETA. Aramburu contó el conflicto vasco a través de dos familias sin maniqueísmos. Fenómeno editorial y serie de HBO. Escribe con claridad sobre heridas que no cierran.",
+    "nationality": "Español",
+    "born": 1959,
+    "genres": [
+      "ficción",
+      "político",
+      "histórico"
+    ],
+    "notable_works": [
+      "Patria",
+      "Los vencejos",
+      "Años lentos"
+    ]
+  },
+  "James Hilton": {
+    "bio": "Inglés, inventor de Shangri-La. Hilton escribió 'Horizontes perdidos' y 'Adiós, Mr. Chips': utopías y nostalgia británica. Sus novelas definieron el escapismo literario de los años 30. Sigue siendo encantador.",
+    "nationality": "Británico",
+    "born": 1900,
+    "died": 1954,
+    "genres": [
+      "ficción",
+      "aventura",
+      "drama"
+    ],
+    "notable_works": [
+      "Horizontes perdidos",
+      "Adiós, Mr. Chips",
+      "Random Harvest"
+    ]
+  },
+  "Ruth Ware": {
+    "bio": "Inglesa, maestra del thriller con setting perfecto. Ware escribe sobre mujeres en lugares aislados (trenes, yates, resorts) donde algo va muy mal. 'La mujer del camarote 10' fue bestseller. Suspense adictivo y atmosférico.",
+    "nationality": "Británica",
+    "born": 1977,
+    "genres": [
+      "thriller",
+      "misterio",
+      "suspense"
+    ],
+    "notable_works": [
+      "La mujer del camarote 10",
+      "In a Dark, Dark Wood",
+      "The Turn of the Key"
+    ]
+  },
+  "Rudyard Kipling": {
+    "bio": "Inglés nacido en India, Nobel 1907, el más joven en ganarlo. Kipling escribió 'El libro de la selva' y 'Kim', clásicos imperiales llenos de aventura. Controvertido hoy por su visión colonial, sigue siendo un narrador extraordinario.",
+    "nationality": "Británico",
+    "born": 1865,
+    "died": 1936,
+    "genres": [
+      "ficción",
+      "aventura",
+      "infantil"
+    ],
+    "notable_works": [
+      "El libro de la selva",
+      "Kim",
+      "Capitanes intrépidos"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1907"
+    ]
+  },
+  "Nathaniel Hawthorne": {
+    "bio": "Americano del siglo XIX, maestro del romance oscuro. Hawthorne escribió sobre el pecado y la culpa puritana con prosa gótica y simbólica. 'La letra escarlata' es un clásico americano. El lado sombrío del sueño americano.",
+    "nationality": "Estadounidense",
+    "born": 1804,
+    "died": 1864,
+    "genres": [
+      "ficción",
+      "gótico",
+      "romántico"
+    ],
+    "notable_works": [
+      "La letra escarlata",
+      "La casa de los siete tejados",
+      "Cuentos contados dos veces"
+    ]
+  },
+  "David Grann": {
+    "bio": "Americano, periodista del New Yorker, maestro de la no ficción narrativa. Grann investiga historias increíbles y las cuenta como thrillers: 'Los asesinos de la luna' sobre el genocidio de los Osage se convirtió en película de Scorsese.",
+    "nationality": "Estadounidense",
+    "born": 1967,
+    "genres": [
+      "no ficción",
+      "periodismo",
+      "historia"
+    ],
+    "notable_works": [
+      "Los asesinos de la luna",
+      "La ciudad perdida de Z",
+      "The White Darkness"
+    ]
+  },
+  "Edith Wharton": {
+    "bio": "Americana, primera mujer en ganar el Pulitzer de ficción (1921). Wharton escribía sobre la alta sociedad neoyorquina que conocía íntimamente, con ironía y compasión. 'La edad de la inocencia' es una obra maestra. Elegancia y tragedia.",
+    "nationality": "Estadounidense",
+    "born": 1862,
+    "died": 1937,
+    "genres": [
+      "ficción",
+      "social",
+      "literario"
+    ],
+    "notable_works": [
+      "La edad de la inocencia",
+      "La casa de la alegría",
+      "Ethan Frome"
+    ],
+    "awards": [
+      "Premio Pulitzer 1921"
+    ]
+  },
+  "Neal Stephenson": {
+    "bio": "Americano, visionario de la ciencia ficción tecnológica. Stephenson escribe novelas enormes sobre criptografía, realidad virtual, historia alternativa. 'Snow Crash' inventó el metaverso. Ambicioso, denso, imprescindible para entender el futuro.",
+    "nationality": "Estadounidense",
+    "born": 1959,
+    "genres": [
+      "ciencia ficción",
+      "cyberpunk",
+      "histórico"
+    ],
+    "notable_works": [
+      "Snow Crash",
+      "Criptonomicón",
+      "Anatema"
+    ]
+  },
+  "Sara Mesa": {
+    "bio": "Sevillana, novelista de la inquietud cotidiana. Mesa escribe sobre relaciones de poder, silencios familiares y espacios cerrados con prosa precisa y perturbadora. 'Un amor' fue muy celebrada. Una de las voces más interesantes de la narrativa española.",
+    "nationality": "Española",
+    "born": 1976,
+    "genres": [
+      "ficción",
+      "psicológico",
+      "literario"
+    ],
+    "notable_works": [
+      "Un amor",
+      "Cicatriz",
+      "Cara de pan"
+    ]
+  },
+  "Friedrich A. Hayek": {
+    "bio": "Austríaco-británico, Nobel de Economía 1974, profeta del libre mercado. Hayek escribió 'Camino de servidumbre' contra la planificación estatal. Héroe de liberales y libertarios, demonio de la izquierda. Pensador influyente, te guste o no.",
+    "nationality": "Austríaco-Británico",
+    "born": 1899,
+    "died": 1992,
+    "genres": [
+      "economía",
+      "filosofía",
+      "política"
+    ],
+    "notable_works": [
+      "Camino de servidumbre",
+      "La fatal arrogancia",
+      "Los fundamentos de la libertad"
+    ],
+    "awards": [
+      "Premio Nobel de Economía 1974"
+    ]
+  },
+  "R. F. Kuang": {
+    "bio": "Americana de origen chino, prodigio de la fantasía. Kuang escribió 'La guerra de la amapola' a los 19: fantasía épica con opio, genocidio y magia inspirada en la historia china. 'Babel' mezcla lingüística y colonialismo. Ambiciosa y feroz.",
+    "nationality": "Estadounidense",
+    "born": 1996,
+    "genres": [
+      "fantasía",
+      "ciencia ficción",
+      "histórico"
+    ],
+    "notable_works": [
+      "La guerra de la amapola",
+      "Babel",
+      "Yellowface"
+    ]
+  },
+  "Leigh Bardugo": {
+    "bio": "Americana, arquitecta del Grishaverse. Bardugo creó un universo de fantasía inspirado en Rusia zarista que se convirtió en serie de Netflix. 'Seis de cuervos' es su obra maestra: una banda de ladrones, un atraco imposible. Fantasía adictiva.",
+    "nationality": "Estadounidense",
+    "born": 1975,
+    "genres": [
+      "fantasía",
+      "juvenil",
+      "aventura"
+    ],
+    "notable_works": [
+      "Seis de cuervos",
+      "Sombra y hueso",
+      "El noveno rey"
+    ]
+  },
+  "Elvira Navarro": {
+    "bio": "Extremeña, novelista de la precariedad y lo extraño. Navarro escribe sobre trabajos basura, locura y los márgenes de la vida urbana. 'La trabajadora' es incómoda y necesaria. Una voz singular de la literatura española contemporánea.",
+    "nationality": "Española",
+    "born": 1978,
+    "genres": [
+      "ficción",
+      "urbano",
+      "experimental"
+    ],
+    "notable_works": [
+      "La trabajadora",
+      "Los últimos días de Adelaida García Morales",
+      "Rabbit Island"
+    ]
+  },
+  "Lucy Foley": {
+    "bio": "Inglesa, nueva reina del whodunit. Foley escribe thrillers con grupos de amigos en lugares remotos donde alguien termina muerto. 'La lista de invitados' fue bestseller global. Agatha Christie para la era de Instagram.",
+    "nationality": "Británica",
+    "born": 1986,
+    "genres": [
+      "thriller",
+      "misterio",
+      "suspense"
+    ],
+    "notable_works": [
+      "La lista de invitados",
+      "El refugio",
+      "La casa de París"
+    ]
+  },
+  "Roberto Calasso": {
+    "bio": "Italiano, editor de Adelphi, erudito total. Calasso escribía ensayos-novela sobre mitología, literatura y civilización con una prosa hipnótica. 'Las bodas de Cadmo y Harmonía' es una obra maestra. Murió en 2021 como uno de los últimos humanistas.",
+    "nationality": "Italiano",
+    "born": 1941,
+    "died": 2021,
+    "genres": [
+      "ensayo",
+      "mitología",
+      "literatura"
+    ],
+    "notable_works": [
+      "Las bodas de Cadmo y Harmonía",
+      "Ka",
+      "La ruina de Kasch"
+    ]
+  },
+  "Audrey Niffenegger": {
+    "bio": "Americana, artista y novelista. 'La mujer del viajero en el tiempo' es un romance de ciencia ficción que conquistó millones: un hombre que viaja en el tiempo y la mujer que lo espera. Ingenioso y emotivo.",
+    "nationality": "Estadounidense",
+    "born": 1963,
+    "genres": [
+      "ficción",
+      "romance",
+      "ciencia ficción"
+    ],
+    "notable_works": [
+      "La mujer del viajero en el tiempo",
+      "Her Fearful Symmetry"
+    ]
+  },
+  "Camila Sosa Villada": {
+    "bio": "Argentina, travesti, actriz y escritora. 'Las malas' es una novela autobiográfica sobre travestis en Córdoba que es brutal, tierna y poética. Sosa Villada escribe desde el cuerpo y la calle. Una voz única.",
+    "nationality": "Argentina",
+    "born": 1982,
+    "genres": [
+      "ficción",
+      "autobiográfico",
+      "LGBTQ"
+    ],
+    "notable_works": [
+      "Las malas",
+      "Soy una tonta por quererte",
+      "Tesis sobre una domesticación"
+    ]
+  },
+  "Julio Ramón Ribeyro": {
+    "bio": "Peruano, el gran cuentista de Lima. Ribeyro escribía sobre perdedores, oficinistas grises y la clase media que no llega a fin de mes. 'La palabra del mudo' recopila sus cuentos perfectos. Discreto, melancólico, genial.",
+    "nationality": "Peruano",
+    "born": 1929,
+    "died": 1994,
+    "genres": [
+      "cuento",
+      "realismo",
+      "urbano"
+    ],
+    "notable_works": [
+      "La palabra del mudo",
+      "Prosas apátridas",
+      "Los geniecillos dominicales"
+    ]
+  },
+  "Paulina Flores": {
+    "bio": "Chilena, revelación del cuento latinoamericano. 'Qué vergüenza' ganó el Roberto Bolaño y mostró una nueva voz: historias sobre mujeres jóvenes en Santiago, precariedad y deseo. Directa, emotiva, sin adornos.",
+    "nationality": "Chilena",
+    "born": 1988,
+    "genres": [
+      "cuento",
+      "contemporáneo",
+      "realismo"
+    ],
+    "notable_works": [
+      "Qué vergüenza",
+      "Isla decepción"
+    ]
+  },
+  "Ivo Andrić": {
+    "bio": "Yugoslavo (bosnio), Nobel 1961, el novelista de los Balcanes. Andrić escribió 'Un puente sobre el Drina': cuatro siglos de historia bosnia a través de un puente. Épico, humano, imprescindible para entender la región.",
+    "nationality": "Yugoslavo (Bosnio)",
+    "born": 1892,
+    "died": 1975,
+    "genres": [
+      "ficción",
+      "histórico",
+      "épico"
+    ],
+    "notable_works": [
+      "Un puente sobre el Drina",
+      "Crónica de Travnik",
+      "La señorita"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1961"
+    ]
+  },
+  "Pedro Mairal": {
+    "bio": "Argentino, poeta y novelista del Buenos Aires contemporáneo. Mairal escribe con humor sobre hombres en crisis, deseos secretos y la vida de escritor. 'La uruguaya' fue un éxito: una escapada a Montevideo que sale mal.",
+    "nationality": "Argentino",
+    "born": 1970,
+    "genres": [
+      "ficción",
+      "poesía",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "La uruguaya",
+      "El año del desierto",
+      "Salvatierra"
+    ]
+  },
+  "Mariana Enriquez": {
+    "bio": "Argentina, reina del terror latinoamericano. Enriquez escribe sobre fantasmas, violencia y los horrores de la historia argentina. 'Las cosas que perdimos en el fuego' la consagró internacionalmente. El terror como forma de hablar de lo real.",
+    "nationality": "Argentina",
+    "born": 1973,
+    "genres": [
+      "terror",
+      "cuento",
+      "fantástico"
+    ],
+    "notable_works": [
+      "Las cosas que perdimos en el fuego",
+      "Nuestra parte de noche",
+      "Los peligros de fumar en la cama"
+    ]
+  },
+  "Yaa Gyasi": {
+    "bio": "Ghanesa-americana, novelista de la diáspora africana. 'Volver a casa' cuenta 300 años de historia desde Ghana hasta América a través de una familia. Gyasi tiene 30 años y ya escribió una novela épica. El futuro de la literatura americana.",
+    "nationality": "Estadounidense (nacida ghanesa)",
+    "born": 1989,
+    "genres": [
+      "ficción",
+      "histórico",
+      "saga"
+    ],
+    "notable_works": [
+      "Volver a casa",
+      "Transcendent Kingdom"
+    ]
+  },
+  "Stendhal": {
+    "bio": "Francés, maestro del realismo psicológico. Stendhal escribió 'Rojo y negro' y 'La cartuja de Parma': ambición, amor y política en la Francia post-napoleónica. Sus novelas anticiparon todo el siglo XIX. Un clásico eterno.",
+    "nationality": "Francés",
+    "born": 1783,
+    "died": 1842,
+    "genres": [
+      "ficción",
+      "realismo",
+      "psicológico"
+    ],
+    "notable_works": [
+      "Rojo y negro",
+      "La cartuja de Parma",
+      "Del amor"
+    ]
+  },
+  "Joan Margarit": {
+    "bio": "Catalán, arquitecto y poeta, Premio Cervantes 2019. Margarit escribía sobre la pérdida (especialmente de su hija) con una claridad que duele. Bilingüe en catalán y castellano. Murió en 2021. La poesía como consuelo imposible.",
+    "nationality": "Español (Catalán)",
+    "born": 1938,
+    "died": 2021,
+    "genres": [
+      "poesía",
+      "lírico",
+      "autobiográfico"
+    ],
+    "notable_works": [
+      "Joana",
+      "Un mal poema ensucia el mundo",
+      "Para tener casa hay que ganar la guerra"
+    ],
+    "awards": [
+      "Premio Cervantes 2019"
+    ]
+  },
+  "Jean Genet": {
+    "bio": "Francés, ladrón, prostituto, escritor sagrado. Genet pasó de la cárcel a la gloria literaria: sus novelas sobre criminales y marginados son poesía pura. Sartre lo canonizó. Provocador, lírico, irrepetible.",
+    "nationality": "Francés",
+    "born": 1910,
+    "died": 1986,
+    "genres": [
+      "ficción",
+      "teatro",
+      "autobiográfico"
+    ],
+    "notable_works": [
+      "Diario del ladrón",
+      "Nuestra Señora de las Flores",
+      "Las criadas"
+    ]
+  },
+  "Hebe Uhart": {
+    "bio": "Argentina, maestra del cuento mínimo. Uhart escribía relatos sobre gente común con un oído perfecto para el habla y el absurdo cotidiano. Fue profesora de escritura, tardó en ser reconocida. Murió en 2018 como clásica secreta.",
+    "nationality": "Argentina",
+    "born": 1936,
+    "died": 2018,
+    "genres": [
+      "cuento",
+      "crónica",
+      "realismo"
+    ],
+    "notable_works": [
+      "Turistas",
+      "Un día cualquiera",
+      "Animales"
+    ]
+  },
+  "Daniel Kehlmann": {
+    "bio": "Alemán-austríaco, novelista de éxito internacional. 'La medición del mundo' sobre Humboldt y Gauss vendió millones. Kehlmann escribe novelas inteligentes y accesibles sobre ciencia, arte e historia. El bestseller alemán respetable.",
+    "nationality": "Alemán-Austríaco",
+    "born": 1975,
+    "genres": [
+      "ficción",
+      "histórico",
+      "literario"
+    ],
+    "notable_works": [
+      "La medición del mundo",
+      "Tyll",
+      "Fama"
+    ]
+  },
+  "Emmanuel Carrère": {
+    "bio": "Francés, inventor de la autoficción como la conocemos. Carrère escribe sobre sí mismo investigando a otros: un impostor, un asesino, su propia depresión. 'El adversario' y 'Limónov' son obras maestras del género. Narcisista y fascinante.",
+    "nationality": "Francés",
+    "born": 1957,
+    "genres": [
+      "autoficción",
+      "no ficción",
+      "biografía"
+    ],
+    "notable_works": [
+      "El adversario",
+      "Limónov",
+      "De vidas ajenas"
+    ]
+  },
+  "Ida Vitale": {
+    "bio": "Uruguaya, Premio Cervantes 2018, poeta de la claridad. Vitale pertenece a la Generación del 45 y ha escrito poesía durante 70 años. Su obra es luminosa, precisa, sabia. A los 100 años sigue siendo esencial.",
+    "nationality": "Uruguaya",
+    "born": 1923,
+    "genres": [
+      "poesía",
+      "ensayo",
+      "lírico"
+    ],
+    "notable_works": [
+      "Luz de esta memoria",
+      "Procura de lo imposible",
+      "Mella y criba"
+    ],
+    "awards": [
+      "Premio Cervantes 2018"
+    ]
+  },
+  "W. G. Sebald": {
+    "bio": "Alemán que escribía en inglés, único e irrepetible. Sebald mezclaba ficción, memoria, fotografía y melancolía en libros inclasificables. 'Austerlitz' es sobre el Holocausto sin mencionarlo directamente. Murió en accidente en 2001. Una pérdida enorme.",
+    "nationality": "Alemán",
+    "born": 1944,
+    "died": 2001,
+    "genres": [
+      "ficción",
+      "memorias",
+      "experimental"
+    ],
+    "notable_works": [
+      "Austerlitz",
+      "Los emigrados",
+      "Los anillos de Saturno"
+    ]
+  },
+  "Péter Nádas": {
+    "bio": "Húngaro, autor de una de las novelas más ambiciosas del siglo XX. 'Libro de memorias' tiene 700 páginas sobre deseo, historia y cuerpo. Nádas escribe lento, denso, hipnótico. Para lectores muy pacientes.",
+    "nationality": "Húngaro",
+    "born": 1942,
+    "genres": [
+      "ficción",
+      "literario",
+      "experimental"
+    ],
+    "notable_works": [
+      "Libro de memorias",
+      "Historias paralelas",
+      "El fin de una saga familiar"
+    ]
+  },
+  "Wislawa Szymborska": {
+    "bio": "Polaca, Nobel 1996, poeta de la ironía y la maravilla. Szymborska escribía poemas cortos, inteligentes, que te hacen ver el mundo diferente. Modesta y genial. Cada poema suyo es una lección de cómo mirar.",
+    "nationality": "Polaca",
+    "born": 1923,
+    "died": 2012,
+    "genres": [
+      "poesía",
+      "filosófico",
+      "irónico"
+    ],
+    "notable_works": [
+      "El gran número",
+      "Poesía no completa",
+      "Aquí"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1996"
+    ]
+  },
+  "Juan Rulfo": {
+    "bio": "Mexicano, autor de una sola novela y un libro de cuentos que cambiaron la literatura latinoamericana. 'Pedro Páramo' es sobre un pueblo de muertos que parece un sueño. Rulfo calló después y su silencio se volvió leyenda. Perfección absoluta.",
+    "nationality": "Mexicano",
+    "born": 1917,
+    "died": 1986,
+    "genres": [
+      "ficción",
+      "realismo mágico",
+      "rural"
+    ],
+    "notable_works": [
+      "Pedro Páramo",
+      "El llano en llamas"
+    ]
+  },
+  "Hernán Díaz": {
+    "bio": "Argentino-americano, Pulitzer 2023 por 'Fortuna'. Díaz escribe sobre dinero, poder y las historias que nos contamos. Su novela es un rompecabezas narrativo sobre Wall Street y verdad. Uno de los grandes debuts de la década.",
+    "nationality": "Argentino-Estadounidense",
+    "born": 1973,
+    "genres": [
+      "ficción",
+      "histórico",
+      "literario"
+    ],
+    "notable_works": [
+      "Fortuna",
+      "En el límite del mundo"
+    ],
+    "awards": [
+      "Premio Pulitzer 2023"
+    ]
+  },
+  "Christopher Isherwood": {
+    "bio": "Inglés, expatriado en Berlín y Hollywood. Isherwood escribió 'Adiós a Berlín' (base de 'Cabaret'): el Berlín de Weimar antes de la catástrofe. Gay cuando era peligroso, cosmopolita, elegante. Un clásico del siglo XX.",
+    "nationality": "Británico-Estadounidense",
+    "born": 1904,
+    "died": 1986,
+    "genres": [
+      "ficción",
+      "autobiográfico",
+      "LGBTQ"
+    ],
+    "notable_works": [
+      "Adiós a Berlín",
+      "Un hombre solo",
+      "El cóndor y las vacas"
+    ]
+  },
+  "Robert Frost": {
+    "bio": "Americano, el poeta del campo de Nueva Inglaterra. Frost escribía versos aparentemente sencillos sobre cercas, caminos y nieve que esconden profundidades. Cuatro veces Pulitzer. El poeta más popular de América, y con razón.",
+    "nationality": "Estadounidense",
+    "born": 1874,
+    "died": 1963,
+    "genres": [
+      "poesía",
+      "lírico",
+      "naturaleza"
+    ],
+    "notable_works": [
+      "The Road Not Taken",
+      "Stopping by Woods on a Snowy Evening",
+      "Mending Wall"
+    ]
+  },
+  "Jean Rhys": {
+    "bio": "Dominicana-británica, voz de las mujeres marginadas. Rhys escribió 'Ancho mar de los Sargazos': la historia de la primera esposa de Rochester (de 'Jane Eyre') antes de volverse loca. Redescubierta tarde, ahora es un clásico feminista y postcolonial.",
+    "nationality": "Británica (nacida en Dominica)",
+    "born": 1890,
+    "died": 1979,
+    "genres": [
+      "ficción",
+      "postcolonial",
+      "feminismo"
+    ],
+    "notable_works": [
+      "Ancho mar de los Sargazos",
+      "Buenos días, medianoche",
+      "Viaje a la oscuridad"
+    ]
+  },
+  "Toshikazu Kawaguchi": {
+    "bio": "Japonés, autor del fenómeno 'Antes de que se enfríe el café'. Kawaguchi escribe sobre una cafetería donde puedes viajar al pasado (con condiciones). Sencillo, emotivo, perfecto para un vuelo o una tarde lluviosa.",
+    "nationality": "Japonés",
+    "born": 1971,
+    "genres": [
+      "ficción",
+      "fantástico",
+      "drama"
+    ],
+    "notable_works": [
+      "Antes de que se enfríe el café",
+      "Mientras el café siga caliente"
+    ]
+  },
+  "Gertrude Stein": {
+    "bio": "Americana en París, madrina del modernismo. Stein escribía prosa experimental y coleccionaba Picassos. Su salón acogió a Hemingway, Fitzgerald, todos los que importaban. 'Autobiografía de Alice B. Toklas' es genial. Una fuerza de la naturaleza.",
+    "nationality": "Estadounidense",
+    "born": 1874,
+    "died": 1946,
+    "genres": [
+      "ficción",
+      "experimental",
+      "memorias"
+    ],
+    "notable_works": [
+      "Autobiografía de Alice B. Toklas",
+      "Tres vidas",
+      "Tender Buttons"
+    ]
+  },
+  "Mohsin Hamid": {
+    "bio": "Pakistaní-británico, novelista de la globalización. Hamid escribe sobre inmigración, identidad y el choque de mundos con inventiva formal. 'El fundamentalista reticente' es un monólogo fascinante. Uno de los autores más importantes de su generación.",
+    "nationality": "Pakistaní-Británico",
+    "born": 1971,
+    "genres": [
+      "ficción",
+      "político",
+      "literario"
+    ],
+    "notable_works": [
+      "El fundamentalista reticente",
+      "Exit West",
+      "Cómo hacerse asquerosamente rico en el Asia emergente"
+    ]
+  },
+  "John Ashbery": {
+    "bio": "Americano, el poeta más influyente de su generación. Ashbery escribía poesía difícil, divertida, que nunca se queda quieta. Ganó todos los premios: Pulitzer, National Book Award, todo. Murió en 2017 como leyenda de la poesía americana.",
+    "nationality": "Estadounidense",
+    "born": 1927,
+    "died": 2017,
+    "genres": [
+      "poesía",
+      "experimental",
+      "postmoderno"
+    ],
+    "notable_works": [
+      "Self-Portrait in a Convex Mirror",
+      "Some Trees",
+      "A Wave"
+    ],
+    "awards": [
+      "Premio Pulitzer 1976"
+    ]
+  },
+  "Gary Jennings": {
+    "bio": "Americano, autor de novelas históricas monumentales. 'Azteca' recrea el México precolombino con detalle extraordinario: 1000 páginas de civilización, guerra y destrucción. Para lectores que quieren perderse en otro mundo.",
+    "nationality": "Estadounidense",
+    "born": 1928,
+    "died": 1999,
+    "genres": [
+      "ficción histórica",
+      "épico",
+      "aventura"
+    ],
+    "notable_works": [
+      "Azteca",
+      "El viajero",
+      "Raptor"
+    ]
+  },
+  "William Finnegan": {
+    "bio": "Americano, periodista del New Yorker, surfista. 'Años salvajes' ganó el Pulitzer: memorias de una vida buscando olas perfectas alrededor del mundo. Periodismo, aventura y obsesión en una combinación perfecta.",
+    "nationality": "Estadounidense",
+    "born": 1952,
+    "genres": [
+      "memorias",
+      "periodismo",
+      "aventura"
+    ],
+    "notable_works": [
+      "Años salvajes",
+      "Cold New World"
+    ],
+    "awards": [
+      "Premio Pulitzer 2016"
+    ]
+  },
+  "Erwin Panofsky": {
+    "bio": "Alemán-americano, el historiador del arte más influyente del siglo XX. Panofsky desarrolló la iconología: cómo leer el significado oculto de las imágenes. 'Estudios sobre iconología' es un clásico. Erudición al servicio de ver mejor.",
+    "nationality": "Alemán-Estadounidense",
+    "born": 1892,
+    "died": 1968,
+    "genres": [
+      "historia del arte",
+      "ensayo",
+      "académico"
+    ],
+    "notable_works": [
+      "Estudios sobre iconología",
+      "La perspectiva como forma simbólica",
+      "Idea"
+    ]
+  },
+  "Ana Rossetti": {
+    "bio": "Gaditana, poeta del erotismo y la transgresión. Rossetti irrumpió en los 80 con poesía sensual y provocadora que rompió tabúes en la España post-Franco. También escribe novela y literatura infantil. Una voz única.",
+    "nationality": "Española",
+    "born": 1950,
+    "genres": [
+      "poesía",
+      "erótico",
+      "ficción"
+    ],
+    "notable_works": [
+      "Los devaneos de Erato",
+      "Indicios vehementes",
+      "Punto umbrío"
+    ]
+  },
+  "Jane Austen": {
+    "bio": "Inglesa, maestra de la ironía y el romance. Austen escribió seis novelas perfectas sobre el matrimonio, el dinero y las pequeñas hipocresías de la burguesía inglesa. 'Orgullo y prejuicio' se ha adaptado infinitas veces. Sigue siendo deliciosamente moderna.",
+    "nationality": "Británica",
+    "born": 1775,
+    "died": 1817,
+    "genres": [
+      "ficción",
+      "romance",
+      "social"
+    ],
+    "notable_works": [
+      "Orgullo y prejuicio",
+      "Emma",
+      "Sentido y sensibilidad",
+      "Persuasión"
+    ]
+  },
+  "Gustave Flaubert": {
+    "bio": "Francés, perfeccionista obsesivo, padre del realismo moderno. Flaubert pasaba semanas buscando la palabra exacta. 'Madame Bovary' escandalizó y cambió la novela para siempre. También escribió 'La educación sentimental'. El artista como mártir de su arte.",
+    "nationality": "Francés",
+    "born": 1821,
+    "died": 1880,
+    "genres": [
+      "ficción",
+      "realismo",
+      "literario"
+    ],
+    "notable_works": [
+      "Madame Bovary",
+      "La educación sentimental",
+      "Salambó"
+    ]
+  },
+  "Emily Brontë": {
+    "bio": "Inglesa, autora de una sola novela que es una de las más grandes jamás escritas. 'Cumbres borrascosas' es salvaje, gótica, apasionada. Emily murió a los 30, un año después de publicarla. Su hermana Charlotte escribió 'Jane Eyre'. Familia de genios.",
+    "nationality": "Británica",
+    "born": 1818,
+    "died": 1848,
+    "genres": [
+      "ficción",
+      "gótico",
+      "romance"
+    ],
+    "notable_works": [
+      "Cumbres borrascosas"
+    ]
+  },
+  "Rainer Maria Rilke": {
+    "bio": "Austro-alemán, el poeta de la soledad y lo sagrado. Rilke escribió las 'Elegías de Duino' y los 'Sonetos a Orfeo': poesía difícil y hermosa sobre la existencia. También sus 'Cartas a un joven poeta' son lectura obligada. El poeta de los poetas.",
+    "nationality": "Austro-Alemán",
+    "born": 1875,
+    "died": 1926,
+    "genres": [
+      "poesía",
+      "lírico",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Elegías de Duino",
+      "Sonetos a Orfeo",
+      "Cartas a un joven poeta"
+    ]
+  },
+  "Ray Bradbury": {
+    "bio": "Americano, poeta de la ciencia ficción. Bradbury escribía sobre Marte, libros prohibidos y el lado oscuro de la tecnología con prosa lírica. 'Fahrenheit 451' y 'Crónicas marcianas' son clásicos. Nunca aprendió a conducir. Imaginación pura.",
+    "nationality": "Estadounidense",
+    "born": 1920,
+    "died": 2012,
+    "genres": [
+      "ciencia ficción",
+      "fantástico",
+      "cuento"
+    ],
+    "notable_works": [
+      "Fahrenheit 451",
+      "Crónicas marcianas",
+      "El hombre ilustrado"
+    ]
+  },
+  "Carl Sagan": {
+    "bio": "Americano, astrónomo, el gran divulgador del cosmos. Sagan hizo que millones miraran las estrellas con 'Cosmos'. También escribió 'Contact' (novela) y luchó contra la pseudociencia. Murió en 1996 dejando un legado de asombro y escepticismo sano.",
+    "nationality": "Estadounidense",
+    "born": 1934,
+    "died": 1996,
+    "genres": [
+      "divulgación",
+      "ciencia",
+      "ciencia ficción"
+    ],
+    "notable_works": [
+      "Cosmos",
+      "Contact",
+      "El mundo y sus demonios"
+    ]
+  },
+  "Madeline Miller": {
+    "bio": "Americana, clasicista que hace vivir los mitos. Miller escribió 'La canción de Aquiles' (sobre Patroclo) y 'Circe': novelas que reinventan la mitología griega con sensibilidad moderna. Bestsellers que también son literatura. El pasado vivo.",
+    "nationality": "Estadounidense",
+    "born": 1978,
+    "genres": [
+      "ficción",
+      "mitología",
+      "histórico"
+    ],
+    "notable_works": [
+      "La canción de Aquiles",
+      "Circe"
+    ]
+  },
+  "Laura Esquivel": {
+    "bio": "Mexicana, autora de 'Como agua para chocolate': realismo mágico culinario que conquistó el mundo. Esquivel mezcla recetas, pasión y revolución mexicana. También guionista. Un fenómeno de los 90 que sigue encantando.",
+    "nationality": "Mexicana",
+    "born": 1950,
+    "genres": [
+      "ficción",
+      "realismo mágico",
+      "romance"
+    ],
+    "notable_works": [
+      "Como agua para chocolate",
+      "La ley del amor",
+      "Malinche"
+    ]
+  },
+  "Mario Levrero": {
+    "bio": "Uruguayo, escritor de culto, genio tardío. Levrero escribió novelas extrañas sobre la mente, el insomnio y la vida cotidiana. 'La novela luminosa' es su obra maestra: 500 páginas de prólogo y 100 de novela. Murió en 2004, ahora es leyenda.",
+    "nationality": "Uruguayo",
+    "born": 1940,
+    "died": 2004,
+    "genres": [
+      "ficción",
+      "experimental",
+      "autobiográfico"
+    ],
+    "notable_works": [
+      "La novela luminosa",
+      "El discurso vacío",
+      "Trilogía involuntaria"
+    ]
+  },
+  "Cynthia Ozick": {
+    "bio": "Americana, novelista y ensayista de la experiencia judía. Ozick escribe sobre memoria, Holocausto, arte y fe con prosa exigente. 'El chal' es devastador. Una de las grandes escritoras vivas, aunque menos conocida de lo que merece.",
+    "nationality": "Estadounidense",
+    "born": 1928,
+    "genres": [
+      "ficción",
+      "ensayo",
+      "judío"
+    ],
+    "notable_works": [
+      "El chal",
+      "El Mesías de Estocolmo",
+      "Herederos del holocausto"
+    ]
+  },
+  "Teju Cole": {
+    "bio": "Nigeriano-americano, novelista, fotógrafo, crítico. Cole escribió 'Ciudad abierta': un hombre camina por Nueva York y piensa. También ensayos brillantes sobre fotografía, raza y arte. Una de las mentes más interesantes de la literatura actual.",
+    "nationality": "Nigeriano-Estadounidense",
+    "born": 1975,
+    "genres": [
+      "ficción",
+      "ensayo",
+      "fotografía"
+    ],
+    "notable_works": [
+      "Ciudad abierta",
+      "Punto de partida",
+      "Known and Strange Things"
+    ]
+  },
+  "Rubén Darío": {
+    "bio": "Nicaragüense, padre del modernismo hispanoamericano. Darío renovó la poesía en español con música, color y cosmopolitismo. 'Azul' y 'Cantos de vida y esperanza' cambiaron todo. Murió a los 49, alcohólico y genial. El poeta que liberó el idioma.",
+    "nationality": "Nicaragüense",
+    "born": 1867,
+    "died": 1916,
+    "genres": [
+      "poesía",
+      "modernismo",
+      "lírico"
+    ],
+    "notable_works": [
+      "Azul",
+      "Cantos de vida y esperanza",
+      "Prosas profanas"
+    ]
+  },
+  "Brenda Navarro": {
+    "bio": "Mexicana, novelista de la maternidad y la violencia. 'Casas vacías' es sobre una madre que pierde a su hijo y otra que lo encuentra: dura, necesaria. Navarro escribe sobre mujeres en situaciones imposibles con honestidad brutal.",
+    "nationality": "Mexicana",
+    "born": 1982,
+    "genres": [
+      "ficción",
+      "feminismo",
+      "social"
+    ],
+    "notable_works": [
+      "Casas vacías",
+      "Ceniza en la boca"
+    ]
+  },
+  "Lucía Lijtmaer": {
+    "bio": "Argentina-española, periodista y novelista. Lijtmaer escribe sobre feminismo, cultura pop y política con inteligencia y gracia. 'Cauterio' es una novela sobre brujas y mujeres perseguidas. Voz fresca del periodismo cultural español.",
+    "nationality": "Argentina-Española",
+    "born": 1977,
+    "genres": [
+      "ficción",
+      "ensayo",
+      "periodismo"
+    ],
+    "notable_works": [
+      "Cauterio",
+      "Ofendiditos"
+    ]
+  },
+  "Morgan Housel": {
+    "bio": "Americano, escritor de finanzas que la gente realmente quiere leer. 'La psicología del dinero' es un bestseller sobre cómo pensamos (mal) sobre el dinero. Housel hace accesible lo complejo sin simplificar. Finanzas para humanos.",
+    "nationality": "Estadounidense",
+    "genres": [
+      "finanzas",
+      "psicología",
+      "divulgación"
+    ],
+    "notable_works": [
+      "La psicología del dinero",
+      "Same as Ever"
+    ]
+  },
+  "Pilar Adón": {
+    "bio": "Madrileña, novelista y poeta de atmósferas inquietantes. Adón escribe sobre casas aisladas, relaciones tensas y naturaleza amenazante. Una voz singular en la literatura española contemporánea.",
+    "nationality": "Española",
+    "born": 1971,
+    "genres": [
+      "ficción",
+      "poesía",
+      "gótico"
+    ],
+    "notable_works": [
+      "Las hijas de Sara",
+      "Las efímeras",
+      "El mes más cruel"
+    ]
+  },
+  "Robert Nozick": {
+    "bio": "Filósofo americano, libertario, provocador intelectual. Nozick escribió 'Anarquía, Estado y utopía' como respuesta a Rawls: una defensa del Estado mínimo que sigue generando debate. También escribió sobre la vida buena. Filosofía que importa.",
+    "nationality": "Estadounidense",
+    "born": 1938,
+    "died": 2002,
+    "genres": [
+      "filosofía",
+      "política",
+      "ética"
+    ],
+    "notable_works": [
+      "Anarquía, Estado y utopía",
+      "Meditaciones sobre la vida"
+    ]
+  },
+  "Josep Fontana": {
+    "bio": "Catalán, historiador marxista, referente de la historiografía española. Fontana escribió sobre el siglo XIX español, la historia de Europa y cómo se hace la historia. Riguroso, comprometido, imprescindible para entender España.",
+    "nationality": "Español (Catalán)",
+    "born": 1931,
+    "died": 2018,
+    "genres": [
+      "historia",
+      "ensayo",
+      "académico"
+    ],
+    "notable_works": [
+      "La historia de los hombres",
+      "Por el bien del imperio",
+      "El siglo de la revolución"
+    ]
+  },
+  "James Jones": {
+    "bio": "Americano, novelista de la guerra. Jones escribió 'De aquí a la eternidad' sobre el ejército antes de Pearl Harbor: brutal, honesta, épica. Ganó el National Book Award. El Hemingway de la Segunda Guerra Mundial.",
+    "nationality": "Estadounidense",
+    "born": 1921,
+    "died": 1977,
+    "genres": [
+      "ficción",
+      "bélico",
+      "drama"
+    ],
+    "notable_works": [
+      "De aquí a la eternidad",
+      "La delgada línea roja",
+      "Whistle"
+    ]
+  },
+  "Charlotte Brontë": {
+    "bio": "Inglesa, autora de 'Jane Eyre': la institutriz que no se calla, el señor oscuro de la mansión, el secreto en el ático. Brontë escribió una de las novelas más influyentes del XIX. Murió a los 38. Las hermanas Brontë son un fenómeno único.",
+    "nationality": "Británica",
+    "born": 1816,
+    "died": 1855,
+    "genres": [
+      "ficción",
+      "gótico",
+      "romance"
+    ],
+    "notable_works": [
+      "Jane Eyre",
+      "Villette",
+      "Shirley"
+    ]
+  },
+  "Herman Melville": {
+    "bio": "Americano, autor de la gran novela americana sobre una ballena blanca. 'Moby Dick' fracasó en su época; ahora es un monumento. Melville murió olvidado; fue redescubierto décadas después. La obsesión hecha literatura.",
+    "nationality": "Estadounidense",
+    "born": 1819,
+    "died": 1891,
+    "genres": [
+      "ficción",
+      "aventura",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Moby Dick",
+      "Bartleby el escribiente",
+      "Billy Budd"
+    ]
+  },
+  "Mark Twain": {
+    "bio": "Americano, humorista, la voz de América. Twain escribió 'Las aventuras de Tom Sawyer' y 'Huckleberry Finn': el Mississippi, la infancia, la crítica social disfrazada de aventura. También conferenciante y polemista. El padre de la literatura americana.",
+    "nationality": "Estadounidense",
+    "born": 1835,
+    "died": 1910,
+    "genres": [
+      "ficción",
+      "humor",
+      "aventura"
+    ],
+    "notable_works": [
+      "Las aventuras de Huckleberry Finn",
+      "Las aventuras de Tom Sawyer",
+      "Un yanqui en la corte del Rey Arturo"
+    ]
+  },
+  "H. G. Wells": {
+    "bio": "Inglés, padre de la ciencia ficción moderna junto a Verne. Wells inventó la máquina del tiempo, el hombre invisible, la invasión alienígena. También socialista y visionario. Sus novelas siguen siendo la base del género.",
+    "nationality": "Británico",
+    "born": 1866,
+    "died": 1946,
+    "genres": [
+      "ciencia ficción",
+      "fantástico",
+      "social"
+    ],
+    "notable_works": [
+      "La máquina del tiempo",
+      "La guerra de los mundos",
+      "El hombre invisible"
+    ]
+  },
+  "Jules Verne": {
+    "bio": "Francés, el otro padre de la ciencia ficción. Verne escribió sobre viajes al centro de la tierra, a la luna, bajo el mar. Predijo submarinos, helicópteros, viajes espaciales. Aventura y ciencia para todas las edades.",
+    "nationality": "Francés",
+    "born": 1828,
+    "died": 1905,
+    "genres": [
+      "ciencia ficción",
+      "aventura",
+      "juvenil"
+    ],
+    "notable_works": [
+      "Veinte mil leguas de viaje submarino",
+      "Viaje al centro de la Tierra",
+      "La vuelta al mundo en 80 días"
+    ]
+  },
+  "Victor Hugo": {
+    "bio": "Francés, titán del romanticismo, escritor nacional. Hugo escribió 'Los miserables' y 'Nuestra Señora de París': novelas monumentales que son también historia de Francia. Poeta, dramaturgo, exiliado político. El escritor francés por excelencia.",
+    "nationality": "Francés",
+    "born": 1802,
+    "died": 1885,
+    "genres": [
+      "ficción",
+      "poesía",
+      "teatro"
+    ],
+    "notable_works": [
+      "Los miserables",
+      "Nuestra Señora de París",
+      "El hombre que ríe"
+    ]
+  },
+  "Stefan Zweig": {
+    "bio": "Austríaco, el escritor más leído de su época, luego olvidado, ahora redescubierto. Zweig escribía novelas cortas y biografías sobre pasiones extremas. Huyó del nazismo y se suicidó en Brasil. 'El mundo de ayer' es su testamento de una Europa perdida.",
+    "nationality": "Austríaco",
+    "born": 1881,
+    "died": 1942,
+    "genres": [
+      "ficción",
+      "biografía",
+      "memorias"
+    ],
+    "notable_works": [
+      "Carta de una desconocida",
+      "El mundo de ayer",
+      "Partida de ajedrez",
+      "María Antonieta"
+    ]
+  },
+  "Primo Levi": {
+    "bio": "Italiano, químico, superviviente de Auschwitz. Levi escribió 'Si esto es un hombre': el testimonio más lúcido del Holocausto. También memorias, cuentos y reflexiones. Se suicidó en 1987. Humanidad y horror en equilibrio imposible.",
+    "nationality": "Italiano",
+    "born": 1919,
+    "died": 1987,
+    "genres": [
+      "memorias",
+      "ensayo",
+      "testimonio"
+    ],
+    "notable_works": [
+      "Si esto es un hombre",
+      "La tregua",
+      "El sistema periódico"
+    ]
+  },
+  "Fernando Pessoa": {
+    "bio": "Portugués, poeta de múltiples voces. Pessoa inventó heterónimos —poetas completos con biografías y estilos— y escribió como todos ellos. 'El libro del desasosiego' es su obra maestra fragmentaria. Vivió anónimo en Lisboa. Ahora es un mito.",
+    "nationality": "Portugués",
+    "born": 1888,
+    "died": 1935,
+    "genres": [
+      "poesía",
+      "prosa poética",
+      "filosófico"
+    ],
+    "notable_works": [
+      "El libro del desasosiego",
+      "Mensaje",
+      "Poesía de Álvaro de Campos"
+    ]
+  },
+  "W. Somerset Maugham": {
+    "bio": "Inglés, viajero, cínico elegante. Maugham escribió novelas, cuentos y obras de teatro sobre el Imperio Británico y sus hipocresías. 'El filo de la navaja' y 'Servidumbre humana' son clásicos. Nunca de moda, siempre legible.",
+    "nationality": "Británico",
+    "born": 1874,
+    "died": 1965,
+    "genres": [
+      "ficción",
+      "cuento",
+      "teatro"
+    ],
+    "notable_works": [
+      "El filo de la navaja",
+      "Servidumbre humana",
+      "La luna y seis peniques"
+    ]
+  },
+  "Evelyn Waugh": {
+    "bio": "Inglés, satírico, católico converso. Waugh escribía comedias crueles sobre la aristocracia decadente y novelas serias sobre la fe. 'Retorno a Brideshead' es ambas cosas. Snob, brillante, inimitable.",
+    "nationality": "Británico",
+    "born": 1903,
+    "died": 1966,
+    "genres": [
+      "ficción",
+      "sátira",
+      "católico"
+    ],
+    "notable_works": [
+      "Retorno a Brideshead",
+      "Un puñado de polvo",
+      "Cuerpos viles"
+    ]
+  },
+  "E. M. Forster": {
+    "bio": "Inglés, humanista, maestro de la novela social. Forster escribió sobre el choque de clases y culturas con ironía y compasión. 'Pasaje a la India' y 'Howards End' son clásicos. 'Solo conectar' era su lema.",
+    "nationality": "Británico",
+    "born": 1879,
+    "died": 1970,
+    "genres": [
+      "ficción",
+      "social",
+      "literario"
+    ],
+    "notable_works": [
+      "Pasaje a la India",
+      "Howards End",
+      "Una habitación con vistas",
+      "Maurice"
+    ]
+  },
+  "Anthony Burgess": {
+    "bio": "Inglés, prolífico, inventor del nadsat. Burgess escribió 'La naranja mecánica': violencia juvenil y libre albedrío en un futuro distópico. Kubrick lo hizo famoso. También escribió sobre Joyce, música y 30 novelas más. Un cerebro inquieto.",
+    "nationality": "Británico",
+    "born": 1917,
+    "died": 1993,
+    "genres": [
+      "ficción",
+      "distopía",
+      "literario"
+    ],
+    "notable_works": [
+      "La naranja mecánica",
+      "Poderes terrenales",
+      "Trilogía malaya"
+    ]
+  },
+  "John le Carré": {
+    "bio": "Inglés, ex espía, maestro del thriller de espionaje literario. Le Carré creó a George Smiley y reinventó el género: nada de glamour, todo gris, moral ambigua. 'El espía que surgió del frío' y 'El topo' son obras maestras. El anti-Bond.",
+    "nationality": "Británico",
+    "born": 1931,
+    "died": 2020,
+    "genres": [
+      "thriller",
+      "espionaje",
+      "político"
+    ],
+    "notable_works": [
+      "El espía que surgió del frío",
+      "El topo",
+      "La casa Rusia"
+    ]
+  },
+  "Daphne du Maurier": {
+    "bio": "Inglesa, maestra del suspense gótico. Du Maurier escribió 'Rebecca' y 'Los pájaros': atmósferas inquietantes, secretos y mansiones. Hitchcock adaptó varias. Entretenimiento sofisticado que perdura.",
+    "nationality": "Británica",
+    "born": 1907,
+    "died": 1989,
+    "genres": [
+      "ficción",
+      "gótico",
+      "suspense"
+    ],
+    "notable_works": [
+      "Rebecca",
+      "Los pájaros",
+      "Mi prima Rachel"
+    ]
+  },
+  "P. G. Wodehouse": {
+    "bio": "Inglés, maestro del humor. Wodehouse creó a Jeeves y Bertie Wooster: el mayordomo perfecto y el aristócrata idiota. Sus novelas son máquinas de comedia perfectamente engrasadas. Alegría pura en cada página.",
+    "nationality": "Británico",
+    "born": 1881,
+    "died": 1975,
+    "genres": [
+      "ficción",
+      "humor",
+      "comedia"
+    ],
+    "notable_works": [
+      "Muy bien, Jeeves",
+      "El código de los Wooster",
+      "Dinero fácil"
+    ]
+  },
+  "Wilkie Collins": {
+    "bio": "Inglés victoriano, inventor de la novela de misterio. Collins escribió 'La piedra lunar' y 'La dama de blanco': suspense, secretos y detectives antes de que existiera el género. Amigo de Dickens. El abuelo de Agatha Christie.",
+    "nationality": "Británico",
+    "born": 1824,
+    "died": 1889,
+    "genres": [
+      "misterio",
+      "victoriano",
+      "suspense"
+    ],
+    "notable_works": [
+      "La piedra lunar",
+      "La dama de blanco",
+      "Armadale"
+    ]
+  },
+  "Bram Stoker": {
+    "bio": "Irlandés, creador de Drácula. Stoker escribió la novela de vampiros definitiva en 1897 y definió el género para siempre. También fue mánager del actor Henry Irving. Un libro bastó para la inmortalidad.",
+    "nationality": "Irlandés",
+    "born": 1847,
+    "died": 1912,
+    "genres": [
+      "terror",
+      "gótico",
+      "fantástico"
+    ],
+    "notable_works": [
+      "Drácula",
+      "La guarida del gusano blanco",
+      "La joya de las siete estrellas"
+    ]
+  },
+  "Mary Shelley": {
+    "bio": "Inglesa, madre de la ciencia ficción. Shelley escribió 'Frankenstein' a los 18 años: el monstruo, el creador, la responsabilidad científica. Todo empezó en una noche de tormenta con Byron y su marido Percy. Visionaria.",
+    "nationality": "Británica",
+    "born": 1797,
+    "died": 1851,
+    "genres": [
+      "ciencia ficción",
+      "gótico",
+      "terror"
+    ],
+    "notable_works": [
+      "Frankenstein",
+      "El último hombre"
+    ]
+  },
+  "H. P. Lovecraft": {
+    "bio": "Americano, creador del horror cósmico. Lovecraft inventó Cthulhu y los Mitos: horrores antiguos ante los cuales la humanidad es insignificante. Racista, recluso, ahora enormemente influyente. El miedo como filosofía.",
+    "nationality": "Estadounidense",
+    "born": 1890,
+    "died": 1937,
+    "genres": [
+      "terror",
+      "fantástico",
+      "ciencia ficción"
+    ],
+    "notable_works": [
+      "La llamada de Cthulhu",
+      "En las montañas de la locura",
+      "El horror de Dunwich"
+    ]
+  },
+  "Shirley Jackson": {
+    "bio": "Americana, maestra del terror doméstico. Jackson escribió 'La maldición de Hill House' y 'Siempre hemos vivido en el castillo': casas encantadas y familias perturbadas. 'La lotería' es el cuento de terror americano. Murió joven, ahora es un clásico.",
+    "nationality": "Estadounidense",
+    "born": 1916,
+    "died": 1965,
+    "genres": [
+      "terror",
+      "gótico",
+      "psicológico"
+    ],
+    "notable_works": [
+      "La maldición de Hill House",
+      "Siempre hemos vivido en el castillo",
+      "La lotería"
+    ]
+  },
+  "Angela Carter": {
+    "bio": "Inglesa, reinventora de cuentos de hadas. Carter escribía fantasías feministas, oscuras y sensuales. 'La cámara sangrienta' es Caperucita y Barba Azul para adultos. Murió a los 51. Una de las más originales del siglo XX.",
+    "nationality": "Británica",
+    "born": 1940,
+    "died": 1992,
+    "genres": [
+      "ficción",
+      "fantástico",
+      "feminismo"
+    ],
+    "notable_works": [
+      "La cámara sangrienta",
+      "Noches en el circo",
+      "La pasión de la nueva Eva"
+    ]
+  },
+  "Octavia E. Butler": {
+    "bio": "Americana, pionera de la ciencia ficción afroamericana. Butler escribía sobre raza, género y supervivencia con imaginación feroz. 'Kindred' viaja a la esclavitud. Ganó el MacArthur 'genius grant'. Una voz imprescindible.",
+    "nationality": "Estadounidense",
+    "born": 1947,
+    "died": 2006,
+    "genres": [
+      "ciencia ficción",
+      "fantástico",
+      "feminismo"
+    ],
+    "notable_works": [
+      "Kindred",
+      "La parábola del sembrador",
+      "Amanecer"
+    ]
+  },
+  "Anaïs Nin": {
+    "bio": "Franco-americana, diarista, exploradora del deseo. Nin escribió diarios íntimos durante 60 años y ficción erótica legendaria. Amiga de Henry Miller, amante de muchos. Su vida fue su obra maestra.",
+    "nationality": "Franco-Estadounidense",
+    "born": 1903,
+    "died": 1977,
+    "genres": [
+      "diarios",
+      "erótico",
+      "ficción"
+    ],
+    "notable_works": [
+      "Delta de Venus",
+      "Diarios",
+      "Una espía en la casa del amor"
+    ]
+  },
+  "Colette": {
+    "bio": "Francesa, escandalosa, libre. Colette escribió sobre el deseo femenino y la naturaleza con sensualidad y precisión. 'Gigi' y las novelas de Claudine son clásicos. Vivió como quiso en una época que no lo permitía.",
+    "nationality": "Francesa",
+    "born": 1873,
+    "died": 1954,
+    "genres": [
+      "ficción",
+      "autobiográfico",
+      "erótico"
+    ],
+    "notable_works": [
+      "Gigi",
+      "Chéri",
+      "La vagabunda",
+      "Claudine en la escuela"
+    ]
+  },
+  "Marguerite Yourcenar": {
+    "bio": "Belga-americana, primera mujer en la Academia Francesa. Yourcenar escribió 'Memorias de Adriano': un emperador romano medita sobre su vida. Erudita, elegante, clásica. Una de las grandes escritoras del siglo XX.",
+    "nationality": "Belga-Estadounidense",
+    "born": 1903,
+    "died": 1987,
+    "genres": [
+      "ficción histórica",
+      "literario",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Memorias de Adriano",
+      "Opus nigrum",
+      "Archivos del Norte"
+    ]
+  },
+  "Naguib Mahfouz": {
+    "bio": "Egipcio, Nobel 1988, el novelista del mundo árabe. Mahfouz escribió la trilogía de El Cairo: historia de Egipto a través de una familia. Fue apuñalado por un fanático. El padre de la novela árabe moderna.",
+    "nationality": "Egipcio",
+    "born": 1911,
+    "died": 2006,
+    "genres": [
+      "ficción",
+      "histórico",
+      "social"
+    ],
+    "notable_works": [
+      "Trilogía de El Cairo",
+      "El callejón de los milagros",
+      "Hijos de nuestro barrio"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1988"
+    ]
+  },
+  "Kenzaburō Ōe": {
+    "bio": "Japonés, Nobel 1994, novelista del dolor y la esperanza. Ōe escribía sobre su hijo discapacitado, la posguerra, la búsqueda de sentido. Difícil pero recompensador. Una voz moral en el Japón moderno.",
+    "nationality": "Japonés",
+    "born": 1935,
+    "died": 2023,
+    "genres": [
+      "ficción",
+      "autobiográfico",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Una cuestión personal",
+      "El grito silencioso",
+      "Arrancad las semillas, fusilad a los niños"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1994"
+    ]
+  },
+  "Banana Yoshimoto": {
+    "bio": "Japonesa, novelista del duelo y la vida cotidiana. Yoshimoto escribe sobre pérdida, familia y sanación con una ternura única. 'Kitchen' la hizo famosa a los 24. Accesible, emotiva, reconfortante.",
+    "nationality": "Japonesa",
+    "born": 1964,
+    "genres": [
+      "ficción",
+      "contemporáneo",
+      "drama"
+    ],
+    "notable_works": [
+      "Kitchen",
+      "Tsugumi",
+      "Sueño profundo"
+    ]
+  },
+  "Mo Yan": {
+    "bio": "Chino, Nobel 2012, novelista del campo chino. Mo Yan escribe sagas rurales con realismo mágico y sátira política. 'Sorgo rojo' fue película de Zhang Yimou. Controvertido por su relación con el gobierno. Prolífico y ambicioso.",
+    "nationality": "Chino",
+    "born": 1955,
+    "genres": [
+      "ficción",
+      "realismo mágico",
+      "histórico"
+    ],
+    "notable_works": [
+      "Sorgo rojo",
+      "Las baladas del ajo",
+      "Grandes pechos, amplias caderas"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2012"
+    ]
+  },
+  "Ngugi wa Thiong'o": {
+    "bio": "Keniata, novelista, activista de la descolonización lingüística. Ngugi dejó de escribir en inglés para hacerlo en kikuyu. Fue encarcelado por el gobierno. Sus novelas critican el colonialismo y sus secuelas. Una voz moral africana.",
+    "nationality": "Keniata",
+    "born": 1938,
+    "genres": [
+      "ficción",
+      "político",
+      "postcolonial"
+    ],
+    "notable_works": [
+      "Un grano de trigo",
+      "Pétalos de sangre",
+      "El diablo en la cruz"
+    ]
+  },
+  "Chinua Achebe": {
+    "bio": "Nigeriano, padre de la literatura africana moderna. Achebe escribió 'Todo se desmorona': la llegada del colonialismo vista desde dentro. Respondió a Conrad. Cambió cómo el mundo lee África. Imprescindible.",
+    "nationality": "Nigeriano",
+    "born": 1930,
+    "died": 2013,
+    "genres": [
+      "ficción",
+      "postcolonial",
+      "histórico"
+    ],
+    "notable_works": [
+      "Todo se desmorona",
+      "Ya no estarás tranquilo",
+      "Hormigueros de la sabana"
+    ]
+  },
+  "Wole Soyinka": {
+    "bio": "Nigeriano, Nobel 1986, el primer africano en ganarlo. Soyinka es dramaturgo, poeta, novelista y activista. Fue encarcelado durante la guerra de Biafra. Su obra mezcla tradición yoruba y modernidad. Un gigante.",
+    "nationality": "Nigeriano",
+    "born": 1934,
+    "genres": [
+      "teatro",
+      "poesía",
+      "memorias"
+    ],
+    "notable_works": [
+      "La danza del bosque",
+      "El hombre murió",
+      "Aké: los años de la infancia"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1986"
+    ]
+  },
+  "J. M. G. Le Clézio": {
+    "bio": "Francés-mauriciano, Nobel 2008, nómada literario. Le Clézio escribe sobre viajes, culturas indígenas y la búsqueda de otro mundo. Ha vivido en México, Panamá, Marruecos. El Nobel más viajero.",
+    "nationality": "Francés-Mauriciano",
+    "born": 1940,
+    "genres": [
+      "ficción",
+      "viajes",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Desierto",
+      "El africano",
+      "Onitsha"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2008"
+    ]
+  },
+  "Ben Okri": {
+    "bio": "Nigeriano-británico, Booker 1991, poeta del realismo mágico africano. Okri escribió 'La calle del hambre': un niño-espíritu en el Lagos de la pobreza. También poeta y ensayista. Visionario y lírico.",
+    "nationality": "Nigeriano-Británico",
+    "born": 1959,
+    "genres": [
+      "ficción",
+      "realismo mágico",
+      "poesía"
+    ],
+    "notable_works": [
+      "La calle del hambre",
+      "Canciones del encantamiento",
+      "Asombrando a los dioses"
+    ],
+    "awards": [
+      "Man Booker Prize 1991"
+    ]
+  },
+  "Abdulrazak Gurnah": {
+    "bio": "Tanzano-británico, Nobel 2021, novelista del exilio y el colonialismo. Gurnah escribe sobre el África oriental, la inmigración y el desarraigo. Sorprendió al mundo con su Nobel. Discreto, profundo, necesario.",
+    "nationality": "Tanzano-Británico",
+    "born": 1948,
+    "genres": [
+      "ficción",
+      "postcolonial",
+      "inmigración"
+    ],
+    "notable_works": [
+      "Paraíso",
+      "A orillas del mar",
+      "El desertor"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2021"
+    ]
+  },
+  "Herta Müller": {
+    "bio": "Alemana de Rumanía, Nobel 2009, poeta de la opresión. Müller escribe sobre la dictadura de Ceausescu con una prosa fragmentaria y poética. Escapó del régimen. Su lenguaje es único: duro, bello, extraño.",
+    "nationality": "Alemana (nacida rumana)",
+    "born": 1953,
+    "genres": [
+      "ficción",
+      "poesía",
+      "político"
+    ],
+    "notable_works": [
+      "En tierras bajas",
+      "El hombre es un gran faisán en el mundo",
+      "Todo lo que tengo lo llevo conmigo"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2009"
+    ]
+  },
+  "Elfriede Jelinek": {
+    "bio": "Austríaca, Nobel 2004, provocadora. Jelinek escribe sobre la opresión de las mujeres y la hipocresía austríaca con rabia y experimentación. 'La pianista' es perturbadora. Odiada y adorada a partes iguales.",
+    "nationality": "Austríaca",
+    "born": 1946,
+    "genres": [
+      "ficción",
+      "teatro",
+      "feminismo"
+    ],
+    "notable_works": [
+      "La pianista",
+      "Los excluidos",
+      "Deseo"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2004"
+    ]
+  },
+  "Imre Kertész": {
+    "bio": "Húngaro, Nobel 2002, superviviente de Auschwitz. Kertész escribió 'Sin destino': un adolescente en los campos, contado sin sentimentalismo. Tardó 13 años en publicar en Hungría. Testimonio puro.",
+    "nationality": "Húngaro",
+    "born": 1929,
+    "died": 2016,
+    "genres": [
+      "ficción",
+      "autobiográfico",
+      "Holocausto"
+    ],
+    "notable_works": [
+      "Sin destino",
+      "Kaddish por el hijo no nacido",
+      "Liquidación"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 2002"
+    ]
+  },
+  "Halldór Laxness": {
+    "bio": "Islandés, Nobel 1955, el novelista de Islandia. Laxness escribió sagas modernas sobre pescadores, campesinos y la lucha por sobrevivir en la isla. Comunista, católico, luego budista. El único Nobel islandés.",
+    "nationality": "Islandés",
+    "born": 1902,
+    "died": 1998,
+    "genres": [
+      "ficción",
+      "social",
+      "islandés"
+    ],
+    "notable_works": [
+      "Gente independiente",
+      "Estación atómica",
+      "Salka Valka"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1955"
+    ]
+  },
+  "Leïla Slimani": {
+    "bio": "Franco-marroquí, Goncourt 2016, novelista del lado oscuro de la maternidad. 'Canción dulce' empieza con una niñera que mata a los niños que cuida. Slimani escribe sobre mujeres atrapadas con precisión quirúrgica. También periodista y activista.",
+    "nationality": "Franco-Marroquí",
+    "born": 1981,
+    "genres": [
+      "ficción",
+      "thriller",
+      "psicológico"
+    ],
+    "notable_works": [
+      "Canción dulce",
+      "El jardín del ogro",
+      "El país de los otros"
+    ],
+    "awards": [
+      "Premio Goncourt 2016"
+    ]
+  },
+  "Julia Navarro": {
+    "bio": "Madrileña, periodista y superventas. Navarro escribe thrillers históricos que mezclan actualidad, religión y conspiraciones. 'La Biblia de barro' vendió millones. Entretenimiento con ambición y documentación.",
+    "nationality": "Española",
+    "born": 1953,
+    "genres": [
+      "thriller",
+      "histórico",
+      "aventura"
+    ],
+    "notable_works": [
+      "La Biblia de barro",
+      "Dime quién soy",
+      "Dispara, yo ya estoy muerto"
+    ]
+  },
+  "Borís Pasternak": {
+    "bio": "Ruso, Nobel 1958, poeta y novelista. Pasternak escribió 'Doctor Zhivago': amor y revolución en Rusia que no pudo publicarse en su país. El Nobel fue un escándalo político. Murió poco después, reivindicado.",
+    "nationality": "Ruso",
+    "born": 1890,
+    "died": 1960,
+    "genres": [
+      "ficción",
+      "poesía",
+      "histórico"
+    ],
+    "notable_works": [
+      "Doctor Zhivago",
+      "Mi hermana la vida"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1958"
+    ]
+  },
+  "Christopher Paolini": {
+    "bio": "Americano que publicó 'Eragon' a los 15 años. La saga del Legado conquistó a millones de jóvenes lectores: dragones, magia, aventura épica. Fenómeno juvenil que creció con sus lectores.",
+    "nationality": "Estadounidense",
+    "born": 1983,
+    "genres": [
+      "fantasía",
+      "juvenil",
+      "épico"
+    ],
+    "notable_works": [
+      "Eragon",
+      "Eldest",
+      "Brisingr",
+      "Legado"
+    ]
+  },
+  "Adam Zagajewski": {
+    "bio": "Polaco, poeta del exilio y la belleza. Zagajewski escribía sobre Lviv (la ciudad perdida de su familia), Europa y el arte con una melancolía luminosa. Murió en 2021. Uno de los grandes poetas europeos recientes.",
+    "nationality": "Polaco",
+    "born": 1945,
+    "died": 2021,
+    "genres": [
+      "poesía",
+      "ensayo",
+      "memorias"
+    ],
+    "notable_works": [
+      "Tierra del fuego",
+      "En defensa del fervor",
+      "Deseo"
+    ]
+  },
+  "José Antonio Marina Torres": {
+    "bio": "Filósofo español, divulgador de la inteligencia y la educación. Marina ha escrito decenas de libros sobre creatividad, emociones y el cerebro. Accesible sin ser superficial. El filósofo de cabecera de muchos españoles.",
+    "nationality": "Español",
+    "born": 1939,
+    "genres": [
+      "filosofía",
+      "divulgación",
+      "educación"
+    ],
+    "notable_works": [
+      "Elogio y refutación del ingenio",
+      "Teoría de la inteligencia creadora",
+      "El vuelo de la inteligencia"
+    ]
+  },
+  "J. M. Mulet": {
+    "bio": "Valenciano, bioquímico, azote de pseudociencias. Mulet escribe sobre alimentación, transgénicos y mitos nutricionales con rigor y humor. 'Comer sin miedo' desmonta leyendas urbanas. Ciencia contra el charlatanismo.",
+    "nationality": "Español",
+    "born": 1973,
+    "genres": [
+      "divulgación",
+      "ciencia",
+      "nutrición"
+    ],
+    "notable_works": [
+      "Comer sin miedo",
+      "Medicina sin engaños",
+      "¿Qué es comer sano?"
+    ]
+  },
+  "Rumaan Alam": {
+    "bio": "Americano, novelista de la ansiedad contemporánea. 'Dejar el mundo atrás' es un thriller doméstico sobre el apocalipsis (fue película de Netflix). Alam escribe sobre raza, clase y miedo con elegancia incómoda.",
+    "nationality": "Estadounidense",
+    "born": 1977,
+    "genres": [
+      "ficción",
+      "thriller",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "Dejar el mundo atrás",
+      "That Kind of Mother"
+    ]
+  },
+  "Anne Boyer": {
+    "bio": "Americana, poeta y ensayista, Pulitzer 2020. Boyer escribió 'Desmorir': un ensayo sobre el cáncer de mama, el capitalismo y el cuerpo que es literatura de primer nivel. Radical, inteligente, necesaria.",
+    "nationality": "Estadounidense",
+    "born": 1973,
+    "genres": [
+      "ensayo",
+      "poesía",
+      "memorias"
+    ],
+    "notable_works": [
+      "Desmorir",
+      "A Handbook of Disappointed Fate"
+    ],
+    "awards": [
+      "Premio Pulitzer 2020"
+    ]
+  },
+  "Robert Stone": {
+    "bio": "Americano, novelista de la América oscura. Stone escribió sobre Vietnam, drogas y la pérdida de inocencia americana. 'Pabellón de locos' ganó el National Book Award. Durísimo y brillante.",
+    "nationality": "Estadounidense",
+    "born": 1937,
+    "died": 2015,
+    "genres": [
+      "ficción",
+      "político",
+      "oscuro"
+    ],
+    "notable_works": [
+      "Pabellón de locos",
+      "Bajo una estrella impía",
+      "Damascus Gate"
+    ],
+    "awards": [
+      "National Book Award 1975"
+    ]
+  },
+  "André Dubus III": {
+    "bio": "Americano, hijo del cuentista André Dubus. 'La casa de arena y niebla' fue bestseller y película: el sueño americano convertido en pesadilla. Escribe sobre gente ordinaria en situaciones extraordinarias.",
+    "nationality": "Estadounidense",
+    "born": 1959,
+    "genres": [
+      "ficción",
+      "drama",
+      "americano"
+    ],
+    "notable_works": [
+      "La casa de arena y niebla",
+      "Townie",
+      "Gone So Long"
+    ]
+  },
+  "Tamara Kamenszain": {
+    "bio": "Argentina, poeta de la intimidad y el duelo. Kamenszain escribía sobre la familia, los muertos, el cuerpo con una precisión que duele. Murió en 2021. Una de las grandes poetas argentinas.",
+    "nationality": "Argentina",
+    "born": 1947,
+    "died": 2021,
+    "genres": [
+      "poesía",
+      "ensayo",
+      "autobiográfico"
+    ],
+    "notable_works": [
+      "El libro de los divanes",
+      "El eco de mi madre",
+      "Libros chiquitos"
+    ]
+  },
+  "Cynthia Rimsky": {
+    "bio": "Chilena, escritora de viajes y memoria. Rimsky busca las huellas de sus antepasados judíos en Europa del Este y lo convierte en literatura. 'Poste restante' es un viaje físico y emocional. Singular.",
+    "nationality": "Chilena",
+    "born": 1962,
+    "genres": [
+      "no ficción",
+      "viajes",
+      "memorias"
+    ],
+    "notable_works": [
+      "Poste restante",
+      "La revolución a dedo",
+      "En obra"
+    ]
+  },
+  "Meg Mason": {
+    "bio": "Neozelandesa, novelista del colapso emocional. 'Dolor y gloria' es sobre una mujer con depresión y su matrimonio: divertida, triste, honesta. Fenómeno en redes. Salud mental sin filtros.",
+    "nationality": "Neozelandesa",
+    "born": 1975,
+    "genres": [
+      "ficción",
+      "drama",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "Dolor y gloria",
+      "Say Hello to My Little Friend"
+    ]
+  },
+  "Lisa Wingate": {
+    "bio": "Americana, novelista de historias basadas en hechos reales. 'Antes de que llegaras' sobre los Tennessee Children's Home Society fue bestseller masivo. Emociona y denuncia.",
+    "nationality": "Estadounidense",
+    "born": 1965,
+    "genres": [
+      "ficción",
+      "histórico",
+      "drama"
+    ],
+    "notable_works": [
+      "Antes de que llegaras",
+      "The Book of Lost Friends"
+    ]
+  },
+  "Tim Bouverie": {
+    "bio": "Historiador británico que escribió sobre el apaciguamiento de Hitler. 'Apaciguando a Hitler' es historia narrativa de primer nivel sobre cómo Europa dejó crecer al monstruo. Debut brillante.",
+    "nationality": "Británico",
+    "born": 1988,
+    "genres": [
+      "historia",
+      "político",
+      "bélico"
+    ],
+    "notable_works": [
+      "Apaciguando a Hitler"
+    ]
+  },
+  "Camilla Pang": {
+    "bio": "Británica de origen hongkonés, científica con autismo y TDAH. 'Explaining Humans' usa la ciencia para entender las interacciones sociales. Divulgación desde una perspectiva única.",
+    "nationality": "Británica",
+    "born": 1991,
+    "genres": [
+      "divulgación",
+      "ciencia",
+      "memorias"
+    ],
+    "notable_works": [
+      "Explicar a los humanos"
+    ]
+  },
+  "Jennifer L. Armentrout": {
+    "bio": "Americana, máquina de bestsellers románticos y fantásticos. Armentrout escribe sagas adictivas con romance, fantasía y acción. 'De sangre y cenizas' conquistó BookTok. Entretenimiento puro.",
+    "nationality": "Estadounidense",
+    "born": 1980,
+    "genres": [
+      "fantasía",
+      "romance",
+      "juvenil"
+    ],
+    "notable_works": [
+      "De sangre y cenizas",
+      "A Kingdom of Flesh and Fire",
+      "The Problem with Forever"
+    ]
+  },
+  "Rebecca F. Kuang": {
+    "bio": "Americana de origen chino, prodigio de la fantasía. Kuang escribió 'La guerra de la amapola' a los 19. 'Babel' mezcla lingüística y colonialismo. 'Yellowface' es sátira del mundo editorial. Ambiciosa y feroz.",
+    "nationality": "Estadounidense",
+    "born": 1996,
+    "genres": [
+      "fantasía",
+      "ciencia ficción",
+      "satírico"
+    ],
+    "notable_works": [
+      "La guerra de la amapola",
+      "Babel",
+      "Yellowface"
+    ]
+  },
+  "Catherine Lacey": {
+    "bio": "Americana, novelista experimental y precisa. Lacey escribe sobre identidad, relaciones y extrañamiento. 'Biografía de X' es una novela ambiciosa sobre una artista misteriosa. Inteligente y original.",
+    "nationality": "Estadounidense",
+    "born": 1985,
+    "genres": [
+      "ficción",
+      "experimental",
+      "literario"
+    ],
+    "notable_works": [
+      "Biografía de X",
+      "Nadie desaparece para siempre",
+      "The Answers"
+    ]
+  },
+  "Vicente Muñoz Puelles": {
+    "bio": "Valenciano, escritor prolífico de literatura juvenil e infantil. Muñoz Puelles ha ganado múltiples premios y escrito decenas de libros para jóvenes lectores. También novela para adultos. Un clásico del género en España.",
+    "nationality": "Español",
+    "born": 1948,
+    "genres": [
+      "juvenil",
+      "infantil",
+      "ficción"
+    ],
+    "notable_works": [
+      "El vuelo de las cigüeñas",
+      "Óscar y el león de Correos",
+      "La perrona"
+    ]
+  },
+  "Noelia Amarillo": {
+    "bio": "Española, autora de romance erótico y contemporáneo. Amarillo ha conquistado lectores con historias apasionadas y personajes memorables. Bestseller del género romántico en español.",
+    "nationality": "Española",
+    "genres": [
+      "romance",
+      "erótico",
+      "contemporáneo"
+    ],
+    "notable_works": [
+      "Besar a un ángel",
+      "Serie Amigos del barrio"
+    ]
+  },
+  "A. B. Guthrie Jr.": {
+    "bio": "Americano, Pulitzer 1950, novelista del Oeste americano. Guthrie escribió 'The Big Sky' y guiones para westerns clásicos. El Oeste antes de los mitos, con dureza y verdad.",
+    "nationality": "Estadounidense",
+    "born": 1901,
+    "died": 1991,
+    "genres": [
+      "western",
+      "histórico",
+      "americano"
+    ],
+    "notable_works": [
+      "The Big Sky",
+      "The Way West",
+      "These Thousand Hills"
+    ],
+    "awards": [
+      "Premio Pulitzer 1950"
+    ]
+  },
+  "Ann Druyan": {
+    "bio": "Americana, escritora de ciencia y viuda de Carl Sagan. Druyan coescribió 'Cosmos' con Sagan y produjo la serie actualizada. También dirigió el proyecto del Disco de Oro de las Voyager. La ciencia como amor.",
+    "nationality": "Estadounidense",
+    "born": 1949,
+    "genres": [
+      "divulgación",
+      "ciencia",
+      "memorias"
+    ],
+    "notable_works": [
+      "Cosmos",
+      "Sombras de antepasados olvidados"
+    ]
+  },
+  "Alina Reyes": {
+    "bio": "Francesa, escritora erótica y provocadora. 'El carnicero' la hizo famosa: erotismo crudo y literario. Reyes escribe sobre el cuerpo y el deseo sin pudor. Transgresora.",
+    "nationality": "Francesa",
+    "born": 1956,
+    "genres": [
+      "ficción",
+      "erótico",
+      "transgresor"
+    ],
+    "notable_works": [
+      "El carnicero",
+      "Detrás de la puerta",
+      "Lilith"
+    ]
+  },
+  "Françoise Rey": {
+    "bio": "Francesa, novelista erótica. Rey escribe historias sensuales con elegancia y sin vulgaridad. Una voz del erotismo literario francés.",
+    "nationality": "Francesa",
+    "genres": [
+      "ficción",
+      "erótico",
+      "romance"
+    ],
+    "notable_works": [
+      "La mujer de papel",
+      "La rencontre"
+    ]
+  },
+  "Alan Le May": {
+    "bio": "Americano, novelista del Oeste. Le May escribió 'Centauros del desierto' (que Ford convirtió en película legendaria) y 'Los que no perdonan'. El western como tragedia.",
+    "nationality": "Estadounidense",
+    "born": 1899,
+    "died": 1964,
+    "genres": [
+      "western",
+      "aventura",
+      "histórico"
+    ],
+    "notable_works": [
+      "Centauros del desierto",
+      "Los que no perdonan"
+    ]
+  },
+  "Marta Jiménez Serrano": {
+    "bio": "Española, escritora de literatura juvenil y fantástica. Jiménez Serrano conecta con lectores jóvenes con historias de romance, magia y aventura. Voz emergente del género en español.",
+    "nationality": "Española",
+    "genres": [
+      "juvenil",
+      "fantasía",
+      "romance"
+    ],
+    "notable_works": [
+      "Maldición gitana",
+      "La maldición de los santos"
+    ]
+  },
+  "Katharina Winkler": {
+    "bio": "Austríaca, novelista del trauma. 'Lengua materna' está basada en una historia real de violencia doméstica en una comunidad kurda. Dura, necesaria, poderosa.",
+    "nationality": "Austríaca",
+    "born": 1979,
+    "genres": [
+      "ficción",
+      "social",
+      "feminismo"
+    ],
+    "notable_works": [
+      "Lengua materna"
+    ]
+  },
+  "Thomas Weber": {
+    "bio": "Historiador alemán especializado en Hitler y el nazismo. Weber ha escrito sobre los años de formación de Hitler con nueva documentación. Historia rigurosa del horror.",
+    "nationality": "Alemán",
+    "born": 1974,
+    "genres": [
+      "historia",
+      "biografía",
+      "político"
+    ],
+    "notable_works": [
+      "La primera guerra de Hitler",
+      "Cómo Hitler se convirtió en nazi"
+    ]
+  },
+  "Jason Brennan": {
+    "bio": "Filósofo político americano, provocador intelectual. Brennan argumenta contra la democracia en 'Contra la democracia'. También escribe sobre ética de las armas y el trabajo. Filosofía que incomoda.",
+    "nationality": "Estadounidense",
+    "born": 1979,
+    "genres": [
+      "filosofía",
+      "política",
+      "ensayo"
+    ],
+    "notable_works": [
+      "Contra la democracia",
+      "When All Else Fails",
+      "Good Work If You Can Get It"
+    ]
+  },
+  "Emilio La Parra López": {
+    "bio": "Historiador español, experto en el siglo XIX. La Parra ha escrito biografías fundamentales de Fernando VII y Godoy. Historia política española rigurosa y accesible.",
+    "nationality": "Español",
+    "born": 1948,
+    "genres": [
+      "historia",
+      "biografía",
+      "político"
+    ],
+    "notable_works": [
+      "Fernando VII",
+      "Manuel Godoy",
+      "La Inquisición en España"
+    ]
+  },
+  "Alfonso del Río": {
+    "bio": "Escritor español contemporáneo. Del Río escribe ficción que conecta con lectores actuales.",
+    "nationality": "Español",
+    "genres": [
+      "ficción",
+      "contemporáneo"
+    ],
+    "notable_works": []
+  },
+  "Dominique Roques": {
+    "bio": "Francés, buscador de esencias. Roques viaja por el mundo buscando materias primas para perfumes y lo cuenta en 'El coleccionista de aromas'. Viajes y sensorialidad.",
+    "nationality": "Francés",
+    "genres": [
+      "no ficción",
+      "viajes",
+      "memorias"
+    ],
+    "notable_works": [
+      "El coleccionista de aromas"
+    ]
+  },
+  "Miguel de Cervantes": {
+    "bio": "Español, el padre de la novela moderna. Cervantes escribió 'Don Quijote de la Mancha', probablemente el libro más importante en español. Soldado, cautivo, pobre, genio. La literatura empieza con él.",
+    "nationality": "Español",
+    "born": 1547,
+    "died": 1616,
+    "genres": [
+      "ficción",
+      "clásico",
+      "satírico"
+    ],
+    "notable_works": [
+      "Don Quijote de la Mancha",
+      "Novelas ejemplares",
+      "Los trabajos de Persiles y Sigismunda"
+    ]
+  },
+  "Federico García Lorca": {
+    "bio": "Granadino, poeta del duende, mártir de la Guerra Civil. Lorca escribió poesía y teatro sobre el deseo, la muerte y la España profunda. Fue asesinado en 1936. El poeta español más universal del siglo XX.",
+    "nationality": "Español",
+    "born": 1898,
+    "died": 1936,
+    "genres": [
+      "poesía",
+      "teatro",
+      "lírico"
+    ],
+    "notable_works": [
+      "Romancero gitano",
+      "Poeta en Nueva York",
+      "La casa de Bernarda Alba",
+      "Bodas de sangre"
+    ]
+  },
+  "Antonio Machado": {
+    "bio": "Sevillano criado en Castilla, poeta de la España esencial. Machado escribía versos sencillos y profundos sobre el tiempo, el paisaje y la pérdida. Murió exiliado en Collioure. 'Caminante, no hay camino...'",
+    "nationality": "Español",
+    "born": 1875,
+    "died": 1939,
+    "genres": [
+      "poesía",
+      "lírico",
+      "filosófico"
+    ],
+    "notable_works": [
+      "Campos de Castilla",
+      "Soledades",
+      "Juan de Mairena"
+    ]
+  },
+  "Pablo Neruda": {
+    "bio": "Chileno, Nobel 1971, el poeta del amor y la revolución. Neruda escribió 'Veinte poemas de amor' y 'Canto general': de lo íntimo a lo épico. Comunista, diplomático, amante. El poeta más leído en español.",
+    "nationality": "Chileno",
+    "born": 1904,
+    "died": 1973,
+    "genres": [
+      "poesía",
+      "político",
+      "lírico"
+    ],
+    "notable_works": [
+      "Veinte poemas de amor",
+      "Canto general",
+      "Residencia en la tierra"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1971"
+    ]
+  },
+  "Octavio Paz": {
+    "bio": "Mexicano, Nobel 1990, poeta y ensayista total. Paz escribió sobre el amor, la soledad mexicana, la India y el surrealismo. 'El laberinto de la soledad' es imprescindible. El intelectual mexicano del siglo XX.",
+    "nationality": "Mexicano",
+    "born": 1914,
+    "died": 1998,
+    "genres": [
+      "poesía",
+      "ensayo",
+      "filosófico"
+    ],
+    "notable_works": [
+      "El laberinto de la soledad",
+      "Piedra de sol",
+      "El arco y la lira"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1990"
+    ]
+  },
+  "César Vallejo": {
+    "bio": "Peruano, el poeta más original de América Latina. Vallejo escribió versos desgarrados sobre el dolor, la injusticia y la solidaridad humana. Murió en París, pobre. 'Trilce' reinventó la poesía en español.",
+    "nationality": "Peruano",
+    "born": 1892,
+    "died": 1938,
+    "genres": [
+      "poesía",
+      "vanguardia",
+      "social"
+    ],
+    "notable_works": [
+      "Trilce",
+      "Poemas humanos",
+      "Los heraldos negros"
+    ]
+  },
+  "Benito Pérez Galdós": {
+    "bio": "Canario, el novelista español más importante del XIX después de Cervantes. Galdós escribió los 'Episodios nacionales' y novelas sobre la sociedad española con ambición balzaciana. Murió ciego y pobre. Un gigante.",
+    "nationality": "Español",
+    "born": 1843,
+    "died": 1920,
+    "genres": [
+      "ficción",
+      "histórico",
+      "realismo"
+    ],
+    "notable_works": [
+      "Fortunata y Jacinta",
+      "Episodios nacionales",
+      "Misericordia",
+      "Doña Perfecta"
+    ]
+  },
+  "Leopoldo Alas 'Clarín'": {
+    "bio": "Asturiano, autor de 'La Regenta', una de las mejores novelas españolas. Clarín diseccionó la hipocresía de una ciudad de provincias con bisturí. También crítico feroz. Un clásico del realismo español.",
+    "nationality": "Español",
+    "born": 1852,
+    "died": 1901,
+    "genres": [
+      "ficción",
+      "realismo",
+      "crítica"
+    ],
+    "notable_works": [
+      "La Regenta",
+      "Su único hijo",
+      "Cuentos morales"
+    ]
+  },
+  "Camilo José Cela": {
+    "bio": "Gallego, Nobel 1989, provocador profesional. Cela escribió 'La familia de Pascual Duarte' y 'La colmena': tremendismo y retrato de la posguerra. Polémico hasta el final. El primer Nobel español en décadas.",
+    "nationality": "Español",
+    "born": 1916,
+    "died": 2002,
+    "genres": [
+      "ficción",
+      "realismo",
+      "experimental"
+    ],
+    "notable_works": [
+      "La familia de Pascual Duarte",
+      "La colmena",
+      "Viaje a la Alcarria"
+    ],
+    "awards": [
+      "Premio Nobel de Literatura 1989"
+    ]
+  },
+  "Miguel Delibes": {
+    "bio": "Vallisoletano, novelista de Castilla y sus gentes. Delibes escribió sobre el mundo rural, la caza, los niños y la España de provincias con ternura y precisión. 'El camino' y 'Los santos inocentes' son clásicos.",
+    "nationality": "Español",
+    "born": 1920,
+    "died": 2010,
+    "genres": [
+      "ficción",
+      "rural",
+      "social"
+    ],
+    "notable_works": [
+      "El camino",
+      "Los santos inocentes",
+      "Cinco horas con Mario"
+    ]
+  },
+  "Carmen Laforet": {
+    "bio": "Barcelonesa que ganó el primer Nadal a los 23 con 'Nada'. Laforet capturó la posguerra en Barcelona con una protagonista inolvidable. Luego escribió poco y se retiró. Una novela bastó para la gloria.",
+    "nationality": "Española",
+    "born": 1921,
+    "died": 2004,
+    "genres": [
+      "ficción",
+      "posguerra",
+      "literario"
+    ],
+    "notable_works": [
+      "Nada",
+      "La isla y los demonios",
+      "La insolación"
+    ]
+  },
+  "Ana María Matute": {
+    "bio": "Barcelonesa, Premio Cervantes 2010, narradora de la infancia y la guerra. Matute escribió sobre niños perdidos en mundos crueles con una poesía oscura. 'Olvidado Rey Gudú' es su obra maestra tardía.",
+    "nationality": "Española",
+    "born": 1925,
+    "died": 2014,
+    "genres": [
+      "ficción",
+      "infantil",
+      "fantástico"
+    ],
+    "notable_works": [
+      "Olvidado Rey Gudú",
+      "Primera memoria",
+      "Los hijos muertos"
+    ],
+    "awards": [
+      "Premio Cervantes 2010"
+    ]
+  },
+  "Manuel Vázquez Montalbán": {
+    "bio": "Barcelonés, creador de Pepe Carvalho, el detective gourmet. Vázquez Montalbán escribió novela negra, ensayo, poesía y gastronomía. Comunista, irónico, prolífico. Un intelectual total.",
+    "nationality": "Español",
+    "born": 1939,
+    "died": 2003,
+    "genres": [
+      "noir",
+      "ensayo",
+      "gastronomía"
+    ],
+    "notable_works": [
+      "Los mares del Sur",
+      "Galíndez",
+      "El pianista"
+    ]
+  },
+  "Soledad Puértolas": {
+    "bio": "Zaragozana, novelista de la intimidad. Puértolas escribe sobre mujeres, familias y los pequeños dramas de la vida cotidiana con delicadeza. Premio Planeta 1989. Una voz constante de las letras españolas.",
+    "nationality": "Española",
+    "born": 1947,
+    "genres": [
+      "ficción",
+      "literario",
+      "intimista"
+    ],
+    "notable_works": [
+      "Queda la noche",
+      "Burdeos",
+      "Historia de un abrigo"
+    ]
+  },
+  "Care Santos": {
+    "bio": "Barcelonesa, novelista y escritora juvenil prolífica. Santos ha ganado el Nadal y escrito decenas de libros para todas las edades. Versatilidad y oficio al servicio de la historia.",
+    "nationality": "Española",
+    "born": 1970,
+    "genres": [
+      "ficción",
+      "juvenil",
+      "histórico"
+    ],
+    "notable_works": [
+      "Media vida",
+      "Mentira",
+      "El aire que respiras"
+    ]
+  },
+  "Almudena Guzmán": {
+    "bio": "Madrileña, poeta del amor y la ciudad. Guzmán escribe versos directos sobre el deseo, la maternidad y lo cotidiano. Una voz importante de la poesía española contemporánea.",
+    "nationality": "Española",
+    "born": 1964,
+    "genres": [
+      "poesía",
+      "lírico",
+      "urbano"
+    ],
+    "notable_works": [
+      "El libro de Tamar",
+      "Usted",
+      "Poema de la mujer"
     ]
   }
 }
