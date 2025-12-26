@@ -11,7 +11,7 @@ const INITIAL_LOAD = 42;
 const LOAD_MORE_COUNT = 21;
 
 // =============================================================================
-// TEMAS - Quiet Material Library
+// TEMAS - Quiet Material Library con Glassmorphism
 // =============================================================================
 const THEMES = {
   night: {
@@ -37,8 +37,22 @@ const THEMES = {
       default: 'rgba(245, 243, 239, 0.1)',
       strong: 'rgba(245, 243, 239, 0.15)',
     },
-    overlay: 'rgba(26, 25, 23, 0.92)',
+    overlay: 'rgba(10, 10, 9, 0.85)',
     success: '#7d9a6d',
+    // Glassmorphism
+    glass: {
+      bg: 'rgba(36, 35, 32, 0.75)',
+      bgStrong: 'rgba(45, 43, 40, 0.85)',
+      border: 'rgba(245, 243, 239, 0.08)',
+      shadow: '0 8px 32px rgba(0, 0, 0, 0.4)',
+      shadowElevated: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+    },
+    gradient: {
+      accent: 'linear-gradient(135deg, #c9a456 0%, #d4b36a 100%)',
+      subtle: 'linear-gradient(180deg, rgba(201, 164, 86, 0.08) 0%, transparent 100%)',
+      card: 'linear-gradient(145deg, rgba(54, 51, 48, 0.9) 0%, rgba(45, 43, 40, 0.95) 100%)',
+      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.03) 50%, transparent 100%)',
+    }
   },
   day: {
     name: 'Día',
@@ -63,8 +77,22 @@ const THEMES = {
       default: 'rgba(42, 40, 37, 0.1)',
       strong: 'rgba(42, 40, 37, 0.15)',
     },
-    overlay: 'rgba(248, 246, 241, 0.95)',
+    overlay: 'rgba(248, 246, 241, 0.85)',
     success: '#5a7a5a',
+    // Glassmorphism
+    glass: {
+      bg: 'rgba(255, 255, 255, 0.7)',
+      bgStrong: 'rgba(255, 255, 255, 0.85)',
+      border: 'rgba(255, 255, 255, 0.5)',
+      shadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
+      shadowElevated: '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+    },
+    gradient: {
+      accent: 'linear-gradient(135deg, #a68a3a 0%, #c9a456 100%)',
+      subtle: 'linear-gradient(180deg, rgba(166, 138, 58, 0.06) 0%, transparent 100%)',
+      card: 'linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 246, 241, 0.98) 100%)',
+      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.02) 50%, transparent 100%)',
+    }
   }
 };
 
@@ -1908,7 +1936,9 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
         alignItems: 'flex-end',
         justifyContent: 'center',
         background: t.overlay,
-        animation: 'fadeIn 0.2s ease'
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        animation: 'fadeIn 0.25s ease'
       }}
     >
       <div 
@@ -1918,27 +1948,52 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           maxWidth: '420px',
           maxHeight: '90vh',
           overflowY: 'auto',
-          borderRadius: '20px 20px 0 0',
-          background: t.bg.elevated,
-          boxShadow: '0 -8px 32px rgba(0,0,0,0.3)',
-          animation: 'slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
+          borderRadius: '24px 24px 0 0',
+          background: t.glass?.bgStrong || t.bg.elevated,
+          backdropFilter: 'blur(40px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          borderBottom: 'none',
+          boxShadow: t.glass?.shadowElevated || '0 -8px 32px rgba(0,0,0,0.3)',
+          animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
+        {/* Handle de arrastre */}
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          paddingTop: '12px',
+          paddingBottom: '8px'
+        }}>
+          <div style={{ 
+            width: '36px', 
+            height: '5px', 
+            borderRadius: '3px', 
+            background: t.border.strong,
+            opacity: 0.6
+          }} />
+        </div>
+        
         {/* Header */}
-        <div style={{ padding: '24px 24px 0', position: 'relative' }}>
+        <div style={{ padding: '8px 24px 0', position: 'relative' }}>
           <button 
             onClick={onClose}
             style={{
-              position: 'absolute', top: '16px', right: '16px',
+              position: 'absolute', top: '0', right: '16px',
               width: '32px', height: '32px',
               borderRadius: '50%',
               border: 'none',
-              background: t.bg.tertiary,
+              background: t.glass?.bg || t.bg.tertiary,
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
               color: t.text.secondary,
               cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: '16px'
+              fontSize: '16px',
+              transition: 'all 150ms ease'
             }}
+            onMouseEnter={e => { e.target.style.background = t.bg.tertiary; e.target.style.transform = 'scale(1.1)'; }}
+            onMouseLeave={e => { e.target.style.background = t.glass?.bg || t.bg.tertiary; e.target.style.transform = 'scale(1)'; }}
           >
             ✕
           </button>
@@ -1946,9 +2001,9 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           <div style={{ display: 'flex', gap: '20px' }}>
             <div style={{
               width: '100px', height: '150px',
-              borderRadius: '8px',
+              borderRadius: '10px',
               overflow: 'hidden',
-              boxShadow: '0 4px 16px rgba(0,0,0,0.2)',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.25)',
               flexShrink: 0,
               background: t.bg.tertiary
             }}>
@@ -2464,7 +2519,9 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
         alignItems: 'flex-end',
         justifyContent: 'center',
         background: t.overlay,
-        animation: 'fadeIn 0.2s ease'
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        animation: 'fadeIn 0.25s ease'
       }}
     >
       <div 
@@ -2473,28 +2530,66 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
           width: '100%',
           maxWidth: '500px',
           maxHeight: '85vh',
-          borderRadius: '20px 20px 0 0',
-          background: t.bg.elevated,
-          boxShadow: '0 -8px 32px rgba(0,0,0,0.3)',
-          animation: 'slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+          borderRadius: '24px 24px 0 0',
+          background: t.glass?.bgStrong || t.bg.elevated,
+          backdropFilter: 'blur(40px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          borderBottom: 'none',
+          boxShadow: t.glass?.shadowElevated || '0 -8px 32px rgba(0,0,0,0.3)',
+          animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
           display: 'flex',
           flexDirection: 'column'
         }}
       >
+        {/* Handle de arrastre */}
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          paddingTop: '12px',
+          paddingBottom: '4px'
+        }}>
+          <div style={{ 
+            width: '36px', 
+            height: '5px', 
+            borderRadius: '3px', 
+            background: t.border.strong,
+            opacity: 0.6
+          }} />
+        </div>
+        
         {/* Header */}
-        <div style={{ padding: '24px 24px 16px', borderBottom: `1px solid ${t.border.subtle}` }}>
+        <div style={{ padding: '12px 24px 16px', borderBottom: `1px solid ${t.border.subtle}` }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
             <h3 style={{ fontFamily: 'Georgia, serif', fontSize: '22px', color: t.text.primary }}>
               Encuentra tu libro
             </h3>
             <button onClick={onClose} style={{ 
-              background: 'none', border: 'none', 
-              color: t.text.tertiary, fontSize: '20px', cursor: 'pointer' 
+              background: t.glass?.bg || 'transparent', 
+              border: 'none', 
+              color: t.text.tertiary, 
+              fontSize: '20px', 
+              cursor: 'pointer',
+              width: '32px',
+              height: '32px',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'all 150ms ease'
             }}>✕</button>
           </div>
           
-          {/* Tabs */}
-          <div style={{ display: 'flex', gap: '4px', background: t.bg.tertiary, borderRadius: '24px', padding: '4px' }}>
+          {/* Tabs con glass */}
+          <div style={{ 
+            display: 'flex', 
+            gap: '4px', 
+            background: t.glass?.bg || t.bg.tertiary, 
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            borderRadius: '24px', 
+            padding: '4px' 
+          }}>
             <SectionTab id="experience" label="Sentir" active={activeSection === 'experience'} />
             <SectionTab id="moment" label="Momento" active={activeSection === 'moment'} />
             <SectionTab id="theme" label="Tema" active={activeSection === 'theme'} />
@@ -2505,14 +2600,16 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
         {/* Content */}
         <div style={{ flex: 1, overflowY: 'auto', padding: '20px 24px' }}>
           
-          {/* Resumen de filtros activos */}
+          {/* Resumen de filtros activos con gradiente */}
           {hasAnyFilter && (
             <div style={{
               padding: '12px 16px',
-              borderRadius: '12px',
-              background: `linear-gradient(135deg, ${t.accent}15, ${t.accent}05)`,
+              borderRadius: '14px',
+              background: t.gradient?.subtle || `linear-gradient(135deg, ${t.accent}15, ${t.accent}05)`,
               marginBottom: '20px',
-              borderLeft: `3px solid ${t.accent}`
+              borderLeft: `3px solid ${t.accent}`,
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)'
             }}>
               <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '4px' }}>Buscando:</p>
               <p style={{ fontSize: '14px', color: t.text.primary, fontWeight: 500 }}>
@@ -2786,6 +2883,17 @@ const StatsModal = ({ books, onClose, theme }) => {
 // =============================================================================
 const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClick, onThemeClick, theme }) => {
   const t = THEMES[theme];
+  const [scrolled, setScrolled] = useState(false);
+  const contentRef = useRef(null);
+  
+  // Detectar scroll para sombra dinámica
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+    const handleScroll = () => setScrolled(el.scrollTop > 10);
+    el.addEventListener('scroll', handleScroll);
+    return () => el.removeEventListener('scroll', handleScroll);
+  }, []);
   
   // Obtener libros de este autor
   const authorBooks = useMemo(() => {
@@ -2813,30 +2921,40 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
         justifyContent: 'center',
         padding: '16px',
         background: t.overlay,
-        animation: 'fadeIn 0.2s ease'
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        animation: 'fadeIn 0.25s ease'
       }}
     >
       <div 
+        ref={contentRef}
         onClick={e => e.stopPropagation()}
         style={{
           width: '100%',
           maxWidth: '480px',
           maxHeight: '85vh',
           overflowY: 'auto',
-          borderRadius: '20px',
-          background: t.bg.elevated,
-          boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
-          animation: 'scaleIn 0.3s ease'
+          borderRadius: '24px',
+          background: t.glass?.bgStrong || t.bg.elevated,
+          backdropFilter: 'blur(40px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          boxShadow: t.glass?.shadowElevated || '0 8px 32px rgba(0,0,0,0.3)',
+          animation: 'scaleIn 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
-        {/* Header */}
+        {/* Header con sombra dinámica */}
         <div style={{ 
-          padding: '24px 24px 0', 
+          padding: '24px 24px 16px', 
           position: 'sticky', 
           top: 0, 
-          background: t.bg.elevated,
-          borderRadius: '20px 20px 0 0',
-          zIndex: 1
+          background: t.glass?.bgStrong || t.bg.elevated,
+          backdropFilter: 'blur(40px)',
+          WebkitBackdropFilter: 'blur(40px)',
+          borderRadius: '24px 24px 0 0',
+          zIndex: 1,
+          transition: 'box-shadow 200ms ease',
+          boxShadow: scrolled ? `0 1px 0 ${t.border.subtle}, 0 4px 12px rgba(0,0,0,0.1)` : 'none'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
             <div style={{ flex: 1 }}>
@@ -3124,6 +3242,17 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
 // =============================================================================
 const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienceClick, theme }) => {
   const t = THEMES[theme];
+  const [scrolled, setScrolled] = useState(false);
+  const contentRef = useRef(null);
+  
+  // Detectar scroll para sombra dinámica
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+    const handleScroll = () => setScrolled(el.scrollTop > 10);
+    el.addEventListener('scroll', handleScroll);
+    return () => el.removeEventListener('scroll', handleScroll);
+  }, []);
   
   const themeEmojis = {
     amor: '❤️', muerte: '💀', familia: '👨‍👩‍👧', memoria: '🧠', identidad: '🪞',
@@ -3168,29 +3297,41 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
         alignItems: 'flex-end',
         justifyContent: 'center',
         background: t.overlay,
-        animation: 'fadeIn 0.2s ease'
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        animation: 'fadeIn 0.25s ease'
       }}
     >
       <div 
+        ref={contentRef}
         onClick={e => e.stopPropagation()}
         style={{
           width: '100%',
           maxWidth: '500px',
           maxHeight: '85vh',
           borderRadius: '24px 24px 0 0',
-          background: t.bg.primary,
+          background: t.glass?.bgStrong || t.bg.primary,
+          backdropFilter: 'blur(40px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          borderBottom: 'none',
           overflow: 'hidden',
-          animation: 'slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+          boxShadow: t.glass?.shadowElevated || '0 -8px 32px rgba(0,0,0,0.3)',
+          animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
         {/* Handle */}
         <div style={{ display: 'flex', justifyContent: 'center', padding: '12px' }}>
-          <div style={{ width: '36px', height: '4px', borderRadius: '2px', background: t.border.strong }} />
+          <div style={{ width: '36px', height: '5px', borderRadius: '3px', background: t.border.strong, opacity: 0.6 }} />
         </div>
         
-        {/* Header */}
-        <div style={{ padding: '0 24px 20px', textAlign: 'center' }}>
-          <span style={{ fontSize: '40px', marginBottom: '8px', display: 'block' }}>
+        {/* Header con gradiente sutil */}
+        <div style={{ 
+          padding: '0 24px 20px', 
+          textAlign: 'center',
+          background: t.gradient?.subtle || 'transparent'
+        }}>
+          <span style={{ fontSize: '44px', marginBottom: '8px', display: 'block' }}>
             {themeEmojis[themeName] || '📚'}
           </span>
           <h2 style={{
@@ -3291,6 +3432,17 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
 // =============================================================================
 const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAuthorClick, theme }) => {
   const t = THEMES[theme];
+  const [scrolled, setScrolled] = useState(false);
+  const contentRef = useRef(null);
+  
+  // Detectar scroll para sombra dinámica
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+    const handleScroll = () => setScrolled(el.scrollTop > 10);
+    el.addEventListener('scroll', handleScroll);
+    return () => el.removeEventListener('scroll', handleScroll);
+  }, []);
   
   const experienceEmojis = {
     devastador: '💔', perturbador: '😰', melancólico: '🌧️', nostálgico: '🕰️',
@@ -3345,33 +3497,42 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
         alignItems: 'flex-end',
         justifyContent: 'center',
         background: t.overlay,
-        animation: 'fadeIn 0.2s ease'
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        animation: 'fadeIn 0.25s ease'
       }}
     >
       <div 
+        ref={contentRef}
         onClick={e => e.stopPropagation()}
         style={{
           width: '100%',
           maxWidth: '500px',
           maxHeight: '85vh',
           borderRadius: '24px 24px 0 0',
-          background: t.bg.primary,
+          background: t.glass?.bgStrong || t.bg.primary,
+          backdropFilter: 'blur(40px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          borderBottom: 'none',
           overflow: 'hidden',
-          animation: 'slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+          boxShadow: t.glass?.shadowElevated || '0 -8px 32px rgba(0,0,0,0.3)',
+          animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
         {/* Handle */}
         <div style={{ display: 'flex', justifyContent: 'center', padding: '12px' }}>
-          <div style={{ width: '36px', height: '4px', borderRadius: '2px', background: t.border.strong }} />
+          <div style={{ width: '36px', height: '5px', borderRadius: '3px', background: t.border.strong, opacity: 0.6 }} />
         </div>
         
-        {/* Header */}
+        {/* Header con gradiente sutil */}
         <div style={{ 
           padding: '0 24px 24px',
           textAlign: 'center',
-          borderBottom: `1px solid ${t.border.subtle}`
+          borderBottom: `1px solid ${t.border.subtle}`,
+          background: t.gradient?.subtle || 'transparent'
         }}>
-          <span style={{ fontSize: '48px', marginBottom: '12px', display: 'block' }}>
+          <span style={{ fontSize: '52px', marginBottom: '12px', display: 'block' }}>
             {experienceEmojis[experience] || '✨'}
           </span>
           <h2 style={{
@@ -3964,39 +4125,55 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         padding: '16px',
         background: t.overlay,
-        animation: 'fadeIn 0.2s ease'
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        animation: 'fadeIn 0.25s ease'
       }}
     >
       <div 
         onClick={e => e.stopPropagation()}
         style={{
           width: '100%', maxWidth: '440px',
-          borderRadius: '20px', padding: '32px',
-          background: t.bg.elevated,
-          boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
-          animation: 'scaleIn 0.3s ease'
+          borderRadius: '24px', padding: '32px',
+          background: t.glass?.bgStrong || t.bg.elevated,
+          backdropFilter: 'blur(40px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          boxShadow: t.glass?.shadowElevated || '0 8px 32px rgba(0,0,0,0.3)',
+          animation: 'scaleIn 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
           {step > 0 ? (
             <button onClick={() => setStep(s => s - 1)} style={{ 
               background: 'none', border: 'none', 
-              color: t.text.tertiary, fontSize: '13px', cursor: 'pointer'
+              color: t.text.tertiary, fontSize: '13px', cursor: 'pointer',
+              transition: 'color 150ms ease'
             }}>← Atrás</button>
           ) : <div />}
           <button onClick={onClose} style={{ 
-            background: 'none', border: 'none', 
-            color: t.text.tertiary, fontSize: '20px', cursor: 'pointer' 
+            background: t.glass?.bg || 'transparent', 
+            border: 'none', 
+            color: t.text.tertiary, 
+            fontSize: '20px', 
+            cursor: 'pointer',
+            width: '32px',
+            height: '32px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'all 150ms ease'
           }}>✕</button>
         </div>
         
-        {/* Progress bar mejorada */}
+        {/* Progress bar mejorada con gradiente */}
         <div style={{ display: 'flex', gap: '6px', marginBottom: '32px' }}>
           {WIZARD_STEPS.map((s, i) => (
             <div key={i} style={{
               flex: 1, height: '4px',
               borderRadius: '2px',
-              background: i < step ? t.accent : i === step ? `${t.accent}80` : t.bg.tertiary,
+              background: i < step ? t.gradient?.accent || t.accent : i === step ? `${t.accent}80` : t.bg.tertiary,
               transition: 'all 0.3s ease'
             }}>
               {i === step && (
@@ -4755,16 +4932,26 @@ export default function App() {
                 {/* Wizard (solo desktop) */}
                 {!isMobile && (
                   <button 
-                    onClick={() => setShowWizard(true)}
+                    onClick={() => { setShowWizard(true); haptic.medium(); }}
                     style={{
-                      padding: '10px 16px',
-                      borderRadius: '10px',
+                      padding: '10px 20px',
+                      borderRadius: '12px',
                       border: 'none',
-                      background: t.accent,
+                      background: t.gradient?.accent || t.accent,
                       color: t.bg.primary,
                       fontSize: '14px',
-                      fontWeight: 500,
-                      cursor: 'pointer'
+                      fontWeight: 600,
+                      cursor: 'pointer',
+                      boxShadow: `0 4px 14px ${t.accent}40`,
+                      transition: 'all 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+                    }}
+                    onMouseEnter={e => { 
+                      e.target.style.transform = 'translateY(-2px)'; 
+                      e.target.style.boxShadow = `0 6px 20px ${t.accent}50`;
+                    }}
+                    onMouseLeave={e => { 
+                      e.target.style.transform = 'translateY(0)'; 
+                      e.target.style.boxShadow = `0 4px 14px ${t.accent}40`;
                     }}
                   >
                     ¿Qué leo?
