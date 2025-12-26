@@ -69,6 +69,201 @@ const THEMES = {
 };
 
 // =============================================================================
+// HAPTIC FEEDBACK - Vibraciones sutiles estilo iOS
+// =============================================================================
+const haptic = {
+  // Feedback ligero - para tocar elementos
+  light: () => {
+    if ('vibrate' in navigator) {
+      navigator.vibrate(10);
+    }
+  },
+  // Feedback medio - para selecciones
+  medium: () => {
+    if ('vibrate' in navigator) {
+      navigator.vibrate(20);
+    }
+  },
+  // Feedback fuerte - para acciones importantes
+  heavy: () => {
+    if ('vibrate' in navigator) {
+      navigator.vibrate([30, 10, 30]);
+    }
+  },
+  // Feedback de éxito - para confirmaciones
+  success: () => {
+    if ('vibrate' in navigator) {
+      navigator.vibrate([10, 50, 20]);
+    }
+  },
+  // Feedback de error
+  error: () => {
+    if ('vibrate' in navigator) {
+      navigator.vibrate([50, 30, 50, 30, 50]);
+    }
+  }
+};
+
+// =============================================================================
+// HOOK: useTouchAnimation - Estado de presión para animaciones
+// =============================================================================
+const useTouchAnimation = () => {
+  const [isPressed, setIsPressed] = useState(false);
+  
+  const touchProps = {
+    onMouseDown: () => setIsPressed(true),
+    onMouseUp: () => setIsPressed(false),
+    onMouseLeave: () => setIsPressed(false),
+    onTouchStart: () => { setIsPressed(true); haptic.light(); },
+    onTouchEnd: () => setIsPressed(false),
+    onTouchCancel: () => setIsPressed(false),
+  };
+  
+  return { isPressed, touchProps };
+};
+
+// =============================================================================
+// COMPONENTE: Touchable - Wrapper con animación táctil
+// =============================================================================
+const Touchable = memo(({ 
+  children, 
+  onClick, 
+  style = {}, 
+  scale = 0.97,
+  className = '',
+  hapticType = 'light',
+  disabled = false,
+  ...props 
+}) => {
+  const [isPressed, setIsPressed] = useState(false);
+  
+  const handlePress = () => {
+    if (disabled) return;
+    setIsPressed(true);
+    if (hapticType && haptic[hapticType]) {
+      haptic[hapticType]();
+    }
+  };
+  
+  const handleRelease = () => setIsPressed(false);
+  
+  const handleClick = (e) => {
+    if (disabled) return;
+    onClick?.(e);
+  };
+  
+  return (
+    <div
+      onClick={handleClick}
+      onMouseDown={handlePress}
+      onMouseUp={handleRelease}
+      onMouseLeave={handleRelease}
+      onTouchStart={handlePress}
+      onTouchEnd={handleRelease}
+      onTouchCancel={handleRelease}
+      className={className}
+      style={{
+        ...style,
+        transform: isPressed ? `scale(${scale})` : 'scale(1)',
+        transition: 'transform 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        cursor: disabled ? 'default' : 'pointer',
+        opacity: disabled ? 0.5 : 1,
+        WebkitTapHighlightColor: 'transparent',
+        userSelect: 'none',
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+});
+
+Touchable.displayName = 'Touchable';
+
+// =============================================================================
+// COMPONENTE: ActionButton - Botón con microinteracciones Apple
+// =============================================================================
+const ActionButton = memo(({ 
+  children, 
+  onClick, 
+  variant = 'primary', // 'primary' | 'secondary'
+  isActive = false,
+  activeColor,
+  theme,
+  style = {},
+  disabled = false
+}) => {
+  const [isPressed, setIsPressed] = useState(false);
+  const t = theme;
+  
+  const handlePress = () => {
+    if (disabled) return;
+    setIsPressed(true);
+  };
+  
+  const handleRelease = () => setIsPressed(false);
+  
+  const isPrimary = variant === 'primary';
+  
+  const baseStyles = isPrimary ? {
+    background: isActive ? t.accent : t.accent,
+    color: t.bg.primary,
+    border: 'none',
+    padding: '15px',
+    fontSize: '15px',
+  } : {
+    background: isActive ? (activeColor || t.accent) : t.bg.tertiary,
+    color: isActive ? t.bg.primary : t.text.secondary,
+    border: `1px solid ${isActive ? 'transparent' : t.border.default}`,
+    padding: '13px',
+    fontSize: '14px',
+  };
+  
+  return (
+    <button
+      onClick={onClick}
+      onMouseDown={handlePress}
+      onMouseUp={handleRelease}
+      onMouseLeave={handleRelease}
+      onTouchStart={handlePress}
+      onTouchEnd={handleRelease}
+      onTouchCancel={handleRelease}
+      disabled={disabled}
+      style={{
+        ...baseStyles,
+        width: '100%',
+        borderRadius: '14px',
+        fontWeight: 600,
+        cursor: disabled ? 'default' : 'pointer',
+        opacity: disabled ? 0.5 : 1,
+        transform: isPressed ? 'scale(0.97)' : 'scale(1)',
+        transition: 'all 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        WebkitTapHighlightColor: 'transparent',
+        position: 'relative',
+        overflow: 'hidden',
+        ...style
+      }}
+    >
+      {/* Ripple effect layer */}
+      <span style={{
+        position: 'absolute',
+        inset: 0,
+        background: isPressed ? 'rgba(255,255,255,0.1)' : 'transparent',
+        transition: 'background 150ms ease',
+        pointerEvents: 'none'
+      }} />
+      
+      {/* Content */}
+      <span style={{ position: 'relative', zIndex: 1 }}>
+        {children}
+      </span>
+    </button>
+  );
+});
+
+ActionButton.displayName = 'ActionButton';
+
+// =============================================================================
 // MICROCOPY
 // =============================================================================
 const COPY = {
@@ -172,6 +367,7 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
   const [ref, isVisible] = useIntersectionObserver();
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
+  const [isPressed, setIsPressed] = useState(false);
   
   const t = THEMES[theme];
   const coverUrl = `/portadas/${book.id}.jpg`;
@@ -182,35 +378,53 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
   // Tamaño más grande en modo santuario
   const size = sanctuary ? { width: '140px', height: '210px' } : { width: '120px', height: '180px' };
   
+  const handlePress = () => {
+    setIsPressed(true);
+    haptic.light();
+  };
+  
+  const handleRelease = () => setIsPressed(false);
+  
   return (
     <div 
       ref={ref}
       onClick={() => onClick?.(book)}
+      onMouseDown={handlePress}
+      onMouseUp={handleRelease}
+      onMouseLeave={handleRelease}
+      onTouchStart={handlePress}
+      onTouchEnd={handleRelease}
+      onTouchCancel={handleRelease}
+      className="book-cover"
       style={{
         ...size,
         flexShrink: 0,
         cursor: 'pointer',
         position: 'relative',
-        borderRadius: '8px',
+        borderRadius: '10px',
         overflow: 'hidden',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+        boxShadow: isPressed 
+          ? '0 2px 8px rgba(0,0,0,0.2)' 
+          : '0 4px 16px rgba(0,0,0,0.18)',
         background: t.bg.tertiary,
-        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+        transform: isPressed ? 'scale(0.96)' : 'scale(1)',
+        transition: 'transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms ease',
+        WebkitTapHighlightColor: 'transparent',
       }}
-      onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)'; }}
-      onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)'; }}
     >
-      {/* Skeleton */}
+      {/* Skeleton mejorado */}
       {(!isVisible || (!imgLoaded && !imgError)) && (
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: `linear-gradient(90deg, ${t.bg.secondary} 0%, ${t.bg.tertiary} 50%, ${t.bg.secondary} 100%)`,
-          backgroundSize: '200% 100%',
-          animation: 'shimmer 1.5s ease-in-out infinite'
-        }} />
+        <div 
+          className="skeleton"
+          style={{
+            position: 'absolute', inset: 0,
+            background: `linear-gradient(90deg, ${t.bg.secondary} 0%, ${t.bg.tertiary} 50%, ${t.bg.secondary} 100%)`,
+            backgroundSize: '200% 100%',
+          }} 
+        />
       )}
       
-      {/* Imagen */}
+      {/* Imagen con fade-in */}
       {isVisible && !imgError && (
         <img 
           src={coverUrl}
@@ -220,7 +434,7 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
             width: '100%', height: '100%',
             objectFit: 'cover',
             opacity: imgLoaded ? 1 : 0,
-            transition: 'opacity 0.3s ease'
+            transition: 'opacity 400ms cubic-bezier(0.16, 1, 0.3, 1)'
           }}
           onLoad={() => setImgLoaded(true)}
           onError={() => setImgError(true)}
@@ -228,7 +442,7 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
         />
       )}
       
-      {/* Fallback */}
+      {/* Fallback elegante */}
       {imgError && (
         <div style={{
           position: 'absolute', inset: 0,
@@ -245,11 +459,11 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
         </div>
       )}
       
-      {/* Indicador (solo si no es santuario) */}
+      {/* Indicador con animación */}
       {!sanctuary && (hasAward || listStatus) && (
         <div style={{
           position: 'absolute', bottom: '6px', right: '6px',
-          width: '18px', height: '18px',
+          width: '20px', height: '20px',
           borderRadius: '50%',
           background: listStatus === 'reading' ? t.accent : 
                      listStatus === 'read' ? t.success : 
@@ -257,7 +471,9 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
           color: t.bg.primary,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontSize: '10px',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+          boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
+          transform: isPressed ? 'scale(0.9)' : 'scale(1)',
+          transition: 'transform 150ms ease'
         }}>
           {listStatus === 'reading' ? '◐' : listStatus === 'read' ? '✓' : listStatus === 'want' ? '○' : '★'}
         </div>
@@ -1705,7 +1921,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           borderRadius: '20px 20px 0 0',
           background: t.bg.elevated,
           boxShadow: '0 -8px 32px rgba(0,0,0,0.3)',
-          animation: 'slideUp 0.3s ease'
+          animation: 'slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
         {/* Header */}
@@ -2084,7 +2300,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           </div>
         )}
         
-        {/* Acciones */}
+        {/* Acciones con microinteracciones */}
         <div style={{ 
           padding: '20px 24px 32px', 
           borderTop: `1px solid ${t.border.subtle}`,
@@ -2092,57 +2308,36 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           flexDirection: 'column',
           gap: '12px'
         }}>
-          <button 
-            onClick={() => handleListClick('reading')}
-            style={{
-              width: '100%',
-              padding: '14px',
-              borderRadius: '12px',
-              border: 'none',
-              background: t.accent,
-              color: t.bg.primary,
-              fontSize: '15px',
-              fontWeight: 500,
-              cursor: 'pointer',
-              opacity: currentList === 'reading' ? 1 : 0.9
-            }}
+          <ActionButton 
+            onClick={() => { handleListClick('reading'); haptic.medium(); }}
+            variant="primary"
+            isActive={currentList === 'reading'}
+            theme={t}
           >
             {currentList === 'reading' ? '◐ Leyendo' : COPY.readNow}
-          </button>
+          </ActionButton>
           
           <div style={{ display: 'flex', gap: '12px' }}>
-            <button 
-              onClick={() => handleListClick('want')}
-              style={{
-                flex: 1,
-                padding: '12px',
-                borderRadius: '12px',
-                border: `1px solid ${t.border.default}`,
-                background: currentList === 'want' ? '#5a7a8a' : t.bg.tertiary,
-                color: currentList === 'want' ? t.bg.primary : t.text.secondary,
-                fontSize: '14px',
-                fontWeight: 500,
-                cursor: 'pointer'
-              }}
+            <ActionButton 
+              onClick={() => { handleListClick('want'); haptic.light(); }}
+              variant="secondary"
+              isActive={currentList === 'want'}
+              activeColor="#5a7a8a"
+              theme={t}
+              style={{ flex: 1 }}
             >
               {currentList === 'want' ? '○ En lista' : COPY.readLater}
-            </button>
-            <button 
-              onClick={() => handleListClick('read')}
-              style={{
-                flex: 1,
-                padding: '12px',
-                borderRadius: '12px',
-                border: `1px solid ${t.border.default}`,
-                background: currentList === 'read' ? t.success : t.bg.tertiary,
-                color: currentList === 'read' ? t.bg.primary : t.text.secondary,
-                fontSize: '14px',
-                fontWeight: 500,
-                cursor: 'pointer'
-              }}
+            </ActionButton>
+            <ActionButton 
+              onClick={() => { handleListClick('read'); haptic.success(); }}
+              variant="secondary"
+              isActive={currentList === 'read'}
+              activeColor={t.success}
+              theme={t}
+              style={{ flex: 1 }}
             >
               {currentList === 'read' ? '✓ Leído' : COPY.alreadyRead}
-            </button>
+            </ActionButton>
           </div>
         </div>
       </div>
@@ -2281,7 +2476,7 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
           borderRadius: '20px 20px 0 0',
           background: t.bg.elevated,
           boxShadow: '0 -8px 32px rgba(0,0,0,0.3)',
-          animation: 'slideUp 0.3s ease',
+          animation: 'slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
           display: 'flex',
           flexDirection: 'column'
         }}
@@ -4128,20 +4323,249 @@ export default function App() {
   const hasFiltersActive = filters.difficulty || filters.mood || filters.hasAwards || 
     filters.experience || filters.moment || filters.theme || debouncedSearch;
   
-  // CSS global para animaciones
+  // CSS global para animaciones - Estilo Apple
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
-      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-      @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-      @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-      @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
-      * { box-sizing: border-box; margin: 0; padding: 0; }
+      /* ============================================
+         MICROINTERACCIONES - Estilo Apple
+         ============================================ */
+      
+      /* Animaciones base con curvas Apple */
+      @keyframes fadeIn { 
+        from { opacity: 0; } 
+        to { opacity: 1; } 
+      }
+      
+      @keyframes slideUp { 
+        from { opacity: 0; transform: translateY(100%); } 
+        to { opacity: 1; transform: translateY(0); } 
+      }
+      
+      @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes scaleIn { 
+        from { opacity: 0; transform: scale(0.9); } 
+        to { opacity: 1; transform: scale(1); } 
+      }
+      
+      @keyframes scaleInBounce {
+        0% { opacity: 0; transform: scale(0.8); }
+        70% { transform: scale(1.02); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+      
+      @keyframes shimmer { 
+        0% { background-position: -200% 0; } 
+        100% { background-position: 200% 0; } 
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+      
+      @keyframes breathe {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+      }
+      
+      @keyframes gentleBounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+        100% { transform: translateY(0); }
+      }
+      
+      @keyframes ripple {
+        0% { transform: scale(0); opacity: 0.5; }
+        100% { transform: scale(4); opacity: 0; }
+      }
+      
+      /* Variables de timing Apple */
+      :root {
+        --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+        --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
+        --spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        --duration-fast: 150ms;
+        --duration-normal: 250ms;
+        --duration-slow: 400ms;
+      }
+      
+      /* Reset y base */
+      * { 
+        box-sizing: border-box; 
+        margin: 0; 
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
       html, body, #root { min-height: 100vh; }
-      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+      
+      body { 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        touch-action: manipulation;
+      }
+      
+      /* Scrollbar elegante */
       ::-webkit-scrollbar { width: 6px; height: 6px; }
       ::-webkit-scrollbar-track { background: transparent; }
-      ::-webkit-scrollbar-thumb { background: rgba(128,128,128,0.3); border-radius: 3px; }
+      ::-webkit-scrollbar-thumb { 
+        background: rgba(128,128,128,0.3); 
+        border-radius: 3px;
+        transition: background 0.2s ease;
+      }
+      ::-webkit-scrollbar-thumb:hover { 
+        background: rgba(128,128,128,0.5); 
+      }
+      
+      /* ============================================
+         CLASES TÁCTILES REUTILIZABLES
+         ============================================ */
+      
+      /* Touchable base - se encoge al presionar */
+      .touchable {
+        transition: transform var(--duration-fast) var(--ease-out-expo),
+                    opacity var(--duration-fast) ease;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      
+      .touchable:active {
+        transform: scale(0.97);
+        opacity: 0.9;
+      }
+      
+      /* Touchable suave - menos pronunciado */
+      .touchable-soft:active {
+        transform: scale(0.985);
+        opacity: 0.95;
+      }
+      
+      /* Touchable con bounce al soltar */
+      .touchable-bounce {
+        transition: transform var(--duration-normal) var(--spring);
+      }
+      
+      .touchable-bounce:active {
+        transform: scale(0.95);
+      }
+      
+      /* Card con elevación al hover */
+      .card-hover {
+        transition: transform var(--duration-normal) var(--ease-out-expo),
+                    box-shadow var(--duration-normal) ease;
+      }
+      
+      .card-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      }
+      
+      .card-hover:active {
+        transform: translateY(0) scale(0.98);
+      }
+      
+      /* Botón con ripple */
+      .btn-ripple {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .btn-ripple::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+        transform: scale(0);
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      .btn-ripple:active::after {
+        animation: ripple 0.4s ease-out;
+      }
+      
+      /* Cover de libro con zoom suave */
+      .book-cover {
+        transition: transform var(--duration-normal) var(--ease-out-expo),
+                    box-shadow var(--duration-normal) ease;
+      }
+      
+      .book-cover:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      }
+      
+      .book-cover:active {
+        transform: scale(0.98);
+      }
+      
+      /* Chip/Tag interactivo */
+      .chip-interactive {
+        transition: all var(--duration-fast) var(--ease-out-expo);
+      }
+      
+      .chip-interactive:hover {
+        transform: translateY(-1px);
+      }
+      
+      .chip-interactive:active {
+        transform: scale(0.95);
+      }
+      
+      /* Modal sheet con slide suave */
+      .modal-sheet {
+        animation: slideUp var(--duration-slow) var(--ease-out-expo);
+      }
+      
+      .modal-overlay {
+        animation: fadeIn var(--duration-normal) ease;
+      }
+      
+      /* Stagger animation para listas */
+      .stagger-item {
+        opacity: 0;
+        animation: fadeIn var(--duration-normal) var(--ease-out-expo) forwards;
+      }
+      
+      .stagger-item:nth-child(1) { animation-delay: 0ms; }
+      .stagger-item:nth-child(2) { animation-delay: 50ms; }
+      .stagger-item:nth-child(3) { animation-delay: 100ms; }
+      .stagger-item:nth-child(4) { animation-delay: 150ms; }
+      .stagger-item:nth-child(5) { animation-delay: 200ms; }
+      .stagger-item:nth-child(6) { animation-delay: 250ms; }
+      .stagger-item:nth-child(7) { animation-delay: 300ms; }
+      .stagger-item:nth-child(8) { animation-delay: 350ms; }
+      
+      /* Focus visible para accesibilidad */
+      :focus-visible {
+        outline: 2px solid rgba(100, 150, 255, 0.5);
+        outline-offset: 2px;
+      }
+      
+      /* Skeleton loading */
+      .skeleton {
+        background: linear-gradient(90deg, 
+          rgba(128,128,128,0.1) 25%, 
+          rgba(128,128,128,0.2) 50%, 
+          rgba(128,128,128,0.1) 75%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+        border-radius: 8px;
+      }
+      
+      /* Prevent text selection on interactive elements */
+      button, [role="button"], .touchable {
+        -webkit-touch-callout: none;
+      }
     `;
     document.head.appendChild(style);
     return () => document.head.removeChild(style);
