@@ -1,5 +1,4 @@
 import React, { useState, useMemo, useEffect, useCallback, useRef, memo } from 'react';
-import { ClickableChip, RelatedBooks, AwardBadge } from './InterconnectedComponents.jsx';
 
 // =============================================================================
 // CONFIGURACIÓN
@@ -2862,61 +2861,62 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
                 }}>
                   En tu biblioteca ({authorBooks.length})
                 </h3>
-              <div style={{ 
-                display: 'flex', 
-                gap: '12px', 
-                overflowX: 'auto',
-                paddingBottom: '8px',
-                marginLeft: '-24px',
-                marginRight: '-24px',
-                paddingLeft: '24px',
-                paddingRight: '24px'
-              }}>
-                {authorBooks.slice(0, 10).map(book => {
-                  const coverUrl = `/portadas/${book.id}.jpg`;
-                  const title = book.t || book.title || 'Sin título';
-                  return (
-                    <div 
-                      key={book.id}
-                      onClick={() => { onClose(); setTimeout(() => onBookClick(book), 100); }}
-                      style={{
-                        width: '80px',
-                        flexShrink: 0,
-                        cursor: 'pointer',
-                        transition: 'transform 0.2s ease'
-                      }}
-                    >
-                      <div style={{
-                        width: '80px',
-                        height: '120px',
-                        borderRadius: '6px',
-                        overflow: 'hidden',
-                        boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-                        marginBottom: '6px',
-                        background: t.bg.tertiary
-                      }}>
-                        <img 
-                          src={coverUrl} 
-                          alt={title}
-                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        />
+                <div style={{ 
+                  display: 'flex', 
+                  gap: '12px', 
+                  overflowX: 'auto',
+                  paddingBottom: '8px',
+                  marginLeft: '-24px',
+                  marginRight: '-24px',
+                  paddingLeft: '24px',
+                  paddingRight: '24px'
+                }}>
+                  {authorBooks.slice(0, 10).map(book => {
+                    const coverUrl = `/portadas/${book.id}.jpg`;
+                    const title = book.t || book.title || 'Sin título';
+                    return (
+                      <div 
+                        key={book.id}
+                        onClick={() => { onClose(); setTimeout(() => onBookClick(book), 100); }}
+                        style={{
+                          width: '80px',
+                          flexShrink: 0,
+                          cursor: 'pointer',
+                          transition: 'transform 0.2s ease'
+                        }}
+                      >
+                        <div style={{
+                          width: '80px',
+                          height: '120px',
+                          borderRadius: '6px',
+                          overflow: 'hidden',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+                          marginBottom: '6px',
+                          background: t.bg.tertiary
+                        }}>
+                          <img 
+                            src={coverUrl} 
+                            alt={title}
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                          />
+                        </div>
+                        <p style={{ 
+                          fontSize: '11px', 
+                          color: t.text.secondary,
+                          lineHeight: 1.3,
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden'
+                        }}>
+                          {title}
+                        </p>
                       </div>
-                      <p style={{ 
-                        fontSize: '11px', 
-                        color: t.text.secondary,
-                        lineHeight: 1.3,
-                        display: '-webkit-box',
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: 'vertical',
-                        overflow: 'hidden'
-                      }}>
-                        {title}
-                      </p>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
-            </div>
+            </>
           )}
         </div>
       </div>
