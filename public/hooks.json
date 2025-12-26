@@ -61,18 +61,6 @@
     "experience": "misterioso",
     "why_matters": "Ishiguro en su modo más onírico, donde nada es lo que parece"
   },
-  "522": {
-    "hook": "Un hombre apostador destruye su vida y la de quienes lo aman. Dostoievski escribió desde su propia adicción.",
-    "perfect_for": "Quien conozca la adicción",
-    "themes": [
-      "juego",
-      "adicción",
-      "destrucción",
-      "amor"
-    ],
-    "experience": "febril",
-    "why_matters": "Dostoievski autobiográfico"
-  },
   "807": {
     "hook": "Tres generaciones de arquitectos alemanes, tres formas de sobrevivir al nazismo. Böll condensa toda la historia de Alemania en un solo día y una partida de billar.",
     "perfect_for": "Quien quiera entender cómo una nación procesa su culpa colectiva",
@@ -520,30 +508,6 @@
     ],
     "experience": "sensual",
     "why_matters": "Updike en su modo más exótico y apasionado"
-  },
-  "149": {
-    "hook": "Un niño sobrevive a un atentado en un museo y roba un cuadro. Tartt escribió la novela más ambiciosa sobre el arte y la pérdida.",
-    "perfect_for": "Amantes del arte y las sagas",
-    "themes": [
-      "arte",
-      "pérdida",
-      "robo",
-      "destino"
-    ],
-    "experience": "absorbente",
-    "why_matters": "Pulitzer Prize"
-  },
-  "150": {
-    "hook": "Estudiantes de griego en Vermont cometen un asesinato. Tartt escribió el thriller literario más adictivo sobre la culpa.",
-    "perfect_for": "Lectores de thrillers que quieran literatura",
-    "themes": [
-      "asesinato",
-      "culpa",
-      "universidad",
-      "griego"
-    ],
-    "experience": "adictivo",
-    "why_matters": "Debut legendario. Millones de copias vendidas"
   },
   "1248": {
     "hook": "Un viudo regresa al pueblo costero de su infancia a escribir sus memorias. Banville escribió la novela más bella sobre la memoria y el duelo en prosa que parece poesía líquida.",
@@ -2513,30 +2477,6 @@
     "experience": "kafkiano",
     "why_matters": "Saramago contra la máquina"
   },
-  "44": {
-    "hook": "Los Compson caen: una familia del Sur destruida por el tiempo y ellos mismos. Faulkner escribió su novela más experimental y devastadora.",
-    "perfect_for": "Lectores que no teman la dificultad",
-    "themes": [
-      "familia",
-      "Sur",
-      "tiempo",
-      "destrucción"
-    ],
-    "experience": "monumental",
-    "why_matters": "La novela favorita de Faulkner. Cambió la literatura"
-  },
-  "45": {
-    "hook": "Un día de furia en el Mississippi de los años 30. Faulkner comprimió toda la violencia del Sur en 24 horas.",
-    "perfect_for": "Lectores de Faulkner que busquen acción",
-    "themes": [
-      "violencia",
-      "Sur",
-      "raza",
-      "venganza"
-    ],
-    "experience": "frenético",
-    "why_matters": "Faulkner en modo thriller"
-  },
   "767": {
     "hook": "Un hombre mata a un árabe en una playa y no sabe por qué. Camus escribió la novela más perfecta sobre el absurdo de la existencia.",
     "perfect_for": "Quien se haya sentido extranjero en su propia vida",
@@ -2813,42 +2753,6 @@
     "experience": "devastador",
     "why_matters": "Pulitzer 2007. McCarthy en su momento más humano"
   },
-  "360": {
-    "hook": "Un profesor de estudios sobre Hitler teme la muerte. DeLillo escribió la novela más divertida y aterradora sobre la mortalidad americana.",
-    "perfect_for": "Quien tema la muerte y pueda reírse de ello",
-    "themes": [
-      "muerte",
-      "consumismo",
-      "academia",
-      "miedo"
-    ],
-    "experience": "paranoico",
-    "why_matters": "National Book Award. DeLillo definiendo la era"
-  },
-  "361": {
-    "hook": "El día que dispararon a Kennedy visto desde múltiples ángulos. DeLillo escribió la novela definitiva sobre la paranoia americana.",
-    "perfect_for": "Obsesos de JFK y las conspiraciones",
-    "themes": [
-      "JFK",
-      "conspiración",
-      "América",
-      "historia"
-    ],
-    "experience": "vertiginoso",
-    "why_matters": "DeLillo reescribiendo la historia"
-  },
-  "235": {
-    "hook": "Un detective en el LA de los 70 investiga un caso mientras fuma hierba. Pynchon escribió el noir más divertido y confuso jamás escrito.",
-    "perfect_for": "Fans de El gran Lebowski y el caos narrativo",
-    "themes": [
-      "LA",
-      "detective",
-      "drogas",
-      "conspiración"
-    ],
-    "experience": "psicodélico",
-    "why_matters": "Pynchon accesible. Llevada al cine"
-  },
   "236": {
     "hook": "Un cohete V-2 cruza el cielo de Europa al final de la guerra. Pynchon escribió la novela más ambiciosa y difícil del siglo XX.",
     "perfect_for": "Lectores extremadamente pacientes y aventureros",
@@ -2956,42 +2860,6 @@
     ],
     "experience": "inquietante",
     "why_matters": "Millás en modo kafkiano"
-  },
-  "420": {
-    "hook": "Cien años de soledad en Macondo: nacimientos, muertes, milagros, tragedias. García Márquez escribió la novela más importante en español del siglo XX.",
-    "perfect_for": "Todo el mundo. Es obligatorio.",
-    "themes": [
-      "familia",
-      "tiempo",
-      "magia",
-      "soledad"
-    ],
-    "experience": "mágico",
-    "why_matters": "Nobel 1982. El libro que definió el realismo mágico"
-  },
-  "421": {
-    "hook": "Un coronel espera una pensión que nunca llega mientras se muere de hambre. García Márquez escribió la novela más perfecta sobre la espera y la dignidad.",
-    "perfect_for": "Quien haya esperado algo que nunca llegó",
-    "themes": [
-      "espera",
-      "dignidad",
-      "pobreza",
-      "vejez"
-    ],
-    "experience": "desgarrador",
-    "why_matters": "Una novela perfecta de 96 páginas"
-  },
-  "422": {
-    "hook": "Un hombre espera 50 años para declarar su amor. García Márquez escribió la novela de amor más épica y paciente.",
-    "perfect_for": "Románticos incurables",
-    "themes": [
-      "amor",
-      "tiempo",
-      "espera",
-      "vejez"
-    ],
-    "experience": "romántico",
-    "why_matters": "García Márquez demostrando que el amor puede esperar"
   },
   "1276": {
     "hook": "Montero explora la creatividad y la locura que habita en todo escritor. Un viaje al interior de la mente creativa.",
@@ -5897,18 +5765,6 @@
     "experience": "inspirador",
     "why_matters": "Eggers en modo aventura"
   },
-  "1059": {
-    "hook": "Estudiantes de griego antiguo cometen un asesinato y pagan las consecuencias. Tartt escribió la novela de campus más oscura y elegante.",
-    "perfect_for": "Lectores de novelas de campus y misterio literario",
-    "themes": [
-      "universidad",
-      "asesinato",
-      "griego",
-      "culpa"
-    ],
-    "experience": "hipnótico",
-    "why_matters": "Un clásico instantáneo de los 90"
-  },
   "1060": {
     "hook": "Bevilacqua investiga en las Canarias. Silva llevó a su detective al Atlántico.",
     "perfect_for": "Fans de Bevilacqua",
@@ -6004,18 +5860,6 @@
     ],
     "experience": "trágico",
     "why_matters": "El cierre de Masters of Rome"
-  },
-  "1072": {
-    "hook": "Relatos fantásticos donde lo extraño invade lo cotidiano. Cortázar inventó un género: el fantástico rioplatense.",
-    "perfect_for": "Amantes del cuento y lo extraño",
-    "themes": [
-      "fantástico",
-      "cotidiano",
-      "extrañeza",
-      "cuento"
-    ],
-    "experience": "extraño",
-    "why_matters": "Cortázar cuentista esencial"
   },
   "1073": {
     "hook": "Un hombre viaja a Comala a buscar a su padre y encuentra un pueblo de muertos. Rulfo escribió la novela más perfecta en español en 120 páginas.",
@@ -6449,42 +6293,6 @@
     "experience": "extraño",
     "why_matters": "Cărtărescu cuentista"
   },
-  "186": {
-    "hook": "Un grupo de estudiantes de griego antiguo cometen un asesinato ritual. Tartt escribió el thriller literario más elegante sobre la belleza y el mal.",
-    "perfect_for": "Lectores de campus novels y thrillers intelectuales",
-    "themes": [
-      "universidad",
-      "asesinato",
-      "griego",
-      "belleza"
-    ],
-    "experience": "intoxicante",
-    "why_matters": "El debut más celebrado de los 90"
-  },
-  "187": {
-    "hook": "Un niño sobrevive a un atentado terrorista y roba un cuadro. Tartt escribió una novela dickensiana para el siglo XXI.",
-    "perfect_for": "Lectores de novelas largas y envolventes",
-    "themes": [
-      "arte",
-      "trauma",
-      "supervivencia",
-      "destino"
-    ],
-    "experience": "épico",
-    "why_matters": "Pulitzer 2014"
-  },
-  "188": {
-    "hook": "Un niño en Mississippi es secuestrado por su propio padre. Tartt escribió sobre la infancia robada en el Sur.",
-    "perfect_for": "Lectores de gótico sureño",
-    "themes": [
-      "secuestro",
-      "padre",
-      "Sur",
-      "infancia"
-    ],
-    "experience": "perturbador",
-    "why_matters": "Tartt sobre el Sur"
-  },
   "189": {
     "hook": "Un hombre funda un club donde los hombres se golpean para sentirse vivos. Palahniuk escribió el manifiesto más salvaje contra la vida corporativa.",
     "perfect_for": "Quien odie su trabajo de oficina",
@@ -6629,66 +6437,6 @@
     "experience": "encantador",
     "why_matters": "Calvino fabulista"
   },
-  "429": {
-    "hook": "Una novela que puede leerse de múltiples formas. Cortázar reinventó la novela como juego y laberinto.",
-    "perfect_for": "Lectores aventureros dispuestos a perderse",
-    "themes": [
-      "París",
-      "amor",
-      "juego",
-      "jazz"
-    ],
-    "experience": "experimental",
-    "why_matters": "La novela que cambió la literatura en español"
-  },
-  "430": {
-    "hook": "Relatos donde lo fantástico irrumpe en lo cotidiano. Cortázar inventó un tipo de cuento: surrealismo en la vida diaria.",
-    "perfect_for": "Amantes del cuento fantástico",
-    "themes": [
-      "fantástico",
-      "cotidiano",
-      "Buenos Aires",
-      "extrañeza"
-    ],
-    "experience": "perturbador",
-    "why_matters": "Cortázar cuentista"
-  },
-  "1102": {
-    "hook": "Un estudiante mata a una usurera para probar una teoría. Dostoievski escribió la novela más profunda sobre la culpa y la redención.",
-    "perfect_for": "Todo lector serio. Es obligatorio.",
-    "themes": [
-      "crimen",
-      "culpa",
-      "redención",
-      "alma"
-    ],
-    "experience": "desgarrador",
-    "why_matters": "Una de las novelas más importantes jamás escritas"
-  },
-  "1103": {
-    "hook": "Cuatro hermanos y un padre asesinado. Dostoievski escribió sobre Dios, el mal y la familia con una profundidad insuperable.",
-    "perfect_for": "Lectores dispuestos a la literatura más profunda",
-    "themes": [
-      "familia",
-      "Dios",
-      "mal",
-      "paternidad"
-    ],
-    "experience": "monumental",
-    "why_matters": "La última novela de Dostoievski. Su obra maestra"
-  },
-  "1104": {
-    "hook": "Un hombre del subsuelo escribe sus memorias de resentimiento. Dostoievski inventó el antihéroe moderno.",
-    "perfect_for": "Quien se haya sentido resentido con el mundo",
-    "themes": [
-      "resentimiento",
-      "soledad",
-      "sociedad",
-      "yo"
-    ],
-    "experience": "perturbador",
-    "why_matters": "El texto que inventó la literatura moderna"
-  },
   "1105": {
     "hook": "Anna deja a su marido por un amor prohibido y paga las consecuencias. Tolstói escribió la novela de amor más perfecta y trágica.",
     "perfect_for": "Románticos que no teman la tragedia",
@@ -6712,114 +6460,6 @@
     ],
     "experience": "monumental",
     "why_matters": "La novela más grande jamás escrita"
-  },
-  "1107": {
-    "hook": "Un hombre despierta convertido en insecto. Kafka escribió la pesadilla más perfecta sobre la alienación moderna.",
-    "perfect_for": "Quien se haya sentido como un bicho",
-    "themes": [
-      "transformación",
-      "familia",
-      "alienación",
-      "absurdo"
-    ],
-    "experience": "kafkiano",
-    "why_matters": "El texto que definió el siglo XX"
-  },
-  "1112": {
-    "hook": "Un hombre es arrestado sin saber por qué. Kafka escribió sobre la burocracia como pesadilla existencial.",
-    "perfect_for": "Quien haya luchado contra el sistema",
-    "themes": [
-      "justicia",
-      "burocracia",
-      "culpa",
-      "absurdo"
-    ],
-    "experience": "angustiante",
-    "why_matters": "Kafka profético"
-  },
-  "1113": {
-    "hook": "Un día en la vida de una mujer londinense que prepara una fiesta. Woolf revolucionó la novela con el flujo de conciencia más bello.",
-    "perfect_for": "Lectores que aman la prosa como música",
-    "themes": [
-      "conciencia",
-      "Londres",
-      "tiempo",
-      "mujer"
-    ],
-    "experience": "hipnótico",
-    "why_matters": "Woolf reinventando la novela"
-  },
-  "1114": {
-    "hook": "Una familia viaja a un faro y el tiempo pasa. Woolf escribió sobre la memoria y la pérdida con una belleza insoportable.",
-    "perfect_for": "Quien quiera prosa que sea poesía",
-    "themes": [
-      "familia",
-      "tiempo",
-      "pérdida",
-      "luz"
-    ],
-    "experience": "lírico",
-    "why_matters": "La mejor novela de Woolf según muchos"
-  },
-  "1115": {
-    "hook": "Un día en Dublín: 16 de junio de 1904. Joyce reinventó la literatura con esta odisea moderna.",
-    "perfect_for": "Lectores muy valientes dispuestos a la cima",
-    "themes": [
-      "Dublín",
-      "día",
-      "conciencia",
-      "humanidad"
-    ],
-    "experience": "monumental",
-    "why_matters": "La novela más influyente del siglo XX"
-  },
-  "1116": {
-    "hook": "Relatos de Dublín: parálisis, epifanías, vida ordinaria. Joyce en su forma más accesible y perfecta.",
-    "perfect_for": "Quien quiera conocer a Joyce sin sufrir",
-    "themes": [
-      "Dublín",
-      "vida",
-      "parálisis",
-      "epifanía"
-    ],
-    "experience": "preciso",
-    "why_matters": "El mejor libro de cuentos en inglés"
-  },
-  "1117": {
-    "hook": "Una magdalena mojada en té desata todos los recuerdos. Proust escribió 3000 páginas sobre la memoria y el tiempo perdido.",
-    "perfect_for": "Lectores con mucho tiempo y paciencia",
-    "themes": [
-      "memoria",
-      "tiempo",
-      "Francia",
-      "sociedad"
-    ],
-    "experience": "monumental",
-    "why_matters": "La novela más larga y más influyente"
-  },
-  "1118": {
-    "hook": "Un profesor europeo se obsesiona con una niña americana. Nabokov escribió la novela más perturbadora y mejor escrita sobre la obsesión.",
-    "perfect_for": "Lectores que aprecian la prosa perfecta sobre temas difíciles",
-    "themes": [
-      "obsesión",
-      "América",
-      "lenguaje",
-      "perversión"
-    ],
-    "experience": "perturbador",
-    "why_matters": "Una de las mejores novelas en inglés. Controversial"
-  },
-  "1120": {
-    "hook": "Un asesino espera su ejecución y recuerda su vida. Nabokov escribió su primera obra maestra en ruso.",
-    "perfect_for": "Fans de Nabokov que quieran más",
-    "themes": [
-      "muerte",
-      "memoria",
-      "prisión",
-      "arte"
-    ],
-    "experience": "onírico",
-    "why_matters": "Nabokov antes de América"
   },
   "1121": {
     "hook": "Un hombre permanece joven mientras su retrato envejece. Wilde escribió la novela más elegante sobre la vanidad y sus consecuencias.",
@@ -7072,102 +6712,6 @@
     ],
     "experience": "desgarrador",
     "why_matters": "La única novela de Plath. Autobiográfica y devastadora"
-  },
-  "506": {
-    "hook": "Un día en la vida de una mujer londinense que prepara una fiesta. Woolf reinventó la novela con esta sinfonía de la conciencia.",
-    "perfect_for": "Lectores de literatura modernista",
-    "themes": [
-      "conciencia",
-      "Londres",
-      "mujer",
-      "tiempo"
-    ],
-    "experience": "fluido",
-    "why_matters": "Woolf en su mejor forma"
-  },
-  "507": {
-    "hook": "Un personaje vive 400 años cambiando de género. Woolf escribió la novela más libre sobre la identidad.",
-    "perfect_for": "Lectores LGBTQ+ y amantes de lo fantástico",
-    "themes": [
-      "género",
-      "tiempo",
-      "identidad",
-      "libertad"
-    ],
-    "experience": "liberador",
-    "why_matters": "Woolf feminista y fantástica"
-  },
-  "508": {
-    "hook": "Una familia va al faro, o no. Woolf escribió sobre la memoria, el tiempo y la pérdida con prosa que es poesía.",
-    "perfect_for": "Lectores de prosa poética",
-    "themes": [
-      "familia",
-      "memoria",
-      "tiempo",
-      "pérdida"
-    ],
-    "experience": "elegíaco",
-    "why_matters": "Woolf sobre la familia"
-  },
-  "509": {
-    "hook": "Un hombre despierta convertido en insecto. Kafka escribió la pesadilla más famosa de la literatura.",
-    "perfect_for": "Quien se haya sentido alienado de su propia vida",
-    "themes": [
-      "transformación",
-      "alienación",
-      "familia",
-      "trabajo"
-    ],
-    "experience": "kafkiano",
-    "why_matters": "El relato que inventó un adjetivo"
-  },
-  "510": {
-    "hook": "Un hombre es arrestado sin saber por qué. Kafka escribió la novela más aterradora sobre la burocracia como pesadilla.",
-    "perfect_for": "Quien haya luchado contra el sistema",
-    "themes": [
-      "justicia",
-      "burocracia",
-      "culpa",
-      "absurdo"
-    ],
-    "experience": "angustiante",
-    "why_matters": "Kafka sobre la ley"
-  },
-  "511": {
-    "hook": "Un agrimensor llega a un pueblo dominado por un castillo al que nunca podrá entrar. Kafka escribió sobre la frustración de nunca llegar.",
-    "perfect_for": "Quien conozca la frustración de metas inalcanzables",
-    "themes": [
-      "burocracia",
-      "frustración",
-      "poder",
-      "exclusión"
-    ],
-    "experience": "frustrante",
-    "why_matters": "Kafka inconcluso pero esencial"
-  },
-  "520": {
-    "hook": "Un estudiante pobre mata a una usurera y enfrenta su conciencia. Dostoievski escribió la novela más profunda sobre la culpa y la redención.",
-    "perfect_for": "Quien quiera entender el alma humana",
-    "themes": [
-      "crimen",
-      "culpa",
-      "redención",
-      "pobreza"
-    ],
-    "experience": "atormentado",
-    "why_matters": "Una de las novelas más importantes jamás escritas"
-  },
-  "521": {
-    "hook": "Cuatro hermanos y un padre asesinado. Dostoievski escribió la novela más ambiciosa sobre Dios, el mal y la familia.",
-    "perfect_for": "Lectores que busquen las grandes preguntas",
-    "themes": [
-      "Dios",
-      "familia",
-      "mal",
-      "fe"
-    ],
-    "experience": "monumental",
-    "why_matters": "La obra maestra final de Dostoievski"
   },
   "530": {
     "hook": "Una mujer casada se enamora de otro hombre y enfrenta a la sociedad rusa. Tolstói escribió la novela de amor más grande de todos los tiempos.",
@@ -7924,54 +7468,6 @@
     ],
     "experience": "adictivo",
     "why_matters": "La saga continúa"
-  },
-  "910": {
-    "hook": "Un hombre moja una magdalena en té y recupera toda su infancia. Proust escribió la novela más ambiciosa sobre la memoria y el tiempo.",
-    "perfect_for": "Lectores pacientes dispuestos a la obra maestra total",
-    "themes": [
-      "memoria",
-      "tiempo",
-      "infancia",
-      "Francia"
-    ],
-    "experience": "monumental",
-    "why_matters": "La novela más influyente del siglo XX"
-  },
-  "911": {
-    "hook": "El narrador descubre el amor y los celos en el mundo de las jóvenes. Proust continuó su búsqueda del tiempo.",
-    "perfect_for": "Lectores de En busca del tiempo perdido",
-    "themes": [
-      "amor",
-      "juventud",
-      "celos",
-      "sociedad"
-    ],
-    "experience": "envolvente",
-    "why_matters": "La saga continúa"
-  },
-  "912": {
-    "hook": "El narrador entra en la alta sociedad parisina. Proust diseccionó la aristocracia con precisión cruel.",
-    "perfect_for": "Fans de la saga proustiana",
-    "themes": [
-      "aristocracia",
-      "París",
-      "sociedad",
-      "esnobismo"
-    ],
-    "experience": "sardónico",
-    "why_matters": "Proust sobre la alta sociedad"
-  },
-  "913": {
-    "hook": "El narrador encuentra el tiempo perdido y la verdad del arte. Proust cerró su catedral con el volumen más luminoso.",
-    "perfect_for": "Quien haya llegado hasta aquí",
-    "themes": [
-      "tiempo",
-      "arte",
-      "verdad",
-      "cierre"
-    ],
-    "experience": "trascendente",
-    "why_matters": "El cierre de la obra maestra"
   },
   "915": {
     "hook": "Un soldado americano viaja en el tiempo y sobrevive al bombardeo de Dresde. Vonnegut escribió la novela antibélica más original y triste.",
