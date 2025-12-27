@@ -503,7 +503,7 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
           transform: isPressed ? 'scale(0.9)' : 'scale(1)',
           transition: 'transform 150ms ease'
         }}>
-          {listStatus === 'reading' ? 'â—' : listStatus === 'read' ? 'âœ“' : listStatus === 'want' ? 'â—‹' : 'â˜…'}
+          {listStatus === 'reading' ? 'â—' : listStatus === 'read' ? '✨“' : listStatus === 'want' ? 'â—‹' : 'â˜…'}
         </div>
       )}
     </div>
@@ -587,7 +587,7 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
           letterSpacing: '1px',
           textTransform: 'uppercase'
         }}>
-          âœ¨ Tu libro de hoy
+          ✨ Tu libro de hoy
         </span>
       </div>
       
@@ -666,7 +666,7 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
                 color: t.accent,
                 fontWeight: 600
               }}>
-                âœ¨ {hook.experience}
+                ✨ {hook.experience}
               </span>
             )}
             {hook.themes?.slice(0, 2).map(theme => (
@@ -1015,7 +1015,7 @@ const SanctuaryButton = ({ onExit, theme }) => {
       onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '0.8'; }}
       title={COPY.sanctuary.exit}
     >
-      âœ•
+      ✕
     </button>
   );
 };
@@ -1057,7 +1057,7 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
               fontWeight: 500
             }}
           >
-            âœ• Ver todo
+            ✕ Ver todo
           </button>
         )}
       </div>
@@ -1200,7 +1200,7 @@ const CollectionHeader = ({ collection, onClear, theme }) => {
                 cursor: 'pointer'
               }}
             >
-              â† Volver a biblioteca
+              ← Volver a biblioteca
             </button>
           </div>
         </div>
@@ -1256,7 +1256,7 @@ const SavedView = ({ books, lists, onBookClick, theme, getListStatus }) => {
       )}
       {savedBooks.read.length > 0 && (
         <Shelf 
-          title={`âœ“ ${COPY.saved.read} (${savedBooks.read.length})`}
+          title={`✨“ ${COPY.saved.read} (${savedBooks.read.length})`}
           books={savedBooks.read}
           onBookClick={onBookClick}
           theme={theme}
@@ -1844,7 +1844,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             onMouseEnter={e => { e.target.style.background = t.bg.tertiary; e.target.style.transform = 'scale(1.1)'; }}
             onMouseLeave={e => { e.target.style.background = t.glass?.bg || t.bg.tertiary; e.target.style.transform = 'scale(1)'; }}
           >
-            âœ•
+            ✕
           </button>
           
           <div style={{ display: 'flex', gap: '20px' }}>
@@ -2024,7 +2024,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                     e.target.style.color = t.accent;
                   }}
                 >
-                  âœ¨ {bookHook.experience}
+                  ✨ {bookHook.experience}
                 </button>
               )}
             </div>
@@ -2142,7 +2142,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                 color: t.text.tertiary
               }}>
                 {experience && (
-                  <span>âœ¨ {experience}</span>
+                  <span>✨ {experience}</span>
                 )}
                 {bookType && (
                   <span style={{ color: t.accent }}>ðŸ“š {bookType}</span>
@@ -2181,7 +2181,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                   fontWeight: 500
                 }}
               >
-                {synopsisExpanded ? 'â† Ver menos' : 'Ver más â†’'}
+                {synopsisExpanded ? '← Ver menos' : 'Ver más ←’'}
               </button>
             )}
           </div>
@@ -2240,7 +2240,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
               theme={t}
               style={{ flex: 1 }}
             >
-              {currentList === 'read' ? 'âœ“ Leído' : COPY.alreadyRead}
+              {currentList === 'read' ? '✨“ Leído' : COPY.alreadyRead}
             </ActionButton>
           </div>
         </div>
@@ -2426,7 +2426,7 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
               alignItems: 'center',
               justifyContent: 'center',
               transition: 'all 150ms ease'
-            }}>âœ•</button>
+            }}>✕</button>
           </div>
           
           {/* Tabs con glass */}
@@ -2697,7 +2697,7 @@ const StatsModal = ({ books, onClose, theme }) => {
           <button onClick={onClose} style={{ 
             background: 'none', border: 'none', 
             color: t.text.tertiary, fontSize: '20px', cursor: 'pointer' 
-          }}>âœ•</button>
+          }}>✕</button>
         </div>
         
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '24px' }}>
@@ -2827,7 +2827,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
               color: t.text.secondary, fontSize: '16px', cursor: 'pointer',
               width: '32px', height: '32px', borderRadius: '50%',
               display: 'flex', alignItems: 'center', justifyContent: 'center'
-            }}>âœ•</button>
+            }}>✕</button>
           </div>
         </div>
         
@@ -3213,10 +3213,10 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
                 }}
               >
                 <span style={{ fontSize: '12px', color: t.accent, fontWeight: 600, textTransform: 'capitalize' }}>
-                  âœ¨ {experience}
+                  ✨ {experience}
                 </span>
                 <span style={{ fontSize: '11px', color: t.text.muted }}>({expBooks.length})</span>
-                {experience !== 'otros' && <span style={{ fontSize: '14px', color: t.text.muted, marginLeft: 'auto' }}>â€º</span>}
+                {experience !== 'otros' && <span style={{ fontSize: '14px', color: t.text.muted, marginLeft: 'auto' }}>"º</span>}
               </div>
               
               {/* Scroll horizontal de covers */}
@@ -3298,7 +3298,7 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
     épico: 'âš”ï¸', monumental: 'ðŸ›ï¸', absorbente: 'ðŸŒ€', hipnótico: 'ðŸ‘ï¸',
     tenso: 'ðŸ˜¬', vertiginoso: 'ðŸŽ¢', brutal: 'ðŸ’€', desgarrador: 'ðŸ˜¢',
     conmovedor: 'ðŸ¥º', íntimo: 'ðŸ’', reflexivo: 'ðŸ¤”', filosófico: 'ðŸ§ ',
-    sardónico: 'ðŸ˜', irónico: 'ðŸŽ', divertido: 'ðŸ˜„', luminoso: 'â˜€ï¸',
+    sardónico: 'ðŸ˜', irónico: 'ðŸŽ', divertido: 'ðŸ˜„', luminoso: '☀️ï¸',
     onírico: 'ðŸŒ™', misterioso: 'ðŸ”®', aterrador: 'ðŸ˜±', inquietante: 'ðŸ‘»',
     agridulce: 'ðŸ‹', contemplativo: 'ðŸ§˜', sombrío: 'ðŸŒ‘', visceral: 'ðŸ’¥'
   };
@@ -3382,7 +3382,7 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
           background: t.gradient?.subtle || 'transparent'
         }}>
           <span style={{ fontSize: '52px', marginBottom: '12px', display: 'block' }}>
-            {experienceEmojis[experience] || 'âœ¨'}
+            {experienceEmojis[experience] || '✨'}
           </span>
           <h2 style={{
             fontFamily: 'Georgia, serif',
@@ -3846,7 +3846,7 @@ const WIZARD_QUESTIONS = {
   },
 
   // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-  // RAMA: DESCUBRIR âœ¨
+  // RAMA: DESCUBRIR ✨
   // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   discover_type: {
     key: 'discover_type',
@@ -4401,7 +4401,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                 color: t.text.tertiary, fontSize: '20px', cursor: 'pointer',
                 width: '32px', height: '32px', borderRadius: '50%',
                 display: 'flex', alignItems: 'center', justifyContent: 'center'
-              }}>âœ•</button>
+              }}>✕</button>
             </div>
             
             {/* Portada y título */}
@@ -4481,7 +4481,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                       background: t.bg.secondary,
                       borderRadius: '20px', color: t.text.secondary
                     }}>
-                      âœ“ {match}
+                      ✨“ {match}
                     </span>
                   ))}
                 </div>
@@ -4539,7 +4539,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                     cursor: 'pointer'
                   }}
                 >
-                  Otro â†’
+                  Otro ←’
                 </button>
               )}
             </div>
@@ -4570,7 +4570,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                 fontSize: '13px', cursor: 'pointer'
               }}
             >
-              â† Empezar de nuevo
+              ← Empezar de nuevo
             </button>
           </div>
         </div>
@@ -4617,7 +4617,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
               color: t.text.tertiary, fontSize: '13px', cursor: 'pointer',
               display: 'flex', alignItems: 'center', gap: '4px'
             }}>
-              â† Atrás
+              ← Atrás
             </button>
           ) : <div />}
           <button onClick={onClose} style={{ 
@@ -4625,7 +4625,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
             color: t.text.tertiary, fontSize: '18px', cursor: 'pointer',
             width: '32px', height: '32px', borderRadius: '50%',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
-          }}>âœ•</button>
+          }}>✕</button>
         </div>
         
         {/* Progress visual (camino recorrido) */}
@@ -4712,7 +4712,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                   )}
                 </div>
                 {answers[currentQuestion.key] === option.id && (
-                  <span style={{ color: t.accent, fontSize: '18px' }}>âœ“</span>
+                  <span style={{ color: t.accent, fontSize: '18px' }}>✨“</span>
                 )}
               </div>
             </Touchable>
