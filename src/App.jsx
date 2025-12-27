@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useCallback, useRef, memo } from 'react';
 
 // =============================================================================
-// CONFIGURACIÓN
+// CONFIGURACIÃ“N
 // =============================================================================
 const BOOKS_URL = '/biblioteca_app.json';
 const AUTHORS_URL = '/authors.json';
@@ -16,7 +16,7 @@ const LOAD_MORE_COUNT = 21;
 const THEMES = {
   night: {
     name: 'Nocturno',
-    icon: '☀',
+    icon: '⭐',
     bg: {
       primary: '#1a1917',
       secondary: '#242320',
@@ -56,7 +56,7 @@ const THEMES = {
   },
   day: {
     name: 'Día',
-    icon: '☾',
+    icon: '⭐',
     bg: {
       primary: '#f8f6f1',
       secondary: '#f0ede6',
@@ -503,7 +503,7 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
           transform: isPressed ? 'scale(0.9)' : 'scale(1)',
           transition: 'transform 150ms ease'
         }}>
-          {listStatus === 'reading' ? '◐' : listStatus === 'read' ? '✓' : listStatus === 'want' ? '○' : '★'}
+          {listStatus === 'reading' ? 'â—' : listStatus === 'read' ? 'âœ“' : listStatus === 'want' ? 'â—‹' : 'â˜…'}
         </div>
       )}
     </div>
@@ -587,7 +587,7 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
           letterSpacing: '1px',
           textTransform: 'uppercase'
         }}>
-          ✨ Tu libro de hoy
+          âœ¨ Tu libro de hoy
         </span>
       </div>
       
@@ -666,7 +666,7 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
                 color: t.accent,
                 fontWeight: 600
               }}>
-                ✨ {hook.experience}
+                âœ¨ {hook.experience}
               </span>
             )}
             {hook.themes?.slice(0, 2).map(theme => (
@@ -910,10 +910,10 @@ const BottomNav = ({ activeTab, onTabChange, theme, savedCount }) => {
   
   const tabs = [
     { id: 'library', icon: '📚', label: COPY.tabs.library },
-    { id: 'collections', icon: '📑', label: COPY.tabs.collections },
-    { id: 'recommend', icon: '✨', label: COPY.tabs.recommend },
-    { id: 'saved', icon: '♡', label: COPY.tabs.saved, badge: savedCount },
-    { id: 'authors', icon: '👤', label: COPY.tabs.authors },
+    { id: 'collections', icon: '📚', label: COPY.tabs.collections },
+    { id: 'recommend', icon: '⭐', label: COPY.tabs.recommend },
+    { id: 'saved', icon: '⭐', label: COPY.tabs.saved, badge: savedCount },
+    { id: 'authors', icon: '📚', label: COPY.tabs.authors },
   ];
   
   return (
@@ -1015,7 +1015,7 @@ const SanctuaryButton = ({ onExit, theme }) => {
       onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '0.8'; }}
       title={COPY.sanctuary.exit}
     >
-      ✕
+      âœ•
     </button>
   );
 };
@@ -1057,7 +1057,7 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
               fontWeight: 500
             }}
           >
-            ✕ Ver todo
+            âœ• Ver todo
           </button>
         )}
       </div>
@@ -1200,7 +1200,7 @@ const CollectionHeader = ({ collection, onClear, theme }) => {
                 cursor: 'pointer'
               }}
             >
-              ← Volver a biblioteca
+              â† Volver a biblioteca
             </button>
           </div>
         </div>
@@ -1227,7 +1227,7 @@ const SavedView = ({ books, lists, onBookClick, theme, getListStatus }) => {
   if (totalSaved === 0) {
     return (
       <div style={{ textAlign: 'center', padding: '80px 24px' }}>
-        <div style={{ fontSize: '48px', marginBottom: '16px', opacity: 0.5 }}>♡</div>
+        <div style={{ fontSize: '48px', marginBottom: '16px', opacity: 0.5 }}>â™¡</div>
         <p style={{ fontSize: '18px', color: t.text.secondary, marginBottom: '8px' }}>{COPY.saved.empty}</p>
         <p style={{ fontSize: '14px', color: t.text.tertiary }}>{COPY.saved.emptyHint}</p>
       </div>
@@ -1238,7 +1238,7 @@ const SavedView = ({ books, lists, onBookClick, theme, getListStatus }) => {
     <div>
       {savedBooks.reading.length > 0 && (
         <Shelf 
-          title={`◐ ${COPY.saved.reading} (${savedBooks.reading.length})`}
+          title={`â— ${COPY.saved.reading} (${savedBooks.reading.length})`}
           books={savedBooks.reading}
           onBookClick={onBookClick}
           theme={theme}
@@ -1247,7 +1247,7 @@ const SavedView = ({ books, lists, onBookClick, theme, getListStatus }) => {
       )}
       {savedBooks.want.length > 0 && (
         <Shelf 
-          title={`○ ${COPY.saved.want} (${savedBooks.want.length})`}
+          title={`â—‹ ${COPY.saved.want} (${savedBooks.want.length})`}
           books={savedBooks.want}
           onBookClick={onBookClick}
           theme={theme}
@@ -1256,7 +1256,7 @@ const SavedView = ({ books, lists, onBookClick, theme, getListStatus }) => {
       )}
       {savedBooks.read.length > 0 && (
         <Shelf 
-          title={`✓ ${COPY.saved.read} (${savedBooks.read.length})`}
+          title={`âœ“ ${COPY.saved.read} (${savedBooks.read.length})`}
           books={savedBooks.read}
           onBookClick={onBookClick}
           theme={theme}
@@ -1351,7 +1351,7 @@ const AuthorsView = ({ books, authorsData, onAuthorClick, theme }) => {
         {data && (
           <>
             <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '8px' }}>
-              {data.years} · {data.nationality}
+              {data.years} Â· {data.nationality}
             </p>
             <p style={{ 
               fontSize: '13px', 
@@ -1500,125 +1500,74 @@ const AuthorsView = ({ books, authorsData, onAuthorClick, theme }) => {
 const CollectionsView = ({ collections, books, onCollectionClick, theme }) => {
   const t = THEMES[theme];
   
-  // Contar libros por colección
   const getCollectionCount = (collection) => {
-    const criteria = collection.criteria;
-    return books.filter(book => {
-      const authors = book.a || book.authors || [];
-      const awards = book.aw || book.awards || [];
-      const vibes = book.v || book.vibes || [];
-      const series = book.s || book.series;
-      const pages = book.pg || book.pages || 300;
-      const difficulty = book.d || book.difficulty || 'medio';
-      
-      if (criteria.authors && criteria.authors.some(a => authors.includes(a))) return true;
-      if (criteria.awards && criteria.awards.some(a => awards.some(aw => aw.includes(a)))) return true;
-      if (criteria.vibes && criteria.vibes.some(v => vibes.includes(v))) return true;
-      if (criteria.series && series === criteria.series) return true;
-      if (criteria.difficulty && difficulty === criteria.difficulty) {
-        if (criteria.maxPages && pages > criteria.maxPages) return false;
-        return true;
-      }
-      if (criteria.maxPages && !criteria.difficulty && pages <= criteria.maxPages) return true;
-      if (criteria.minPages && pages >= criteria.minPages) return true;
-      
-      return false;
-    }).length;
-  };
-  
-  // Agrupar colecciones por tipo
-  const grouped = {
-    regions: collections.filter(c => ['🇫🇷', '🇺🇸', '🇪🇸', '🇷🇺', '🇯🇵', '🇮🇹', '🇬🇧'].includes(c.emoji)),
-    awards: collections.filter(c => ['🏆', '📚', '🎖️'].includes(c.emoji)),
-    genres: collections.filter(c => ['🔍', '✨', '🏛️', '🚀', '📝', '😄'].includes(c.emoji)),
-    series: collections.filter(c => ['🥸', '🕵️', '🦁'].includes(c.emoji)),
-    difficulty: collections.filter(c => ['☀️', '🧠', '⚡', '📖'].includes(c.emoji))
-  };
-  
-  const Section = ({ title, items }) => {
-    if (!items || items.length === 0) return null;
-    return (
-      <section style={{ marginBottom: '32px' }}>
-        <h2 style={{ 
-          fontFamily: 'Georgia, serif', 
-          fontSize: '16px', 
-          color: t.text.tertiary,
-          marginBottom: '16px',
-          textTransform: 'uppercase',
-          letterSpacing: '1px'
-        }}>
-          {title}
-        </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
-          {items.map(collection => {
-            const count = getCollectionCount(collection);
-            if (count === 0) return null;
-            return (
-              <div
-                key={collection.id}
-                onClick={() => onCollectionClick(collection)}
-                style={{
-                  padding: '16px',
-                  borderRadius: '12px',
-                  background: t.bg.secondary,
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                  border: `1px solid ${t.border.subtle}`
-                }}
-                onMouseEnter={e => { 
-                  e.currentTarget.style.background = t.bg.tertiary;
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={e => { 
-                  e.currentTarget.style.background = t.bg.secondary;
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <span style={{ fontSize: '28px' }}>{collection.emoji}</span>
-                  <div style={{ flex: 1 }}>
-                    <h3 style={{ 
-                      fontFamily: 'Georgia, serif', 
-                      fontSize: '16px', 
-                      fontWeight: 600, 
-                      color: t.text.primary,
-                      marginBottom: '2px'
-                    }}>
-                      {collection.title}
-                    </h3>
-                    <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '8px' }}>
-                      {collection.subtitle}
-                    </p>
-                    <span style={{ 
-                      fontSize: '12px', 
-                      color: t.accent,
-                      background: t.accentMuted,
-                      padding: '2px 8px',
-                      borderRadius: '10px'
-                    }}>
-                      {count} {count === 1 ? 'libro' : 'libros'}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-    );
+    if (collection.bookIds && collection.bookIds.length > 0) {
+      return collection.bookIds.filter(id => books.some(b => b && b.id === id)).length;
+    }
+    return collection.count || 0;
   };
   
   return (
     <div>
       <p style={{ fontSize: '14px', color: t.text.secondary, marginBottom: '24px', lineHeight: 1.6 }}>
-        Explora tu biblioteca organizada en colecciones temáticas, por autor, premios, género y más.
+        Explora tu biblioteca organizada en colecciones tematicas.
       </p>
       
-      <Section title="Por Región" items={grouped.regions} />
-      <Section title="Premios Literarios" items={grouped.awards} />
-      <Section title="Géneros y Estilos" items={grouped.genres} />
-      <Section title="Series" items={grouped.series} />
-      <Section title="Por Dificultad y Extensión" items={grouped.difficulty} />
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
+        {collections.map(collection => {
+          const count = getCollectionCount(collection);
+          if (count === 0) return null;
+          return (
+            <div
+              key={collection.id}
+              onClick={() => onCollectionClick(collection)}
+              style={{
+                padding: '16px',
+                borderRadius: '12px',
+                background: t.bg.secondary,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                border: `1px solid ${t.border.subtle}`
+              }}
+              onMouseEnter={e => { 
+                e.currentTarget.style.background = t.bg.tertiary;
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={e => { 
+                e.currentTarget.style.background = t.bg.secondary;
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                <span style={{ fontSize: '28px' }}>{collection.emoji || '📚'}</span>
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ 
+                    fontFamily: 'Georgia, serif', 
+                    fontSize: '16px', 
+                    fontWeight: 600, 
+                    color: t.text.primary,
+                    marginBottom: '2px'
+                  }}>
+                    {collection.title}
+                  </h3>
+                  <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '8px' }}>
+                    {collection.subtitle}
+                  </p>
+                  <span style={{ 
+                    fontSize: '12px', 
+                    color: t.accent,
+                    background: t.accentMuted,
+                    padding: '2px 8px',
+                    borderRadius: '10px'
+                  }}>
+                    {count} {count === 1 ? 'libro' : 'libros'}
+                  </span>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -1629,143 +1578,43 @@ const CollectionsView = ({ collections, books, onCollectionClick, theme }) => {
 const CollectionDetailView = ({ collection, books, onBookClick, onBack, theme, getListStatus }) => {
   const t = THEMES[theme];
   
-  // Filtrar libros según criterios
   const filteredBooks = useMemo(() => {
-    const criteria = collection.criteria;
-    return books.filter(book => {
-      const authors = book.a || book.authors || [];
-      const awards = book.aw || book.awards || [];
-      const vibes = book.v || book.vibes || [];
-      const series = book.s || book.series;
-      const pages = book.pg || book.pages || 300;
-      const difficulty = book.d || book.difficulty || 'medio';
-      
-      if (criteria.authors && criteria.authors.some(a => authors.includes(a))) return true;
-      if (criteria.awards && criteria.awards.some(a => awards.some(aw => aw.includes(a)))) return true;
-      if (criteria.vibes && criteria.vibes.some(v => vibes.includes(v))) return true;
-      if (criteria.series && series === criteria.series) return true;
-      if (criteria.difficulty && difficulty === criteria.difficulty) {
-        if (criteria.maxPages && pages > criteria.maxPages) return false;
-        return true;
-      }
-      if (criteria.maxPages && !criteria.difficulty && pages <= criteria.maxPages) return true;
-      if (criteria.minPages && pages >= criteria.minPages) return true;
-      
-      return false;
-    });
+    if (collection.bookIds && collection.bookIds.length > 0) {
+      return books.filter(book => book && collection.bookIds.includes(book.id));
+    }
+    return [];
   }, [collection, books]);
   
   return (
     <div>
-      {/* Header */}
       <div style={{ marginBottom: '24px' }}>
-        <button
-          onClick={onBack}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: t.accent,
-            fontSize: '14px',
-            cursor: 'pointer',
-            padding: '0',
-            marginBottom: '16px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '4px'
-          }}
-        >
-          ← Volver a colecciones
+        <button onClick={onBack} style={{ background: 'none', border: 'none', color: t.accent, fontSize: '14px', cursor: 'pointer', padding: '0', marginBottom: '16px' }}>
+          Volver a colecciones
         </button>
-        
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '12px' }}>
           <span style={{ fontSize: '48px' }}>{collection.emoji}</span>
           <div>
-            <h1 style={{ 
-              fontFamily: 'Georgia, serif', 
-              fontSize: '28px', 
-              fontWeight: 600, 
-              color: t.text.primary,
-              marginBottom: '4px'
-            }}>
-              {collection.title}
-            </h1>
-            <p style={{ fontSize: '14px', color: t.text.tertiary }}>
-              {collection.subtitle} · {filteredBooks.length} libros
-            </p>
+            <h1 style={{ fontFamily: 'Georgia, serif', fontSize: '28px', fontWeight: 600, color: t.text.primary, marginBottom: '4px' }}>{collection.title}</h1>
+            <p style={{ fontSize: '14px', color: t.text.tertiary }}>{collection.subtitle} - {filteredBooks.length} libros</p>
           </div>
         </div>
-        
-        <p style={{ fontSize: '15px', color: t.text.secondary, lineHeight: 1.6 }}>
-          {collection.description}
-        </p>
+        <p style={{ fontSize: '15px', color: t.text.secondary, lineHeight: 1.6 }}>{collection.description}</p>
       </div>
-      
-      {/* Grid de libros */}
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', 
-        gap: '16px' 
-      }}>
-        {filteredBooks.map(book => {
-          const listStatus = getListStatus(book.id);
-          return (
-            <div
-              key={book.id}
-              onClick={() => onBookClick(book)}
-              style={{ cursor: 'pointer', position: 'relative' }}
-            >
-              <img
-                src={`/portadas/${book.id}.jpg`}
-                alt={book.t || book.title}
-                style={{
-                  width: '100%',
-                  aspectRatio: '2/3',
-                  objectFit: 'cover',
-                  borderRadius: '8px',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
-                }}
-                onError={e => { e.target.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 3"><rect fill="%23333" width="2" height="3"/></svg>'; }}
-              />
-              {listStatus && (
-                <div style={{
-                  position: 'absolute',
-                  top: '6px',
-                  right: '6px',
-                  width: '24px',
-                  height: '24px',
-                  borderRadius: '50%',
-                  background: t.accent,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '12px'
-                }}>
-                  {listStatus === 'want' ? '♡' : listStatus === 'reading' ? '📖' : '✓'}
-                </div>
-              )}
-              <p style={{
-                fontSize: '12px',
-                color: t.text.secondary,
-                marginTop: '8px',
-                lineHeight: 1.3,
-                display: '-webkit-box',
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden'
-              }}>
-                {book.t || book.title}
-              </p>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '16px' }}>
+        {filteredBooks.map(book => (
+          <div key={book.id} onClick={() => onBookClick(book)} style={{ cursor: 'pointer' }}>
+            <div style={{ aspectRatio: '2/3', borderRadius: '8px', overflow: 'hidden', marginBottom: '8px', background: t.bg.tertiary }}>
+              <img src={book.c || `/portadas/${book.id}.jpg`} alt={book.t} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => e.target.style.display = 'none'} />
             </div>
-          );
-        })}
+            <h4 style={{ fontSize: '13px', fontWeight: 500, color: t.text.primary, marginBottom: '2px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{book.t}</h4>
+            <p style={{ fontSize: '11px', color: t.text.tertiary, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{(book.a || [])[0]}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-// =============================================================================
-// COMPONENTE: RelatedBooksSection - Libros relacionados inline
-// =============================================================================
 const RelatedBooksSection = memo(({ currentBook, books, hooks, onBookClick, theme, t }) => {
   const currentHook = hooks[String(currentBook.id)];
   
@@ -1995,7 +1844,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             onMouseEnter={e => { e.target.style.background = t.bg.tertiary; e.target.style.transform = 'scale(1.1)'; }}
             onMouseLeave={e => { e.target.style.background = t.glass?.bg || t.bg.tertiary; e.target.style.transform = 'scale(1)'; }}
           >
-            ✕
+            âœ•
           </button>
           
           <div style={{ display: 'flex', gap: '20px' }}>
@@ -2016,7 +1865,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                   width: '100%', height: '100%', 
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   color: t.text.muted, fontSize: '32px'
-                }}>📖</div>
+                }}>ðŸ“–</div>
               )}
             </div>
             
@@ -2052,7 +1901,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
               </p>
               {series && (
                 <p style={{ fontSize: '12px', color: t.text.tertiary }}>
-                  {series} · #{seriesIndex}
+                  {series} Â· #{seriesIndex}
                 </p>
               )}
               
@@ -2066,7 +1915,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                       background: t.accentMuted,
                       color: t.accent
                     }}>
-                      ★ {award}
+                      â˜… {award}
                     </span>
                   ))}
                 </div>
@@ -2087,7 +1936,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           </div>
           <div>
             <span style={{ fontSize: '22px', fontWeight: 500, color: t.text.primary }}>
-              {difficulty === 'ligero' ? '○' : difficulty === 'denso' ? '●' : '◐'}
+              {difficulty === 'ligero' ? 'â—‹' : difficulty === 'denso' ? 'â—' : 'â—'}
             </span>
             <span style={{ fontSize: '12px', color: t.text.tertiary, marginLeft: '4px' }}>{difficulty}</span>
           </div>
@@ -2145,7 +1994,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                   background: t.bg.tertiary,
                   color: t.text.secondary
                 }}>
-                  👤 {bookHook.perfect_for}
+                  ðŸ‘¤ {bookHook.perfect_for}
                 </span>
               )}
               
@@ -2175,7 +2024,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                     e.target.style.color = t.accent;
                   }}
                 >
-                  ✨ {bookHook.experience}
+                  âœ¨ {bookHook.experience}
                 </button>
               )}
             </div>
@@ -2188,7 +2037,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                 margin: 0,
                 lineHeight: 1.5
               }}>
-                💡 {bookHook.why_matters}
+                ðŸ’¡ {bookHook.why_matters}
               </p>
             )}
             
@@ -2279,7 +2128,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                 color: t.text.tertiary,
                 marginTop: '8px'
               }}>
-                👤 <strong style={{ color: t.text.secondary }}>Ideal para:</strong> {idealFor}
+                ðŸ‘¤ <strong style={{ color: t.text.secondary }}>Ideal para:</strong> {idealFor}
               </p>
             )}
             
@@ -2293,10 +2142,10 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                 color: t.text.tertiary
               }}>
                 {experience && (
-                  <span>✨ {experience}</span>
+                  <span>âœ¨ {experience}</span>
                 )}
                 {bookType && (
-                  <span style={{ color: t.accent }}>📚 {bookType}</span>
+                  <span style={{ color: t.accent }}>ðŸ“š {bookType}</span>
                 )}
               </div>
             )}
@@ -2332,7 +2181,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                   fontWeight: 500
                 }}
               >
-                {synopsisExpanded ? '← Ver menos' : 'Ver más →'}
+                {synopsisExpanded ? 'â† Ver menos' : 'Ver más â†’'}
               </button>
             )}
           </div>
@@ -2369,7 +2218,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             isActive={currentList === 'reading'}
             theme={t}
           >
-            {currentList === 'reading' ? '◐ Leyendo' : COPY.readNow}
+            {currentList === 'reading' ? 'â— Leyendo' : COPY.readNow}
           </ActionButton>
           
           <div style={{ display: 'flex', gap: '12px' }}>
@@ -2381,7 +2230,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
               theme={t}
               style={{ flex: 1 }}
             >
-              {currentList === 'want' ? '○ En lista' : COPY.readLater}
+              {currentList === 'want' ? 'â—‹ En lista' : COPY.readLater}
             </ActionButton>
             <ActionButton 
               onClick={() => { handleListClick('read'); haptic.success(); }}
@@ -2391,7 +2240,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
               theme={t}
               style={{ flex: 1 }}
             >
-              {currentList === 'read' ? '✓ Leído' : COPY.alreadyRead}
+              {currentList === 'read' ? 'âœ“ Leído' : COPY.alreadyRead}
             </ActionButton>
           </div>
         </div>
@@ -2408,34 +2257,34 @@ BookModal.displayName = 'BookModal';
 // Definición de filtros con alma
 const SOUL_FILTERS = {
   experience: {
-    label: '¿Qué quieres sentir?',
+    label: 'Â¿Qué quieres sentir?',
     options: [
-      { id: 'cry', icon: '💔', label: 'Me hará llorar', moods: ['emotivo', 'íntimo'], vibes: ['dramático'] },
-      { id: 'grip', icon: '🔥', label: 'No podré soltarlo', moods: ['tenso', 'inquietante'], vibes: ['intriga', 'policial', 'psicológico'] },
-      { id: 'think', icon: '🧠', label: 'Me hará pensar', moods: ['reflexivo'], vibes: ['ensayo', 'filosófico'] },
-      { id: 'smile', icon: '😂', label: 'Me hará sonreír', moods: ['ligero', 'entretenido', 'irónico'], vibes: ['humor'] },
-      { id: 'escape', icon: '🌌', label: 'Otro mundo', moods: ['inmersivo', 'imaginativo', 'especulativo'], vibes: ['fantasía', 'ciencia ficción'] }
+      { id: 'cry', icon: '📚', label: 'Me hará llorar', moods: ['emotivo', 'íntimo'], vibes: ['dramático'] },
+      { id: 'grip', icon: '📚', label: 'No podré soltarlo', moods: ['tenso', 'inquietante'], vibes: ['intriga', 'policial', 'psicológico'] },
+      { id: 'think', icon: '📚', label: 'Me hará pensar', moods: ['reflexivo'], vibes: ['ensayo', 'filosófico'] },
+      { id: 'smile', icon: '📚', label: 'Me hará sonreír', moods: ['ligero', 'entretenido', 'irónico'], vibes: ['humor'] },
+      { id: 'escape', icon: '📚', label: 'Otro mundo', moods: ['inmersivo', 'imaginativo', 'especulativo'], vibes: ['fantasía', 'ciencia ficción'] }
     ]
   },
   moment: {
-    label: '¿Cuándo lo leerás?',
+    label: 'Â¿Cuándo lo leerás?',
     options: [
-      { id: 'commute', icon: '🚇', label: 'En el metro', maxPages: 250, desc: 'Breve y ágil' },
-      { id: 'weekend', icon: '☕', label: 'Fin de semana', minPages: 200, maxPages: 400, desc: 'Ideal para 2-3 días' },
-      { id: 'vacation', icon: '🏖️', label: 'Vacaciones', moods: ['entretenido', 'inmersivo', 'ligero'], desc: 'Puro disfrute' },
-      { id: 'nights', icon: '🌙', label: 'Noches largas', moods: ['tenso', 'inmersivo', 'inquietante'], desc: 'Que no te deje dormir' },
+      { id: 'commute', icon: '📚', label: 'En el metro', maxPages: 250, desc: 'Breve y ágil' },
+      { id: 'weekend', icon: '⭐', label: 'Fin de semana', minPages: 200, maxPages: 400, desc: 'Ideal para 2-3 días' },
+      { id: 'vacation', icon: '📚', label: 'Vacaciones', moods: ['entretenido', 'inmersivo', 'ligero'], desc: 'Puro disfrute' },
+      { id: 'nights', icon: '📚', label: 'Noches largas', moods: ['tenso', 'inmersivo', 'inquietante'], desc: 'Que no te deje dormir' },
       { id: 'epic', icon: '📚', label: 'Proyecto épico', minPages: 500, desc: 'Más de 500 páginas' }
     ]
   },
   theme: {
-    label: '¿Qué te interesa?',
+    label: 'Â¿Qué te interesa?',
     options: [
-      { id: 'identity', icon: '🪞', label: 'Identidad', vibes: ['psicológico', 'memorias'], keywords: ['memoria', 'identidad'] },
-      { id: 'love', icon: '❤️', label: 'Amor', vibes: ['romántico', 'erótico'], moods: ['emotivo', 'íntimo'] },
-      { id: 'power', icon: '⚔️', label: 'Poder', vibes: ['histórico', 'político', 'historia'] },
-      { id: 'crime', icon: '🔍', label: 'Crimen', vibes: ['policial', 'intriga', 'noir'] },
-      { id: 'worlds', icon: '✨', label: 'Otros mundos', vibes: ['fantasía', 'ciencia ficción', 'aventura'] },
-      { id: 'real', icon: '📰', label: 'Vida real', vibes: ['crónica', 'memorias', 'ensayo', 'divulgación'] }
+      { id: 'identity', icon: '📚', label: 'Identidad', vibes: ['psicológico', 'memorias'], keywords: ['memoria', 'identidad'] },
+      { id: 'love', icon: '⭐', label: 'Amor', vibes: ['romántico', 'erótico'], moods: ['emotivo', 'íntimo'] },
+      { id: 'power', icon: '⭐', label: 'Poder', vibes: ['histórico', 'político', 'historia'] },
+      { id: 'crime', icon: '📚', label: 'Crimen', vibes: ['policial', 'intriga', 'noir'] },
+      { id: 'worlds', icon: '⭐', label: 'Otros mundos', vibes: ['fantasía', 'ciencia ficción', 'aventura'] },
+      { id: 'real', icon: '📚', label: 'Vida real', vibes: ['crónica', 'memorias', 'ensayo', 'divulgación'] }
     ]
   }
 };
@@ -2503,9 +2352,9 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
       const th = SOUL_FILTERS.theme.options.find(o => o.id === filters.theme);
       if (th) parts.push(`${th.icon} ${th.label}`);
     }
-    if (filters.difficulty) parts.push(`⚡ ${filters.difficulty}`);
-    if (filters.hasAwards) parts.push('🏆 premiados');
-    return parts.join(' · ');
+    if (filters.difficulty) parts.push(`âš¡ ${filters.difficulty}`);
+    if (filters.hasAwards) parts.push('ðŸ† premiados');
+    return parts.join(' Â· ');
   };
   
   return (
@@ -2577,7 +2426,7 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
               alignItems: 'center',
               justifyContent: 'center',
               transition: 'all 150ms ease'
-            }}>✕</button>
+            }}>âœ•</button>
           </div>
           
           {/* Tabs con glass */}
@@ -2705,9 +2554,9 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
                 </p>
                 <div style={{ display: 'flex', gap: '8px' }}>
                   {[
-                    { id: 'ligero', icon: '○', label: 'Ligero' },
-                    { id: 'medio', icon: '◐', label: 'Medio' },
-                    { id: 'denso', icon: '●', label: 'Denso' }
+                    { id: 'ligero', icon: '⭐', label: 'Ligero' },
+                    { id: 'medio', icon: '⭐', label: 'Medio' },
+                    { id: 'denso', icon: '⭐', label: 'Denso' }
                   ].map(d => (
                     <ChipButton
                       key={d.id}
@@ -2745,7 +2594,7 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
                   active={filters.hasAwards}
                   onClick={() => setFilters(f => ({ ...f, hasAwards: !f.hasAwards }))}
                 >
-                  🏆 Solo premiados
+                  ðŸ† Solo premiados
                 </ChipButton>
               </div>
             </div>
@@ -2848,7 +2697,7 @@ const StatsModal = ({ books, onClose, theme }) => {
           <button onClick={onClose} style={{ 
             background: 'none', border: 'none', 
             color: t.text.tertiary, fontSize: '20px', cursor: 'pointer' 
-          }}>✕</button>
+          }}>âœ•</button>
         </div>
         
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '24px' }}>
@@ -2969,7 +2818,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
               </h2>
               {hasData && data.years && (
                 <p style={{ fontSize: '14px', color: t.text.tertiary }}>
-                  {data.years} · {data.nationality}
+                  {data.years} Â· {data.nationality}
                 </p>
               )}
             </div>
@@ -2978,7 +2827,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
               color: t.text.secondary, fontSize: '16px', cursor: 'pointer',
               width: '32px', height: '32px', borderRadius: '50%',
               display: 'flex', alignItems: 'center', justifyContent: 'center'
-            }}>✕</button>
+            }}>âœ•</button>
           </div>
         </div>
         
@@ -3050,7 +2899,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
                         background: t.bg.tertiary,
                         color: t.text.secondary
                       }}>
-                        ★ {award}
+                        â˜… {award}
                       </span>
                     ))}
                   </div>
@@ -3257,11 +3106,11 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
   const themeEmojis = {
     amor: '❤️', muerte: '💀', familia: '👨‍👩‍👧', memoria: '🧠', identidad: '🪞',
     guerra: '⚔️', poder: '👑', soledad: '🌙', viaje: '🧭', tiempo: '⏳',
-    naturaleza: '🌿', arte: '🎨', música: '🎵', política: '🏛️', ciencia: '🔬',
-    religión: '✝️', locura: '🌀', venganza: '🔥', infancia: '🧒', vejez: '👴',
-    amistad: '🤝', traición: '🗡️', libertad: '🕊️', supervivencia: '🏕️', obsesión: '👁️',
-    pérdida: '🥀', redención: '🌅', destino: '⭐', violencia: '💥', escritura: '✍️',
-    América: '🇺🇸', España: '🇪🇸', juventud: '🌱', historia: '📜', vida: '🌻'
+    naturaleza: '🌿', arte: '🎨', musica: '🎵', politica: '🏛️', ciencia: '🔬',
+    religion: '✝️', locura: '🌀', venganza: '🔥', infancia: '🧒', vejez: '👴',
+    amistad: '🤝', traicion: '🗡️', libertad: '🕊️', supervivencia: '🏕️', obsesion: '👁️',
+    perdida: '🥀', redencion: '🌅', destino: '⭐', violencia: '💥', escritura: '✍️',
+    America: '🇺🇸', Espana: '🇪🇸', juventud: '🌱', historia: '📜', vida: '🌻'
   };
   
   // Encontrar libros con este tema
@@ -3332,7 +3181,7 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
           background: t.gradient?.subtle || 'transparent'
         }}>
           <span style={{ fontSize: '44px', marginBottom: '8px', display: 'block' }}>
-            {themeEmojis[themeName] || '📚'}
+            {themeEmojis[themeName] || 'ðŸ“š'}
           </span>
           <h2 style={{
             fontFamily: 'Georgia, serif',
@@ -3364,10 +3213,10 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
                 }}
               >
                 <span style={{ fontSize: '12px', color: t.accent, fontWeight: 600, textTransform: 'capitalize' }}>
-                  ✨ {experience}
+                  âœ¨ {experience}
                 </span>
                 <span style={{ fontSize: '11px', color: t.text.muted }}>({expBooks.length})</span>
-                {experience !== 'otros' && <span style={{ fontSize: '14px', color: t.text.muted, marginLeft: 'auto' }}>›</span>}
+                {experience !== 'otros' && <span style={{ fontSize: '14px', color: t.text.muted, marginLeft: 'auto' }}>â€º</span>}
               </div>
               
               {/* Scroll horizontal de covers */}
@@ -3445,13 +3294,13 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
   }, []);
   
   const experienceEmojis = {
-    devastador: '💔', perturbador: '😰', melancólico: '🌧️', nostálgico: '🕰️',
-    épico: '⚔️', monumental: '🏛️', absorbente: '🌀', hipnótico: '👁️',
-    tenso: '😬', vertiginoso: '🎢', brutal: '💀', desgarrador: '😢',
-    conmovedor: '🥺', íntimo: '💭', reflexivo: '🤔', filosófico: '🧠',
-    sardónico: '😏', irónico: '🎭', divertido: '😄', luminoso: '☀️',
-    onírico: '🌙', misterioso: '🔮', aterrador: '😱', inquietante: '👻',
-    agridulce: '🍋', contemplativo: '🧘', sombrío: '🌑', visceral: '💥'
+    devastador: 'ðŸ’”', perturbador: 'ðŸ˜°', melancólico: 'ðŸŒ§ï¸', nostálgico: 'ðŸ•°ï¸',
+    épico: 'âš”ï¸', monumental: 'ðŸ›ï¸', absorbente: 'ðŸŒ€', hipnótico: 'ðŸ‘ï¸',
+    tenso: 'ðŸ˜¬', vertiginoso: 'ðŸŽ¢', brutal: 'ðŸ’€', desgarrador: 'ðŸ˜¢',
+    conmovedor: 'ðŸ¥º', íntimo: 'ðŸ’', reflexivo: 'ðŸ¤”', filosófico: 'ðŸ§ ',
+    sardónico: 'ðŸ˜', irónico: 'ðŸŽ', divertido: 'ðŸ˜„', luminoso: 'â˜€ï¸',
+    onírico: 'ðŸŒ™', misterioso: 'ðŸ”®', aterrador: 'ðŸ˜±', inquietante: 'ðŸ‘»',
+    agridulce: 'ðŸ‹', contemplativo: 'ðŸ§˜', sombrío: 'ðŸŒ‘', visceral: 'ðŸ’¥'
   };
   
   const experienceDescriptions = {
@@ -3533,7 +3382,7 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
           background: t.gradient?.subtle || 'transparent'
         }}>
           <span style={{ fontSize: '52px', marginBottom: '12px', display: 'block' }}>
-            {experienceEmojis[experience] || '✨'}
+            {experienceEmojis[experience] || 'âœ¨'}
           </span>
           <h2 style={{
             fontFamily: 'Georgia, serif',
@@ -3622,165 +3471,165 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
 
 // Estructura de preguntas ramificadas
 const WIZARD_QUESTIONS = {
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // NIVEL 1: La Puerta de Entrada
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   root: {
     key: 'root',
-    question: '¿Qué quieres que te dé este libro?',
+    question: 'Â¿Qué quieres que te dé este libro?',
     hint: 'La pregunta fundamental',
     options: [
-      { id: 'feel', icon: '💔', label: 'Sentir', desc: 'Una experiencia emocional', next: 'feel_type' },
-      { id: 'travel', icon: '🌍', label: 'Viajar', desc: 'Transportarme a otro lugar o tiempo', next: 'travel_where' },
-      { id: 'think', icon: '🧠', label: 'Pensar', desc: 'Reflexionar profundamente', next: 'think_about' },
-      { id: 'tension', icon: '⚡', label: 'Tensión', desc: 'Adrenalina, no poder soltarlo', next: 'tension_type' },
-      { id: 'discover', icon: '✨', label: 'Descubrir', desc: 'Algo que me sorprenda', next: 'discover_type' },
-      { id: 'laugh', icon: '🎭', label: 'Reír', desc: 'Pasarlo bien, divertirme', next: 'laugh_type' }
+      { id: 'feel', icon: '📚', label: 'Sentir', desc: 'Una experiencia emocional', next: 'feel_type' },
+      { id: 'travel', icon: '📚', label: 'Viajar', desc: 'Transportarme a otro lugar o tiempo', next: 'travel_where' },
+      { id: 'think', icon: '📚', label: 'Pensar', desc: 'Reflexionar profundamente', next: 'think_about' },
+      { id: 'tension', icon: '⭐', label: 'Tensión', desc: 'Adrenalina, no poder soltarlo', next: 'tension_type' },
+      { id: 'discover', icon: '⭐', label: 'Descubrir', desc: 'Algo que me sorprenda', next: 'discover_type' },
+      { id: 'laugh', icon: '📚', label: 'Reír', desc: 'Pasarlo bien, divertirme', next: 'laugh_type' }
     ]
   },
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // RAMA: SENTIR 💔
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // RAMA: SENTIR ðŸ’”
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   feel_type: {
     key: 'feel_type',
-    question: '¿Qué tipo de impacto emocional buscas?',
+    question: 'Â¿Qué tipo de impacto emocional buscas?',
     hint: 'Sé sincero contigo mismo',
     options: [
-      { id: 'devastate', icon: '💀', label: 'Devastarme', desc: 'Que me destruya (de la mejor manera)', 
+      { id: 'devastate', icon: '📚', label: 'Devastarme', desc: 'Que me destruya (de la mejor manera)', 
         experiences: ['devastador', 'desgarrador', 'brutal'], next: 'devastate_through' },
-      { id: 'move', icon: '🥺', label: 'Conmoverme', desc: 'Que toque mi corazón', 
+      { id: 'move', icon: '📚', label: 'Conmoverme', desc: 'Que toque mi corazón', 
         experiences: ['conmovedor', 'melancólico', 'íntimo'], next: 'move_how' },
-      { id: 'disturb', icon: '😰', label: 'Inquietarme', desc: 'Que me perturbe y me haga pensar', 
+      { id: 'disturb', icon: '📚', label: 'Inquietarme', desc: 'Que me perturbe y me haga pensar', 
         experiences: ['perturbador', 'inquietante', 'sombrío'], next: 'disturb_how' },
-      { id: 'awe', icon: '✨', label: 'Maravillarme', desc: 'Sentir asombro y admiración', 
+      { id: 'awe', icon: '⭐', label: 'Maravillarme', desc: 'Sentir asombro y admiración', 
         experiences: ['épico', 'onírico', 'monumental'], next: 'awe_how' }
     ]
   },
 
   devastate_through: {
     key: 'devastate_through',
-    question: '¿A través de qué quieres ser devastado?',
+    question: 'Â¿A través de qué quieres ser devastado?',
     hint: 'El vehículo del impacto',
     options: [
-      { id: 'tragic_love', icon: '💔', label: 'Amor trágico', desc: 'Amor que destruye o se pierde',
+      { id: 'tragic_love', icon: '📚', label: 'Amor trágico', desc: 'Amor que destruye o se pierde',
         themes: ['amor', 'pérdida', 'traición'], experiences: ['desgarrador', 'devastador'], next: 'time_commitment' },
-      { id: 'broken_family', icon: '👨‍👩‍👧', label: 'Familia rota', desc: 'Disfunción, trauma familiar',
+      { id: 'broken_family', icon: '📚', label: 'Familia rota', desc: 'Disfunción, trauma familiar',
         themes: ['familia', 'trauma', 'padre', 'madre', 'infancia'], experiences: ['devastador'], next: 'time_commitment' },
-      { id: 'war_violence', icon: '⚔️', label: 'Guerra y violencia', desc: 'La humanidad en su peor momento',
+      { id: 'war_violence', icon: '⭐', label: 'Guerra y violencia', desc: 'La humanidad en su peor momento',
         themes: ['guerra', 'violencia', 'supervivencia'], experiences: ['brutal', 'devastador'], next: 'time_commitment' },
-      { id: 'death_loss', icon: '💀', label: 'Muerte y pérdida', desc: 'El duelo, la ausencia',
+      { id: 'death_loss', icon: '📚', label: 'Muerte y pérdida', desc: 'El duelo, la ausencia',
         themes: ['muerte', 'duelo', 'pérdida', 'vejez'], experiences: ['devastador', 'elegíaco'], next: 'time_commitment' }
     ]
   },
 
   move_how: {
     key: 'move_how',
-    question: '¿Qué tipo de historia te conmueve?',
+    question: 'Â¿Qué tipo de historia te conmueve?',
     hint: 'Lo que toca tu corazón',
     options: [
-      { id: 'love_story', icon: '💕', label: 'Historias de amor', desc: 'Romance, conexión',
+      { id: 'love_story', icon: '📚', label: 'Historias de amor', desc: 'Romance, conexión',
         themes: ['amor', 'matrimonio'], experiences: ['conmovedor', 'romántico'], moods: ['emotivo'], next: 'time_commitment' },
-      { id: 'coming_of_age', icon: '🌱', label: 'Crecer', desc: 'Juventud, descubrimiento',
+      { id: 'coming_of_age', icon: '📚', label: 'Crecer', desc: 'Juventud, descubrimiento',
         themes: ['juventud', 'infancia', 'identidad'], experiences: ['nostálgico', 'agridulce'], next: 'time_commitment' },
-      { id: 'friendship', icon: '🤝', label: 'Amistad', desc: 'Vínculos que perduran',
+      { id: 'friendship', icon: '📚', label: 'Amistad', desc: 'Vínculos que perduran',
         themes: ['amistad', 'lealtad'], experiences: ['conmovedor', 'íntimo'], next: 'time_commitment' },
-      { id: 'redemption', icon: '🌅', label: 'Redención', desc: 'Segundas oportunidades',
+      { id: 'redemption', icon: '📚', label: 'Redención', desc: 'Segundas oportunidades',
         themes: ['redención', 'perdón', 'cambio'], experiences: ['conmovedor', 'luminoso'], next: 'time_commitment' }
     ]
   },
 
   disturb_how: {
     key: 'disturb_how',
-    question: '¿Qué tipo de inquietud buscas?',
+    question: 'Â¿Qué tipo de inquietud buscas?',
     hint: 'Lo que te quita el sueño',
     options: [
-      { id: 'psychological', icon: '🧠', label: 'Psicológica', desc: 'La mente bajo presión',
+      { id: 'psychological', icon: '📚', label: 'Psicológica', desc: 'La mente bajo presión',
         themes: ['obsesión', 'locura', 'culpa'], vibes: ['psicológico'], experiences: ['perturbador'], next: 'time_commitment' },
-      { id: 'existential', icon: '🕳️', label: 'Existencial', desc: 'Preguntas sin respuesta',
+      { id: 'existential', icon: '📚', label: 'Existencial', desc: 'Preguntas sin respuesta',
         themes: ['identidad', 'vacío', 'alienación'], experiences: ['perturbador', 'sombrío'], next: 'time_commitment' },
-      { id: 'social', icon: '👁️', label: 'Social', desc: 'Lo que está mal en la sociedad',
+      { id: 'social', icon: '📚', label: 'Social', desc: 'Lo que está mal en la sociedad',
         themes: ['poder', 'violencia', 'injusticia'], experiences: ['perturbador', 'brutal'], next: 'time_commitment' },
-      { id: 'uncanny', icon: '👻', label: 'Lo extraño', desc: 'Algo no está bien aquí',
+      { id: 'uncanny', icon: '📚', label: 'Lo extraño', desc: 'Algo no está bien aquí',
         experiences: ['inquietante', 'onírico'], moods: ['inquietante', 'oscuro'], next: 'time_commitment' }
     ]
   },
 
   awe_how: {
     key: 'awe_how',
-    question: '¿Qué te maravilla?',
+    question: 'Â¿Qué te maravilla?',
     hint: 'Lo sublime',
     options: [
-      { id: 'epic_scale', icon: '🏔️', label: 'Escala épica', desc: 'Historias monumentales',
+      { id: 'epic_scale', icon: '📚', label: 'Escala épica', desc: 'Historias monumentales',
         experiences: ['épico', 'monumental'], themes: ['historia', 'poder'], next: 'time_commitment' },
-      { id: 'beautiful_prose', icon: '✍️', label: 'Prosa hermosa', desc: 'El lenguaje como arte',
+      { id: 'beautiful_prose', icon: '⭐', label: 'Prosa hermosa', desc: 'El lenguaje como arte',
         experiences: ['elegíaco', 'poético'], moods: ['reflexivo'], next: 'time_commitment' },
-      { id: 'imagination', icon: '🌙', label: 'La imaginación', desc: 'Mundos imposibles',
+      { id: 'imagination', icon: '📚', label: 'La imaginación', desc: 'Mundos imposibles',
         experiences: ['onírico', 'fabuloso'], moods: ['imaginativo'], next: 'time_commitment' },
-      { id: 'human_spirit', icon: '🔥', label: 'El espíritu humano', desc: 'Triunfo contra todo',
+      { id: 'human_spirit', icon: '📚', label: 'El espíritu humano', desc: 'Triunfo contra todo',
         themes: ['supervivencia', 'libertad', 'esperanza'], experiences: ['épico', 'luminoso'], next: 'time_commitment' }
     ]
   },
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // RAMA: VIAJAR 🌍
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // RAMA: VIAJAR ðŸŒ
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   travel_where: {
     key: 'travel_where',
-    question: '¿A dónde quieres ir?',
+    question: 'Â¿A dónde quieres ir?',
     hint: 'Tu destino literario',
     options: [
-      { id: 'past', icon: '🏛️', label: 'Al pasado', desc: 'Vivir otra época', 
+      { id: 'past', icon: '📚', label: 'Al pasado', desc: 'Vivir otra época', 
         vibes: ['histórico'], next: 'past_when' },
-      { id: 'impossible', icon: '🚀', label: 'A lo imposible', desc: 'Mundos que no existen', 
+      { id: 'impossible', icon: '📚', label: 'A lo imposible', desc: 'Mundos que no existen', 
         vibes: ['fantasía', 'ciencia ficción', 'especulativo'], next: 'impossible_type' },
-      { id: 'dark_places', icon: '🌑', label: 'A lo oscuro', desc: 'Callejones, crímenes, secretos', 
+      { id: 'dark_places', icon: '📚', label: 'A lo oscuro', desc: 'Callejones, crímenes, secretos', 
         vibes: ['noir', 'policial', 'intriga'], moods: ['tenso', 'oscuro'], next: 'dark_type' },
-      { id: 'faraway', icon: '🗺️', label: 'A tierras lejanas', desc: 'Culturas, lugares exóticos', 
+      { id: 'faraway', icon: '📚', label: 'A tierras lejanas', desc: 'Culturas, lugares exóticos', 
         themes: ['viaje', 'aventura'], next: 'faraway_where' }
     ]
   },
 
   past_when: {
     key: 'past_when',
-    question: '¿Qué época te atrae?',
+    question: 'Â¿Qué época te atrae?',
     hint: 'El tiempo es relativo',
     options: [
-      { id: 'ancient', icon: '🏛️', label: 'Antigüedad', desc: 'Grecia, Roma, antes del 500',
+      { id: 'ancient', icon: '📚', label: 'AntigÃ¼edad', desc: 'Grecia, Roma, antes del 500',
         keywords: ['griego', 'romano', 'antiguo', 'imperio', 'mitología'], next: 'historical_fiction' },
-      { id: 'medieval', icon: '⚔️', label: 'Medieval', desc: 'Reyes, caballeros, castillos',
+      { id: 'medieval', icon: '⭐', label: 'Medieval', desc: 'Reyes, caballeros, castillos',
         keywords: ['medieval', 'rey', 'castillo', 'caballero'], next: 'historical_fiction' },
-      { id: 'century_19', icon: '🎩', label: 'Siglo XIX', desc: 'Victoriano, revoluciones',
+      { id: 'century_19', icon: '📚', label: 'Siglo XIX', desc: 'Victoriano, revoluciones',
         keywords: ['victoriano', 'siglo xix', 'revolución', 'napoleón'], next: 'historical_fiction' },
-      { id: 'world_wars', icon: '💣', label: 'Guerras Mundiales', desc: '1914-1945',
+      { id: 'world_wars', icon: '📚', label: 'Guerras Mundiales', desc: '1914-1945',
         keywords: ['guerra mundial', 'nazi', 'trinchera', 'holocaust'], themes: ['guerra'], next: 'war_focus' },
-      { id: 'recent_past', icon: '📺', label: 'Siglo XX tardío', desc: 'Guerra Fría, 60s-90s',
+      { id: 'recent_past', icon: '📚', label: 'Siglo XX tardío', desc: 'Guerra Fría, 60s-90s',
         keywords: ['guerra fría', '60s', '70s', '80s'], next: 'historical_fiction' }
     ]
   },
 
   war_focus: {
     key: 'war_focus',
-    question: '¿Qué aspecto de la guerra?',
+    question: 'Â¿Qué aspecto de la guerra?',
     hint: 'La guerra tiene muchas caras',
     options: [
-      { id: 'soldiers', icon: '🪖', label: 'Los soldados', desc: 'En el frente, las trincheras',
+      { id: 'soldiers', icon: '📚', label: 'Los soldados', desc: 'En el frente, las trincheras',
         themes: ['guerra', 'soldado', 'muerte'], experiences: ['brutal', 'devastador'], next: 'time_commitment' },
-      { id: 'civilians', icon: '👨‍👩‍👧', label: 'Los civiles', desc: 'Vivir bajo la guerra',
+      { id: 'civilians', icon: '📚', label: 'Los civiles', desc: 'Vivir bajo la guerra',
         themes: ['guerra', 'familia', 'supervivencia'], experiences: ['devastador', 'conmovedor'], next: 'time_commitment' },
-      { id: 'resistance', icon: '✊', label: 'La resistencia', desc: 'Luchar desde las sombras',
+      { id: 'resistance', icon: '⭐', label: 'La resistencia', desc: 'Luchar desde las sombras',
         themes: ['guerra', 'resistencia', 'libertad'], experiences: ['tenso', 'épico'], next: 'time_commitment' },
-      { id: 'aftermath', icon: '🕊️', label: 'Las secuelas', desc: 'Después de que todo termina',
+      { id: 'aftermath', icon: '📚', label: 'Las secuelas', desc: 'Después de que todo termina',
         themes: ['guerra', 'trauma', 'memoria'], experiences: ['melancólico', 'devastador'], next: 'time_commitment' }
     ]
   },
 
   historical_fiction: {
     key: 'historical_fiction',
-    question: '¿Ficción o hechos reales?',
+    question: 'Â¿Ficción o hechos reales?',
     hint: 'Historia y literatura',
     options: [
-      { id: 'fiction', icon: '📖', label: 'Novela histórica', desc: 'Ficción ambientada en la época',
+      { id: 'fiction', icon: '📚', label: 'Novela histórica', desc: 'Ficción ambientada en la época',
         vibes: ['ficción', 'histórico'], next: 'time_commitment' },
       { id: 'nonfiction', icon: '📚', label: 'Historia real', desc: 'Hechos documentados',
         vibes: ['historia', 'crónica', 'memorias'], next: 'time_commitment' }
@@ -3789,330 +3638,330 @@ const WIZARD_QUESTIONS = {
 
   impossible_type: {
     key: 'impossible_type',
-    question: '¿Qué tipo de imposible?',
+    question: 'Â¿Qué tipo de imposible?',
     hint: 'Los límites de la realidad',
     options: [
-      { id: 'epic_fantasy', icon: '⚔️', label: 'Fantasía épica', desc: 'Guerras, reinos, magia',
+      { id: 'epic_fantasy', icon: '⭐', label: 'Fantasía épica', desc: 'Guerras, reinos, magia',
         vibes: ['fantasía'], experiences: ['épico', 'monumental'], next: 'time_commitment' },
-      { id: 'scifi', icon: '🚀', label: 'Ciencia ficción', desc: 'Futuros, tecnología, espacio',
+      { id: 'scifi', icon: '📚', label: 'Ciencia ficción', desc: 'Futuros, tecnología, espacio',
         vibes: ['ciencia ficción'], moods: ['especulativo'], next: 'time_commitment' },
-      { id: 'magical_realism', icon: '🌙', label: 'Realismo mágico', desc: 'Lo mágico en lo cotidiano',
+      { id: 'magical_realism', icon: '📚', label: 'Realismo mágico', desc: 'Lo mágico en lo cotidiano',
         experiences: ['onírico', 'fabuloso'], moods: ['imaginativo'], next: 'time_commitment' },
-      { id: 'weird', icon: '👁️', label: 'Lo extraño', desc: 'Inclasificable, perturbador',
+      { id: 'weird', icon: '📚', label: 'Lo extraño', desc: 'Inclasificable, perturbador',
         experiences: ['inquietante', 'onírico'], vibes: ['especulativo'], next: 'time_commitment' }
     ]
   },
 
   dark_type: {
     key: 'dark_type',
-    question: '¿Qué tipo de oscuridad?',
+    question: 'Â¿Qué tipo de oscuridad?',
     hint: 'Las sombras tienen matices',
     options: [
-      { id: 'noir_classic', icon: '🕵️', label: 'Noir clásico', desc: 'Detectives, femme fatales',
+      { id: 'noir_classic', icon: '📚', label: 'Noir clásico', desc: 'Detectives, femme fatales',
         vibes: ['noir', 'policial'], themes: ['detective', 'crimen'], next: 'time_commitment' },
-      { id: 'psychological_thriller', icon: '🧠', label: 'Thriller psicológico', desc: 'La mente es el campo de batalla',
+      { id: 'psychological_thriller', icon: '📚', label: 'Thriller psicológico', desc: 'La mente es el campo de batalla',
         vibes: ['psicológico', 'intriga'], experiences: ['perturbador', 'tenso'], next: 'time_commitment' },
-      { id: 'crime', icon: '🔪', label: 'Crimen', desc: 'Asesinatos, investigaciones',
+      { id: 'crime', icon: '📚', label: 'Crimen', desc: 'Asesinatos, investigaciones',
         themes: ['crimen', 'asesinato', 'misterio'], moods: ['tenso'], next: 'time_commitment' },
-      { id: 'gothic', icon: '🏚️', label: 'Gótico', desc: 'Casas encantadas, secretos familiares',
+      { id: 'gothic', icon: '📚', label: 'Gótico', desc: 'Casas encantadas, secretos familiares',
         vibes: ['oscuro'], moods: ['inquietante'], themes: ['secreto', 'familia'], next: 'time_commitment' }
     ]
   },
 
   faraway_where: {
     key: 'faraway_where',
-    question: '¿Qué región del mundo?',
+    question: 'Â¿Qué región del mundo?',
     hint: 'El mapa literario',
     options: [
-      { id: 'americas', icon: '🌎', label: 'Las Américas', desc: 'Del Norte al Sur',
+      { id: 'americas', icon: '📚', label: 'Las Américas', desc: 'Del Norte al Sur',
         themes: ['América'], next: 'americas_where' },
-      { id: 'europe', icon: '🇪🇺', label: 'Europa', desc: 'El viejo continente',
+      { id: 'europe', icon: '📚', label: 'Europa', desc: 'El viejo continente',
         next: 'europe_where' },
-      { id: 'asia', icon: '🌏', label: 'Asia', desc: 'Oriente',
+      { id: 'asia', icon: '📚', label: 'Asia', desc: 'Oriente',
         themes: ['Japón', 'China', 'India'], next: 'time_commitment' },
-      { id: 'other', icon: '🌍', label: 'África y más', desc: 'Otros mundos',
-        themes: ['África', 'viaje'], next: 'time_commitment' }
+      { id: 'other', icon: '📚', label: 'Ãfrica y más', desc: 'Otros mundos',
+        themes: ['Ãfrica', 'viaje'], next: 'time_commitment' }
     ]
   },
 
   americas_where: {
     key: 'americas_where',
-    question: '¿Qué parte de las Américas?',
+    question: 'Â¿Qué parte de las Américas?',
     options: [
-      { id: 'usa', icon: '🇺🇸', label: 'Estados Unidos', themes: ['América', 'Nueva York'], next: 'usa_where' },
-      { id: 'latam', icon: '🌴', label: 'Latinoamérica', themes: ['México', 'Argentina', 'Colombia'], next: 'time_commitment' },
-      { id: 'caribbean', icon: '🏝️', label: 'Caribe', themes: ['Caribe', 'isla'], next: 'time_commitment' }
+      { id: 'usa', icon: '📚', label: 'Estados Unidos', themes: ['América', 'Nueva York'], next: 'usa_where' },
+      { id: 'latam', icon: '📚', label: 'Latinoamérica', themes: ['México', 'Argentina', 'Colombia'], next: 'time_commitment' },
+      { id: 'caribbean', icon: '📚', label: 'Caribe', themes: ['Caribe', 'isla'], next: 'time_commitment' }
     ]
   },
 
   usa_where: {
     key: 'usa_where',
-    question: '¿Qué Estados Unidos?',
+    question: 'Â¿Qué Estados Unidos?',
     options: [
-      { id: 'deep_south', icon: '🏚️', label: 'El Sur profundo', desc: 'Mississippi, Alabama...',
+      { id: 'deep_south', icon: '📚', label: 'El Sur profundo', desc: 'Mississippi, Alabama...',
         themes: ['América', 'sur'], keywords: ['sur', 'mississippi'], next: 'time_commitment' },
-      { id: 'new_york', icon: '🗽', label: 'Nueva York', desc: 'La gran ciudad',
+      { id: 'new_york', icon: '📚', label: 'Nueva York', desc: 'La gran ciudad',
         themes: ['Nueva York', 'ciudad'], next: 'time_commitment' },
-      { id: 'west', icon: '🤠', label: 'El Oeste', desc: 'Fronteras, desiertos',
+      { id: 'west', icon: '📚', label: 'El Oeste', desc: 'Fronteras, desiertos',
         themes: ['oeste', 'frontera'], vibes: ['aventura'], next: 'time_commitment' },
-      { id: 'small_town', icon: '🏘️', label: 'América profunda', desc: 'Pueblos, suburbios',
+      { id: 'small_town', icon: '📚', label: 'América profunda', desc: 'Pueblos, suburbios',
         themes: ['América', 'pueblo'], next: 'time_commitment' }
     ]
   },
 
   europe_where: {
     key: 'europe_where',
-    question: '¿Qué parte de Europa?',
+    question: 'Â¿Qué parte de Europa?',
     options: [
-      { id: 'spain', icon: '🇪🇸', label: 'España', themes: ['España'], next: 'time_commitment' },
-      { id: 'france', icon: '🇫🇷', label: 'Francia', themes: ['Francia', 'París'], next: 'time_commitment' },
-      { id: 'uk', icon: '🇬🇧', label: 'Reino Unido', themes: ['Inglaterra', 'Londres'], next: 'time_commitment' },
-      { id: 'russia', icon: '🇷🇺', label: 'Rusia', themes: ['Rusia'], next: 'time_commitment' },
-      { id: 'italy', icon: '🇮🇹', label: 'Italia', themes: ['Italia', 'Roma'], next: 'time_commitment' }
+      { id: 'spain', icon: '📚', label: 'España', themes: ['España'], next: 'time_commitment' },
+      { id: 'france', icon: '📚', label: 'Francia', themes: ['Francia', 'París'], next: 'time_commitment' },
+      { id: 'uk', icon: '📚', label: 'Reino Unido', themes: ['Inglaterra', 'Londres'], next: 'time_commitment' },
+      { id: 'russia', icon: '📚', label: 'Rusia', themes: ['Rusia'], next: 'time_commitment' },
+      { id: 'italy', icon: '📚', label: 'Italia', themes: ['Italia', 'Roma'], next: 'time_commitment' }
     ]
   },
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // RAMA: PENSAR 🧠
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // RAMA: PENSAR ðŸ§ 
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   think_about: {
     key: 'think_about',
-    question: '¿Sobre qué quieres reflexionar?',
+    question: 'Â¿Sobre qué quieres reflexionar?',
     hint: 'Las grandes preguntas',
     options: [
-      { id: 'existence', icon: '🌌', label: 'La existencia', desc: 'Vida, muerte, tiempo',
+      { id: 'existence', icon: '📚', label: 'La existencia', desc: 'Vida, muerte, tiempo',
         themes: ['muerte', 'vida', 'tiempo', 'identidad', 'memoria', 'soledad'], next: 'existence_focus' },
-      { id: 'relationships', icon: '👥', label: 'Las relaciones', desc: 'Amor, familia, amistad',
+      { id: 'relationships', icon: '📚', label: 'Las relaciones', desc: 'Amor, familia, amistad',
         themes: ['amor', 'familia', 'amistad'], next: 'relationship_focus' },
-      { id: 'society', icon: '⚖️', label: 'La sociedad', desc: 'Poder, justicia, violencia',
+      { id: 'society', icon: '⭐', label: 'La sociedad', desc: 'Poder, justicia, violencia',
         themes: ['poder', 'política', 'libertad', 'violencia'], next: 'society_focus' },
-      { id: 'art_creation', icon: '🎨', label: 'El arte', desc: 'Creación, verdad, belleza',
+      { id: 'art_creation', icon: '📚', label: 'El arte', desc: 'Creación, verdad, belleza',
         themes: ['arte', 'escritura', 'música', 'creación'], next: 'time_commitment' }
     ]
   },
 
   existence_focus: {
     key: 'existence_focus',
-    question: '¿Qué aspecto de la existencia?',
+    question: 'Â¿Qué aspecto de la existencia?',
     options: [
-      { id: 'identity', icon: '🪞', label: 'Quién soy', desc: 'Identidad, autenticidad',
+      { id: 'identity', icon: '📚', label: 'Quién soy', desc: 'Identidad, autenticidad',
         themes: ['identidad', 'búsqueda'], next: 'time_commitment' },
-      { id: 'mortality', icon: '⏳', label: 'La mortalidad', desc: 'Muerte, tiempo, finitud',
+      { id: 'mortality', icon: '⭐', label: 'La mortalidad', desc: 'Muerte, tiempo, finitud',
         themes: ['muerte', 'tiempo', 'vejez'], next: 'time_commitment' },
-      { id: 'memory', icon: '🧠', label: 'La memoria', desc: 'Pasado, recuerdos, olvido',
+      { id: 'memory', icon: '📚', label: 'La memoria', desc: 'Pasado, recuerdos, olvido',
         themes: ['memoria', 'pasado', 'nostalgia'], experiences: ['nostálgico', 'melancólico'], next: 'time_commitment' },
-      { id: 'loneliness', icon: '🌙', label: 'La soledad', desc: 'Aislamiento, conexión',
+      { id: 'loneliness', icon: '📚', label: 'La soledad', desc: 'Aislamiento, conexión',
         themes: ['soledad', 'alienación'], experiences: ['melancólico', 'íntimo'], next: 'time_commitment' }
     ]
   },
 
   relationship_focus: {
     key: 'relationship_focus',
-    question: '¿Qué tipo de relación?',
+    question: 'Â¿Qué tipo de relación?',
     options: [
-      { id: 'romantic', icon: '💕', label: 'Amor romántico', themes: ['amor', 'matrimonio'], next: 'love_ending' },
-      { id: 'family', icon: '👨‍👩‍👧', label: 'Familia', themes: ['familia', 'padre', 'madre', 'infancia'], next: 'time_commitment' },
-      { id: 'friendship', icon: '🤝', label: 'Amistad', themes: ['amistad'], next: 'time_commitment' },
-      { id: 'marriage', icon: '💍', label: 'Matrimonio', desc: 'El día a día del amor',
+      { id: 'romantic', icon: '📚', label: 'Amor romántico', themes: ['amor', 'matrimonio'], next: 'love_ending' },
+      { id: 'family', icon: '📚', label: 'Familia', themes: ['familia', 'padre', 'madre', 'infancia'], next: 'time_commitment' },
+      { id: 'friendship', icon: '📚', label: 'Amistad', themes: ['amistad'], next: 'time_commitment' },
+      { id: 'marriage', icon: '📚', label: 'Matrimonio', desc: 'El día a día del amor',
         themes: ['matrimonio', 'pareja'], next: 'time_commitment' }
     ]
   },
 
   love_ending: {
     key: 'love_ending',
-    question: '¿Cómo prefieres que termine?',
+    question: 'Â¿Cómo prefieres que termine?',
     hint: 'Spoiler controlado',
     options: [
-      { id: 'happy', icon: '💕', label: 'Bien', desc: 'Final feliz',
+      { id: 'happy', icon: '📚', label: 'Bien', desc: 'Final feliz',
         experiences: ['conmovedor', 'luminoso'], next: 'time_commitment' },
-      { id: 'tragic', icon: '💔', label: 'Mal', desc: 'Tragedia, pérdida',
+      { id: 'tragic', icon: '📚', label: 'Mal', desc: 'Tragedia, pérdida',
         themes: ['pérdida'], experiences: ['devastador', 'desgarrador'], next: 'time_commitment' },
-      { id: 'ambiguous', icon: '❓', label: 'Ambiguo', desc: 'Abierto a interpretación',
+      { id: 'ambiguous', icon: '⭐', label: 'Ambiguo', desc: 'Abierto a interpretación',
         next: 'time_commitment' }
     ]
   },
 
   society_focus: {
     key: 'society_focus',
-    question: '¿Qué aspecto de la sociedad?',
+    question: 'Â¿Qué aspecto de la sociedad?',
     options: [
-      { id: 'power', icon: '👑', label: 'El poder', desc: 'Quién manda y por qué',
+      { id: 'power', icon: '📚', label: 'El poder', desc: 'Quién manda y por qué',
         themes: ['poder', 'política'], next: 'time_commitment' },
-      { id: 'justice', icon: '⚖️', label: 'La justicia', desc: 'Lo correcto, el sistema',
+      { id: 'justice', icon: '⭐', label: 'La justicia', desc: 'Lo correcto, el sistema',
         themes: ['justicia', 'ley', 'crimen'], next: 'time_commitment' },
-      { id: 'violence', icon: '💥', label: 'La violencia', desc: 'Por qué nos destruimos',
+      { id: 'violence', icon: '📚', label: 'La violencia', desc: 'Por qué nos destruimos',
         themes: ['violencia', 'guerra'], experiences: ['brutal', 'perturbador'], next: 'time_commitment' },
-      { id: 'freedom', icon: '🕊️', label: 'La libertad', desc: 'Opresión y liberación',
+      { id: 'freedom', icon: '📚', label: 'La libertad', desc: 'Opresión y liberación',
         themes: ['libertad', 'revolución', 'resistencia'], next: 'time_commitment' }
     ]
   },
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // RAMA: TENSIÓN ⚡
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // RAMA: TENSIÃ“N âš¡
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   tension_type: {
     key: 'tension_type',
-    question: '¿Qué tipo de tensión?',
+    question: 'Â¿Qué tipo de tensión?',
     hint: 'Tu dosis de adrenalina',
     options: [
-      { id: 'crime', icon: '🔪', label: 'Crimen', desc: 'Asesinatos, investigaciones',
+      { id: 'crime', icon: '📚', label: 'Crimen', desc: 'Asesinatos, investigaciones',
         themes: ['crimen', 'detective', 'misterio'], moods: ['tenso'], next: 'crime_focus' },
-      { id: 'horror', icon: '😱', label: 'Terror', desc: 'Miedo genuino',
+      { id: 'horror', icon: '📚', label: 'Terror', desc: 'Miedo genuino',
         experiences: ['aterrador', 'inquietante'], moods: ['oscuro', 'inquietante'], next: 'horror_type' },
-      { id: 'psychological', icon: '🧠', label: 'Psicológica', desc: 'La mente bajo presión',
+      { id: 'psychological', icon: '📚', label: 'Psicológica', desc: 'La mente bajo presión',
         vibes: ['psicológico'], themes: ['obsesión', 'locura', 'culpa'], next: 'time_commitment' },
-      { id: 'action', icon: '🎢', label: 'Vertiginosa', desc: 'Ritmo imparable',
+      { id: 'action', icon: '📚', label: 'Vertiginosa', desc: 'Ritmo imparable',
         experiences: ['vertiginoso', 'absorbente', 'tenso'], vibes: ['aventura'], next: 'time_commitment' }
     ]
   },
 
   crime_focus: {
     key: 'crime_focus',
-    question: '¿Qué te atrae del crimen?',
+    question: 'Â¿Qué te atrae del crimen?',
     options: [
-      { id: 'detective', icon: '🔍', label: 'El detective', desc: 'Seguir la investigación',
+      { id: 'detective', icon: '📚', label: 'El detective', desc: 'Seguir la investigación',
         themes: ['detective'], vibes: ['policial'], next: 'time_commitment' },
-      { id: 'criminal_mind', icon: '🎭', label: 'El criminal', desc: 'Entender la mente oscura',
+      { id: 'criminal_mind', icon: '📚', label: 'El criminal', desc: 'Entender la mente oscura',
         themes: ['psicópata', 'obsesión'], experiences: ['perturbador'], next: 'time_commitment' },
-      { id: 'noir', icon: '🌃', label: 'Atmósfera noir', desc: 'La ciudad, las sombras',
+      { id: 'noir', icon: '📚', label: 'Atmósfera noir', desc: 'La ciudad, las sombras',
         vibes: ['noir'], moods: ['oscuro', 'tenso'], next: 'time_commitment' },
-      { id: 'procedural', icon: '📋', label: 'Procedimiento', desc: 'El sistema, la ley',
+      { id: 'procedural', icon: '📚', label: 'Procedimiento', desc: 'El sistema, la ley',
         themes: ['justicia', 'policía'], next: 'time_commitment' }
     ]
   },
 
   horror_type: {
     key: 'horror_type',
-    question: '¿Qué tipo de terror?',
+    question: 'Â¿Qué tipo de terror?',
     options: [
-      { id: 'supernatural', icon: '👻', label: 'Sobrenatural', desc: 'Fantasmas, demonios',
+      { id: 'supernatural', icon: '📚', label: 'Sobrenatural', desc: 'Fantasmas, demonios',
         moods: ['oscuro', 'inquietante'], next: 'time_commitment' },
-      { id: 'psychological_horror', icon: '🧠', label: 'Psicológico', desc: 'El horror en la mente',
+      { id: 'psychological_horror', icon: '📚', label: 'Psicológico', desc: 'El horror en la mente',
         vibes: ['psicológico'], experiences: ['perturbador', 'inquietante'], next: 'time_commitment' },
-      { id: 'cosmic', icon: '🌌', label: 'Cósmico', desc: 'Lo incomprensible, Lovecraft',
+      { id: 'cosmic', icon: '📚', label: 'Cósmico', desc: 'Lo incomprensible, Lovecraft',
         experiences: ['aterrador', 'onírico'], next: 'time_commitment' },
-      { id: 'human_horror', icon: '🔪', label: 'El horror humano', desc: 'Lo que somos capaces de hacer',
+      { id: 'human_horror', icon: '📚', label: 'El horror humano', desc: 'Lo que somos capaces de hacer',
         experiences: ['brutal', 'perturbador'], themes: ['violencia'], next: 'time_commitment' }
     ]
   },
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // RAMA: DESCUBRIR ✨
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // RAMA: DESCUBRIR âœ¨
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   discover_type: {
     key: 'discover_type',
-    question: '¿Qué tipo de descubrimiento?',
+    question: 'Â¿Qué tipo de descubrimiento?',
     hint: 'La aventura de lo nuevo',
     options: [
-      { id: 'hidden_gems', icon: '💎', label: 'Joyas ocultas', desc: 'Libros que nadie conoce',
+      { id: 'hidden_gems', icon: '📚', label: 'Joyas ocultas', desc: 'Libros que nadie conoce',
         filter: { noAwards: true, lowProfile: true }, next: 'hidden_gem_type' },
-      { id: 'classics', icon: '🏆', label: 'Clásicos pendientes', desc: 'Los que todos conocen menos yo',
+      { id: 'classics', icon: '📚', label: 'Clásicos pendientes', desc: 'Los que todos conocen menos yo',
         filter: { hasAwards: true, canonical: true }, next: 'classic_type' },
-      { id: 'new_voices', icon: '🌱', label: 'Voces nuevas', desc: 'Autores contemporáneos',
+      { id: 'new_voices', icon: '📚', label: 'Voces nuevas', desc: 'Autores contemporáneos',
         filter: { contemporary: true }, next: 'time_commitment' },
-      { id: 'total_random', icon: '🎲', label: 'Sorpresa total', desc: 'No me des opciones, elige tú',
+      { id: 'total_random', icon: '📚', label: 'Sorpresa total', desc: 'No me des opciones, elige tú',
         algorithm: 'random_quality', direct: true }
     ]
   },
 
   hidden_gem_type: {
     key: 'hidden_gem_type',
-    question: '¿De qué tipo?',
+    question: 'Â¿De qué tipo?',
     hint: 'Joyas por descubrir',
     options: [
-      { id: 'emotional', icon: '💔', label: 'Emocionales', experiences: ['conmovedor', 'devastador', 'íntimo'], next: 'time_commitment' },
-      { id: 'thrilling', icon: '⚡', label: 'Trepidantes', experiences: ['tenso', 'absorbente', 'vertiginoso'], next: 'time_commitment' },
-      { id: 'thoughtful', icon: '🧠', label: 'Reflexivas', experiences: ['contemplativo', 'filosófico'], next: 'time_commitment' },
-      { id: 'any_gem', icon: '✨', label: 'Lo que sea', next: 'time_commitment' }
+      { id: 'emotional', icon: '📚', label: 'Emocionales', experiences: ['conmovedor', 'devastador', 'íntimo'], next: 'time_commitment' },
+      { id: 'thrilling', icon: '⭐', label: 'Trepidantes', experiences: ['tenso', 'absorbente', 'vertiginoso'], next: 'time_commitment' },
+      { id: 'thoughtful', icon: '📚', label: 'Reflexivas', experiences: ['contemplativo', 'filosófico'], next: 'time_commitment' },
+      { id: 'any_gem', icon: '⭐', label: 'Lo que sea', next: 'time_commitment' }
     ]
   },
 
   classic_type: {
     key: 'classic_type',
-    question: '¿Qué tipo de clásico?',
+    question: 'Â¿Qué tipo de clásico?',
     options: [
-      { id: 'nobel', icon: '🏅', label: 'Premios Nobel', filter: { award: 'Nobel de Literatura' }, next: 'time_commitment' },
-      { id: 'spanish', icon: '🇪🇸', label: 'Clásicos en español', filter: { award: 'Premio hispano importante' }, next: 'time_commitment' },
-      { id: 'american', icon: '🇺🇸', label: 'Clásicos americanos', filter: { award: 'Pulitzer' }, next: 'time_commitment' },
+      { id: 'nobel', icon: '📚', label: 'Premios Nobel', filter: { award: 'Nobel de Literatura' }, next: 'time_commitment' },
+      { id: 'spanish', icon: '📚', label: 'Clásicos en español', filter: { award: 'Premio hispano importante' }, next: 'time_commitment' },
+      { id: 'american', icon: '📚', label: 'Clásicos americanos', filter: { award: 'Pulitzer' }, next: 'time_commitment' },
       { id: 'any_classic', icon: '📚', label: 'Cualquier clásico', next: 'time_commitment' }
     ]
   },
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // RAMA: REÍR 🎭
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // RAMA: REÃR ðŸŽ
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   laugh_type: {
     key: 'laugh_type',
-    question: '¿Qué tipo de humor?',
+    question: 'Â¿Qué tipo de humor?',
     hint: 'Hay muchas formas de reír',
     options: [
-      { id: 'sardonic', icon: '😏', label: 'Sardónico', desc: 'Ironía mordaz',
+      { id: 'sardonic', icon: '📚', label: 'Sardónico', desc: 'Ironía mordaz',
         experiences: ['sardónico', 'irónico'], vibes: ['satírico'], next: 'time_commitment' },
-      { id: 'light', icon: '😄', label: 'Ligero', desc: 'Simple diversión',
+      { id: 'light', icon: '📚', label: 'Ligero', desc: 'Simple diversión',
         moods: ['ligero', 'entretenido'], vibes: ['humor'], next: 'time_commitment' },
-      { id: 'absurd', icon: '🤪', label: 'Absurdo', desc: 'Lo ridículo de la vida',
+      { id: 'absurd', icon: '📚', label: 'Absurdo', desc: 'Lo ridículo de la vida',
         experiences: ['sardónico', 'agridulce'], next: 'time_commitment' },
-      { id: 'bittersweet', icon: '🍋', label: 'Agridulce', desc: 'Ríe mientras llora',
+      { id: 'bittersweet', icon: '📚', label: 'Agridulce', desc: 'Ríe mientras llora',
         experiences: ['agridulce'], next: 'time_commitment' }
     ]
   },
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PREGUNTAS UNIVERSALES (NIVEL FINAL)
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   time_commitment: {
     key: 'time_commitment',
-    question: '¿Cuánto tiempo puedes dedicar?',
+    question: 'Â¿Cuánto tiempo puedes dedicar?',
     hint: 'Para las próximas semanas',
     options: [
-      { id: 'afternoon', icon: '☕', label: 'Una tarde', desc: 'Menos de 150 páginas',
+      { id: 'afternoon', icon: '⭐', label: 'Una tarde', desc: 'Menos de 150 páginas',
         pages: { max: 150 }, difficulty: ['ligero'], next: 'series_preference' },
-      { id: 'weekend', icon: '🌙', label: 'Un fin de semana', desc: '150-300 páginas',
+      { id: 'weekend', icon: '📚', label: 'Un fin de semana', desc: '150-300 páginas',
         pages: { min: 100, max: 300 }, difficulty: ['ligero', 'medio'], next: 'series_preference' },
-      { id: 'weeks', icon: '📅', label: 'Unas semanas', desc: '300-500 páginas',
+      { id: 'weeks', icon: '📚', label: 'Unas semanas', desc: '300-500 páginas',
         pages: { min: 250, max: 500 }, next: 'series_preference' },
-      { id: 'project', icon: '🏔️', label: 'Un proyecto', desc: 'Más de 500 páginas',
+      { id: 'project', icon: '📚', label: 'Un proyecto', desc: 'Más de 500 páginas',
         pages: { min: 450 }, next: 'series_preference' }
     ]
   },
 
   series_preference: {
     key: 'series_preference',
-    question: '¿Serie o libro único?',
-    hint: '¿Quieres compromiso a largo plazo?',
+    question: 'Â¿Serie o libro único?',
+    hint: 'Â¿Quieres compromiso a largo plazo?',
     options: [
-      { id: 'standalone', icon: '📖', label: 'Libro único', desc: 'Empieza y termina',
+      { id: 'standalone', icon: '📚', label: 'Libro único', desc: 'Empieza y termina',
         standalone: true, next: 'difficulty_preference' },
       { id: 'series', icon: '📚', label: 'Parte de una serie', desc: 'Me gusta cuando hay más',
         wantsSeries: true, next: 'difficulty_preference' },
-      { id: 'either', icon: '🎲', label: 'Me da igual', next: 'difficulty_preference' }
+      { id: 'either', icon: '📚', label: 'Me da igual', next: 'difficulty_preference' }
     ]
   },
 
   difficulty_preference: {
     key: 'difficulty_preference',
-    question: '¿Qué nivel de desafío?',
+    question: 'Â¿Qué nivel de desafío?',
     hint: 'Tu zona de confort literaria',
     options: [
-      { id: 'easy', icon: '🌿', label: 'Lectura fluida', desc: 'Que fluya sin esfuerzo',
+      { id: 'easy', icon: '📚', label: 'Lectura fluida', desc: 'Que fluya sin esfuerzo',
         difficulty: ['ligero'], moods: ['entretenido', 'ligero'], next: 'risk_preference' },
-      { id: 'medium', icon: '⚖️', label: 'Equilibrado', desc: 'Ni muy fácil ni muy difícil',
+      { id: 'medium', icon: '⭐', label: 'Equilibrado', desc: 'Ni muy fácil ni muy difícil',
         difficulty: ['medio'], next: 'risk_preference' },
-      { id: 'challenging', icon: '🧗', label: 'Desafiante', desc: 'Quiero que me exija',
+      { id: 'challenging', icon: '📚', label: 'Desafiante', desc: 'Quiero que me exija',
         difficulty: ['denso'], vibes: ['filosófico'], next: 'risk_preference' }
     ]
   },
 
   risk_preference: {
     key: 'risk_preference',
-    question: '¿Cuánto quieres arriesgarte?',
+    question: 'Â¿Cuánto quieres arriesgarte?',
     hint: 'La última pregunta',
     options: [
-      { id: 'safe', icon: '🏠', label: 'Zona segura', desc: 'Algo que probablemente me guste',
+      { id: 'safe', icon: '📚', label: 'Zona segura', desc: 'Algo que probablemente me guste',
         riskLevel: 'safe', boost: { awards: true, known: true } },
-      { id: 'curious', icon: '🔍', label: 'Curioso', desc: 'Abierto a sorpresas',
+      { id: 'curious', icon: '📚', label: 'Curioso', desc: 'Abierto a sorpresas',
         riskLevel: 'balanced' },
-      { id: 'adventurous', icon: '🎲', label: 'Aventurero', desc: 'Territorio desconocido',
+      { id: 'adventurous', icon: '📚', label: 'Aventurero', desc: 'Territorio desconocido',
         riskLevel: 'adventurous', boost: { unknown: true, noAwards: true } }
     ]
   }
@@ -4137,9 +3986,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
   const questionsAnswered = Object.keys(answers).length;
   const estimatedTotal = Math.min(8, questionsAnswered + 3); // Estimación dinámica
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // SISTEMA DE SCORING NUEVO
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const calculateScore = useCallback((book) => {
     let score = 0;
     const bookHook = hooks[String(book.id)];
@@ -4164,9 +4013,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
       hook: !!bookHook
     };
     
-    // ═══════════════════════════════════════════════════════════════════════
-    // MATCH DIRECTO (0-120 puntos) - LO MÁS IMPORTANTE
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // MATCH DIRECTO (0-120 puntos) - LO MÃS IMPORTANTE
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     // Themes que eligió el usuario (hasta 75 pts)
     const userThemes = preferences.themes || [];
@@ -4206,9 +4055,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
       if (keywordMatch) score += 15;
     }
     
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // FILTROS DUROS (Penalización o Descalificación)
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     // Páginas
     const pagePrefs = preferences.pages;
@@ -4249,9 +4098,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
       matchDetails.series = true;
     }
     
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // CALIDAD (Reducido: 0-15 puntos máximo)
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     // Hook disponible (ahora vale menos)
     if (bookHook) {
@@ -4268,9 +4117,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
       }
     }
     
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // FACTOR DESCUBRIMIENTO (0-25 puntos)
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     if (preferences.riskLevel === 'adventurous') {
       // Boost a libros sin premio
@@ -4286,18 +4135,18 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
       if (preferences.filter.award && awards.includes(preferences.filter.award)) score += 25;
     }
     
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // ALEATORIEDAD CONTROLADA (0-20 puntos)
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     score += Math.random() * 20;
     
     return { score: Math.max(0, score), matchDetails };
   }, [hooks, preferences]);
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // OBTENER RECOMENDACIONES CON POOL DIVERSIFICADO
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const getRecommendations = useCallback(() => {
     // Calcular score para todos los libros
     const scored = books.map(book => {
@@ -4349,9 +4198,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
     return result.slice(0, 8);
   }, [books, calculateScore]);
   
-  // ═══════════════════════════════════════════════════════════════════════════
-  // GENERAR RAZÓN PERSONALIZADA
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // GENERAR RAZÃ“N PERSONALIZADA
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const generateReason = useCallback((book, matchDetails) => {
     const bookHook = hooks[String(book.id)];
     const reasons = [];
@@ -4396,9 +4245,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
     };
   }, [hooks]);
   
-  // ═══════════════════════════════════════════════════════════════════════════
-  // MANEJAR SELECCIÓN DE OPCIÓN
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // MANEJAR SELECCIÃ“N DE OPCIÃ“N
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const handleSelect = (option) => {
     haptic.medium();
     
@@ -4499,9 +4348,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
     }
   };
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // RENDER: Resultado
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   if (result && result.length > 0) {
     const { book, matchDetails } = result[resultIndex];
     const bookHook = hooks[String(book.id)];
@@ -4552,7 +4401,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                 color: t.text.tertiary, fontSize: '20px', cursor: 'pointer',
                 width: '32px', height: '32px', borderRadius: '50%',
                 display: 'flex', alignItems: 'center', justifyContent: 'center'
-              }}>✕</button>
+              }}>âœ•</button>
             </div>
             
             {/* Portada y título */}
@@ -4585,7 +4434,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                         background: `${t.accent}20`, color: t.accent,
                         borderRadius: '6px', fontWeight: 500
                       }}>
-                        ★ {award.replace('Premio hispano importante', 'Premio literario')}
+                        â˜… {award.replace('Premio hispano importante', 'Premio literario')}
                       </span>
                     ))}
                   </div>
@@ -4623,7 +4472,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
             {reason.whyMatches.length > 0 && (
               <div style={{ marginBottom: '16px' }}>
                 <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '8px', fontWeight: 600 }}>
-                  POR QUÉ ENCAJA CONTIGO:
+                  POR QUÃ‰ ENCAJA CONTIGO:
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {reason.whyMatches.map((match, i) => (
@@ -4632,7 +4481,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                       background: t.bg.secondary,
                       borderRadius: '20px', color: t.text.secondary
                     }}>
-                      ✓ {match}
+                      âœ“ {match}
                     </span>
                   ))}
                 </div>
@@ -4642,7 +4491,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
             {/* Perfect for */}
             {reason.perfectFor && (
               <p style={{ fontSize: '13px', color: t.text.secondary, marginBottom: '16px' }}>
-                <span style={{ color: t.accent }}>👤</span> Perfecto para: {reason.perfectFor}
+                <span style={{ color: t.accent }}>ðŸ‘¤</span> Perfecto para: {reason.perfectFor}
               </p>
             )}
             
@@ -4675,7 +4524,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                   boxShadow: `0 4px 14px ${t.accent}40`
                 }}
               >
-                📖 Lo leo ahora
+                ðŸ“– Lo leo ahora
               </button>
               {resultIndex < result.length - 1 && (
                 <button
@@ -4690,7 +4539,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                     cursor: 'pointer'
                   }}
                 >
-                  Otro →
+                  Otro â†’
                 </button>
               )}
             </div>
@@ -4721,7 +4570,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                 fontSize: '13px', cursor: 'pointer'
               }}
             >
-              ← Empezar de nuevo
+              â† Empezar de nuevo
             </button>
           </div>
         </div>
@@ -4729,9 +4578,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
     );
   }
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // RENDER: Preguntas
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   if (!currentQuestion) return null;
   
   return (
@@ -4768,7 +4617,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
               color: t.text.tertiary, fontSize: '13px', cursor: 'pointer',
               display: 'flex', alignItems: 'center', gap: '4px'
             }}>
-              ← Atrás
+              â† Atrás
             </button>
           ) : <div />}
           <button onClick={onClose} style={{ 
@@ -4776,7 +4625,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
             color: t.text.tertiary, fontSize: '18px', cursor: 'pointer',
             width: '32px', height: '32px', borderRadius: '50%',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
-          }}>✕</button>
+          }}>âœ•</button>
         </div>
         
         {/* Progress visual (camino recorrido) */}
@@ -4863,7 +4712,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
                   )}
                 </div>
                 {answers[currentQuestion.key] === option.id && (
-                  <span style={{ color: t.accent, fontSize: '18px' }}>✓</span>
+                  <span style={{ color: t.accent, fontSize: '18px' }}>âœ“</span>
                 )}
               </div>
             </Touchable>
@@ -5207,7 +5056,7 @@ export default function App() {
       }
       
       /* ============================================
-         CLASES TÁCTILES REUTILIZABLES
+         CLASES TÃCTILES REUTILIZABLES
          ============================================ */
       
       /* Touchable base - se encoge al presionar */
@@ -5362,7 +5211,7 @@ export default function App() {
         alignItems: 'center', justifyContent: 'center',
         background: t.bg.primary
       }}>
-        <div style={{ fontSize: '48px', marginBottom: '16px' }}>📚</div>
+        <div style={{ fontSize: '48px', marginBottom: '16px' }}>ðŸ“š</div>
         <p style={{ fontSize: '14px', color: t.text.secondary }}>{COPY.loading}</p>
       </div>
     );
@@ -5408,7 +5257,7 @@ export default function App() {
                 onMouseLeave={e => e.currentTarget.style.opacity = '1'}
                 title="Volver al inicio"
               >
-                <span style={{ fontSize: '28px' }}>📚</span>
+                <span style={{ fontSize: '28px' }}>ðŸ“š</span>
                 <div>
                   <h1 style={{ fontFamily: 'Georgia, serif', fontSize: '20px', fontWeight: 600, color: t.text.primary }}>NextRead</h1>
                   <p style={{ fontSize: '12px', color: t.text.tertiary }}>{books.length} libros</p>
@@ -5454,7 +5303,7 @@ export default function App() {
                   }}
                   title={COPY.sanctuary.enter}
                 >
-                  ◯
+                  â—¯
                 </button>
                 
                 {/* Theme toggle */}
@@ -5491,7 +5340,7 @@ export default function App() {
                     }}
                     title="Estadísticas"
                   >
-                    ◔
+                    â—”
                   </button>
                 )}
                 
@@ -5511,7 +5360,7 @@ export default function App() {
                     }}
                     title="Autores"
                   >
-                    👤
+                    ðŸ‘¤
                   </button>
                 )}
                 
@@ -5530,7 +5379,7 @@ export default function App() {
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
                   >
-                    ⚙
+                    âš™
                   </button>
                 )}
                 
@@ -5559,7 +5408,7 @@ export default function App() {
                       e.target.style.boxShadow = `0 4px 14px ${t.accent}40`;
                     }}
                   >
-                    ¿Qué leo?
+                    Â¿Qué leo?
                   </button>
                 )}
               </div>
@@ -5884,7 +5733,7 @@ export default function App() {
           />
         )}
         
-        {/* VISTA DETALLE DE COLECCIÓN */}
+        {/* VISTA DETALLE DE COLECCIÃ“N */}
         {!sanctuaryMode && activeTab === 'collections' && selectedCollection && (
           <CollectionDetailView
             collection={selectedCollection}
