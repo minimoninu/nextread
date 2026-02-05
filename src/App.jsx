@@ -546,9 +546,15 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
   const title = book.t || book.title || 'Sin título';
   const authors = book.a || book.authors || ['Desconocido'];
   const hasAward = (book.aw || book.awards || []).length > 0;
+  const statusColor = listStatus === 'reading'
+    ? t.accent
+    : listStatus === 'read'
+    ? t.success
+    : listStatus === 'want'
+    ? '#5d83c4'
+    : t.accent;
   
-  // Tamaño más grande en modo santuario
-  const size = sanctuary ? { width: '140px', height: '210px' } : { width: '120px', height: '180px' };
+  const size = sanctuary ? { width: '148px', height: '222px' } : { width: '122px', height: '186px' };
   
   const handlePress = () => {
     setIsPressed(true);
@@ -573,30 +579,29 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
         flexShrink: 0,
         cursor: 'pointer',
         position: 'relative',
-        borderRadius: '10px',
+        borderRadius: '8px',
         overflow: 'hidden',
+        border: `1px solid ${t.border.default}`,
         boxShadow: isPressed 
-          ? '0 2px 8px rgba(0,0,0,0.2)' 
-          : '0 4px 16px rgba(0,0,0,0.18)',
-        background: t.bg.tertiary,
-        transform: isPressed ? 'scale(0.96)' : 'scale(1)',
-        transition: 'transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms ease',
+          ? '0 2px 8px rgba(0,0,0,0.22)' 
+          : '0 8px 14px rgba(0,0,0,0.14)',
+        background: t.bg.secondary,
+        transform: isPressed ? 'scale(0.985)' : 'scale(1)',
+        transition: 'transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease',
         WebkitTapHighlightColor: 'transparent',
       }}
     >
-      {/* Skeleton mejorado */}
       {(!isVisible || (!imgLoaded && !imgError)) && (
         <div 
           className="skeleton"
           style={{
             position: 'absolute', inset: 0,
-            background: `linear-gradient(90deg, ${t.bg.secondary} 0%, ${t.bg.tertiary} 50%, ${t.bg.secondary} 100%)`,
+            background: `linear-gradient(90deg, ${t.bg.secondary} 0%, ${t.bg.elevated} 50%, ${t.bg.secondary} 100%)`,
             backgroundSize: '200% 100%',
           }} 
         />
       )}
       
-      {/* Imagen con fade-in */}
       {isVisible && !imgError && (
         <img 
           src={coverUrl}
@@ -606,7 +611,7 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
             width: '100%', height: '100%',
             objectFit: 'cover',
             opacity: imgLoaded ? 1 : 0,
-            transition: 'opacity 400ms cubic-bezier(0.16, 1, 0.3, 1)'
+            transition: 'opacity 220ms ease'
           }}
           onLoad={() => setImgLoaded(true)}
           onError={() => setImgError(true)}
@@ -614,15 +619,14 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
         />
       )}
       
-      {/* Fallback elegante */}
       {imgError && (
         <div style={{
           position: 'absolute', inset: 0,
           display: 'flex', flexDirection: 'column',
-          justifyContent: 'flex-end', padding: '12px',
-          background: `linear-gradient(145deg, ${t.bg.tertiary}, ${t.bg.elevated})`
+          justifyContent: 'flex-end', padding: '10px',
+          background: t.bg.secondary
         }}>
-          <div style={{ fontFamily: 'Georgia, serif', fontSize: '11px', fontWeight: 600, color: t.text.primary, lineHeight: 1.3 }}>
+          <div style={{ fontFamily: t.typography.display, fontSize: '11px', fontWeight: 600, color: t.text.primary, lineHeight: 1.3 }}>
             {title.slice(0, 50)}
           </div>
           <div style={{ fontSize: '10px', color: t.text.tertiary, marginTop: '4px' }}>
@@ -631,21 +635,20 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
         </div>
       )}
       
-      {/* Indicador con animación */}
       {!sanctuary && (hasAward || listStatus) && (
         <div style={{
-          position: 'absolute', bottom: '6px', right: '6px',
-          width: '20px', height: '20px',
-          borderRadius: '50%',
-          background: listStatus === 'reading' ? t.accent : 
-                     listStatus === 'read' ? t.success : 
-                     listStatus === 'want' ? '#5a7a8a' : t.accent,
+          position: 'absolute', bottom: '7px', right: '7px',
+          minWidth: '20px', height: '20px',
+          padding: '0 6px',
+          borderRadius: '6px',
+          border: `1px solid ${t.bg.primary}`,
+          background: statusColor,
           color: t.bg.primary,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontSize: '10px',
-          boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
-          transform: isPressed ? 'scale(0.9)' : 'scale(1)',
-          transition: 'transform 150ms ease'
+          fontWeight: 700,
+          lineHeight: 1,
+          boxShadow: '0 1px 4px rgba(0,0,0,0.22)'
         }}>
           {listStatus === 'reading' ? '◐' : listStatus === 'read' ? '✔' : listStatus === 'want' ? '○' : '★'}
         </div>
@@ -664,24 +667,25 @@ const Shelf = ({ title, books, onBookClick, theme, getListStatus, sanctuary }) =
   if (!books || books.length === 0) return null;
   
   return (
-    <section style={{ marginBottom: sanctuary ? '56px' : '48px' }}>
+    <section style={{ marginBottom: sanctuary ? '48px' : '40px' }}>
       {!sanctuary && (
         <h2 style={{
-          fontFamily: 'Georgia, serif',
-          fontSize: '20px',
-          fontWeight: 400,
+          fontFamily: t.typography.display,
+          fontSize: '17px',
+          fontWeight: 600,
+          letterSpacing: '0.02em',
           color: t.text.primary,
-          marginBottom: '20px',
-          paddingLeft: '4px'
+          marginBottom: '14px',
+          paddingLeft: '2px'
         }}>
           {title}
         </h2>
       )}
       <div style={{
         display: 'flex',
-        gap: sanctuary ? '20px' : '16px',
+        gap: sanctuary ? '18px' : '12px',
         overflowX: 'auto',
-        paddingBottom: '16px',
+        paddingBottom: '12px',
         marginLeft: '-16px',
         marginRight: '-16px',
         paddingLeft: '16px',
@@ -717,46 +721,48 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
   const pages = book.pg || 300;
   
   return (
-    <section style={{ marginBottom: '48px' }}>
-      {/* Etiqueta */}
-      <div style={{ marginBottom: '16px' }}>
+    <section style={{ marginBottom: '40px' }}>
+      <div style={{ marginBottom: '12px' }}>
         <span style={{
-          display: 'inline-block',
-          padding: '6px 14px',
-          borderRadius: '20px',
-          background: `linear-gradient(135deg, ${t.accent}20, ${t.accent}10)`,
-          color: t.accent,
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '6px',
+          padding: '6px 10px',
+          borderRadius: '8px',
+          border: `1px solid ${t.border.default}`,
+          background: t.bg.elevated,
+          color: t.text.secondary,
           fontSize: '11px',
           fontWeight: 700,
-          letterSpacing: '1px',
+          letterSpacing: '0.06em',
           textTransform: 'uppercase'
         }}>
-          ✨ Tu libro de hoy
+          Selección de hoy
         </span>
       </div>
       
-      {/* Card principal */}
       <div 
         onClick={() => onClick(book)}
         style={{
           display: 'flex',
-          gap: '24px',
-          padding: '24px',
-          borderRadius: '20px',
-          background: `linear-gradient(135deg, ${t.bg.elevated}, ${t.bg.tertiary})`,
-          border: `1px solid ${t.border.subtle}`,
+          gap: '16px',
+          padding: '18px',
+          borderRadius: '14px',
+          background: t.bg.elevated,
+          border: `1px solid ${t.border.default}`,
           cursor: 'pointer',
-          transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+          transition: 'border-color 120ms ease, box-shadow 120ms ease',
+          boxShadow: '0 8px 20px rgba(0,0,0,0.08)'
         }}
       >
-        {/* Portada */}
         <div style={{
           flexShrink: 0,
-          width: '120px',
-          height: '180px',
-          borderRadius: '12px',
+          width: '112px',
+          height: '168px',
+          borderRadius: '8px',
           overflow: 'hidden',
-          boxShadow: '0 8px 24px rgba(0,0,0,0.25)'
+          border: `1px solid ${t.border.default}`,
+          background: t.bg.secondary
         }}>
           <img 
             src={coverUrl} 
@@ -765,15 +771,14 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
           />
         </div>
         
-        {/* Contenido */}
         <div style={{ flex: 1, minWidth: 0 }}>
           <h2 style={{
-            fontFamily: 'Georgia, serif',
-            fontSize: '22px',
+            fontFamily: t.typography.display,
+            fontSize: '24px',
             fontWeight: 600,
             color: t.text.primary,
-            marginBottom: '6px',
-            lineHeight: 1.2
+            marginBottom: '4px',
+            lineHeight: 1.15
           }}>
             {title}
           </h2>
@@ -784,47 +789,49 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
             {pages} páginas
           </p>
           
-          {/* Hook */}
           <p style={{
             fontSize: '14px',
-            lineHeight: 1.6,
+            lineHeight: 1.55,
             color: t.text.secondary,
-            fontStyle: 'italic',
             marginBottom: '12px',
             display: '-webkit-box',
-            WebkitLineClamp: 4,
+            WebkitLineClamp: 5,
             WebkitBoxOrient: 'vertical',
             overflow: 'hidden'
           }}>
-            "{hook.hook}"
+            {hook.hook}
           </p>
           
-          {/* Meta */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
             {hook.experience && (
               <span style={{
                 fontSize: '11px',
-                padding: '4px 10px',
-                borderRadius: '12px',
+                padding: '4px 8px',
+                borderRadius: '8px',
                 background: t.accentMuted,
                 color: t.accent,
-                fontWeight: 600
+                fontWeight: 600,
+                border: `1px solid ${t.border.subtle}`
               }}>
-                ✨ {hook.experience}
+                {hook.experience}
               </span>
             )}
             {hook.themes?.slice(0, 2).map(theme => (
               <span key={theme} style={{
                 fontSize: '11px',
-                padding: '4px 10px',
-                borderRadius: '12px',
-                border: `1px solid ${t.border.subtle}`,
-                color: t.text.tertiary
+                padding: '4px 8px',
+                borderRadius: '8px',
+                border: `1px solid ${t.border.default}`,
+                color: t.text.tertiary,
+                background: t.bg.secondary
               }}>
                 {theme}
               </span>
             ))}
           </div>
+          <p style={{ marginTop: '10px', fontSize: '12px', color: t.accent, fontWeight: 600 }}>
+            Abrir ficha completa →
+          </p>
         </div>
       </div>
     </section>
@@ -839,12 +846,13 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme }) =
   if (!books || books.length === 0) return null;
   
   return (
-    <section style={{ marginBottom: '48px' }}>
-      <div style={{ marginBottom: '20px' }}>
+    <section style={{ marginBottom: '40px' }}>
+      <div style={{ marginBottom: '14px' }}>
         <h2 style={{
-          fontFamily: 'Georgia, serif',
-          fontSize: '20px',
-          fontWeight: 400,
+          fontFamily: t.typography.display,
+          fontSize: '17px',
+          fontWeight: 600,
+          letterSpacing: '0.02em',
           color: t.text.primary,
           marginBottom: '4px'
         }}>
@@ -859,9 +867,9 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme }) =
       
       <div style={{
         display: 'flex',
-        gap: '16px',
+        gap: '12px',
         overflowX: 'auto',
-        paddingBottom: '16px',
+        paddingBottom: '12px',
         marginLeft: '-16px',
         marginRight: '-16px',
         paddingLeft: '16px',
@@ -881,32 +889,31 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme }) =
               onClick={() => onBookClick(book)}
               style={{
                 flexShrink: 0,
-                width: '280px',
-                padding: '16px',
-                borderRadius: '16px',
+                width: '292px',
+                padding: '14px',
+                borderRadius: '12px',
                 background: t.bg.elevated,
-                border: `1px solid ${t.border.subtle}`,
+                border: `1px solid ${t.border.default}`,
                 cursor: 'pointer',
-                transition: 'transform 0.2s ease'
+                transition: 'border-color 120ms ease, box-shadow 120ms ease'
               }}
             >
               <div style={{ display: 'flex', gap: '14px', marginBottom: '12px' }}>
-                {/* Mini portada */}
                 <div style={{
                   flexShrink: 0,
                   width: '60px',
                   height: '90px',
                   borderRadius: '8px',
                   overflow: 'hidden',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+                  border: `1px solid ${t.border.default}`,
+                  background: t.bg.secondary
                 }}>
                   <img src={coverUrl} alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 
-                {/* Info */}
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <h3 style={{
-                    fontFamily: 'Georgia, serif',
+                    fontFamily: t.typography.display,
                     fontSize: '15px',
                     fontWeight: 600,
                     color: t.text.primary,
@@ -933,11 +940,12 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme }) =
                       display: 'inline-block',
                       marginTop: '6px',
                       fontSize: '10px',
-                      padding: '3px 8px',
-                      borderRadius: '10px',
+                      padding: '3px 7px',
+                      borderRadius: '7px',
                       background: t.accentMuted,
                       color: t.accent,
-                      fontWeight: 600
+                      fontWeight: 600,
+                      border: `1px solid ${t.border.subtle}`
                     }}>
                       {hook.experience}
                     </span>
@@ -945,19 +953,17 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme }) =
                 </div>
               </div>
               
-              {/* Mini hook */}
               {hook && (
                 <p style={{
                   fontSize: '12px',
                   lineHeight: 1.5,
                   color: t.text.secondary,
-                  fontStyle: 'italic',
                   display: '-webkit-box',
                   WebkitLineClamp: 3,
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden'
                 }}>
-                  "{hook.hook}"
+                  {hook.hook}
                 </p>
               )}
             </div>
@@ -984,7 +990,7 @@ const FeaturedCollections = ({ collections, onSelect, theme }) => {
   return (
     <section style={{ marginBottom: '48px' }}>
       <h2 style={{
-        fontFamily: 'Georgia, serif',
+        fontFamily: t.typography.display,
         fontSize: '20px',
         fontWeight: 400,
         color: t.text.primary,
@@ -1028,7 +1034,7 @@ const FeaturedCollections = ({ collections, onSelect, theme }) => {
               {collection.emoji}
             </div>
             <h3 style={{
-              fontFamily: 'Georgia, serif',
+              fontFamily: t.typography.display,
               fontSize: '15px',
               fontWeight: 600,
               color: t.text.primary,
@@ -1067,14 +1073,13 @@ const BottomNav = ({ activeTab, onTabChange, theme, savedCount }) => {
       left: 0,
       right: 0,
       zIndex: 60,
-      background: t.bg.elevated,
-      borderTop: `1px solid ${t.border.subtle}`,
+      background: t.bg.primary,
+      borderTop: `1px solid ${t.border.default}`,
       paddingBottom: 'env(safe-area-inset-bottom)',
       display: 'flex',
       justifyContent: 'space-around',
       alignItems: 'center',
-      height: '64px',
-      boxShadow: '0 -2px 10px rgba(0,0,0,0.1)'
+      height: '66px'
     }}>
       {tabs.map(tab => (
         <button
@@ -1092,10 +1097,20 @@ const BottomNav = ({ activeTab, onTabChange, theme, savedCount }) => {
             border: 'none',
             cursor: 'pointer',
             position: 'relative',
-            color: activeTab === tab.id ? t.accent : t.text.tertiary,
-            transition: 'color 0.2s ease'
+            color: activeTab === tab.id ? t.text.primary : t.text.tertiary,
+            transition: 'color 120ms ease'
           }}
         >
+          {activeTab === tab.id && (
+            <span style={{
+              position: 'absolute',
+              top: '-1px',
+              width: '18px',
+              height: '2px',
+              borderRadius: '999px',
+              background: t.accent
+            }} />
+          )}
           <span style={{ fontSize: '22px', lineHeight: 1 }}>{tab.icon}</span>
           <span style={{ fontSize: '10px', fontWeight: 500 }}>{tab.label}</span>
           
@@ -1107,7 +1122,7 @@ const BottomNav = ({ activeTab, onTabChange, theme, savedCount }) => {
               right: 'calc(50% - 16px)',
               minWidth: '16px',
               height: '16px',
-              borderRadius: '8px',
+              borderRadius: '6px',
               background: t.accent,
               color: t.bg.primary,
               fontSize: '10px',
@@ -1142,21 +1157,21 @@ const SanctuaryButton = ({ onExit, theme }) => {
         zIndex: 70,
         width: '48px',
         height: '48px',
-        borderRadius: '50%',
-        border: 'none',
-        background: t.bg.elevated,
+        borderRadius: '10px',
+        border: `1px solid ${t.border.default}`,
+        background: t.bg.primary,
         color: t.text.secondary,
-        boxShadow: '0 4px 16px rgba(0,0,0,0.2)',
+        boxShadow: '0 8px 20px rgba(0,0,0,0.16)',
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        fontSize: '20px',
-        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+        fontSize: '18px',
+        transition: 'transform 120ms ease, opacity 120ms ease',
         opacity: 0.8
       }}
-      onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.opacity = '1'; }}
-      onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '0.8'; }}
+      onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.opacity = '1'; }}
+      onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.opacity = '0.8'; }}
       title={COPY.sanctuary.exit}
     >
       ✕
@@ -1173,16 +1188,18 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
   if (!collections || collections.length === 0) return null;
   
   return (
-    <section style={{ marginBottom: '32px' }}>
+    <section style={{ marginBottom: '28px' }}>
       <div style={{ 
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'space-between',
-        marginBottom: '16px' 
+        marginBottom: '12px' 
       }}>
         <h2 style={{ 
-          fontFamily: 'Georgia, serif', 
-          fontSize: '18px', 
+          fontFamily: t.typography.display, 
+          fontSize: '16px',
+          fontWeight: 600,
+          letterSpacing: '0.02em',
           color: t.text.primary 
         }}>
           Colecciones
@@ -1192,13 +1209,13 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
             onClick={() => onSelectCollection(null)}
             style={{
               background: t.accentMuted,
-              border: 'none',
+              border: `1px solid ${t.accent}`,
               color: t.accent,
               padding: '6px 12px',
-              borderRadius: '16px',
-              fontSize: '13px',
+              borderRadius: '8px',
+              fontSize: '12px',
               cursor: 'pointer',
-              fontWeight: 500
+              fontWeight: 600
             }}
           >
             → Ver todo
@@ -1221,64 +1238,59 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
               key={coll.id}
               onClick={() => onSelectCollection(isSelected ? null : coll)}
               style={{
-                minWidth: '200px',
-                padding: '16px',
-                borderRadius: '16px',
-                background: isSelected ? t.accent : t.bg.secondary,
-                border: `1px solid ${isSelected ? t.accent : t.border.subtle}`,
+                minWidth: '198px',
+                padding: '14px',
+                borderRadius: '12px',
+                background: isSelected ? t.accentMuted : t.bg.secondary,
+                border: `1px solid ${isSelected ? t.accent : t.border.default}`,
                 cursor: 'pointer',
-                transition: 'all 0.2s ease',
+                transition: 'all 120ms ease',
                 position: 'relative',
                 overflow: 'hidden'
               }}
             >
-              {/* Emoji decorativo */}
               <span style={{ 
-                fontSize: '32px', 
-                marginBottom: '8px', 
+                fontSize: '28px', 
+                marginBottom: '6px', 
                 display: 'block' 
               }}>
                 {coll.emoji}
               </span>
               
-              {/* Título */}
               <h3 style={{ 
-                fontSize: '15px', 
+                fontSize: '14px', 
                 fontWeight: 600, 
-                color: isSelected ? t.bg.primary : t.text.primary,
+                color: isSelected ? t.accent : t.text.primary,
                 marginBottom: '4px'
               }}>
                 {coll.title}
               </h3>
               
-              {/* Subtítulo */}
               <p style={{ 
-                fontSize: '12px', 
-                color: isSelected ? t.bg.secondary : t.text.tertiary,
+                fontSize: '11px', 
+                color: isSelected ? t.text.secondary : t.text.tertiary,
                 marginBottom: '8px',
                 lineHeight: 1.4
               }}>
                 {coll.subtitle}
               </p>
               
-              {/* Contador */}
               <span style={{ 
                 fontSize: '11px', 
-                color: isSelected ? t.bg.tertiary : t.text.muted,
-                fontWeight: 500
+                color: isSelected ? t.accent : t.text.muted,
+                fontWeight: 600
               }}>
                 {coll.count} libros
               </span>
               
-              {/* Barra de color decorativa */}
               <div style={{
                 position: 'absolute',
                 bottom: 0,
                 left: 0,
                 right: 0,
-                height: '3px',
+                height: '2px',
                 background: coll.color || t.accent,
-                opacity: isSelected ? 0 : 0.6
+                opacity: isSelected ? 1 : 0.55
               }} />
             </div>
           );
@@ -1298,17 +1310,17 @@ const CollectionHeader = ({ collection, onClear, theme }) => {
   
   return (
     <div style={{
-      padding: '24px',
-      borderRadius: '16px',
-      background: `linear-gradient(135deg, ${collection.color}22, ${collection.color}11)`,
-      border: `1px solid ${collection.color}44`,
+      padding: '18px',
+      borderRadius: '12px',
+      background: t.bg.elevated,
+      border: `1px solid ${t.border.default}`,
       marginBottom: '24px'
     }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
         <span style={{ fontSize: '48px' }}>{collection.emoji}</span>
         <div style={{ flex: 1 }}>
           <h2 style={{ 
-            fontFamily: 'Georgia, serif', 
+            fontFamily: t.typography.display, 
             fontSize: '24px', 
             fontWeight: 600, 
             color: t.text.primary,
@@ -1472,7 +1484,7 @@ const AuthorsView = ({ books, authorsData, onAuthorClick, theme }) => {
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
           <h3 style={{ 
-            fontFamily: 'Georgia, serif', 
+            fontFamily: t.typography.display, 
             fontSize: '16px', 
             fontWeight: 600, 
             color: t.text.primary,
@@ -1566,7 +1578,7 @@ const AuthorsView = ({ books, authorsData, onAuthorClick, theme }) => {
       {authorsWithBio.length > 0 && (
         <section style={{ marginBottom: '32px' }}>
           <h2 style={{ 
-            fontFamily: 'Georgia, serif', 
+            fontFamily: t.typography.display, 
             fontSize: '18px', 
             color: t.text.primary, 
             marginBottom: '16px' 
@@ -1590,7 +1602,7 @@ const AuthorsView = ({ books, authorsData, onAuthorClick, theme }) => {
       {authorsWithoutBio.length > 0 && (
         <section>
           <h2 style={{ 
-            fontFamily: 'Georgia, serif', 
+            fontFamily: t.typography.display, 
             fontSize: '18px', 
             color: t.text.primary, 
             marginBottom: '16px' 
@@ -1693,7 +1705,7 @@ const CollectionsView = ({ collections, books, onCollectionClick, theme }) => {
     return (
       <section style={{ marginBottom: '32px' }}>
         <h2 style={{ 
-          fontFamily: 'Georgia, serif', 
+          fontFamily: t.typography.display, 
           fontSize: '16px', 
           color: t.text.tertiary,
           marginBottom: '16px',
@@ -1731,7 +1743,7 @@ const CollectionsView = ({ collections, books, onCollectionClick, theme }) => {
                   <span style={{ fontSize: '28px' }}>{collection.emoji}</span>
                   <div style={{ flex: 1 }}>
                     <h3 style={{ 
-                      fontFamily: 'Georgia, serif', 
+                      fontFamily: t.typography.display, 
                       fontSize: '16px', 
                       fontWeight: 600, 
                       color: t.text.primary,
@@ -1838,7 +1850,7 @@ const CollectionDetailView = ({ collection, books, onBookClick, onBack, theme, g
           <span style={{ fontSize: '48px' }}>{collection.emoji}</span>
           <div>
             <h1 style={{ 
-              fontFamily: 'Georgia, serif', 
+              fontFamily: t.typography.display, 
               fontSize: '28px', 
               fontWeight: 600, 
               color: t.text.primary,
@@ -2049,12 +2061,57 @@ const RelatedBooksSection = memo(({ currentBook, books, hooks, onBookClick, them
 
 RelatedBooksSection.displayName = 'RelatedBooksSection';
 
+const SPOILER_LEVELS = [
+  {
+    id: 'vibes',
+    label: 'Vibes',
+    description: 'Solo tono general y sensaciones.'
+  },
+  {
+    id: 'lore',
+    label: 'Lore',
+    description: 'Contexto, temas y por que importa.'
+  },
+  {
+    id: 'personajes',
+    label: 'Personajes',
+    description: 'Vista breve de personajes y situacion inicial.'
+  },
+  {
+    id: 'detalles',
+    label: 'Detalles',
+    description: 'Ficha completa con sinopsis extendida.'
+  }
+];
+
+const SPOILER_RANK = {
+  vibes: 0,
+  lore: 1,
+  personajes: 2,
+  detalles: 3
+};
+
+const buildSynopsisPreview = (synopsis, maxLength = 280) => {
+  const compact = String(synopsis || '').replace(/\s+/g, ' ').trim();
+  if (!compact || compact.length <= maxLength) return compact;
+  const chunk = compact.slice(0, maxLength);
+  const breakpoints = ['. ', '; ', ', '];
+  let cut = -1;
+  breakpoints.forEach((bp) => {
+    const idx = chunk.lastIndexOf(bp);
+    if (idx > cut) cut = idx;
+  });
+  const safeCut = cut > 160 ? cut + 1 : maxLength;
+  return `${chunk.slice(0, safeCut).trim()}...`;
+};
+
 // =============================================================================
 // COMPONENTE: BookModal
 // =============================================================================
 const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAuthorClick, onThemeClick, onExperienceClick, onBookClick, bookHook, books, hooks }) => {
   const [imgError, setImgError] = useState(false);
   const [synopsisExpanded, setSynopsisExpanded] = useState(false);
+  const [spoilerLevel, setSpoilerLevel] = useLocalStorage('nextread_spoiler_level', 'vibes');
   const t = THEMES[theme];
   
   if (!book) return null;
@@ -2077,6 +2134,35 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
   const idealFor = book.ideal_for || '';
   const experience = book.experience || '';
   const bookType = book.book_type || '';
+  const activeSpoilerLevel = SPOILER_RANK[spoilerLevel] === undefined ? 'vibes' : spoilerLevel;
+  const spoilerRank = SPOILER_RANK[activeSpoilerLevel];
+  const canSeeLore = spoilerRank >= SPOILER_RANK.lore;
+  const canSeeCharacters = spoilerRank >= SPOILER_RANK.personajes;
+  const canSeeDetails = spoilerRank >= SPOILER_RANK.detalles;
+  const activeSpoilerMeta = SPOILER_LEVELS.find(level => level.id === activeSpoilerLevel) || SPOILER_LEVELS[0];
+  const synopsisPreview = useMemo(() => buildSynopsisPreview(synopsis), [synopsis]);
+  const loreVisualTokens = useMemo(() => {
+    const tokens = [];
+    const hookThemes = Array.isArray(bookHook?.themes) ? bookHook.themes : [];
+    const safeVibes = Array.isArray(vibes) ? vibes : [];
+    safeVibes.slice(0, 3).forEach((vibe) => tokens.push({ label: vibe, accent: false }));
+    hookThemes.slice(0, 3).forEach((thm) => tokens.push({ label: thm, accent: true }));
+    if (book.m) tokens.push({ label: `Mood: ${book.m}`, accent: false });
+    if (difficulty) tokens.push({ label: `Dificultad: ${difficulty}`, accent: false });
+    return tokens.slice(0, 6);
+  }, [bookHook, vibes, book.m, difficulty]);
+
+  useEffect(() => {
+    if (SPOILER_RANK[spoilerLevel] === undefined) {
+      setSpoilerLevel('vibes');
+    }
+  }, [spoilerLevel, setSpoilerLevel]);
+
+  useEffect(() => {
+    if (!canSeeDetails && synopsisExpanded) {
+      setSynopsisExpanded(false);
+    }
+  }, [canSeeDetails, synopsisExpanded]);
   
   const handleListClick = (listId) => {
     onListChange(book.id, currentList === listId ? null : listId);
@@ -2179,7 +2265,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             
             <div style={{ flex: 1, paddingTop: '8px' }}>
               <h2 style={{
-                fontFamily: 'Georgia, serif',
+                fontFamily: t.typography.display,
                 fontSize: '20px',
                 fontWeight: 600,
                 color: t.text.primary,
@@ -2249,6 +2335,79 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             <span style={{ fontSize: '12px', color: t.text.tertiary, marginLeft: '4px' }}>{difficulty}</span>
           </div>
         </div>
+
+        {/* Anti-spoilers + Lore visual */}
+        <div style={{ padding: '0 24px 18px' }}>
+          <p style={{
+            fontSize: '11px',
+            fontWeight: 600,
+            letterSpacing: '0.5px',
+            textTransform: 'uppercase',
+            color: t.text.tertiary,
+            marginBottom: '10px'
+          }}>
+            Nivel de informacion
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            {SPOILER_LEVELS.map((level) => (
+              <button
+                key={level.id}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSpoilerLevel(level.id);
+                }}
+                style={{
+                  fontSize: '12px',
+                  padding: '6px 10px',
+                  borderRadius: '12px',
+                  border: `1px solid ${activeSpoilerLevel === level.id ? t.accent : t.border.default}`,
+                  background: activeSpoilerLevel === level.id ? t.accentMuted : t.bg.tertiary,
+                  color: activeSpoilerLevel === level.id ? t.accent : t.text.secondary,
+                  cursor: 'pointer',
+                  fontWeight: 600
+                }}
+              >
+                {level.label}
+              </button>
+            ))}
+          </div>
+          <p style={{ fontSize: '12px', color: t.text.tertiary, marginTop: '8px' }}>
+            {activeSpoilerMeta.description}
+          </p>
+
+          {loreVisualTokens.length > 0 && (
+            <>
+              <p style={{
+                fontSize: '11px',
+                fontWeight: 600,
+                letterSpacing: '0.5px',
+                textTransform: 'uppercase',
+                color: t.text.tertiary,
+                marginTop: '12px',
+                marginBottom: '8px'
+              }}>
+                Mapa visual del lore (sin spoiler)
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {loreVisualTokens.map((token, idx) => (
+                  <span
+                    key={`${token.label}-${idx}`}
+                    style={{
+                      fontSize: '11px',
+                      padding: '4px 9px',
+                      borderRadius: '999px',
+                      background: token.accent ? t.accentMuted : t.bg.tertiary,
+                      color: token.accent ? t.accent : t.text.secondary,
+                      border: `1px solid ${token.accent ? t.accent : t.border.subtle}`
+                    }}
+                  >
+                    {token.label}
+                  </span>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
         
         {/* Vibes */}
         {vibes.length > 0 && (
@@ -2273,28 +2432,30 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             padding: '0 24px 20px'
           }}>
             {/* El gancho principal */}
-            <div style={{
-              padding: '16px',
-              borderRadius: '12px',
-              background: `linear-gradient(135deg, ${t.accent}15, ${t.accent}05)`,
-              borderLeft: `3px solid ${t.accent}`,
-              marginBottom: '12px'
-            }}>
-              <p style={{
-                fontSize: '15px',
-                lineHeight: 1.7,
-                color: t.text.primary,
-                fontStyle: 'italic',
-                margin: 0
+            {bookHook.hook && (
+              <div style={{
+                padding: '16px',
+                borderRadius: '12px',
+                background: `linear-gradient(135deg, ${t.accent}15, ${t.accent}05)`,
+                borderLeft: `3px solid ${t.accent}`,
+                marginBottom: '12px'
               }}>
-                "{bookHook.hook}"
-              </p>
-            </div>
+                <p style={{
+                  fontSize: '15px',
+                  lineHeight: 1.7,
+                  color: t.text.primary,
+                  fontStyle: 'italic',
+                  margin: 0
+                }}>
+                  "{bookHook.hook}"
+                </p>
+              </div>
+            )}
             
             {/* Meta info del hook */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '12px' }}>
               {/* Perfecto para */}
-              {bookHook.perfect_for && (
+              {canSeeLore && bookHook.perfect_for && (
                 <span style={{
                   fontSize: '12px',
                   padding: '4px 10px',
@@ -2338,7 +2499,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             </div>
             
             {/* Por qué importa */}
-            {bookHook.why_matters && (
+            {canSeeLore && bookHook.why_matters && (
               <p style={{
                 fontSize: '12px',
                 color: t.text.tertiary,
@@ -2350,7 +2511,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             )}
             
             {/* Temas */}
-            {bookHook.themes && bookHook.themes.length > 0 && (
+            {canSeeLore && bookHook.themes && bookHook.themes.length > 0 && (
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '12px' }}>
                 {bookHook.themes.map(thm => (
                   <button 
@@ -2385,8 +2546,8 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           </div>
         )}
         
-        {/* Hook - Por qué leer este libro */}
-        {hook && (
+        {/* Hook fallback (solo si no hay hook enriquecido) */}
+        {!bookHook && hook && (
           <div style={{ 
             padding: '20px 24px',
             background: `linear-gradient(135deg, ${t.accent}11, ${t.accent}05)`,
@@ -2404,7 +2565,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             </p>
             
             {/* Temas */}
-            {themes.length > 0 && (
+            {canSeeLore && themes.length > 0 && (
               <div style={{ 
                 display: 'flex', 
                 flexWrap: 'wrap', 
@@ -2430,7 +2591,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             )}
             
             {/* Para quién es */}
-            {idealFor && (
+            {canSeeLore && idealFor && (
               <p style={{
                 fontSize: '12px',
                 color: t.text.tertiary,
@@ -2441,7 +2602,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
             )}
             
             {/* Experiencia y tipo */}
-            {(experience || bookType) && (
+            {canSeeLore && (experience || bookType) && (
               <div style={{ 
                 display: 'flex', 
                 gap: '12px', 
@@ -2463,34 +2624,55 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
         {/* Sinopsis */}
         {synopsis && (
           <div style={{ padding: '0 24px 20px' }}>
-            <p style={{
-              fontSize: '14px',
-              lineHeight: 1.7,
-              color: t.text.secondary,
-              ...(!synopsisExpanded ? {
-                display: '-webkit-box',
-                WebkitLineClamp: 5,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden'
-              } : {})
-            }}>
-              {synopsis}
-            </p>
-            {synopsis.length > 150 && (
-              <button
-                onClick={(e) => { e.stopPropagation(); setSynopsisExpanded(!synopsisExpanded); }}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  color: t.accent,
-                  fontSize: '13px',
-                  cursor: 'pointer',
-                  padding: '8px 0 0 0',
-                  fontWeight: 500
-                }}
-              >
-                {synopsisExpanded ? '← Ver menos' : 'Ver más →'}
-              </button>
+            {!canSeeCharacters && (
+              <div style={{
+                padding: '12px 14px',
+                borderRadius: '10px',
+                background: t.bg.secondary,
+                border: `1px solid ${t.border.subtle}`
+              }}>
+                <p style={{ fontSize: '12px', color: t.text.tertiary, lineHeight: 1.5 }}>
+                  🔒 Sinopsis oculta en este nivel. Cambia a <strong style={{ color: t.text.secondary }}>Personajes</strong> o <strong style={{ color: t.text.secondary }}>Detalles</strong> para verla.
+                </p>
+              </div>
+            )}
+            {canSeeCharacters && (
+              <>
+                <p style={{
+                  fontSize: '14px',
+                  lineHeight: 1.7,
+                  color: t.text.secondary,
+                  ...((canSeeDetails && !synopsisExpanded) ? {
+                    display: '-webkit-box',
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden'
+                  } : {})
+                }}>
+                  {canSeeDetails ? synopsis : synopsisPreview}
+                </p>
+                {!canSeeDetails && synopsis.length > synopsisPreview.length && (
+                  <p style={{ fontSize: '12px', color: t.text.tertiary, marginTop: '8px' }}>
+                    Para ver la sinopsis completa, cambia a nivel <strong style={{ color: t.text.secondary }}>Detalles</strong>.
+                  </p>
+                )}
+                {canSeeDetails && synopsis.length > 150 && (
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setSynopsisExpanded(!synopsisExpanded); }}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      color: t.accent,
+                      fontSize: '13px',
+                      cursor: 'pointer',
+                      padding: '8px 0 0 0',
+                      fontWeight: 500
+                    }}
+                  >
+                    {synopsisExpanded ? '← Ver menos' : 'Ver más →'}
+                  </button>
+                )}
+              </>
             )}
           </div>
         )}
@@ -2730,7 +2912,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
         {/* Header */}
         <div style={{ padding: '12px 24px 16px', borderBottom: `1px solid ${t.border.subtle}` }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-            <h3 style={{ fontFamily: 'Georgia, serif', fontSize: '22px', color: t.text.primary }}>
+            <h3 style={{ fontFamily: t.typography.display, fontSize: '22px', color: t.text.primary }}>
               Encuentra tu libro
             </h3>
             <button onClick={onClose} style={{ 
@@ -3093,7 +3275,7 @@ const StatsModal = ({ books, onClose, theme }) => {
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-          <h3 style={{ fontFamily: 'Georgia, serif', fontSize: '22px', color: t.text.primary }}>{COPY.stats.title}</h3>
+          <h3 style={{ fontFamily: t.typography.display, fontSize: '22px', color: t.text.primary }}>{COPY.stats.title}</h3>
           <button onClick={onClose} style={{ 
             background: 'none', border: 'none', 
             color: t.text.tertiary, fontSize: '20px', cursor: 'pointer' 
@@ -3208,7 +3390,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
             <div style={{ flex: 1 }}>
               <h2 style={{ 
-                fontFamily: 'Georgia, serif', 
+                fontFamily: t.typography.display, 
                 fontSize: '24px', 
                 fontWeight: 600, 
                 color: t.text.primary,
@@ -3584,7 +3766,7 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
             {themeEmojis[themeName] || '📚'}
           </span>
           <h2 style={{
-            fontFamily: 'Georgia, serif',
+            fontFamily: t.typography.display,
             fontSize: '24px',
             fontWeight: 600,
             color: t.text.primary,
@@ -3785,7 +3967,7 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
             {experienceEmojis[experience] || '✨'}
           </span>
           <h2 style={{
-            fontFamily: 'Georgia, serif',
+            fontFamily: t.typography.display,
             fontSize: '26px',
             fontWeight: 600,
             color: t.text.primary,
@@ -4781,7 +4963,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <h2 style={{ 
-                  fontFamily: 'Georgia, serif', fontSize: '22px', fontWeight: 600,
+                  fontFamily: t.typography.display, fontSize: '22px', fontWeight: 600,
                   color: t.text.primary, marginBottom: '8px', lineHeight: 1.2
                 }}>
                   {book.t}
@@ -5023,7 +5205,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
         
         {/* Pregunta */}
         <h2 style={{ 
-          fontFamily: 'Georgia, serif',
+          fontFamily: t.typography.display,
           fontSize: '24px', fontWeight: 600,
           color: t.text.primary,
           marginBottom: '8px',
@@ -5155,7 +5337,7 @@ const TodayMode = ({ picks, onBookClick, onExit, theme, getListStatus }) => {
               Seleccion diaria
             </p>
             <h2 style={{
-              fontFamily: 'Georgia, serif',
+              fontFamily: t.typography.display,
               fontSize: '28px',
               fontWeight: 600,
               color: t.text.primary,
@@ -5587,39 +5769,23 @@ export default function App() {
     filters.length || filters.language || filters.minAcclaim ||
     (filters.genres && filters.genres.length > 0);
   
-  // CSS global para animaciones - Estilo Apple
+  // CSS global para microinteracciones minimalistas
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
-      /* ============================================
-         MICROINTERACCIONES - Estilo Apple
-         ============================================ */
-      
-      /* Animaciones base con curvas Apple */
       @keyframes fadeIn { 
         from { opacity: 0; } 
         to { opacity: 1; } 
       }
       
       @keyframes slideUp { 
-        from { opacity: 0; transform: translateY(100%); } 
+        from { opacity: 0; transform: translateY(18px); } 
         to { opacity: 1; transform: translateY(0); } 
       }
       
-      @keyframes slideDown {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      
       @keyframes scaleIn { 
-        from { opacity: 0; transform: scale(0.9); } 
+        from { opacity: 0; transform: scale(0.985); } 
         to { opacity: 1; transform: scale(1); } 
-      }
-      
-      @keyframes scaleInBounce {
-        0% { opacity: 0; transform: scale(0.8); }
-        70% { transform: scale(1.02); }
-        100% { opacity: 1; transform: scale(1); }
       }
       
       @keyframes shimmer { 
@@ -5627,39 +5793,13 @@ export default function App() {
         100% { background-position: 200% 0; } 
       }
       
-      @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.7; }
-      }
-      
-      @keyframes breathe {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.02); }
-      }
-      
-      @keyframes gentleBounce {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-4px); }
-        100% { transform: translateY(0); }
-      }
-      
-      @keyframes ripple {
-        0% { transform: scale(0); opacity: 0.5; }
-        100% { transform: scale(4); opacity: 0; }
-      }
-      
-      /* Variables de timing Apple */
       :root {
-        --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-        --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
-        --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
-        --spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        --duration-fast: 150ms;
-        --duration-normal: 250ms;
-        --duration-slow: 400ms;
+        --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+        --duration-fast: 120ms;
+        --duration-normal: 180ms;
+        --duration-slow: 240ms;
       }
       
-      /* Reset y base */
       * { 
         box-sizing: border-box; 
         margin: 0; 
@@ -5670,133 +5810,61 @@ export default function App() {
       html, body, #root { min-height: 100vh; }
       
       body { 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+        font-family: ${FONT_STACK_BODY}; 
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         touch-action: manipulation;
       }
       
-      /* Scrollbar elegante */
-      ::-webkit-scrollbar { width: 6px; height: 6px; }
+      ::-webkit-scrollbar { width: 7px; height: 7px; }
       ::-webkit-scrollbar-track { background: transparent; }
       ::-webkit-scrollbar-thumb { 
-        background: rgba(128,128,128,0.3); 
-        border-radius: 3px;
-        transition: background 0.2s ease;
+        background: rgba(127, 127, 127, 0.28); 
+        border-radius: 999px;
       }
       ::-webkit-scrollbar-thumb:hover { 
-        background: rgba(128,128,128,0.5); 
+        background: rgba(127, 127, 127, 0.42); 
       }
       
-      /* ============================================
-         CLASES TÁCTILES REUTILIZABLES
-         ============================================ */
-      
-      /* Touchable base - se encoge al presionar */
       .touchable {
-        transition: transform var(--duration-fast) var(--ease-out-expo),
-                    opacity var(--duration-fast) ease;
+        transition: transform var(--duration-fast) var(--ease-standard),
+                    opacity var(--duration-fast) var(--ease-standard);
         cursor: pointer;
         user-select: none;
         -webkit-user-select: none;
       }
       
       .touchable:active {
-        transform: scale(0.97);
-        opacity: 0.9;
-      }
-      
-      /* Touchable suave - menos pronunciado */
-      .touchable-soft:active {
         transform: scale(0.985);
-        opacity: 0.95;
+        opacity: 0.96;
       }
       
-      /* Touchable con bounce al soltar */
-      .touchable-bounce {
-        transition: transform var(--duration-normal) var(--spring);
-      }
-      
-      .touchable-bounce:active {
-        transform: scale(0.95);
-      }
-      
-      /* Card con elevación al hover */
-      .card-hover {
-        transition: transform var(--duration-normal) var(--ease-out-expo),
-                    box-shadow var(--duration-normal) ease;
-      }
-      
-      .card-hover:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-      }
-      
-      .card-hover:active {
-        transform: translateY(0) scale(0.98);
-      }
-      
-      /* Botón con ripple */
-      .btn-ripple {
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .btn-ripple::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-        transform: scale(0);
-        opacity: 0;
-        pointer-events: none;
-      }
-      
-      .btn-ripple:active::after {
-        animation: ripple 0.4s ease-out;
-      }
-      
-      /* Cover de libro con zoom suave */
       .book-cover {
-        transition: transform var(--duration-normal) var(--ease-out-expo),
-                    box-shadow var(--duration-normal) ease;
+        transition: transform var(--duration-fast) var(--ease-standard),
+                    box-shadow var(--duration-fast) var(--ease-standard),
+                    border-color var(--duration-fast) var(--ease-standard);
       }
       
       .book-cover:hover {
-        transform: scale(1.03);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        transform: translateY(-1px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.12);
       }
       
       .book-cover:active {
-        transform: scale(0.98);
+        transform: scale(0.99);
       }
       
-      /* Chip/Tag interactivo */
-      .chip-interactive {
-        transition: all var(--duration-fast) var(--ease-out-expo);
-      }
-      
-      .chip-interactive:hover {
-        transform: translateY(-1px);
-      }
-      
-      .chip-interactive:active {
-        transform: scale(0.95);
-      }
-      
-      /* Modal sheet con slide suave */
       .modal-sheet {
-        animation: slideUp var(--duration-slow) var(--ease-out-expo);
+        animation: slideUp var(--duration-slow) var(--ease-standard);
       }
       
       .modal-overlay {
-        animation: fadeIn var(--duration-normal) ease;
+        animation: fadeIn var(--duration-normal) var(--ease-standard);
       }
       
-      /* Stagger animation para listas */
       .stagger-item {
         opacity: 0;
-        animation: fadeIn var(--duration-normal) var(--ease-out-expo) forwards;
+        animation: fadeIn var(--duration-normal) var(--ease-standard) forwards;
       }
       
       .stagger-item:nth-child(1) { animation-delay: 0ms; }
@@ -5808,25 +5876,22 @@ export default function App() {
       .stagger-item:nth-child(7) { animation-delay: 300ms; }
       .stagger-item:nth-child(8) { animation-delay: 350ms; }
       
-      /* Focus visible para accesibilidad */
       :focus-visible {
-        outline: 2px solid rgba(100, 150, 255, 0.5);
+        outline: 2px solid rgba(15, 102, 218, 0.58);
         outline-offset: 2px;
       }
       
-      /* Skeleton loading */
       .skeleton {
         background: linear-gradient(90deg, 
-          rgba(128,128,128,0.1) 25%, 
-          rgba(128,128,128,0.2) 50%, 
-          rgba(128,128,128,0.1) 75%
+          rgba(127, 127, 127, 0.08) 25%, 
+          rgba(127, 127, 127, 0.16) 50%, 
+          rgba(127, 127, 127, 0.08) 75%
         );
         background-size: 200% 100%;
-        animation: shimmer 1.5s infinite;
+        animation: shimmer 1.6s infinite linear;
         border-radius: 8px;
       }
       
-      /* Prevent text selection on interactive elements */
       button, [role="button"], .touchable {
         -webkit-touch-callout: none;
       }
@@ -5854,7 +5919,7 @@ export default function App() {
     <div style={{ 
       minHeight: '100vh', 
       background: t.bg.primary, 
-      transition: 'background 0.3s ease',
+      transition: 'background 180ms ease',
       paddingBottom: isMobile && !sanctuaryMode ? '80px' : '0'
     }}>
       {/* Header (oculto en modo santuario) */}
@@ -5862,9 +5927,11 @@ export default function App() {
         <header style={{ 
           position: 'sticky', top: 0, zIndex: 50,
           background: t.bg.primary,
-          borderBottom: `1px solid ${t.border.subtle}`,
+          borderBottom: `1px solid ${t.border.default}`,
           padding: '16px',
-          transition: 'background 0.3s ease'
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+          transition: 'background 180ms ease'
         }}>
           <div style={{ maxWidth: '1024px', margin: '0 auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
@@ -5883,17 +5950,17 @@ export default function App() {
                 style={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  gap: '12px',
+                  gap: '10px',
                   cursor: 'pointer',
-                  transition: 'opacity 0.2s ease'
+                  transition: 'opacity 120ms ease'
                 }}
                 onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
                 onMouseLeave={e => e.currentTarget.style.opacity = '1'}
                 title="Volver al inicio"
               >
-                <span style={{ fontSize: '28px' }}>📚</span>
+                <span style={{ fontSize: '26px' }}>📚</span>
                 <div>
-                  <h1 style={{ fontFamily: 'Georgia, serif', fontSize: '20px', fontWeight: 600, color: t.text.primary }}>NextRead</h1>
+                  <h1 style={{ fontFamily: t.typography.display, fontSize: '19px', fontWeight: 600, color: t.text.primary, letterSpacing: '0.01em' }}>NextRead</h1>
                   <p style={{ fontSize: '12px', color: t.text.tertiary }}>{books.length} libros</p>
                 </div>
               </div>
@@ -5907,11 +5974,11 @@ export default function App() {
                   onChange={e => setFilters(f => ({ ...f, search: e.target.value }))}
                   style={{
                     flex: 1,
-                    maxWidth: '300px',
+                    maxWidth: '320px',
                     padding: '10px 16px',
-                    borderRadius: '10px',
+                    borderRadius: '8px',
                     border: `1px solid ${t.border.default}`,
-                    background: t.bg.secondary,
+                    background: t.bg.elevated,
                     color: t.text.primary,
                     fontSize: '14px',
                     outline: 'none',
@@ -5927,9 +5994,9 @@ export default function App() {
                   onClick={() => setSanctuaryMode(true)}
                   style={{
                     width: '40px', height: '40px',
-                    borderRadius: '10px',
-                    border: 'none',
-                    background: t.bg.tertiary,
+                    borderRadius: '8px',
+                    border: `1px solid ${t.border.default}`,
+                    background: t.bg.elevated,
                     color: t.text.secondary,
                     fontSize: '18px',
                     cursor: 'pointer',
@@ -5945,9 +6012,9 @@ export default function App() {
                   onClick={() => setTheme(theme === 'night' ? 'day' : 'night')}
                   style={{
                     width: '40px', height: '40px',
-                    borderRadius: '10px',
-                    border: 'none',
-                    background: t.bg.tertiary,
+                    borderRadius: '8px',
+                    border: `1px solid ${t.border.default}`,
+                    background: t.bg.elevated,
                     color: t.text.secondary,
                     fontSize: '18px',
                     cursor: 'pointer',
@@ -5963,9 +6030,9 @@ export default function App() {
                   onClick={toggleTodayMode}
                   style={{
                     width: '40px', height: '40px',
-                    borderRadius: '10px',
-                    border: 'none',
-                    background: todayMode ? t.accentMuted : t.bg.tertiary,
+                    borderRadius: '8px',
+                    border: `1px solid ${todayMode ? t.accent : t.border.default}`,
+                    background: todayMode ? t.accentMuted : t.bg.elevated,
                     color: todayMode ? t.accent : t.text.secondary,
                     fontSize: '16px',
                     fontWeight: 700,
@@ -5983,9 +6050,9 @@ export default function App() {
                     onClick={() => setShowStats(true)}
                     style={{
                       width: '40px', height: '40px',
-                      borderRadius: '10px',
-                      border: 'none',
-                      background: t.bg.tertiary,
+                      borderRadius: '8px',
+                      border: `1px solid ${t.border.default}`,
+                      background: t.bg.elevated,
                       color: t.text.secondary,
                       fontSize: '18px',
                       cursor: 'pointer',
@@ -6003,9 +6070,9 @@ export default function App() {
                     onClick={() => setActiveTab('authors')}
                     style={{
                       width: '40px', height: '40px',
-                      borderRadius: '10px',
-                      border: 'none',
-                      background: activeTab === 'authors' ? t.accentMuted : t.bg.tertiary,
+                      borderRadius: '8px',
+                      border: `1px solid ${activeTab === 'authors' ? t.accent : t.border.default}`,
+                      background: activeTab === 'authors' ? t.accentMuted : t.bg.elevated,
                       color: activeTab === 'authors' ? t.accent : t.text.secondary,
                       fontSize: '18px',
                       cursor: 'pointer',
@@ -6023,9 +6090,9 @@ export default function App() {
                     onClick={() => setShowFilters(true)}
                     style={{
                       width: '40px', height: '40px',
-                      borderRadius: '10px',
-                      border: 'none',
-                      background: hasFiltersActive ? t.accentMuted : t.bg.tertiary,
+                      borderRadius: '8px',
+                      border: `1px solid ${hasFiltersActive ? t.accent : t.border.default}`,
+                      background: hasFiltersActive ? t.accentMuted : t.bg.elevated,
                       color: hasFiltersActive ? t.accent : t.text.secondary,
                       fontSize: '18px',
                       cursor: 'pointer',
@@ -6041,24 +6108,24 @@ export default function App() {
                   <button 
                     onClick={() => { setShowWizard(true); haptic.medium(); }}
                     style={{
-                      padding: '10px 20px',
-                      borderRadius: '12px',
-                      border: 'none',
-                      background: t.gradient?.accent || t.accent,
+                      padding: '10px 16px',
+                      borderRadius: '8px',
+                      border: `1px solid ${t.accent}`,
+                      background: t.accent,
                       color: t.bg.primary,
                       fontSize: '14px',
                       fontWeight: 600,
                       cursor: 'pointer',
-                      boxShadow: `0 4px 14px ${t.accent}40`,
-                      transition: 'all 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+                      letterSpacing: '0.01em',
+                      transition: 'filter 120ms ease, transform 120ms ease',
                     }}
                     onMouseEnter={e => { 
-                      e.target.style.transform = 'translateY(-2px)'; 
-                      e.target.style.boxShadow = `0 6px 20px ${t.accent}50`;
+                      e.target.style.filter = 'brightness(1.04)'; 
+                      e.target.style.transform = 'translateY(-1px)';
                     }}
                     onMouseLeave={e => { 
-                      e.target.style.transform = 'translateY(0)'; 
-                      e.target.style.boxShadow = `0 4px 14px ${t.accent}40`;
+                      e.target.style.filter = 'brightness(1)'; 
+                      e.target.style.transform = 'translateY(0)';
                     }}
                   >
                     ¿Qué leo?
@@ -6078,9 +6145,9 @@ export default function App() {
                   width: '100%',
                   marginTop: '12px',
                   padding: '10px 16px',
-                  borderRadius: '10px',
+                  borderRadius: '8px',
                   border: `1px solid ${t.border.default}`,
-                  background: t.bg.secondary,
+                  background: t.bg.elevated,
                   color: t.text.primary,
                   fontSize: '14px',
                   outline: 'none'
@@ -6093,22 +6160,23 @@ export default function App() {
               <div style={{ 
                 display: 'flex', gap: '4px', 
                 marginTop: '16px', padding: '4px',
-                borderRadius: '10px',
-                background: t.bg.secondary
+                borderRadius: '8px',
+                background: t.bg.secondary,
+                border: `1px solid ${t.border.default}`
               }}>
                 <button
                   onClick={() => setViewMode('curated')}
                   style={{
                     flex: 1, padding: '10px',
                     borderRadius: '8px',
-                    border: 'none',
+                    border: `1px solid ${viewMode === 'curated' ? t.border.default : 'transparent'}`,
                     background: viewMode === 'curated' ? t.bg.elevated : 'transparent',
                     color: viewMode === 'curated' ? t.text.primary : t.text.tertiary,
                     fontSize: '14px',
-                    fontWeight: 500,
+                    fontWeight: 600,
                     cursor: 'pointer',
-                    boxShadow: viewMode === 'curated' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
-                    transition: 'all 0.2s ease'
+                    boxShadow: 'none',
+                    transition: 'all 120ms ease'
                   }}
                 >
                   {COPY.curated}
@@ -6118,14 +6186,14 @@ export default function App() {
                   style={{
                     flex: 1, padding: '10px',
                     borderRadius: '8px',
-                    border: 'none',
+                    border: `1px solid ${viewMode === 'archive' ? t.border.default : 'transparent'}`,
                     background: viewMode === 'archive' ? t.bg.elevated : 'transparent',
                     color: viewMode === 'archive' ? t.text.primary : t.text.tertiary,
                     fontSize: '14px',
-                    fontWeight: 500,
+                    fontWeight: 600,
                     cursor: 'pointer',
-                    boxShadow: viewMode === 'archive' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
-                    transition: 'all 0.2s ease'
+                    boxShadow: 'none',
+                    transition: 'all 120ms ease'
                   }}
                 >
                   {COPY.archive}
@@ -6140,7 +6208,7 @@ export default function App() {
       <main style={{ 
         maxWidth: '1024px', 
         margin: '0 auto', 
-        padding: sanctuaryMode ? '48px 16px' : '24px 16px 64px'
+        padding: sanctuaryMode ? '40px 16px' : '20px 16px 64px'
       }}>
         {/* MODO SANTUARIO */}
         {sanctuaryMode && narrativeShelves && (
