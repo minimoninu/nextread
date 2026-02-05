@@ -338,6 +338,118 @@ const COPY = {
   }
 };
 
+const DEFAULT_FILTERS = {
+  search: '',
+  difficulty: null,
+  hasAwards: false,
+  mood: null,
+  experience: null,
+  moment: null,
+  theme: null,
+  genres: [],
+  minAcclaim: null,
+  length: null,
+  language: null
+};
+
+const ACCLAIM_FILTER_OPTIONS = [
+  { id: 1, label: '1+ critica' },
+  { id: 2, label: '2+ critica' },
+  { id: 3, label: '3+ critica' },
+  { id: 4, label: '4+ critica' }
+];
+
+const LENGTH_FILTER_OPTIONS = [
+  { id: 'short', label: 'Corto', max: 250 },
+  { id: 'medium', label: 'Medio', min: 251, max: 450 },
+  { id: 'long', label: 'Largo', min: 451, max: 700 },
+  { id: 'epic', label: 'Epico', min: 701 }
+];
+
+const LANGUAGE_FILTER_OPTIONS = [
+  { id: 'es', label: 'Espanol' },
+  { id: 'en', label: 'Ingles' },
+  { id: 'fr', label: 'Frances' },
+  { id: 'it', label: 'Italiano' },
+  { id: 'pt', label: 'Portugues' },
+  { id: 'de', label: 'Aleman' },
+  { id: 'unknown', label: 'Sin detectar' }
+];
+
+const LANGUAGE_KEYWORDS = {
+  es: ['el', 'la', 'los', 'las', 'de', 'del', 'y', 'en', 'una', 'un'],
+  en: ['the', 'and', 'of', 'in', 'to', 'a', 'an', 'for', 'with'],
+  fr: ['le', 'la', 'les', 'de', 'des', 'et', 'dans', 'une', 'un'],
+  it: ['il', 'lo', 'gli', 'le', 'di', 'del', 'e', 'una', 'un'],
+  pt: ['o', 'a', 'os', 'as', 'de', 'do', 'da', 'e', 'uma', 'um'],
+  de: ['der', 'die', 'das', 'und', 'von', 'ein', 'eine', 'im']
+};
+
+const normalizeFilters = (value = {}) => {
+  const next = { ...DEFAULT_FILTERS, ...value };
+  next.genres = Array.isArray(next.genres) ? next.genres.filter(Boolean) : [];
+  next.minAcclaim = Number.isFinite(Number(next.minAcclaim)) ? Number(next.minAcclaim) : null;
+  return next;
+};
+
+const parsePages = (book) => {
+  const raw = Number(book?.pg ?? book?.pages ?? 0);
+  return Number.isFinite(raw) ? raw : 0;
+};
+
+const parseAcclaim = (book) => {
+  const raw = Number(book?.ac ?? 0);
+  return Number.isFinite(raw) ? raw : 0;
+};
+
+const detectLanguageFromTitle = (title) => {
+  const cleaned = String(title || '')
+    .toLowerCase()
+    .replace(/[^0-9a-z\u00C0-\u017F]+/g, ' ')
+    .trim();
+  if (!cleaned) return 'unknown';
+
+  const tokens = new Set(cleaned.split(/\s+/));
+  const score = { es: 0, en: 0, fr: 0, it: 0, pt: 0, de: 0 };
+
+  Object.entries(LANGUAGE_KEYWORDS).forEach(([lang, words]) => {
+    words.forEach((word) => {
+      if (tokens.has(word)) score[lang] += 1;
+    });
+  });
+
+  if (/[ñáéíóú]/.test(cleaned)) score.es += 1;
+  if (/[ãõç]/.test(cleaned)) score.pt += 1;
+  if (/[äöüß]/.test(cleaned)) score.de += 1;
+  if (/[àâêëîïôûùÿœ]/.test(cleaned)) score.fr += 1;
+
+  const ranked = Object.entries(score).sort((a, b) => b[1] - a[1]);
+  if (!ranked[0] || ranked[0][1] === 0) return 'unknown';
+  if (ranked[1] && ranked[0][1] === ranked[1][1]) return 'unknown';
+  return ranked[0][0];
+};
+
+const getBookLanguage = (book) => {
+  const explicit = String(book?.lang || book?.language || book?.idioma || '').toLowerCase();
+  if (explicit.startsWith('es')) return 'es';
+  if (explicit.startsWith('en')) return 'en';
+  if (explicit.startsWith('fr')) return 'fr';
+  if (explicit.startsWith('it')) return 'it';
+  if (explicit.startsWith('pt')) return 'pt';
+  if (explicit.startsWith('de')) return 'de';
+  return detectLanguageFromTitle(book?.t || book?.title || '');
+};
+
+const matchesLengthFilter = (book, lengthFilter) => {
+  if (!lengthFilter) return true;
+  const pages = parsePages(book);
+  const option = LENGTH_FILTER_OPTIONS.find((item) => item.id === lengthFilter);
+  if (!option || pages <= 0) return false;
+  if (option.min && pages < option.min) return false;
+  if (option.max && pages > option.max) return false;
+  return true;
+};
+
 // =============================================================================
 // HOOKS
 // =============================================================================
@@ -2455,7 +2567,7 @@ const SOUL_FILTERS = {
   }
 };
 
-const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
+const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => {
   const t = THEMES[theme];
   const [activeSection, setActiveSection] = useState('experience');
   
@@ -2501,8 +2613,10 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
     </button>
   );
 
-  const hasAnyFilter = filters.experience || filters.moment || filters.theme || 
-                       filters.difficulty || filters.hasAwards;
+  const hasAnyFilter = filters.experience || filters.moment || filters.theme ||
+    filters.difficulty || filters.hasAwards || filters.mood ||
+    filters.length || filters.language || filters.minAcclaim ||
+    (filters.genres && filters.genres.length > 0);
 
   const getActiveFiltersSummary = () => {
     const parts = [];
@@ -2520,6 +2634,16 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
     }
     if (filters.difficulty) parts.push(`⚡ ${filters.difficulty}`);
     if (filters.hasAwards) parts.push('🏆 premiados');
+    if (filters.genres.length > 0) parts.push(`🏷 ${filters.genres.length} generos`);
+    if (filters.minAcclaim) parts.push(`⭐ ${filters.minAcclaim}+ critica`);
+    if (filters.length) {
+      const lengthLabel = LENGTH_FILTER_OPTIONS.find(o => o.id === filters.length)?.label;
+      if (lengthLabel) parts.push(`📏 ${lengthLabel}`);
+    }
+    if (filters.language) {
+      const languageLabel = LANGUAGE_FILTER_OPTIONS.find(o => o.id === filters.language)?.label;
+      if (languageLabel) parts.push(`🌍 ${languageLabel}`);
+    }
     return parts.join(' · ');
   };
   
@@ -2716,6 +2840,28 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
             <div>
               <div style={{ marginBottom: '24px' }}>
                 <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                  Genero
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                  {genres.slice(0, 24).map(g => (
+                    <ChipButton
+                      key={g}
+                      active={filters.genres.includes(g)}
+                      onClick={() => setFilters(f => ({
+                        ...f,
+                        genres: f.genres.includes(g)
+                          ? f.genres.filter(item => item !== g)
+                          : [...f.genres, g]
+                      }))}
+                    >
+                      {g}
+                    </ChipButton>
+                  ))}
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
                   Dificultad
                 </p>
                 <div style={{ display: 'flex', gap: '8px' }}>
@@ -2734,7 +2880,70 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
                   ))}
                 </div>
               </div>
-              
+
+              <div style={{ marginBottom: '24px' }}>
+                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                  Aclamacion critica
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                  {ACCLAIM_FILTER_OPTIONS.map(opt => (
+                    <ChipButton
+                      key={opt.id}
+                      active={filters.minAcclaim === opt.id}
+                      onClick={() => setFilters(f => ({
+                        ...f,
+                        minAcclaim: f.minAcclaim === opt.id ? null : opt.id
+                      }))}
+                    >
+                      {opt.label}
+                    </ChipButton>
+                  ))}
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                  Longitud
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                  {LENGTH_FILTER_OPTIONS.map(opt => (
+                    <ChipButton
+                      key={opt.id}
+                      active={filters.length === opt.id}
+                      onClick={() => setFilters(f => ({
+                        ...f,
+                        length: f.length === opt.id ? null : opt.id
+                      }))}
+                    >
+                      {opt.label}
+                    </ChipButton>
+                  ))}
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                  Idioma (estimado)
+                </p>
+                <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '10px' }}>
+                  Basado en titulo cuando no hay dato explicito.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                  {LANGUAGE_FILTER_OPTIONS.map(opt => (
+                    <ChipButton
+                      key={opt.id}
+                      active={filters.language === opt.id}
+                      onClick={() => setFilters(f => ({
+                        ...f,
+                        language: f.language === opt.id ? null : opt.id
+                      }))}
+                    >
+                      {opt.label}
+                    </ChipButton>
+                  ))}
+                </div>
+              </div>
+
               <div style={{ marginBottom: '24px' }}>
                 <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
                   Atmósfera
@@ -2776,13 +2985,8 @@ const FilterSheet = ({ filters, setFilters, moods, onClose, theme }) => {
         }}>
           <button 
             onClick={() => setFilters({ 
-              search: filters.search, 
-              difficulty: null, 
-              hasAwards: false, 
-              mood: null,
-              experience: null,
-              moment: null,
-              theme: null
+              ...DEFAULT_FILTERS,
+              search: filters.search
             })}
             style={{
               flex: 1, padding: '14px',
@@ -5073,6 +5277,7 @@ export default function App() {
   const [viewMode, setViewMode] = useState('curated');
   const [theme, setTheme] = useLocalStorage('nextread_theme', 'night');
   const [lists, setLists] = useLocalStorage('nextread_lists', {});
+  const [storedFilters, setStoredFilters] = useLocalStorage('nextread_filters', DEFAULT_FILTERS);
   const [activeTab, setActiveTab] = useState('library');
   const [sanctuaryMode, setSanctuaryMode] = useState(false);
   const [todayMode, setTodayMode] = useState(() => {
@@ -5082,16 +5287,15 @@ export default function App() {
       return false;
     }
   });
-  
-  const [filters, setFilters] = useState({
-    search: '',
-    difficulty: null,
-    hasAwards: false,
-    mood: null,
-    experience: null,
-    moment: null,
-    theme: null
-  });
+
+  const filters = useMemo(() => normalizeFilters(storedFilters), [storedFilters]);
+  const setFilters = useCallback((update) => {
+    setStoredFilters(prev => {
+      const normalizedPrev = normalizeFilters(prev);
+      const next = typeof update === 'function' ? update(normalizedPrev) : update;
+      return normalizeFilters(next);
+    });
+  }, [setStoredFilters]);
   
   const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
   const debouncedSearch = useDebounce(filters.search, 300);
@@ -5139,7 +5343,7 @@ export default function App() {
   // Reset visible count
   useEffect(() => {
     setVisibleCount(INITIAL_LOAD);
-  }, [debouncedSearch, filters.difficulty, filters.hasAwards, filters.mood]);
+  }, [debouncedSearch, filters]);
   
   // Manejar tabs
   const handleTabChange = (tab) => {
@@ -5175,28 +5379,44 @@ export default function App() {
   
   // Filtrado
   const filteredBooks = useMemo(() => {
-    const searchLower = debouncedSearch.toLowerCase();
+    const searchLower = debouncedSearch.trim().toLowerCase();
+
     return books.filter(book => {
       // Filtro por colección
-      if (selectedCollection && !selectedCollection.bookIds.includes(book.id)) return false;
-      
+      if (selectedCollection?.bookIds && !selectedCollection.bookIds.includes(book.id)) return false;
+
+      const bookHook = hooks[String(book.id)] || {};
+      const bookMood = book.m;
+      const bookVibes = Array.isArray(book.v) ? book.v : [];
+      const bookAwards = (book.aw || book.awards || []);
+
       // Búsqueda por texto
       if (searchLower) {
-        const title = (book.t || book.title || '').toLowerCase();
-        const authors = (book.a || book.authors || []).join(' ').toLowerCase();
-        if (!title.includes(searchLower) && !authors.includes(searchLower)) return false;
+        const searchableText = [
+          book.t || book.title || '',
+          (book.a || book.authors || []).join(' '),
+          (Array.isArray(book.v) ? book.v : []).join(' '),
+          (Array.isArray(book.themes) ? book.themes : []).join(' '),
+          book.syn || '',
+          bookHook.hook || '',
+          bookHook.why_matters || '',
+          bookHook.perfect_for || '',
+          (Array.isArray(bookHook.themes) ? bookHook.themes : []).join(' '),
+          bookHook.experience || ''
+        ].join(' ').toLowerCase();
+        if (!searchableText.includes(searchLower)) return false;
       }
-      
+
       // Filtros clásicos
-      if (filters.difficulty && (book.d || book.difficulty) !== filters.difficulty) return false;
-      if (filters.hasAwards && (book.aw || book.awards || []).length === 0) return false;
+      if (filters.difficulty && String(book.d || book.difficulty || '').toLowerCase() !== filters.difficulty) return false;
+      if (filters.hasAwards && bookAwards.length === 0) return false;
       if (filters.mood && book.m !== filters.mood) return false;
-      
+      if (filters.genres.length > 0 && !filters.genres.some(g => bookVibes.includes(g))) return false;
+      if (filters.minAcclaim && parseAcclaim(book) < filters.minAcclaim) return false;
+      if (filters.length && !matchesLengthFilter(book, filters.length)) return false;
+      if (filters.language && getBookLanguage(book) !== filters.language) return false;
+
       // FILTROS CON ALMA
-      const bookMood = book.m;
-      const bookVibes = book.v || [];
-      const bookPages = book.pg || 300;
-      
       // Filtro por experiencia
       if (filters.experience) {
         const expFilter = SOUL_FILTERS.experience.options.find(o => o.id === filters.experience);
@@ -5211,6 +5431,7 @@ export default function App() {
       if (filters.moment) {
         const momFilter = SOUL_FILTERS.moment.options.find(o => o.id === filters.moment);
         if (momFilter) {
+          const bookPages = parsePages(book);
           // Filtro por páginas
           if (momFilter.maxPages && bookPages > momFilter.maxPages) return false;
           if (momFilter.minPages && bookPages < momFilter.minPages) return false;
@@ -5228,13 +5449,19 @@ export default function App() {
         if (themeFilter) {
           const vibeMatch = themeFilter.vibes?.some(v => bookVibes.includes(v));
           const moodMatch = themeFilter.moods?.some(m => bookMood === m);
-          if (!vibeMatch && !moodMatch) return false;
+          const keywordMatch = themeFilter.keywords?.some(k => {
+            const keyword = String(k || '').toLowerCase();
+            if (!keyword) return false;
+            const text = `${book.syn || ''} ${bookHook.hook || ''} ${bookHook.why_matters || ''}`.toLowerCase();
+            return text.includes(keyword);
+          });
+          if (!vibeMatch && !moodMatch && !keywordMatch) return false;
         }
       }
-      
+
       return true;
     });
-  }, [books, debouncedSearch, filters, selectedCollection]);
+  }, [books, hooks, debouncedSearch, filters, selectedCollection]);
   
   const visibleBooks = useMemo(() => filteredBooks.slice(0, visibleCount), [filteredBooks, visibleCount]);
   
@@ -5299,13 +5526,29 @@ export default function App() {
     const moodSet = new Set(books.map(b => b.m).filter(Boolean));
     return Array.from(moodSet).sort();
   }, [books]);
+
+  const genres = useMemo(() => {
+    const counts = new Map();
+    books.forEach((book) => {
+      const bookGenres = Array.isArray(book.v) ? book.v : [];
+      bookGenres.forEach((genre) => {
+        if (!genre) return;
+        counts.set(genre, (counts.get(genre) || 0) + 1);
+      });
+    });
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([genre]) => genre);
+  }, [books]);
   
   const handleLoadMore = useCallback(() => {
     setVisibleCount(prev => Math.min(prev + LOAD_MORE_COUNT, filteredBooks.length));
   }, [filteredBooks.length]);
   
-  const hasFiltersActive = filters.difficulty || filters.mood || filters.hasAwards || 
-    filters.experience || filters.moment || filters.theme || debouncedSearch;
+  const hasFiltersActive = filters.difficulty || filters.mood || filters.hasAwards ||
+    filters.experience || filters.moment || filters.theme || debouncedSearch ||
+    filters.length || filters.language || filters.minAcclaim ||
+    (filters.genres && filters.genres.length > 0);
   
   // CSS global para animaciones - Estilo Apple
   useEffect(() => {
@@ -5594,7 +5837,7 @@ export default function App() {
                   setActiveTab('library'); 
                   setTodayMode(false);
                   setViewMode('curated');
-                  setFilters({ search: '', difficulty: null, hasAwards: false, mood: null, experience: null, moment: null, theme: null });
+                  setFilters(DEFAULT_FILTERS);
                   setSelectedBook(null);
                   setSelectedAuthor(null);
                   setSelectedCollection(null);
@@ -5622,7 +5865,7 @@ export default function App() {
               {activeTab === 'library' && !todayMode && (
                 <input
                   type="text"
-                  placeholder="Buscar..."
+                  placeholder="Buscar titulo, autor, tema o hook..."
                   value={filters.search}
                   onChange={e => setFilters(f => ({ ...f, search: e.target.value }))}
                   style={{
@@ -5791,7 +6034,7 @@ export default function App() {
             {isMobile && activeTab === 'library' && !todayMode && (
               <input
                 type="text"
-                placeholder="Buscar..."
+                placeholder="Buscar titulo, autor, tema o hook..."
                 value={filters.search}
                 onChange={e => setFilters(f => ({ ...f, search: e.target.value }))}
                 style={{
@@ -6202,6 +6445,7 @@ export default function App() {
           filters={filters} 
           setFilters={setFilters} 
           moods={moods}
+          genres={genres}
           onClose={() => setShowFilters(false)}
           theme={theme}
         />
