@@ -12,50 +12,50 @@ const COLLECTIONS_URL = '/collections.json';
 const HOOKS_URL = '/hooks.json';
 const INITIAL_LOAD = 42;
 const LOAD_MORE_COUNT = 21;
-const FONT_STACK_BODY = "'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
-const FONT_STACK_DISPLAY = "'Space Grotesk', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+const FONT_STACK_BODY = "'Sora', 'Avenir Next', 'Segoe UI', sans-serif";
+const FONT_STACK_DISPLAY = "'DM Serif Display', 'Iowan Old Style', 'Baskerville', serif";
 
 // =============================================================================
-// TEMAS - Minimal Precisa
+// TEMAS - Editorial Contrast
 // =============================================================================
 const THEMES = {
   night: {
     name: 'Nocturno',
     icon: '☀',
     bg: {
-      primary: '#0f1218',
-      secondary: '#151a23',
-      tertiary: '#1b2230',
-      elevated: '#212a3a',
+      primary: '#101214',
+      secondary: '#181b20',
+      tertiary: '#21252b',
+      elevated: '#2b3038',
     },
     text: {
-      primary: '#f4f7fb',
-      secondary: '#c4cfde',
-      tertiary: '#98a6bb',
-      muted: '#6d7c93',
+      primary: '#f6f2ec',
+      secondary: '#d7d0c6',
+      tertiary: '#ada599',
+      muted: '#7e776c',
     },
-    accent: '#59a7ff',
-    accentHover: '#78b8ff',
-    accentMuted: 'rgba(89, 167, 255, 0.16)',
+    accent: '#e34c36',
+    accentHover: '#ef6a57',
+    accentMuted: 'rgba(227, 76, 54, 0.18)',
     border: {
-      subtle: 'rgba(244, 247, 251, 0.08)',
-      default: 'rgba(244, 247, 251, 0.16)',
-      strong: 'rgba(244, 247, 251, 0.24)',
+      subtle: 'rgba(246, 242, 236, 0.08)',
+      default: 'rgba(246, 242, 236, 0.16)',
+      strong: 'rgba(246, 242, 236, 0.24)',
     },
-    overlay: 'rgba(7, 10, 16, 0.82)',
-    success: '#4fb27c',
+    overlay: 'rgba(8, 10, 12, 0.84)',
+    success: '#5e9270',
     glass: {
-      bg: 'rgba(21, 26, 35, 0.82)',
-      bgStrong: 'rgba(21, 26, 35, 0.94)',
-      border: 'rgba(244, 247, 251, 0.12)',
-      shadow: '0 8px 24px rgba(0, 0, 0, 0.35)',
-      shadowElevated: '0 20px 42px -12px rgba(0, 0, 0, 0.45)',
+      bg: 'rgba(24, 27, 32, 0.84)',
+      bgStrong: 'rgba(24, 27, 32, 0.94)',
+      border: 'rgba(246, 242, 236, 0.12)',
+      shadow: '0 10px 24px rgba(0, 0, 0, 0.42)',
+      shadowElevated: '0 22px 42px -12px rgba(0, 0, 0, 0.52)',
     },
     gradient: {
-      accent: 'linear-gradient(135deg, #59a7ff 0%, #7fc0ff 100%)',
-      subtle: 'linear-gradient(180deg, rgba(89, 167, 255, 0.08) 0%, transparent 100%)',
-      card: 'linear-gradient(160deg, rgba(33, 42, 58, 0.96) 0%, rgba(27, 34, 48, 0.98) 100%)',
-      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.035) 50%, transparent 100%)',
+      accent: 'linear-gradient(135deg, #e34c36 0%, #f07c69 100%)',
+      subtle: 'linear-gradient(180deg, rgba(227, 76, 54, 0.12) 0%, transparent 100%)',
+      card: 'linear-gradient(170deg, rgba(43, 48, 56, 0.96) 0%, rgba(33, 37, 43, 0.98) 100%)',
+      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 50%, transparent 100%)',
     },
     typography: {
       body: FONT_STACK_BODY,
@@ -66,39 +66,39 @@ const THEMES = {
     name: 'Día',
     icon: '☾',
     bg: {
-      primary: '#f4f7fb',
-      secondary: '#e9eef5',
-      tertiary: '#dde5ef',
+      primary: '#fbfaf7',
+      secondary: '#f2eee8',
+      tertiary: '#e8e2d9',
       elevated: '#ffffff',
     },
     text: {
-      primary: '#111827',
-      secondary: '#364152',
-      tertiary: '#5f6f84',
-      muted: '#8a98ab',
+      primary: '#1f1b18',
+      secondary: '#4b433c',
+      tertiary: '#787067',
+      muted: '#a39a90',
     },
-    accent: '#0f66da',
-    accentHover: '#0d57ba',
-    accentMuted: 'rgba(15, 102, 218, 0.12)',
+    accent: '#d9412b',
+    accentHover: '#b93220',
+    accentMuted: 'rgba(217, 65, 43, 0.12)',
     border: {
-      subtle: 'rgba(17, 24, 39, 0.08)',
-      default: 'rgba(17, 24, 39, 0.16)',
-      strong: 'rgba(17, 24, 39, 0.24)',
+      subtle: 'rgba(31, 27, 24, 0.08)',
+      default: 'rgba(31, 27, 24, 0.16)',
+      strong: 'rgba(31, 27, 24, 0.24)',
     },
-    overlay: 'rgba(244, 247, 251, 0.88)',
-    success: '#228455',
+    overlay: 'rgba(251, 250, 247, 0.9)',
+    success: '#4f835f',
     glass: {
       bg: 'rgba(255, 255, 255, 0.84)',
       bgStrong: 'rgba(255, 255, 255, 0.94)',
-      border: 'rgba(255, 255, 255, 0.7)',
-      shadow: '0 8px 22px rgba(9, 30, 66, 0.09)',
-      shadowElevated: '0 18px 36px -14px rgba(9, 30, 66, 0.14)',
+      border: 'rgba(255, 255, 255, 0.8)',
+      shadow: '0 8px 22px rgba(24, 20, 18, 0.1)',
+      shadowElevated: '0 18px 36px -14px rgba(24, 20, 18, 0.14)',
     },
     gradient: {
-      accent: 'linear-gradient(135deg, #0f66da 0%, #1b84ff 100%)',
-      subtle: 'linear-gradient(180deg, rgba(15, 102, 218, 0.07) 0%, transparent 100%)',
-      card: 'linear-gradient(170deg, rgba(255, 255, 255, 1) 0%, rgba(244, 247, 251, 1) 100%)',
-      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(17,24,39,0.03) 50%, transparent 100%)',
+      accent: 'linear-gradient(135deg, #d9412b 0%, #ea6956 100%)',
+      subtle: 'linear-gradient(180deg, rgba(217, 65, 43, 0.1) 0%, transparent 100%)',
+      card: 'linear-gradient(170deg, rgba(255, 255, 255, 1) 0%, rgba(251, 250, 247, 1) 100%)',
+      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(31,27,24,0.03) 50%, transparent 100%)',
     },
     typography: {
       body: FONT_STACK_BODY,
@@ -592,7 +592,7 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary, hasAwardO
     : listStatus === 'read'
     ? t.success
     : listStatus === 'want'
-    ? '#5d83c4'
+    ? '#8e7a69'
     : t.accent;
   
   const size = sanctuary ? { width: '148px', height: '222px' } : { width: '122px', height: '186px' };
@@ -712,11 +712,12 @@ const Shelf = ({ title, books, onBookClick, theme, getListStatus, sanctuary }) =
       {!sanctuary && (
         <h2 style={{
           fontFamily: t.typography.display,
-          fontSize: '17px',
-          fontWeight: 600,
-          letterSpacing: '0.02em',
+          fontSize: '22px',
+          fontWeight: 400,
+          letterSpacing: '0.07em',
+          textTransform: 'uppercase',
           color: t.text.primary,
-          marginBottom: '14px',
+          marginBottom: '18px',
           paddingLeft: '2px'
         }}>
           {title}
@@ -760,119 +761,103 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
   const title = book.t || 'Sin título';
   const authors = (book.a || []).join(', ');
   const pages = book.pg || 300;
+  const darkOverlay = theme === 'day'
+    ? 'linear-gradient(100deg, rgba(15, 13, 11, 0.88) 0%, rgba(15, 13, 11, 0.72) 46%, rgba(15, 13, 11, 0.24) 100%)'
+    : 'linear-gradient(100deg, rgba(8, 9, 11, 0.9) 0%, rgba(8, 9, 11, 0.72) 46%, rgba(8, 9, 11, 0.26) 100%)';
   
   return (
-    <section style={{ marginBottom: '40px' }}>
-      <div style={{ marginBottom: '12px' }}>
-        <span style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '6px',
-          padding: '6px 10px',
-          borderRadius: '8px',
-          border: `1px solid ${t.border.default}`,
-          background: t.bg.elevated,
-          color: t.text.secondary,
-          fontSize: '11px',
-          fontWeight: 700,
-          letterSpacing: '0.06em',
-          textTransform: 'uppercase'
-        }}>
-          Selección de hoy
-        </span>
-      </div>
-      
+    <section style={{ marginBottom: '48px' }}>
       <div 
         onClick={() => onClick(book)}
         style={{
-          display: 'flex',
-          gap: '16px',
-          padding: '18px',
-          borderRadius: '14px',
-          background: t.bg.elevated,
-          border: `1px solid ${t.border.default}`,
-          cursor: 'pointer',
-          transition: 'border-color 120ms ease, box-shadow 120ms ease',
-          boxShadow: '0 8px 20px rgba(0,0,0,0.08)'
-        }}
-      >
-        <div style={{
-          flexShrink: 0,
-          width: '112px',
-          height: '168px',
-          borderRadius: '8px',
+          position: 'relative',
+          minHeight: '360px',
+          borderRadius: '20px',
           overflow: 'hidden',
           border: `1px solid ${t.border.default}`,
-          background: t.bg.secondary
+          cursor: 'pointer',
+          boxShadow: '0 16px 34px rgba(0,0,0,0.2)',
+          backgroundImage: `${darkOverlay}, url(${coverUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          transition: 'transform 160ms ease, box-shadow 160ms ease'
+        }}
+        onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 22px 42px rgba(0,0,0,0.24)'; }}
+        onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 16px 34px rgba(0,0,0,0.2)'; }}
+      >
+        <div style={{
+          position: 'relative',
+          zIndex: 1,
+          maxWidth: '640px',
+          padding: '34px 32px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '12px'
         }}>
-          <img 
-            src={coverUrl} 
-            alt={title}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-        </div>
-        
-        <div style={{ flex: 1, minWidth: 0 }}>
+          <p style={{
+            fontSize: '12px',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            fontWeight: 700,
+            color: 'rgba(255, 255, 255, 0.9)'
+          }}>
+            {hook.experience ? `Selección ${hook.experience}` : 'Selección editorial'}
+          </p>
           <h2 style={{
             fontFamily: t.typography.display,
-            fontSize: '24px',
-            fontWeight: 600,
-            color: t.text.primary,
-            marginBottom: '4px',
-            lineHeight: 1.15
+            fontSize: 'clamp(2.4rem, 7vw, 4rem)',
+            fontWeight: 400,
+            color: '#ffffff',
+            lineHeight: 1.02,
+            maxWidth: '540px',
+            textWrap: 'balance'
           }}>
             {title}
           </h2>
-          <p style={{ fontSize: '14px', color: t.text.secondary, marginBottom: '4px' }}>
-            {authors}
-          </p>
-          <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '16px' }}>
-            {pages} páginas
-          </p>
-          
           <p style={{
-            fontSize: '14px',
-            lineHeight: 1.55,
-            color: t.text.secondary,
-            marginBottom: '12px',
+            fontSize: 'clamp(1rem, 2.1vw, 1.25rem)',
+            lineHeight: 1.35,
+            color: 'rgba(255, 255, 255, 0.9)',
+            maxWidth: '560px',
             display: '-webkit-box',
-            WebkitLineClamp: 5,
+            WebkitLineClamp: 3,
             WebkitBoxOrient: 'vertical',
             overflow: 'hidden'
           }}>
             {hook.hook}
           </p>
-          
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-            {hook.experience && (
-              <span style={{
-                fontSize: '11px',
-                padding: '4px 8px',
-                borderRadius: '8px',
-                background: t.accentMuted,
-                color: t.accent,
-                fontWeight: 600,
-                border: `1px solid ${t.border.subtle}`
-              }}>
-                {hook.experience}
-              </span>
-            )}
-            {hook.themes?.slice(0, 2).map(theme => (
-              <span key={theme} style={{
-                fontSize: '11px',
-                padding: '4px 8px',
-                borderRadius: '8px',
-                border: `1px solid ${t.border.default}`,
-                color: t.text.tertiary,
-                background: t.bg.secondary
-              }}>
-                {theme}
-              </span>
-            ))}
-          </div>
-          <p style={{ marginTop: '10px', fontSize: '12px', color: t.accent, fontWeight: 600 }}>
-            Abrir ficha completa →
+          <p style={{
+            fontSize: '13px',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            color: 'rgba(255, 255, 255, 0.78)',
+            marginTop: '2px'
+          }}>
+            {authors} · {pages} páginas
           </p>
+          <div style={{ display: 'flex', gap: '12px', marginTop: '8px', flexWrap: 'wrap' }}>
+            <span style={{
+              padding: '11px 22px',
+              borderRadius: '999px',
+              background: '#1f1b18',
+              border: '1px solid rgba(255,255,255,0.16)',
+              color: '#ffffff',
+              fontSize: '18px',
+              fontWeight: 600
+            }}>
+              Abrir libro
+            </span>
+            <span style={{
+              padding: '11px 22px',
+              borderRadius: '999px',
+              background: '#ffffff',
+              color: '#1f1b18',
+              fontSize: '18px',
+              fontWeight: 600
+            }}>
+              Ver detalle
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -882,25 +867,24 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
 // =============================================================================
 // COMPONENTE: NarrativeShelf (estante con hooks visibles)
 // =============================================================================
-const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme, getBookAwardLabel }) => {
+const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme, getBookAwardLabel, getBookReason }) => {
   const t = THEMES[theme];
   if (!books || books.length === 0) return null;
   
   return (
-    <section style={{ marginBottom: '40px' }}>
-      <div style={{ marginBottom: '14px' }}>
+    <section style={{ marginBottom: '48px' }}>
+      <div style={{ marginBottom: '20px' }}>
         <h2 style={{
           fontFamily: t.typography.display,
-          fontSize: '17px',
-          fontWeight: 600,
-          letterSpacing: '0.02em',
+          fontSize: '28px',
+          fontWeight: 400,
           color: t.text.primary,
           marginBottom: '4px'
         }}>
           {title}
         </h2>
         {subtitle && (
-          <p style={{ fontSize: '13px', color: t.text.tertiary }}>
+          <p style={{ fontSize: '13px', color: t.text.tertiary, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
             {subtitle}
           </p>
         )}
@@ -908,9 +892,9 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme, get
       
       <div style={{
         display: 'flex',
-        gap: '12px',
+        gap: '26px',
         overflowX: 'auto',
-        paddingBottom: '12px',
+        paddingBottom: '16px',
         marginLeft: '-16px',
         marginRight: '-16px',
         paddingLeft: '16px',
@@ -924,6 +908,14 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme, get
           const title = book.t || 'Sin título';
           const authors = (book.a || []).join(', ');
           const awardLabel = typeof getBookAwardLabel === 'function' ? getBookAwardLabel(book) : null;
+          const reason = typeof getBookReason === 'function' ? getBookReason(book) : null;
+          const verdict = awardLabel
+            ? 'RAVE'
+            : reason
+            ? 'POSITIVO'
+            : hook?.experience
+            ? hook.experience.toUpperCase()
+            : 'LECTURA';
           
           return (
             <div
@@ -931,99 +923,67 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme, get
               onClick={() => onBookClick(book)}
               style={{
                 flexShrink: 0,
-                width: '292px',
-                padding: '14px',
-                borderRadius: '12px',
-                background: t.bg.elevated,
-                border: `1px solid ${t.border.default}`,
+                width: '198px',
                 cursor: 'pointer',
-                transition: 'border-color 120ms ease, box-shadow 120ms ease'
+                textAlign: 'center',
+                transition: 'transform 140ms ease'
               }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
             >
-              <div style={{ display: 'flex', gap: '14px', marginBottom: '12px' }}>
-                <div style={{
-                  flexShrink: 0,
-                  width: '60px',
-                  height: '90px',
-                  borderRadius: '8px',
-                  overflow: 'hidden',
-                  border: `1px solid ${t.border.default}`,
-                  background: t.bg.secondary
-                }}>
-                  <img src={coverUrl} alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-                
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <h3 style={{
-                    fontFamily: t.typography.display,
-                    fontSize: '15px',
-                    fontWeight: 600,
-                    color: t.text.primary,
-                    marginBottom: '4px',
-                    lineHeight: 1.2,
-                    display: '-webkit-box',
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden'
-                  }}>
-                    {title}
-                  </h3>
-                  <p style={{ 
-                    fontSize: '12px', 
-                    color: t.text.tertiary,
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis'
-                  }}>
-                    {authors}
-                  </p>
-                  {hook?.experience && (
-                    <span style={{
-                      display: 'inline-block',
-                      marginTop: '6px',
-                      fontSize: '10px',
-                      padding: '3px 7px',
-                      borderRadius: '7px',
-                      background: t.accentMuted,
-                      color: t.accent,
-                      fontWeight: 600,
-                      border: `1px solid ${t.border.subtle}`
-                    }}>
-                      {hook.experience}
-                    </span>
-                  )}
-                  {awardLabel && (
-                    <span style={{
-                      display: 'inline-block',
-                      marginTop: '6px',
-                      marginLeft: hook?.experience ? '6px' : 0,
-                      fontSize: '10px',
-                      padding: '3px 7px',
-                      borderRadius: '7px',
-                      background: t.accentMuted,
-                      color: t.accent,
-                      fontWeight: 600,
-                      border: `1px solid ${t.border.subtle}`
-                    }}>
-                      🏆 {awardLabel}
-                    </span>
-                  )}
-                </div>
+              <div style={{
+                width: '198px',
+                height: '298px',
+                borderRadius: '0',
+                overflow: 'hidden',
+                border: `1px solid ${t.border.default}`,
+                boxShadow: '0 8px 20px rgba(0,0,0,0.12)',
+                marginBottom: '14px',
+                background: t.bg.elevated
+              }}>
+                <img
+                  src={coverUrl}
+                  alt={title}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  onError={(event) => { event.currentTarget.style.display = 'none'; }}
+                />
               </div>
-              
-              {hook && (
-                <p style={{
-                  fontSize: '12px',
-                  lineHeight: 1.5,
-                  color: t.text.secondary,
-                  display: '-webkit-box',
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: 'vertical',
-                  overflow: 'hidden'
-                }}>
-                  {hook.hook}
-                </p>
-              )}
+              <h3 style={{
+                fontFamily: t.typography.display,
+                fontSize: 'clamp(1.4rem, 2.2vw, 2rem)',
+                fontWeight: 400,
+                color: t.text.primary,
+                lineHeight: 1.08,
+                marginBottom: '8px',
+                display: '-webkit-box',
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden',
+                textWrap: 'balance'
+              }}>
+                {title}
+              </h3>
+              <p style={{
+                fontSize: '11px',
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: t.text.tertiary,
+                marginBottom: '10px',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis'
+              }}>
+                {authors}
+              </p>
+              <p style={{
+                fontSize: '13px',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                color: t.accent,
+                fontWeight: 700
+              }}>
+                {verdict}
+              </p>
             </div>
           );
         })}
@@ -1246,18 +1206,19 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
   if (!collections || collections.length === 0) return null;
   
   return (
-    <section style={{ marginBottom: '28px' }}>
+    <section style={{ marginBottom: '34px' }}>
       <div style={{ 
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'space-between',
-        marginBottom: '12px' 
+        marginBottom: '14px' 
       }}>
         <h2 style={{ 
           fontFamily: t.typography.display, 
-          fontSize: '16px',
-          fontWeight: 600,
-          letterSpacing: '0.02em',
+          fontSize: '24px',
+          fontWeight: 400,
+          letterSpacing: '0.06em',
+          textTransform: 'uppercase',
           color: t.text.primary 
         }}>
           Colecciones
@@ -1269,9 +1230,11 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
               background: t.accentMuted,
               border: `1px solid ${t.accent}`,
               color: t.accent,
-              padding: '6px 12px',
-              borderRadius: '8px',
-              fontSize: '12px',
+              padding: '7px 14px',
+              borderRadius: '999px',
+              fontSize: '11px',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
               cursor: 'pointer',
               fontWeight: 600
             }}
@@ -1297,10 +1260,10 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
               key={coll.id}
               onClick={() => onSelectCollection(isSelected ? null : coll)}
               style={{
-                minWidth: '198px',
-                padding: '14px',
+                minWidth: '220px',
+                padding: '16px',
                 borderRadius: '12px',
-                background: isSelected ? t.accentMuted : t.bg.secondary,
+                background: t.bg.elevated,
                 border: `1px solid ${isSelected ? t.accent : t.border.default}`,
                 cursor: 'pointer',
                 transition: 'all 120ms ease',
@@ -1309,7 +1272,7 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
               }}
             >
               <span style={{ 
-                fontSize: '28px', 
+                fontSize: '24px', 
                 marginBottom: '6px', 
                 display: 'block' 
               }}>
@@ -1317,18 +1280,20 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
               </span>
               
               <h3 style={{ 
-                fontSize: '14px', 
-                fontWeight: 600, 
-                color: isSelected ? t.accent : t.text.primary,
-                marginBottom: '4px'
+                fontFamily: t.typography.display,
+                fontSize: '20px',
+                fontWeight: 400,
+                color: t.text.primary,
+                marginBottom: '6px',
+                lineHeight: 1.05
               }}>
                 {coll.title}
               </h3>
               
               <p style={{ 
-                fontSize: '11px', 
-                color: isSelected ? t.text.secondary : t.text.tertiary,
-                marginBottom: '8px',
+                fontSize: '12px', 
+                color: t.text.tertiary,
+                marginBottom: '10px',
                 lineHeight: 1.4
               }}>
                 {coll.subtitle}
@@ -1337,19 +1302,21 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
               <span style={{ 
                 fontSize: '11px', 
                 color: isSelected ? t.accent : t.text.muted,
-                fontWeight: 600
+                fontWeight: 700,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase'
               }}>
                 {totalBooks} libros
               </span>
               
               <div style={{
                 position: 'absolute',
-                bottom: 0,
+                top: 0,
                 left: 0,
                 right: 0,
                 height: '2px',
-                background: coll.color || t.accent,
-                opacity: isSelected ? 1 : 0.55
+                background: isSelected ? t.accent : (coll.color || t.border.default),
+                opacity: isSelected ? 1 : 0.75
               }} />
             </div>
           );
@@ -1371,21 +1338,22 @@ const CollectionHeader = ({ collection, onClear, theme, countOverride }) => {
   
   return (
     <div style={{
-      padding: '18px',
+      padding: '22px',
       borderRadius: '12px',
       background: t.bg.elevated,
       border: `1px solid ${t.border.default}`,
       marginBottom: '24px'
     }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-        <span style={{ fontSize: '48px' }}>{collection.emoji}</span>
+        <span style={{ fontSize: '40px' }}>{collection.emoji}</span>
         <div style={{ flex: 1 }}>
           <h2 style={{ 
             fontFamily: t.typography.display, 
-            fontSize: '24px', 
-            fontWeight: 600, 
+            fontSize: '32px', 
+            fontWeight: 400, 
             color: t.text.primary,
-            marginBottom: '4px'
+            marginBottom: '6px',
+            lineHeight: 1
           }}>
             {collection.title}
           </h2>
@@ -1408,12 +1376,14 @@ const CollectionHeader = ({ collection, onClear, theme, countOverride }) => {
             <button
               onClick={onClear}
               style={{
-                background: 'none',
+                background: t.bg.primary,
                 border: `1px solid ${t.border.default}`,
                 color: t.text.secondary,
-                padding: '6px 12px',
-                borderRadius: '16px',
-                fontSize: '12px',
+                padding: '7px 14px',
+                borderRadius: '999px',
+                fontSize: '11px',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
                 cursor: 'pointer'
               }}
             >
@@ -2389,14 +2359,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
 
         {/* Anti-spoilers + Lore visual */}
         <div style={{ padding: '0 24px 18px' }}>
-          <p style={{
-            fontSize: '11px',
-            fontWeight: 600,
-            letterSpacing: '0.5px',
-            textTransform: 'uppercase',
-            color: t.text.tertiary,
-            marginBottom: '10px'
-          }}>
+          <p style={SECTION_TITLE_STYLE(t)}>
             Nivel de informacion
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -2407,15 +2370,18 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                   e.stopPropagation();
                   setSpoilerLevel(level.id);
                 }}
+                aria-pressed={activeSpoilerLevel === level.id}
                 style={{
                   fontSize: '12px',
-                  padding: '6px 10px',
-                  borderRadius: '12px',
+                  minHeight: '36px',
+                  padding: '6px 12px',
+                  borderRadius: '8px',
                   border: `1px solid ${activeSpoilerLevel === level.id ? t.accent : t.border.default}`,
-                  background: activeSpoilerLevel === level.id ? t.accentMuted : t.bg.tertiary,
+                  background: activeSpoilerLevel === level.id ? t.accentMuted : t.bg.elevated,
                   color: activeSpoilerLevel === level.id ? t.accent : t.text.secondary,
                   cursor: 'pointer',
-                  fontWeight: 600
+                  fontWeight: 600,
+                  transition: 'all 120ms ease'
                 }}
               >
                 {level.label}
@@ -2428,15 +2394,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
 
           {loreVisualTokens.length > 0 && (
             <>
-              <p style={{
-                fontSize: '11px',
-                fontWeight: 600,
-                letterSpacing: '0.5px',
-                textTransform: 'uppercase',
-                color: t.text.tertiary,
-                marginTop: '12px',
-                marginBottom: '8px'
-              }}>
+              <p style={{ ...SECTION_TITLE_STYLE(t), marginTop: '12px' }}>
                 Mapa visual del lore (sin spoiler)
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -2445,11 +2403,11 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                     key={`${token.label}-${idx}`}
                     style={{
                       fontSize: '11px',
-                      padding: '4px 9px',
-                      borderRadius: '999px',
-                      background: token.accent ? t.accentMuted : t.bg.tertiary,
+                      padding: '4px 8px',
+                      borderRadius: '8px',
+                      background: token.accent ? t.accentMuted : t.bg.elevated,
                       color: token.accent ? t.accent : t.text.secondary,
-                      border: `1px solid ${token.accent ? t.accent : t.border.subtle}`
+                      border: `1px solid ${token.accent ? t.accent : t.border.default}`
                     }}
                   >
                     {token.label}
@@ -2522,29 +2480,26 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
               {bookHook.experience && (
                 <button 
                   onClick={(e) => { e.stopPropagation(); onExperienceClick?.(bookHook.experience); }}
+                  aria-label={`Abrir experiencia ${bookHook.experience}`}
                   style={{
                     fontSize: '12px',
-                    padding: '4px 10px',
-                    borderRadius: '12px',
+                    padding: '6px 10px',
+                    borderRadius: '8px',
                     background: t.accentMuted,
                     color: t.accent,
-                    fontWeight: 500,
-                    border: 'none',
+                    fontWeight: 600,
+                    border: `1px solid ${t.accent}`,
                     cursor: 'pointer',
-                    transition: 'all 0.15s ease'
+                    transition: 'all 120ms ease'
                   }}
                   onMouseEnter={e => { 
-                    e.target.style.transform = 'scale(1.05)';
-                    e.target.style.background = t.accent;
-                    e.target.style.color = t.bg.primary;
+                    e.currentTarget.style.transform = 'translateY(-1px)';
                   }}
                   onMouseLeave={e => { 
-                    e.target.style.transform = 'scale(1)';
-                    e.target.style.background = t.accentMuted;
-                    e.target.style.color = t.accent;
+                    e.currentTarget.style.transform = 'translateY(0)';
                   }}
                 >
-                  ✨ {bookHook.experience}
+                  {bookHook.experience}
                 </button>
               )}
             </div>
@@ -2568,25 +2523,24 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
                   <button 
                     key={thm} 
                     onClick={(e) => { e.stopPropagation(); onThemeClick?.(thm); }}
+                    aria-label={`Abrir tema ${thm}`}
                     style={{
                       fontSize: '11px',
-                      padding: '3px 8px',
-                      borderRadius: '10px',
-                      border: `1px solid ${t.border.subtle}`,
-                      background: 'transparent',
-                      color: t.text.tertiary,
+                      padding: '4px 8px',
+                      borderRadius: '8px',
+                      border: `1px solid ${t.border.default}`,
+                      background: t.bg.elevated,
+                      color: t.text.secondary,
                       cursor: 'pointer',
-                      transition: 'all 0.15s ease'
+                      transition: 'all 120ms ease'
                     }}
                     onMouseEnter={e => { 
-                      e.target.style.background = t.accentMuted; 
-                      e.target.style.color = t.accent;
-                      e.target.style.borderColor = t.accent;
+                      e.currentTarget.style.borderColor = t.accent;
+                      e.currentTarget.style.color = t.accent;
                     }}
                     onMouseLeave={e => { 
-                      e.target.style.background = 'transparent'; 
-                      e.target.style.color = t.text.tertiary;
-                      e.target.style.borderColor = t.border.subtle;
+                      e.currentTarget.style.borderColor = t.border.default;
+                      e.currentTarget.style.color = t.text.secondary;
                     }}
                   >
                     {thm}
@@ -2748,7 +2702,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
         {/* Acciones con microinteracciones */}
         <div style={{ 
           padding: '20px 24px 32px', 
-          borderTop: `1px solid ${t.border.subtle}`,
+          borderTop: `1px solid ${t.border.default}`,
           display: 'flex',
           flexDirection: 'column',
           gap: '12px'
@@ -2767,7 +2721,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
               onClick={() => { handleListClick('want'); haptic.light(); }}
               variant="secondary"
               isActive={currentList === 'want'}
-              activeColor="#5a7a8a"
+              activeColor="#8e7a69"
               theme={t}
               style={{ flex: 1 }}
             >
@@ -2833,20 +2787,23 @@ const SOUL_FILTERS = {
 const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => {
   const t = THEMES[theme];
   const [activeSection, setActiveSection] = useState('experience');
+  useEscapeKey(onClose);
   
   const ChipButton = ({ active, onClick, children, large }) => (
     <button
       onClick={onClick}
+      aria-pressed={active}
       style={{
-        padding: large ? '12px 16px' : '6px 14px',
-        borderRadius: large ? '12px' : '20px',
-        border: `1.5px solid ${active ? t.accent : t.border.default}`,
-        background: active ? t.accentMuted : t.bg.tertiary,
+        minHeight: large ? '44px' : '36px',
+        padding: large ? '12px 14px' : '6px 12px',
+        borderRadius: '8px',
+        border: `1px solid ${active ? t.accent : t.border.default}`,
+        background: active ? t.accentMuted : t.bg.elevated,
         color: active ? t.accent : t.text.secondary,
         fontSize: large ? '14px' : '13px',
-        fontWeight: 500,
+        fontWeight: 600,
         cursor: 'pointer',
-        transition: 'all 0.15s ease',
+        transition: 'all 120ms ease',
         textAlign: 'left',
         display: 'flex',
         alignItems: 'center',
@@ -2860,16 +2817,17 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
   const SectionTab = ({ id, label, active }) => (
     <button
       onClick={() => setActiveSection(id)}
+      aria-pressed={active}
       style={{
-        padding: '8px 16px',
-        borderRadius: '20px',
-        border: 'none',
-        background: active ? t.accent : 'transparent',
-        color: active ? t.bg.primary : t.text.tertiary,
+        padding: '8px 12px',
+        borderRadius: '8px',
+        border: `1px solid ${active ? t.accent : 'transparent'}`,
+        background: active ? t.accentMuted : 'transparent',
+        color: active ? t.accent : t.text.tertiary,
         fontSize: '13px',
         fontWeight: 600,
         cursor: 'pointer',
-        transition: 'all 0.15s ease'
+        transition: 'all 120ms ease'
       }}
     >
       {label}
@@ -2913,6 +2871,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
   return (
     <div 
       onClick={onClose}
+      role="presentation"
       style={{
         position: 'fixed',
         inset: 0,
@@ -2921,25 +2880,26 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
         alignItems: 'flex-end',
         justifyContent: 'center',
         background: t.overlay,
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        animation: 'fadeIn 0.25s ease'
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        animation: 'fadeIn 0.2s ease'
       }}
     >
       <div 
         onClick={e => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Filtros de búsqueda"
         style={{
           width: '100%',
           maxWidth: '500px',
           maxHeight: '85vh',
-          borderRadius: '24px 24px 0 0',
-          background: t.glass?.bgStrong || t.bg.elevated,
-          backdropFilter: 'blur(40px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          borderRadius: '16px 16px 0 0',
+          background: t.bg.primary,
+          border: `1px solid ${t.border.default}`,
           borderBottom: 'none',
-          boxShadow: t.glass?.shadowElevated || '0 -8px 32px rgba(0,0,0,0.3)',
-          animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+          boxShadow: '0 -16px 32px rgba(0,0,0,0.18)',
+          animation: 'slideUp 0.24s cubic-bezier(0.2, 0, 0, 1)',
           display: 'flex',
           flexDirection: 'column'
         }}
@@ -2961,36 +2921,27 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
         </div>
         
         {/* Header */}
-        <div style={{ padding: '12px 24px 16px', borderBottom: `1px solid ${t.border.subtle}` }}>
+        <div style={{ padding: '12px 24px 16px', borderBottom: `1px solid ${t.border.default}` }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
             <h3 style={{ fontFamily: t.typography.display, fontSize: '22px', color: t.text.primary }}>
               Encuentra tu libro
             </h3>
-            <button onClick={onClose} style={{ 
-              background: t.glass?.bg || 'transparent', 
-              border: 'none', 
-              color: t.text.tertiary, 
-              fontSize: '20px', 
-              cursor: 'pointer',
-              width: '32px',
-              height: '32px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'all 150ms ease'
-            }}>✕</button>
+            <button
+              onClick={onClose}
+              aria-label="Cerrar filtros"
+              style={getModalCloseButtonStyle(t)}
+            >
+              ✕
+            </button>
           </div>
           
-          {/* Tabs con glass */}
           <div style={{ 
             display: 'flex', 
             gap: '4px', 
-            background: t.glass?.bg || t.bg.tertiary, 
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            borderRadius: '24px', 
-            padding: '4px' 
+            background: t.bg.secondary,
+            borderRadius: '8px',
+            border: `1px solid ${t.border.default}`,
+            padding: '4px'
           }}>
             <SectionTab id="experience" label="Sentir" active={activeSection === 'experience'} />
             <SectionTab id="moment" label="Momento" active={activeSection === 'moment'} />
@@ -3006,12 +2957,10 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
           {hasAnyFilter && (
             <div style={{
               padding: '12px 16px',
-              borderRadius: '14px',
-              background: t.gradient?.subtle || `linear-gradient(135deg, ${t.accent}15, ${t.accent}05)`,
+              borderRadius: '8px',
+              background: t.accentMuted,
               marginBottom: '20px',
-              borderLeft: `3px solid ${t.accent}`,
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)'
+              border: `1px solid ${t.accent}`
             }}>
               <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '4px' }}>Buscando:</p>
               <p style={{ fontSize: '14px', color: t.text.primary, fontWeight: 500 }}>
@@ -3023,7 +2972,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
           {/* Sección: Experiencia */}
           {activeSection === 'experience' && (
             <div>
-              <p style={{ fontSize: '13px', color: t.text.tertiary, marginBottom: '16px' }}>
+              <p style={{ ...SECTION_TITLE_STYLE(t), fontSize: '12px', marginBottom: '12px' }}>
                 {SOUL_FILTERS.experience.label}
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -3048,7 +2997,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
           {/* Sección: Momento */}
           {activeSection === 'moment' && (
             <div>
-              <p style={{ fontSize: '13px', color: t.text.tertiary, marginBottom: '16px' }}>
+              <p style={{ ...SECTION_TITLE_STYLE(t), fontSize: '12px', marginBottom: '12px' }}>
                 {SOUL_FILTERS.moment.label}
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -3076,7 +3025,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
           {/* Sección: Tema */}
           {activeSection === 'theme' && (
             <div>
-              <p style={{ fontSize: '13px', color: t.text.tertiary, marginBottom: '16px' }}>
+              <p style={{ ...SECTION_TITLE_STYLE(t), fontSize: '12px', marginBottom: '12px' }}>
                 {SOUL_FILTERS.theme.label}
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
@@ -3102,7 +3051,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
           {activeSection === 'classic' && (
             <div>
               <div style={{ marginBottom: '24px' }}>
-                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
                   Genero
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -3124,7 +3073,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
               </div>
 
               <div style={{ marginBottom: '24px' }}>
-                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
                   Dificultad
                 </p>
                 <div style={{ display: 'flex', gap: '8px' }}>
@@ -3145,7 +3094,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
               </div>
 
               <div style={{ marginBottom: '24px' }}>
-                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
                   Aclamacion critica
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -3165,7 +3114,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
               </div>
 
               <div style={{ marginBottom: '24px' }}>
-                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
                   Longitud
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -3185,7 +3134,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
               </div>
 
               <div style={{ marginBottom: '24px' }}>
-                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
                   Idioma original (estimado)
                 </p>
                 <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '10px' }}>
@@ -3208,7 +3157,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
               </div>
 
               <div style={{ marginBottom: '24px' }}>
-                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
                   Atmósfera
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -3225,7 +3174,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
               </div>
               
               <div>
-                <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
+                <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
                   Especial
                 </p>
                 <ChipButton
@@ -3242,7 +3191,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
         {/* Footer */}
         <div style={{ 
           padding: '16px 24px 24px', 
-          borderTop: `1px solid ${t.border.subtle}`,
+          borderTop: `1px solid ${t.border.default}`,
           display: 'flex', 
           gap: '12px' 
         }}>
@@ -3253,13 +3202,15 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
             })}
             style={{
               flex: 1, padding: '14px',
-              borderRadius: '12px',
+              minHeight: '44px',
+              borderRadius: '8px',
               border: `1px solid ${t.border.default}`,
-              background: t.bg.tertiary,
+              background: t.bg.elevated,
               color: t.text.secondary,
               fontSize: '14px',
-              fontWeight: 500,
-              cursor: 'pointer'
+              fontWeight: 600,
+              cursor: 'pointer',
+              transition: 'all 120ms ease'
             }}
           >
             Limpiar filtros
@@ -3268,13 +3219,15 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
             onClick={onClose}
             style={{
               flex: 1, padding: '14px',
-              borderRadius: '12px',
-              border: 'none',
+              minHeight: '44px',
+              borderRadius: '8px',
+              border: `1px solid ${t.accent}`,
               background: t.accent,
               color: t.bg.primary,
               fontSize: '14px',
               fontWeight: 600,
-              cursor: 'pointer'
+              cursor: 'pointer',
+              transition: 'filter 120ms ease'
             }}
           >
             Ver resultados
@@ -3290,6 +3243,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
 // =============================================================================
 const StatsModal = ({ books, awardedBookIds, onClose, theme }) => {
   const t = THEMES[theme];
+  useEscapeKey(onClose);
   
   const stats = useMemo(() => {
     const totalPages = books.reduce((sum, b) => sum + (b.pg || b.pages || 250), 0);
@@ -3303,6 +3257,7 @@ const StatsModal = ({ books, awardedBookIds, onClose, theme }) => {
   return (
     <div 
       onClick={onClose}
+      role="presentation"
       style={{
         position: 'fixed',
         inset: 0,
@@ -3312,43 +3267,52 @@ const StatsModal = ({ books, awardedBookIds, onClose, theme }) => {
         justifyContent: 'center',
         padding: '16px',
         background: t.overlay,
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
         animation: 'fadeIn 0.2s ease'
       }}
     >
       <div 
         onClick={e => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Estadísticas de biblioteca"
         style={{
           width: '100%',
           maxWidth: '360px',
-          borderRadius: '20px',
+          borderRadius: '14px',
           padding: '24px',
-          background: t.bg.elevated,
-          boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
-          animation: 'scaleIn 0.3s ease'
+          background: t.bg.primary,
+          border: `1px solid ${t.border.default}`,
+          boxShadow: '0 14px 32px rgba(0,0,0,0.18)',
+          animation: 'scaleIn 0.2s ease'
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-          <h3 style={{ fontFamily: t.typography.display, fontSize: '22px', color: t.text.primary }}>{COPY.stats.title}</h3>
-          <button onClick={onClose} style={{ 
-            background: 'none', border: 'none', 
-            color: t.text.tertiary, fontSize: '20px', cursor: 'pointer' 
-          }}>✕</button>
+          <h3 style={{ fontFamily: t.typography.display, fontSize: '20px', color: t.text.primary }}>{COPY.stats.title}</h3>
+          <button
+            onClick={onClose}
+            aria-label="Cerrar estadísticas"
+            style={getModalCloseButtonStyle(t)}
+          >
+            ✕
+          </button>
         </div>
         
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '24px' }}>
-          <div style={{ padding: '16px', borderRadius: '12px', background: t.bg.tertiary }}>
+          <div style={{ padding: '16px', borderRadius: '8px', background: t.bg.elevated, border: `1px solid ${t.border.default}` }}>
             <div style={{ fontSize: '28px', fontWeight: 600, color: t.text.primary }}>{stats.total}</div>
             <div style={{ fontSize: '12px', color: t.text.tertiary }}>{COPY.stats.books}</div>
           </div>
-          <div style={{ padding: '16px', borderRadius: '12px', background: t.bg.tertiary }}>
+          <div style={{ padding: '16px', borderRadius: '8px', background: t.bg.elevated, border: `1px solid ${t.border.default}` }}>
             <div style={{ fontSize: '28px', fontWeight: 600, color: t.text.primary }}>{stats.pages}</div>
             <div style={{ fontSize: '12px', color: t.text.tertiary }}>{COPY.stats.pages}</div>
           </div>
-          <div style={{ padding: '16px', borderRadius: '12px', background: t.bg.tertiary }}>
+          <div style={{ padding: '16px', borderRadius: '8px', background: t.bg.elevated, border: `1px solid ${t.border.default}` }}>
             <div style={{ fontSize: '28px', fontWeight: 600, color: t.text.primary }}>{stats.hours}</div>
             <div style={{ fontSize: '12px', color: t.text.tertiary }}>{COPY.stats.hours}</div>
           </div>
-          <div style={{ padding: '16px', borderRadius: '12px', background: t.bg.tertiary }}>
+          <div style={{ padding: '16px', borderRadius: '8px', background: t.bg.elevated, border: `1px solid ${t.border.default}` }}>
             <div style={{ fontSize: '28px', fontWeight: 600, color: t.accent }}>{stats.awarded}</div>
             <div style={{ fontSize: '12px', color: t.text.tertiary }}>{COPY.stats.awarded}</div>
           </div>
@@ -3369,6 +3333,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
   const t = THEMES[theme];
   const [scrolled, setScrolled] = useState(false);
   const contentRef = useRef(null);
+  useEscapeKey(onClose);
   
   // Detectar scroll para sombra dinámica
   useEffect(() => {
@@ -3396,6 +3361,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
   return (
     <div 
       onClick={onClose}
+      role="presentation"
       style={{
         position: 'fixed',
         inset: 0,
@@ -3405,40 +3371,39 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
         justifyContent: 'center',
         padding: '16px',
         background: t.overlay,
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        animation: 'fadeIn 0.25s ease'
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        animation: 'fadeIn 0.2s ease'
       }}
     >
       <div 
         ref={contentRef}
         onClick={e => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Autor ${authorName}`}
         style={{
           width: '100%',
           maxWidth: '480px',
           maxHeight: '85vh',
           overflowY: 'auto',
-          borderRadius: '24px',
-          background: t.glass?.bgStrong || t.bg.elevated,
-          backdropFilter: 'blur(40px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-          border: `1px solid ${t.glass?.border || t.border.subtle}`,
-          boxShadow: t.glass?.shadowElevated || '0 8px 32px rgba(0,0,0,0.3)',
-          animation: 'scaleIn 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
+          borderRadius: '14px',
+          background: t.bg.primary,
+          border: `1px solid ${t.border.default}`,
+          boxShadow: '0 14px 32px rgba(0,0,0,0.18)',
+          animation: 'scaleIn 0.2s ease'
         }}
       >
         {/* Header con sombra dinámica */}
         <div style={{ 
-          padding: '24px 24px 16px', 
+          padding: '20px 24px 14px', 
           position: 'sticky', 
           top: 0, 
-          background: t.glass?.bgStrong || t.bg.elevated,
-          backdropFilter: 'blur(40px)',
-          WebkitBackdropFilter: 'blur(40px)',
-          borderRadius: '24px 24px 0 0',
+          background: t.bg.primary,
+          borderRadius: '14px 14px 0 0',
           zIndex: 1,
-          transition: 'box-shadow 200ms ease',
-          boxShadow: scrolled ? `0 1px 0 ${t.border.subtle}, 0 4px 12px rgba(0,0,0,0.1)` : 'none'
+          transition: 'box-shadow 120ms ease',
+          boxShadow: scrolled ? `0 1px 0 ${t.border.default}` : 'none'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
             <div style={{ flex: 1 }}>
@@ -3457,12 +3422,13 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
                 </p>
               )}
             </div>
-            <button onClick={onClose} style={{ 
-              background: t.bg.tertiary, border: 'none', 
-              color: t.text.secondary, fontSize: '16px', cursor: 'pointer',
-              width: '32px', height: '32px', borderRadius: '50%',
-              display: 'flex', alignItems: 'center', justifyContent: 'center'
-            }}>✕</button>
+            <button
+              onClick={onClose}
+              aria-label="Cerrar autor"
+              style={getModalCloseButtonStyle(t)}
+            >
+              ✕
+            </button>
           </div>
         </div>
         
@@ -3471,14 +3437,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
             <>
               {/* Biografía */}
               <div style={{ marginBottom: '24px' }}>
-                <h3 style={{ 
-                  fontSize: '11px', 
-                  fontWeight: 600, 
-                  textTransform: 'uppercase', 
-                  letterSpacing: '0.5px',
-                  color: t.text.tertiary, 
-                  marginBottom: '8px' 
-                }}>
+                <h3 style={SECTION_TITLE_STYLE(t)}>
                   Biografía
                 </h3>
                 <p style={{ fontSize: '14px', lineHeight: 1.6, color: t.text.secondary }}>
@@ -3488,25 +3447,17 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
               
               {/* Importancia */}
               <div style={{ marginBottom: '24px' }}>
-                <h3 style={{ 
-                  fontSize: '11px', 
-                  fontWeight: 600, 
-                  textTransform: 'uppercase', 
-                  letterSpacing: '0.5px',
-                  color: t.text.tertiary, 
-                  marginBottom: '8px' 
-                }}>
+                <h3 style={SECTION_TITLE_STYLE(t)}>
                   Por qué es importante
                 </h3>
                 <p style={{ 
                   fontSize: '14px', 
                   lineHeight: 1.6, 
                   color: t.text.primary,
-                  fontStyle: 'italic',
                   padding: '12px 16px',
                   background: t.accentMuted,
                   borderRadius: '8px',
-                  borderLeft: `3px solid ${t.accent}`
+                  border: `1px solid ${t.accent}`
                 }}>
                   {data.importance}
                 </p>
@@ -3515,23 +3466,17 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
               {/* Premios */}
               {data.awards && data.awards.length > 0 && (
                 <div style={{ marginBottom: '24px' }}>
-                  <h3 style={{ 
-                    fontSize: '11px', 
-                    fontWeight: 600, 
-                    textTransform: 'uppercase', 
-                    letterSpacing: '0.5px',
-                    color: t.text.tertiary, 
-                    marginBottom: '8px' 
-                  }}>
+                  <h3 style={SECTION_TITLE_STYLE(t)}>
                     Reconocimientos
                   </h3>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                     {data.awards.map((award, i) => (
                       <span key={i} style={{
                         fontSize: '12px',
-                        padding: '4px 10px',
-                        borderRadius: '12px',
-                        background: t.bg.tertiary,
+                        padding: '4px 8px',
+                        borderRadius: '8px',
+                        background: t.bg.elevated,
+                        border: `1px solid ${t.border.default}`,
                         color: t.text.secondary
                       }}>
                         ★ {award}
@@ -3544,14 +3489,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
               {/* Obras destacadas */}
               {data.notable_works && data.notable_works.length > 0 && (
                 <div style={{ marginBottom: '24px' }}>
-                  <h3 style={{ 
-                    fontSize: '11px', 
-                    fontWeight: 600, 
-                    textTransform: 'uppercase', 
-                    letterSpacing: '0.5px',
-                    color: t.text.tertiary, 
-                    marginBottom: '8px' 
-                  }}>
+                  <h3 style={SECTION_TITLE_STYLE(t)}>
                     Obras destacadas
                   </h3>
                   <ul style={{ margin: 0, paddingLeft: '20px' }}>
@@ -3603,14 +3541,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
                 
                 return (
                   <div style={{ marginBottom: '20px' }}>
-                    <h3 style={{ 
-                      fontSize: '11px', 
-                      fontWeight: 600, 
-                      textTransform: 'uppercase', 
-                      letterSpacing: '0.5px',
-                      color: t.text.tertiary, 
-                      marginBottom: '8px' 
-                    }}>
+                    <h3 style={SECTION_TITLE_STYLE(t)}>
                       Temas que explora
                     </h3>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -3620,23 +3551,21 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
                           onClick={() => onThemeClick?.(thm)}
                           style={{
                             fontSize: '12px',
-                            padding: '4px 10px',
-                            borderRadius: '12px',
-                            background: 'transparent',
+                            padding: '6px 10px',
+                            borderRadius: '8px',
+                            background: t.bg.elevated,
                             border: `1px solid ${t.border.default}`,
                             color: t.text.secondary,
                             cursor: 'pointer',
-                            transition: 'all 0.15s ease'
+                            transition: 'all 120ms ease'
                           }}
                           onMouseEnter={e => { 
-                            e.target.style.background = t.accentMuted; 
-                            e.target.style.color = t.accent;
-                            e.target.style.borderColor = t.accent;
+                            e.currentTarget.style.borderColor = t.accent;
+                            e.currentTarget.style.color = t.accent;
                           }}
                           onMouseLeave={e => { 
-                            e.target.style.background = 'transparent'; 
-                            e.target.style.color = t.text.secondary;
-                            e.target.style.borderColor = t.border.default;
+                            e.currentTarget.style.borderColor = t.border.default;
+                            e.currentTarget.style.color = t.text.secondary;
                           }}
                         >
                           {thm}
@@ -3648,14 +3577,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
               })()}
               
               <div>
-                <h3 style={{ 
-                  fontSize: '11px', 
-                  fontWeight: 600, 
-                  textTransform: 'uppercase', 
-                  letterSpacing: '0.5px',
-                  color: t.text.tertiary, 
-                  marginBottom: '12px' 
-                }}>
+                <h3 style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
                   En tu biblioteca ({authorBooks.length})
                 </h3>
                 <div style={{ 
@@ -3679,17 +3601,18 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
                           width: '80px',
                           flexShrink: 0,
                           cursor: 'pointer',
-                          transition: 'transform 0.2s ease'
+                          transition: 'transform 120ms ease'
                         }}
                       >
                         <div style={{
                           width: '80px',
                           height: '120px',
-                          borderRadius: '6px',
+                          borderRadius: '8px',
                           overflow: 'hidden',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+                          border: `1px solid ${t.border.default}`,
+                          boxShadow: '0 4px 10px rgba(0,0,0,0.12)',
                           marginBottom: '6px',
-                          background: t.bg.tertiary
+                          background: t.bg.elevated
                         }}>
                           <img 
                             src={coverUrl} 
@@ -3726,17 +3649,8 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
 // =============================================================================
 const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienceClick, theme }) => {
   const t = THEMES[theme];
-  const [scrolled, setScrolled] = useState(false);
   const contentRef = useRef(null);
-  
-  // Detectar scroll para sombra dinámica
-  useEffect(() => {
-    const el = contentRef.current;
-    if (!el) return;
-    const handleScroll = () => setScrolled(el.scrollTop > 10);
-    el.addEventListener('scroll', handleScroll);
-    return () => el.removeEventListener('scroll', handleScroll);
-  }, []);
+  useEscapeKey(onClose);
   
   const themeEmojis = {
     amor: '❤️', muerte: '💀', familia: '👨‍👩‍👧', memoria: '🧠', identidad: '🪞',
@@ -3773,6 +3687,7 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
   return (
     <div 
       onClick={onClose}
+      role="presentation"
       style={{
         position: 'fixed',
         inset: 0,
@@ -3781,27 +3696,28 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
         alignItems: 'flex-end',
         justifyContent: 'center',
         background: t.overlay,
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        animation: 'fadeIn 0.25s ease'
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        animation: 'fadeIn 0.2s ease'
       }}
     >
       <div 
         ref={contentRef}
         onClick={e => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Tema ${themeName}`}
         style={{
           width: '100%',
           maxWidth: '500px',
           maxHeight: '85vh',
-          borderRadius: '24px 24px 0 0',
-          background: t.glass?.bgStrong || t.bg.primary,
-          backdropFilter: 'blur(40px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          borderRadius: '16px 16px 0 0',
+          background: t.bg.primary,
+          border: `1px solid ${t.border.default}`,
           borderBottom: 'none',
           overflow: 'hidden',
-          boxShadow: t.glass?.shadowElevated || '0 -8px 32px rgba(0,0,0,0.3)',
-          animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
+          boxShadow: '0 -16px 32px rgba(0,0,0,0.18)',
+          animation: 'slideUp 0.24s cubic-bezier(0.2, 0, 0, 1)'
         }}
       >
         {/* Handle */}
@@ -3809,12 +3725,26 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
           <div style={{ width: '36px', height: '5px', borderRadius: '3px', background: t.border.strong, opacity: 0.6 }} />
         </div>
         
-        {/* Header con gradiente sutil */}
+        {/* Header */}
         <div style={{ 
-          padding: '0 24px 20px', 
+          padding: '0 24px 18px', 
           textAlign: 'center',
-          background: t.gradient?.subtle || 'transparent'
+          background: t.bg.primary,
+          borderBottom: `1px solid ${t.border.default}`,
+          position: 'relative'
         }}>
+          <button
+            onClick={onClose}
+            aria-label="Cerrar tema"
+            style={{
+              ...getModalCloseButtonStyle(t),
+              position: 'absolute',
+              top: '-2px',
+              right: '24px'
+            }}
+          >
+            ✕
+          </button>
           <span style={{ fontSize: '44px', marginBottom: '8px', display: 'block' }}>
             {themeEmojis[themeName] || '📚'}
           </span>
@@ -3834,25 +3764,31 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
         </div>
         
         {/* Lista agrupada por experiencia */}
-        <div style={{ padding: '0 24px 32px', maxHeight: '60vh', overflowY: 'auto' }}>
+        <div style={{ padding: '16px 24px 28px', maxHeight: '60vh', overflowY: 'auto' }}>
           {experienceGroups.map(([experience, expBooks]) => (
             <div key={experience} style={{ marginBottom: '24px' }}>
-              <div 
+              <button
                 onClick={() => experience !== 'otros' && onExperienceClick?.(experience)}
+                disabled={experience === 'otros'}
                 style={{ 
+                  width: '100%',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
                   marginBottom: '12px',
-                  cursor: experience !== 'otros' ? 'pointer' : 'default'
+                  background: 'transparent',
+                  border: 'none',
+                  padding: 0,
+                  cursor: experience !== 'otros' ? 'pointer' : 'default',
+                  textAlign: 'left'
                 }}
               >
-                <span style={{ fontSize: '12px', color: t.accent, fontWeight: 600, textTransform: 'capitalize' }}>
+                <span style={{ fontSize: '12px', color: t.accent, fontWeight: 700, textTransform: 'capitalize' }}>
                   ✨ {experience}
                 </span>
                 <span style={{ fontSize: '11px', color: t.text.muted }}>({expBooks.length})</span>
                 {experience !== 'otros' && <span style={{ fontSize: '14px', color: t.text.muted, marginLeft: 'auto' }}>›</span>}
-              </div>
+              </button>
               
               {/* Scroll horizontal de covers */}
               <div style={{
@@ -3877,9 +3813,10 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
                       height: '120px',
                       borderRadius: '8px',
                       overflow: 'hidden',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                      border: `1px solid ${t.border.default}`,
+                      boxShadow: '0 4px 10px rgba(0,0,0,0.12)',
                       marginBottom: '6px',
-                      background: t.bg.tertiary
+                      background: t.bg.elevated
                     }}>
                       <img 
                         src={`/portadas/${book.id}.jpg`}
@@ -3916,17 +3853,8 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
 // =============================================================================
 const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAuthorClick, theme }) => {
   const t = THEMES[theme];
-  const [scrolled, setScrolled] = useState(false);
   const contentRef = useRef(null);
-  
-  // Detectar scroll para sombra dinámica
-  useEffect(() => {
-    const el = contentRef.current;
-    if (!el) return;
-    const handleScroll = () => setScrolled(el.scrollTop > 10);
-    el.addEventListener('scroll', handleScroll);
-    return () => el.removeEventListener('scroll', handleScroll);
-  }, []);
+  useEscapeKey(onClose);
   
   const experienceEmojis = {
     devastador: '💔', perturbador: '😰', melancólico: '🌧️', nostálgico: '🕰️',
@@ -3973,6 +3901,7 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
   return (
     <div 
       onClick={onClose}
+      role="presentation"
       style={{
         position: 'fixed',
         inset: 0,
@@ -3981,27 +3910,28 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
         alignItems: 'flex-end',
         justifyContent: 'center',
         background: t.overlay,
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        animation: 'fadeIn 0.25s ease'
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        animation: 'fadeIn 0.2s ease'
       }}
     >
       <div 
         ref={contentRef}
         onClick={e => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Experiencia ${experience}`}
         style={{
           width: '100%',
           maxWidth: '500px',
           maxHeight: '85vh',
-          borderRadius: '24px 24px 0 0',
-          background: t.glass?.bgStrong || t.bg.primary,
-          backdropFilter: 'blur(40px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          borderRadius: '16px 16px 0 0',
+          background: t.bg.primary,
+          border: `1px solid ${t.border.default}`,
           borderBottom: 'none',
           overflow: 'hidden',
-          boxShadow: t.glass?.shadowElevated || '0 -8px 32px rgba(0,0,0,0.3)',
-          animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
+          boxShadow: '0 -16px 32px rgba(0,0,0,0.18)',
+          animation: 'slideUp 0.24s cubic-bezier(0.2, 0, 0, 1)'
         }}
       >
         {/* Handle */}
@@ -4009,13 +3939,26 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
           <div style={{ width: '36px', height: '5px', borderRadius: '3px', background: t.border.strong, opacity: 0.6 }} />
         </div>
         
-        {/* Header con gradiente sutil */}
+        {/* Header */}
         <div style={{ 
-          padding: '0 24px 24px',
+          padding: '0 24px 18px',
           textAlign: 'center',
-          borderBottom: `1px solid ${t.border.subtle}`,
-          background: t.gradient?.subtle || 'transparent'
+          borderBottom: `1px solid ${t.border.default}`,
+          background: t.bg.primary,
+          position: 'relative'
         }}>
+          <button
+            onClick={onClose}
+            aria-label="Cerrar experiencia"
+            style={{
+              ...getModalCloseButtonStyle(t),
+              position: 'absolute',
+              top: '-2px',
+              right: '24px'
+            }}
+          >
+            ✕
+          </button>
           <span style={{ fontSize: '52px', marginBottom: '12px', display: 'block' }}>
             {experienceEmojis[experience] || '✨'}
           </span>
@@ -4047,7 +3990,7 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '16px'
+            gap: '14px'
           }}>
             {experienceBooks.map(book => {
               const authors = (book.a || []).slice(0, 1);
@@ -4058,9 +4001,10 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
                     aspectRatio: '2/3',
                     borderRadius: '8px',
                     overflow: 'hidden',
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                    border: `1px solid ${t.border.default}`,
+                    boxShadow: '0 4px 10px rgba(0,0,0,0.12)',
                     marginBottom: '8px',
-                    background: t.bg.tertiary
+                    background: t.bg.elevated
                   }}>
                     <img 
                       src={`/portadas/${book.id}.jpg`}
@@ -4083,12 +4027,23 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
                     {book.t}
                   </p>
                   {authors[0] && (
-                    <p 
+                    <button
+                      type="button"
+                      aria-label={`Abrir autor ${authors[0]}`}
                       onClick={(e) => { e.stopPropagation(); onAuthorClick?.(authors[0]); }}
-                      style={{ fontSize: '11px', color: t.text.tertiary, cursor: 'pointer' }}
+                      style={{
+                        font: 'inherit',
+                        border: 'none',
+                        background: 'transparent',
+                        padding: 0,
+                        margin: 0,
+                        fontSize: '11px',
+                        color: t.text.tertiary,
+                        cursor: 'pointer'
+                      }}
                     >
                       {authors[0]}
-                    </p>
+                    </button>
                   )}
                 </div>
               );
@@ -4611,6 +4566,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
   const [resultIndex, setResultIndex] = useState(0);
   
   const t = THEMES[theme];
+  useEscapeKey(onClose);
   
   // Pregunta actual basada en el path
   const currentQuestionKey = path[path.length - 1];
@@ -4963,45 +4919,43 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
     return (
       <div 
         onClick={onClose}
+        role="presentation"
         style={{
           position: 'fixed', inset: 0, zIndex: 100,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           padding: '16px',
           background: t.overlay,
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)',
-          animation: 'fadeIn 0.25s ease'
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          animation: 'fadeIn 0.2s ease'
         }}
       >
         <div 
           onClick={e => e.stopPropagation()}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Resultado del wizard"
           style={{
             width: '100%', maxWidth: '440px',
-            borderRadius: '24px',
-            background: t.glass?.bgStrong || t.bg.elevated,
-            backdropFilter: 'blur(40px) saturate(180%)',
-            WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-            border: `1px solid ${t.glass?.border || t.border.subtle}`,
-            boxShadow: t.glass?.shadowElevated || '0 8px 32px rgba(0,0,0,0.3)',
-            animation: 'scaleIn 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+            borderRadius: '14px',
+            background: t.bg.primary,
+            border: `1px solid ${t.border.default}`,
+            boxShadow: '0 14px 32px rgba(0,0,0,0.18)',
+            animation: 'scaleIn 0.2s ease',
             overflow: 'hidden'
           }}
         >
-          {/* Header con gradiente */}
+          {/* Header */}
           <div style={{ 
-            background: t.gradient?.subtle || `linear-gradient(180deg, ${t.accent}10, transparent)`,
+            background: t.bg.primary,
+            borderBottom: `1px solid ${t.border.default}`,
             padding: '24px 24px 0'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
               <p style={{ fontSize: '12px', color: t.accent, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>
                 Tu próxima lectura
               </p>
-              <button onClick={onClose} style={{ 
-                background: t.glass?.bg || 'transparent', border: 'none', 
-                color: t.text.tertiary, fontSize: '20px', cursor: 'pointer',
-                width: '32px', height: '32px', borderRadius: '50%',
-                display: 'flex', alignItems: 'center', justifyContent: 'center'
-              }}>✕</button>
+              <button onClick={onClose} aria-label="Cerrar wizard" style={getModalCloseButtonStyle(t)}>✕</button>
             </div>
             
             {/* Portada y título */}
@@ -5186,27 +5140,29 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
   return (
     <div 
       onClick={onClose}
+      role="presentation"
       style={{
         position: 'fixed', inset: 0, zIndex: 100,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         padding: '16px',
         background: t.overlay,
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        animation: 'fadeIn 0.25s ease'
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        animation: 'fadeIn 0.2s ease'
       }}
     >
       <div 
         onClick={e => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Preguntas del wizard"
         style={{
           width: '100%', maxWidth: '440px',
-          borderRadius: '24px', padding: '28px',
-          background: t.glass?.bgStrong || t.bg.elevated,
-          backdropFilter: 'blur(40px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-          border: `1px solid ${t.glass?.border || t.border.subtle}`,
-          boxShadow: t.glass?.shadowElevated || '0 8px 32px rgba(0,0,0,0.3)',
-          animation: 'scaleIn 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
+          borderRadius: '14px', padding: '24px',
+          background: t.bg.primary,
+          border: `1px solid ${t.border.default}`,
+          boxShadow: '0 14px 32px rgba(0,0,0,0.18)',
+          animation: 'scaleIn 0.2s ease'
         }}
       >
         {/* Header */}
@@ -5220,12 +5176,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
               ← Atrás
             </button>
           ) : <div />}
-          <button onClick={onClose} style={{ 
-            background: t.glass?.bg || 'transparent', border: 'none', 
-            color: t.text.tertiary, fontSize: '18px', cursor: 'pointer',
-            width: '32px', height: '32px', borderRadius: '50%',
-            display: 'flex', alignItems: 'center', justifyContent: 'center'
-          }}>✕</button>
+          <button onClick={onClose} aria-label="Cerrar wizard" style={getModalCloseButtonStyle(t)}>✕</button>
         </div>
         
         {/* Progress visual (camino recorrido) */}
@@ -5545,6 +5496,7 @@ export default function App() {
   const [storedFilters, setStoredFilters] = useLocalStorage('nextread_filters', DEFAULT_FILTERS);
   const [activeTab, setActiveTab] = useState('library');
   const [sanctuaryMode, setSanctuaryMode] = useState(false);
+  const [curationSeed, setCurationSeed] = useState(() => Date.now());
   const [todayMode, setTodayMode] = useState(() => {
     try {
       return new URLSearchParams(window.location.search).get('today') === '1';
@@ -5652,6 +5604,10 @@ export default function App() {
     setActiveTab('library');
     setSelectedCollection(null);
     setShowFilters(false);
+  }, []);
+
+  const rerollCuratedShelves = useCallback(() => {
+    setCurationSeed((prev) => prev + 1);
   }, []);
   
   // Listas
@@ -5786,6 +5742,21 @@ export default function App() {
     
     if (booksWithHooks.length === 0) return null;
 
+    const hashSeed = (input) => {
+      const text = String(input || '');
+      let hash = 0;
+      for (let index = 0; index < text.length; index += 1) {
+        hash = (hash << 5) - hash + text.charCodeAt(index);
+        hash |= 0;
+      }
+      return Math.abs(hash);
+    };
+
+    const seededNoise = (bookId, salt = '') => {
+      const seed = hashSeed(`${curationSeed}:${bookId}:${salt}`);
+      return (seed % 1000) / 1000;
+    };
+
     const pickUniqueByAuthor = (scoredBooks, limit = 8) => {
       const picked = [];
       const seenAuthors = new Set();
@@ -5795,24 +5766,60 @@ export default function App() {
         if (picked.length >= limit) return;
         if (seenAuthors.has(primaryAuthor)) return;
         seenAuthors.add(primaryAuthor);
-        picked.push(item.book);
+        picked.push(item);
       });
 
       if (picked.length < limit) {
         scoredBooks.forEach((item) => {
           if (picked.length >= limit) return;
-          if (!picked.some((book) => book.id === item.book.id)) {
-            picked.push(item.book);
+          if (!picked.some((entry) => entry.book.id === item.book.id)) {
+            picked.push(item);
           }
         });
       }
 
       return picked;
     };
+
+    const pickVariedShelf = (items, limit, salt) => {
+      const sorted = [...items].sort((a, b) => b.score - a.score);
+      if (sorted.length === 0) return [];
+
+      const poolSize = Math.min(sorted.length, Math.max(limit * 4, 20));
+      const pool = sorted.slice(0, poolSize);
+      const scoreRange = pool.length > 1 ? Math.max(0, pool[0].score - pool[pool.length - 1].score) : 0;
+      const jitter = Math.max(9, scoreRange * 0.32);
+      const varied = pool
+        .map((item) => ({
+          ...item,
+          score: item.score + (seededNoise(item.book.id, salt) * jitter),
+        }))
+        .sort((a, b) => b.score - a.score);
+
+      return pickUniqueByAuthor(varied, limit);
+    };
+
+    const toReasonMap = (items) => {
+      const next = {};
+      items.forEach((item) => {
+        next[item.book.id] = item.reason || 'Por equilibrio de calidad y perfil del estante.';
+      });
+      return next;
+    };
     
-    // Hero: libro aleatorio con hook (cambia cada render)
-    const heroIndex = Math.floor(Math.random() * booksWithHooks.length);
-    const heroBook = booksWithHooks[heroIndex];
+    // Hero: rotación por semilla para evitar repetición constante
+    const heroRanked = booksWithHooks
+      .map((book) => {
+        const hook = hooks[String(book.id)] || {};
+        const score = (hook.why_matters ? hook.why_matters.length * 0.14 : 0)
+          + (parseAcclaim(book) * 10)
+          + (awardMetaByBookId[book.id]?.isAwarded ? 16 : 0)
+          + (seededNoise(book.id, 'hero') * 6);
+        return { book, score };
+      })
+      .sort((a, b) => b.score - a.score);
+
+    const heroBook = heroRanked[0].book;
     const heroHook = hooks[String(heroBook.id)];
     const candidates = booksWithHooks.filter((book) => book.id !== heroBook.id);
     const cantPutDownExperience = new Set([
@@ -5820,24 +5827,33 @@ export default function App() {
       'adictivo', 'intenso', 'escalofriante', 'oscuro', 'visceral'
     ]);
     
-    // "Libros que cambiaron todo" - con why_matters fuerte
-    const changedEverything = pickUniqueByAuthor(
+    // "Libros que cambiaron todo" - impacto + prestigio + señal narrativa
+    const changedEverythingItems = pickVariedShelf(
       candidates
         .map((book) => {
           const h = hooks[String(book.id)];
           const whyLength = h?.why_matters ? h.why_matters.length : 0;
           const acclaim = parseAcclaim(book);
           const awardBoost = awardMetaByBookId[book.id]?.isAwarded ? 28 : 0;
-          const themesBoost = Array.isArray(h?.themes) ? h.themes.length * 2 : 0;
-          const score = (whyLength * 0.35) + (acclaim * 14) + awardBoost + themesBoost;
-          return { book, score, whyLength };
+          const themesBoost = Array.isArray(h?.themes) ? h.themes.length * 2.5 : 0;
+          const score = (whyLength * 0.28) + (acclaim * 14) + awardBoost + themesBoost;
+          const awardLabel = awardMetaByBookId[book.id]?.labels?.[0];
+          let reason = 'Tiene impacto literario y señal fuerte en el hook.';
+          if (awardLabel) {
+            reason = `Premiado (${awardLabel}) y con impacto crítico.`;
+          } else if (acclaim >= 2) {
+            reason = `Muy bien valorado (${acclaim}/5) y con señal de impacto.`;
+          } else if (whyLength >= 80) {
+            reason = 'El hook lo marca como obra transformadora.';
+          }
+          return { book, score, whyLength, reason };
         })
         .filter((item) => item.whyLength >= 45 || item.score >= 35)
-        .sort((a, b) => b.score - a.score)
+      , 8, 'changed'
     );
     
-    // "Para una tarde" - compactos y abordables, pero de calidad
-    const forAnAfternoon = pickUniqueByAuthor(
+    // "Para una tarde" - abordables + ritmo + calidad
+    const forAnAfternoonItems = pickVariedShelf(
       candidates
         .map((book) => {
           const pages = parsePages(book);
@@ -5850,14 +5866,17 @@ export default function App() {
           const readabilityBoost = difficulty === 'ligero' ? 12 : difficulty === 'medio' ? 7 : -5;
           const score = paceBoost + readabilityBoost + awardBoost + (acclaim * 8) - (distanceToIdeal * 0.06) +
             (hook.experience === 'adictivo' ? 5 : 0);
-          return { book, score, pages, difficulty };
+          const reason = pages > 0
+            ? `Lectura ágil: ${pages} páginas y dificultad ${difficulty || 'media'}.`
+            : `Lectura ágil y accesible para una tarde.`;
+          return { book, score, pages, difficulty, reason };
         })
         .filter((item) => item.pages >= 80 && item.pages <= 300 && item.difficulty !== 'denso')
-        .sort((a, b) => b.score - a.score)
+      , 8, 'afternoon'
     );
     
-    // "No podrás soltarlo" - señal narrativa fuerte + intensidad
-    const cantPutDown = pickUniqueByAuthor(
+    // "No podrás soltarlo" - intensidad narrativa + tensión
+    const cantPutDownItems = pickVariedShelf(
       candidates
         .map((book) => {
           const hook = hooks[String(book.id)] || {};
@@ -5870,14 +5889,16 @@ export default function App() {
           const expBoost = cantPutDownExperience.has(exp) ? 20 : 0;
           const moodBoost = ['tenso', 'inquietante', 'oscuro'].includes(mood) ? 8 : 0;
           const score = expBoost + moodBoost + hookIntensity + (acclaim * 9) + awardBoost;
-          return { book, score, exp, mood };
+          const primarySignal = hook.experience || book.m || 'intensidad narrativa';
+          const reason = `Señal fuerte de tensión: ${primarySignal}.`;
+          return { book, score, exp, mood, reason };
         })
         .filter((item) => cantPutDownExperience.has(item.exp) || ['tenso', 'inquietante', 'oscuro'].includes(item.mood))
-        .sort((a, b) => b.score - a.score)
+      , 8, 'cantputdown'
     );
     
     // "Viaje interior" - contemplativos, íntimos
-    const innerJourney = pickUniqueByAuthor(
+    const innerJourneyItems = pickVariedShelf(
       candidates
       .filter(b => {
         const h = hooks[String(b.id)];
@@ -5886,20 +5907,25 @@ export default function App() {
       .map((book) => {
         const h = hooks[String(book.id)] || {};
         const score = (h.why_matters ? h.why_matters.length * 0.2 : 0) + (parseAcclaim(book) * 8);
-        return { book, score };
+        const reason = `Perfil introspectivo (${h.experience || book.m || 'contemplativo'}).`;
+        return { book, score, reason };
       })
-      .sort((a, b) => b.score - a.score)
+    , 8, 'innerjourney'
     );
     
     return { 
       heroBook, 
       heroHook,
-      changedEverything, 
-      forAnAfternoon, 
-      cantPutDown, 
-      innerJourney 
+      changedEverything: changedEverythingItems.map((item) => item.book),
+      changedEverythingReasons: toReasonMap(changedEverythingItems),
+      forAnAfternoon: forAnAfternoonItems.map((item) => item.book),
+      forAnAfternoonReasons: toReasonMap(forAnAfternoonItems),
+      cantPutDown: cantPutDownItems.map((item) => item.book),
+      cantPutDownReasons: toReasonMap(cantPutDownItems),
+      innerJourney: innerJourneyItems.map((item) => item.book),
+      innerJourneyReasons: toReasonMap(innerJourneyItems),
     };
-  }, [books, hooks, viewMode, selectedCollection, awardMetaByBookId]);
+  }, [books, hooks, viewMode, selectedCollection, awardMetaByBookId, curationSeed]);
   
   const moods = useMemo(() => {
     const moodSet = new Set(books.map(b => b.m).filter(Boolean));
@@ -6037,7 +6063,7 @@ export default function App() {
       .stagger-item:nth-child(8) { animation-delay: 350ms; }
       
       :focus-visible {
-        outline: 2px solid rgba(15, 102, 218, 0.58);
+        outline: 2px solid rgba(217, 65, 43, 0.62);
         outline-offset: 2px;
       }
       
@@ -6110,7 +6136,7 @@ export default function App() {
                 style={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  gap: '10px',
+                  gap: '12px',
                   cursor: 'pointer',
                   transition: 'opacity 120ms ease'
                 }}
@@ -6118,10 +6144,25 @@ export default function App() {
                 onMouseLeave={e => e.currentTarget.style.opacity = '1'}
                 title="Volver al inicio"
               >
-                <span style={{ fontSize: '26px' }}>📚</span>
+                <span style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '999px',
+                  border: `1px solid ${t.border.default}`,
+                  background: t.bg.elevated,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '10px',
+                  fontWeight: 700,
+                  letterSpacing: '0.12em',
+                  color: t.text.secondary
+                }}>
+                  NR
+                </span>
                 <div>
-                  <h1 style={{ fontFamily: t.typography.display, fontSize: '19px', fontWeight: 600, color: t.text.primary, letterSpacing: '0.01em' }}>NextRead</h1>
-                  <p style={{ fontSize: '12px', color: t.text.tertiary }}>{books.length} libros</p>
+                  <h1 style={{ fontFamily: t.typography.display, fontSize: '24px', fontWeight: 400, color: t.text.primary, letterSpacing: '0.01em', lineHeight: 1 }}>NextRead</h1>
+                  <p style={{ fontSize: '11px', color: t.text.tertiary, letterSpacing: '0.09em', textTransform: 'uppercase' }}>{books.length} libros</p>
                 </div>
               </div>
               
@@ -6134,13 +6175,14 @@ export default function App() {
                   onChange={e => setFilters(f => ({ ...f, search: e.target.value }))}
                   style={{
                     flex: 1,
-                    maxWidth: '320px',
-                    padding: '10px 16px',
-                    borderRadius: '8px',
+                    maxWidth: '360px',
+                    padding: '11px 16px',
+                    borderRadius: '999px',
                     border: `1px solid ${t.border.default}`,
                     background: t.bg.elevated,
                     color: t.text.primary,
-                    fontSize: '14px',
+                    fontSize: '13px',
+                    letterSpacing: '0.01em',
                     outline: 'none',
                     display: isMobile ? 'none' : 'block'
                   }}
@@ -6304,12 +6346,13 @@ export default function App() {
                 style={{
                   width: '100%',
                   marginTop: '12px',
-                  padding: '10px 16px',
-                  borderRadius: '8px',
+                  padding: '11px 16px',
+                  borderRadius: '999px',
                   border: `1px solid ${t.border.default}`,
                   background: t.bg.elevated,
                   color: t.text.primary,
-                  fontSize: '14px',
+                  fontSize: '13px',
+                  letterSpacing: '0.01em',
                   outline: 'none'
                 }}
               />
@@ -6320,7 +6363,7 @@ export default function App() {
               <div style={{ 
                 display: 'flex', gap: '4px', 
                 marginTop: '16px', padding: '4px',
-                borderRadius: '8px',
+                borderRadius: '999px',
                 background: t.bg.secondary,
                 border: `1px solid ${t.border.default}`
               }}>
@@ -6328,7 +6371,7 @@ export default function App() {
                   onClick={() => setViewMode('curated')}
                   style={{
                     flex: 1, padding: '10px',
-                    borderRadius: '8px',
+                    borderRadius: '999px',
                     border: `1px solid ${viewMode === 'curated' ? t.border.default : 'transparent'}`,
                     background: viewMode === 'curated' ? t.bg.elevated : 'transparent',
                     color: viewMode === 'curated' ? t.text.primary : t.text.tertiary,
@@ -6345,7 +6388,7 @@ export default function App() {
                   onClick={() => setViewMode('archive')}
                   style={{
                     flex: 1, padding: '10px',
-                    borderRadius: '8px',
+                    borderRadius: '999px',
                     border: `1px solid ${viewMode === 'archive' ? t.border.default : 'transparent'}`,
                     background: viewMode === 'archive' ? t.bg.elevated : 'transparent',
                     color: viewMode === 'archive' ? t.text.primary : t.text.tertiary,
@@ -6483,6 +6526,24 @@ export default function App() {
                   onClick={setSelectedBook}
                   theme={theme}
                 />
+
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '18px' }}>
+                  <button
+                    onClick={rerollCuratedShelves}
+                    style={{
+                      border: `1px solid ${t.border.default}`,
+                      background: t.bg.tertiary,
+                      color: t.text.secondary,
+                      borderRadius: '10px',
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      padding: '8px 12px',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    Cambiar recomendaciones
+                  </button>
+                </div>
                 
                 {/* Estante: Libros que cambiaron todo */}
                 {narrativeShelves.changedEverything.length > 0 && (
@@ -6494,6 +6555,7 @@ export default function App() {
                     onBookClick={setSelectedBook}
                     theme={theme}
                     getBookAwardLabel={getBookAwardLabel}
+                    getBookReason={(book) => narrativeShelves.changedEverythingReasons?.[book.id] || null}
                   />
                 )}
                 
@@ -6507,6 +6569,7 @@ export default function App() {
                     onBookClick={setSelectedBook}
                     theme={theme}
                     getBookAwardLabel={getBookAwardLabel}
+                    getBookReason={(book) => narrativeShelves.cantPutDownReasons?.[book.id] || null}
                   />
                 )}
                 
@@ -6520,6 +6583,7 @@ export default function App() {
                     onBookClick={setSelectedBook}
                     theme={theme}
                     getBookAwardLabel={getBookAwardLabel}
+                    getBookReason={(book) => narrativeShelves.forAnAfternoonReasons?.[book.id] || null}
                   />
                 )}
                 
@@ -6533,6 +6597,7 @@ export default function App() {
                     onBookClick={setSelectedBook}
                     theme={theme}
                     getBookAwardLabel={getBookAwardLabel}
+                    getBookReason={(book) => narrativeShelves.innerJourneyReasons?.[book.id] || null}
                   />
                 )}
                 
