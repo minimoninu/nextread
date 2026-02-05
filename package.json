@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync:hooks": "node scripts/sync-hooks.mjs",
+    "check:data": "node scripts/check-data.mjs",
+    "check:data:strict": "CHECK_DATA_STRICT=1 node scripts/check-data.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",
