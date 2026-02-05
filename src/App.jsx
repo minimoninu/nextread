@@ -11,90 +11,98 @@ const COLLECTIONS_URL = '/collections.json';
 const HOOKS_URL = '/hooks.json';
 const INITIAL_LOAD = 42;
 const LOAD_MORE_COUNT = 21;
+const FONT_STACK_BODY = "'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+const FONT_STACK_DISPLAY = "'Space Grotesk', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
 
 // =============================================================================
-// TEMAS - Quiet Material Library con Glassmorphism
+// TEMAS - Minimal Precisa
 // =============================================================================
 const THEMES = {
   night: {
     name: 'Nocturno',
     icon: '☀',
     bg: {
-      primary: '#1a1917',
-      secondary: '#242320',
-      tertiary: '#2d2b28',
-      elevated: '#363330',
+      primary: '#0f1218',
+      secondary: '#151a23',
+      tertiary: '#1b2230',
+      elevated: '#212a3a',
     },
     text: {
-      primary: '#f5f3ef',
-      secondary: '#b8b5ad',
-      tertiary: '#8a867d',
-      muted: '#5c5850',
+      primary: '#f4f7fb',
+      secondary: '#c4cfde',
+      tertiary: '#98a6bb',
+      muted: '#6d7c93',
     },
-    accent: '#c9a456',
-    accentHover: '#d4b36a',
-    accentMuted: 'rgba(201, 164, 86, 0.15)',
+    accent: '#59a7ff',
+    accentHover: '#78b8ff',
+    accentMuted: 'rgba(89, 167, 255, 0.16)',
     border: {
-      subtle: 'rgba(245, 243, 239, 0.06)',
-      default: 'rgba(245, 243, 239, 0.1)',
-      strong: 'rgba(245, 243, 239, 0.15)',
+      subtle: 'rgba(244, 247, 251, 0.08)',
+      default: 'rgba(244, 247, 251, 0.16)',
+      strong: 'rgba(244, 247, 251, 0.24)',
     },
-    overlay: 'rgba(10, 10, 9, 0.85)',
-    success: '#7d9a6d',
-    // Glassmorphism
+    overlay: 'rgba(7, 10, 16, 0.82)',
+    success: '#4fb27c',
     glass: {
-      bg: 'rgba(36, 35, 32, 0.75)',
-      bgStrong: 'rgba(45, 43, 40, 0.85)',
-      border: 'rgba(245, 243, 239, 0.08)',
-      shadow: '0 8px 32px rgba(0, 0, 0, 0.4)',
-      shadowElevated: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+      bg: 'rgba(21, 26, 35, 0.82)',
+      bgStrong: 'rgba(21, 26, 35, 0.94)',
+      border: 'rgba(244, 247, 251, 0.12)',
+      shadow: '0 8px 24px rgba(0, 0, 0, 0.35)',
+      shadowElevated: '0 20px 42px -12px rgba(0, 0, 0, 0.45)',
     },
     gradient: {
-      accent: 'linear-gradient(135deg, #c9a456 0%, #d4b36a 100%)',
-      subtle: 'linear-gradient(180deg, rgba(201, 164, 86, 0.08) 0%, transparent 100%)',
-      card: 'linear-gradient(145deg, rgba(54, 51, 48, 0.9) 0%, rgba(45, 43, 40, 0.95) 100%)',
-      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.03) 50%, transparent 100%)',
-    }
+      accent: 'linear-gradient(135deg, #59a7ff 0%, #7fc0ff 100%)',
+      subtle: 'linear-gradient(180deg, rgba(89, 167, 255, 0.08) 0%, transparent 100%)',
+      card: 'linear-gradient(160deg, rgba(33, 42, 58, 0.96) 0%, rgba(27, 34, 48, 0.98) 100%)',
+      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.035) 50%, transparent 100%)',
+    },
+    typography: {
+      body: FONT_STACK_BODY,
+      display: FONT_STACK_DISPLAY,
+    },
   },
   day: {
     name: 'Día',
     icon: '☾',
     bg: {
-      primary: '#f8f6f1',
-      secondary: '#f0ede6',
-      tertiary: '#e8e4db',
+      primary: '#f4f7fb',
+      secondary: '#e9eef5',
+      tertiary: '#dde5ef',
       elevated: '#ffffff',
     },
     text: {
-      primary: '#2a2825',
-      secondary: '#5a5752',
-      tertiary: '#8a857d',
-      muted: '#b5b0a5',
+      primary: '#111827',
+      secondary: '#364152',
+      tertiary: '#5f6f84',
+      muted: '#8a98ab',
     },
-    accent: '#a68a3a',
-    accentHover: '#8a7030',
-    accentMuted: 'rgba(166, 138, 58, 0.12)',
+    accent: '#0f66da',
+    accentHover: '#0d57ba',
+    accentMuted: 'rgba(15, 102, 218, 0.12)',
     border: {
-      subtle: 'rgba(42, 40, 37, 0.05)',
-      default: 'rgba(42, 40, 37, 0.1)',
-      strong: 'rgba(42, 40, 37, 0.15)',
+      subtle: 'rgba(17, 24, 39, 0.08)',
+      default: 'rgba(17, 24, 39, 0.16)',
+      strong: 'rgba(17, 24, 39, 0.24)',
     },
-    overlay: 'rgba(248, 246, 241, 0.85)',
-    success: '#5a7a5a',
-    // Glassmorphism
+    overlay: 'rgba(244, 247, 251, 0.88)',
+    success: '#228455',
     glass: {
-      bg: 'rgba(255, 255, 255, 0.7)',
-      bgStrong: 'rgba(255, 255, 255, 0.85)',
-      border: 'rgba(255, 255, 255, 0.5)',
-      shadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
-      shadowElevated: '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+      bg: 'rgba(255, 255, 255, 0.84)',
+      bgStrong: 'rgba(255, 255, 255, 0.94)',
+      border: 'rgba(255, 255, 255, 0.7)',
+      shadow: '0 8px 22px rgba(9, 30, 66, 0.09)',
+      shadowElevated: '0 18px 36px -14px rgba(9, 30, 66, 0.14)',
     },
     gradient: {
-      accent: 'linear-gradient(135deg, #a68a3a 0%, #c9a456 100%)',
-      subtle: 'linear-gradient(180deg, rgba(166, 138, 58, 0.06) 0%, transparent 100%)',
-      card: 'linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 246, 241, 0.98) 100%)',
-      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.02) 50%, transparent 100%)',
-    }
+      accent: 'linear-gradient(135deg, #0f66da 0%, #1b84ff 100%)',
+      subtle: 'linear-gradient(180deg, rgba(15, 102, 218, 0.07) 0%, transparent 100%)',
+      card: 'linear-gradient(170deg, rgba(255, 255, 255, 1) 0%, rgba(244, 247, 251, 1) 100%)',
+      shimmer: 'linear-gradient(90deg, transparent 0%, rgba(17,24,39,0.03) 50%, transparent 100%)',
+    },
+    typography: {
+      body: FONT_STACK_BODY,
+      display: FONT_STACK_DISPLAY,
+    },
   }
 };
 
@@ -376,13 +384,13 @@ const LANGUAGE_FILTER_OPTIONS = [
   { id: 'unknown', label: 'Sin detectar' }
 ];
 
-const LANGUAGE_KEYWORDS = {
-  es: ['el', 'la', 'los', 'las', 'de', 'del', 'y', 'en', 'una', 'un'],
-  en: ['the', 'and', 'of', 'in', 'to', 'a', 'an', 'for', 'with'],
-  fr: ['le', 'la', 'les', 'de', 'des', 'et', 'dans', 'une', 'un'],
-  it: ['il', 'lo', 'gli', 'le', 'di', 'del', 'e', 'una', 'un'],
-  pt: ['o', 'a', 'os', 'as', 'de', 'do', 'da', 'e', 'uma', 'um'],
-  de: ['der', 'die', 'das', 'und', 'von', 'ein', 'eine', 'im']
+const NATIONALITY_LANGUAGE_PATTERNS = {
+  es: ['espanol', 'espanola', 'argentin', 'mexican', 'colombian', 'chilen', 'peruan', 'uruguay', 'nicaragu', 'cuban', 'venezolan', 'bolivian', 'paraguay', 'ecuator', 'guatemal', 'honduren', 'salvadoren', 'costarric', 'dominican', 'puertorriq'],
+  en: ['estadounidense', 'american', 'britanic', 'ingles', 'irland', 'canad', 'australian', 'neozeland', 'escoces', 'gales'],
+  fr: ['frances', 'franco'],
+  it: ['italian'],
+  pt: ['portugues', 'brasil'],
+  de: ['aleman', 'austriac', 'german']
 };
 
 const normalizeFilters = (value = {}) => {
@@ -402,42 +410,64 @@ const parseAcclaim = (book) => {
   return Number.isFinite(raw) ? raw : 0;
 };
 
-const detectLanguageFromTitle = (title) => {
-  const cleaned = String(title || '')
+const normalizeForMatch = (value) =>
+  String(value || '')
     .toLowerCase()
-    .replace(/[^0-9a-z\u00C0-\u017F]+/g, ' ')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^0-9a-z]+/g, ' ')
     .trim();
-  if (!cleaned) return 'unknown';
 
-  const tokens = new Set(cleaned.split(/\s+/));
+const toLanguageCode = (value) => {
+  const normalized = normalizeForMatch(value);
+  if (!normalized) return null;
+  if (normalized === 'es' || normalized.includes('espanol') || normalized.includes('spanish')) return 'es';
+  if (normalized === 'en' || normalized.includes('ingles') || normalized.includes('english')) return 'en';
+  if (normalized === 'fr' || normalized.includes('frances') || normalized.includes('french')) return 'fr';
+  if (normalized === 'it' || normalized.includes('italiano') || normalized.includes('italian')) return 'it';
+  if (normalized === 'pt' || normalized.includes('portugues') || normalized.includes('portuguese')) return 'pt';
+  if (normalized === 'de' || normalized.includes('aleman') || normalized.includes('german')) return 'de';
+  return null;
+};
+
+const detectLanguageFromNationality = (nationality) => {
+  const normalized = normalizeForMatch(nationality);
+  if (!normalized) return null;
+
   const score = { es: 0, en: 0, fr: 0, it: 0, pt: 0, de: 0 };
-
-  Object.entries(LANGUAGE_KEYWORDS).forEach(([lang, words]) => {
-    words.forEach((word) => {
-      if (tokens.has(word)) score[lang] += 1;
+  Object.entries(NATIONALITY_LANGUAGE_PATTERNS).forEach(([lang, patterns]) => {
+    patterns.forEach((pattern) => {
+      if (normalized.includes(pattern)) score[lang] += 1;
     });
   });
 
-  if (/[ñáéíóú]/.test(cleaned)) score.es += 1;
-  if (/[ãõç]/.test(cleaned)) score.pt += 1;
-  if (/[äöüß]/.test(cleaned)) score.de += 1;
-  if (/[àâêëîïôûùÿœ]/.test(cleaned)) score.fr += 1;
-
   const ranked = Object.entries(score).sort((a, b) => b[1] - a[1]);
-  if (!ranked[0] || ranked[0][1] === 0) return 'unknown';
-  if (ranked[1] && ranked[0][1] === ranked[1][1]) return 'unknown';
+  if (!ranked[0] || ranked[0][1] === 0) return null;
+  if (ranked[1] && ranked[0][1] === ranked[1][1]) return null;
   return ranked[0][0];
 };
 
-const getBookLanguage = (book) => {
-  const explicit = String(book?.lang || book?.language || book?.idioma || '').toLowerCase();
-  if (explicit.startsWith('es')) return 'es';
-  if (explicit.startsWith('en')) return 'en';
-  if (explicit.startsWith('fr')) return 'fr';
-  if (explicit.startsWith('it')) return 'it';
-  if (explicit.startsWith('pt')) return 'pt';
-  if (explicit.startsWith('de')) return 'de';
-  return detectLanguageFromTitle(book?.t || book?.title || '');
+const getBookOriginalLanguage = (book, authorsData) => {
+  const explicitOriginal = toLanguageCode(
+    book?.original_language || book?.originalLanguage || book?.idioma_original || book?.lang_original
+  );
+  if (explicitOriginal) return explicitOriginal;
+
+  const authors = Array.isArray(book?.a || book?.authors) ? (book?.a || book?.authors) : [];
+  const detected = authors
+    .map((authorName) => detectLanguageFromNationality(authorsData?.[authorName]?.nationality))
+    .filter(Boolean);
+
+  if (detected.length === 0) return 'unknown';
+  const counts = detected.reduce((acc, lang) => {
+    acc[lang] = (acc[lang] || 0) + 1;
+    return acc;
+  }, {});
+
+  const ranked = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  if (!ranked[0]) return 'unknown';
+  if (ranked[1] && ranked[0][1] === ranked[1][1]) return 'unknown';
+  return ranked[0][0];
 };
 
 const matchesLengthFilter = (book, lengthFilter) => {
@@ -2923,10 +2953,10 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
 
               <div style={{ marginBottom: '24px' }}>
                 <p style={{ fontSize: '11px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', color: t.text.tertiary, marginBottom: '12px' }}>
-                  Idioma (estimado)
+                  Idioma original (estimado)
                 </p>
                 <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '10px' }}>
-                  Basado en titulo cuando no hay dato explicito.
+                  Basado en nacionalidad del autor si no hay metadato explicito.
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {LANGUAGE_FILTER_OPTIONS.map(opt => (
@@ -5309,6 +5339,13 @@ export default function App() {
     () => buildTodayPicks({ books, hooks, lists, count: 3 }),
     [books, hooks, lists]
   );
+  const originalLanguageByBookId = useMemo(() => {
+    const next = {};
+    books.forEach((book) => {
+      next[book.id] = getBookOriginalLanguage(book, authorsData);
+    });
+    return next;
+  }, [books, authorsData]);
   
   // Cargar libros, autores, colecciones y hooks
   useEffect(() => {
@@ -5414,7 +5451,7 @@ export default function App() {
       if (filters.genres.length > 0 && !filters.genres.some(g => bookVibes.includes(g))) return false;
       if (filters.minAcclaim && parseAcclaim(book) < filters.minAcclaim) return false;
       if (filters.length && !matchesLengthFilter(book, filters.length)) return false;
-      if (filters.language && getBookLanguage(book) !== filters.language) return false;
+      if (filters.language && (originalLanguageByBookId[book.id] || 'unknown') !== filters.language) return false;
 
       // FILTROS CON ALMA
       // Filtro por experiencia
@@ -5461,7 +5498,7 @@ export default function App() {
 
       return true;
     });
-  }, [books, hooks, debouncedSearch, filters, selectedCollection]);
+  }, [books, hooks, debouncedSearch, filters, selectedCollection, originalLanguageByBookId]);
   
   const visibleBooks = useMemo(() => filteredBooks.slice(0, visibleCount), [filteredBooks, visibleCount]);
   
