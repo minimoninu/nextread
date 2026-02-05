@@ -10,7 +10,8 @@
     "sync:hooks": "node scripts/sync-hooks.mjs",
     "check:data": "node scripts/check-data.mjs",
     "check:data:strict": "CHECK_DATA_STRICT=1 node scripts/check-data.mjs",
-    "test:today-picks": "node scripts/test-today-picks.mjs"
+    "test:today-picks": "node scripts/test-today-picks.mjs",
+    "test:book-awards": "node scripts/test-book-awards.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",

@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect, useCallback, useRef, memo } from 'react';
 import { applyOptionToPreferences, buildPreferencesFromAnswers } from './wizardPreferences.js';
 import { buildTodayPicks } from './todayPicks.js';
+import { getBookAwardLabels, isAwardCollection } from './bookAwards.js';
 
 // =============================================================================
 // CONFIGURACIÓN
@@ -532,10 +533,48 @@ const useIsMobile = () => {
   return isMobile;
 };
 
+const useEscapeKey = (onClose) => {
+  useEffect(() => {
+    const handleKeydown = (event) => {
+      if (event.key === 'Escape') {
+        onClose?.();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeydown);
+    return () => window.removeEventListener('keydown', handleKeydown);
+  }, [onClose]);
+};
+
+const getModalCloseButtonStyle = (t) => ({
+  width: '36px',
+  height: '36px',
+  minWidth: '36px',
+  borderRadius: '8px',
+  border: `1px solid ${t.border.default}`,
+  background: t.bg.elevated,
+  color: t.text.secondary,
+  cursor: 'pointer',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: '16px',
+  transition: 'transform 120ms ease, opacity 120ms ease',
+});
+
+const SECTION_TITLE_STYLE = (t) => ({
+  fontSize: '11px',
+  fontWeight: 700,
+  textTransform: 'uppercase',
+  letterSpacing: '0.05em',
+  color: t.text.tertiary,
+  marginBottom: '8px',
+});
+
 // =============================================================================
 // COMPONENTE: BookCover
 // =============================================================================
-const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
+const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary, hasAwardOverride }) => {
   const [ref, isVisible] = useIntersectionObserver();
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -545,7 +584,9 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary }) => {
   const coverUrl = `/portadas/${book.id}.jpg`;
   const title = book.t || book.title || 'Sin título';
   const authors = book.a || book.authors || ['Desconocido'];
-  const hasAward = (book.aw || book.awards || []).length > 0;
+  const hasAward = typeof hasAwardOverride === 'boolean'
+    ? hasAwardOverride
+    : (book.aw || book.awards || []).length > 0;
   const statusColor = listStatus === 'reading'
     ? t.accent
     : listStatus === 'read'
@@ -841,7 +882,7 @@ const HeroBook = ({ book, hook, onClick, theme }) => {
 // =============================================================================
 // COMPONENTE: NarrativeShelf (estante con hooks visibles)
 // =============================================================================
-const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme }) => {
+const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme, getBookAwardLabel }) => {
   const t = THEMES[theme];
   if (!books || books.length === 0) return null;
   
@@ -882,6 +923,7 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme }) =
           const coverUrl = `/portadas/${book.id}.jpg`;
           const title = book.t || 'Sin título';
           const authors = (book.a || []).join(', ');
+          const awardLabel = typeof getBookAwardLabel === 'function' ? getBookAwardLabel(book) : null;
           
           return (
             <div
@@ -950,6 +992,22 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme }) =
                       {hook.experience}
                     </span>
                   )}
+                  {awardLabel && (
+                    <span style={{
+                      display: 'inline-block',
+                      marginTop: '6px',
+                      marginLeft: hook?.experience ? '6px' : 0,
+                      fontSize: '10px',
+                      padding: '3px 7px',
+                      borderRadius: '7px',
+                      background: t.accentMuted,
+                      color: t.accent,
+                      fontWeight: 600,
+                      border: `1px solid ${t.border.subtle}`
+                    }}>
+                      🏆 {awardLabel}
+                    </span>
+                  )}
                 </div>
               </div>
               
@@ -977,12 +1035,12 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme }) =
 // =============================================================================
 // COMPONENTE: FeaturedCollections (colecciones destacadas)
 // =============================================================================
-const FeaturedCollections = ({ collections, onSelect, theme }) => {
+const FeaturedCollections = ({ collections, onSelect, theme, getCollectionCount }) => {
   const t = THEMES[theme];
   
   // Seleccionar 4 colecciones destacadas
   const featured = collections.filter(c => 
-    ['premio-nobel', 'noir-nordico', 'literatura-japonesa', 'espana-contemporanea'].includes(c.id)
+    ['pulitzer', 'noir-nordico', 'literatura-japonesa', 'espanola-contemporanea'].includes(c.id)
   ).slice(0, 4);
   
   if (featured.length === 0) return null;
@@ -1043,7 +1101,7 @@ const FeaturedCollections = ({ collections, onSelect, theme }) => {
               {collection.title}
             </h3>
             <p style={{ fontSize: '11px', color: t.text.tertiary }}>
-              {collection.count} libros
+              {(typeof getCollectionCount === 'function' ? getCollectionCount(collection) : collection.count)} libros
             </p>
           </button>
         ))}
@@ -1182,7 +1240,7 @@ const SanctuaryButton = ({ onExit, theme }) => {
 // =============================================================================
 // COMPONENTE: CollectionsSection (colecciones curadas)
 // =============================================================================
-const CollectionsSection = ({ collections, selectedCollection, onSelectCollection, theme }) => {
+const CollectionsSection = ({ collections, selectedCollection, onSelectCollection, theme, getCollectionCount }) => {
   const t = THEMES[theme];
   
   if (!collections || collections.length === 0) return null;
@@ -1233,6 +1291,7 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
       }}>
         {collections.map(coll => {
           const isSelected = selectedCollection?.id === coll.id;
+          const totalBooks = typeof getCollectionCount === 'function' ? getCollectionCount(coll) : coll.count;
           return (
             <div
               key={coll.id}
@@ -1280,7 +1339,7 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
                 color: isSelected ? t.accent : t.text.muted,
                 fontWeight: 600
               }}>
-                {coll.count} libros
+                {totalBooks} libros
               </span>
               
               <div style={{
@@ -1303,10 +1362,12 @@ const CollectionsSection = ({ collections, selectedCollection, onSelectCollectio
 // =============================================================================
 // COMPONENTE: CollectionHeader (header cuando hay colección seleccionada)
 // =============================================================================
-const CollectionHeader = ({ collection, onClear, theme }) => {
+const CollectionHeader = ({ collection, onClear, theme, countOverride }) => {
   const t = THEMES[theme];
   
   if (!collection) return null;
+
+  const totalBooks = Number.isFinite(countOverride) ? countOverride : collection.count;
   
   return (
     <div style={{
@@ -1342,7 +1403,7 @@ const CollectionHeader = ({ collection, onClear, theme }) => {
               color: collection.color,
               fontWeight: 600
             }}>
-              {collection.count} libros
+              {totalBooks} libros
             </span>
             <button
               onClick={onClear}
@@ -1653,32 +1714,30 @@ const AuthorsView = ({ books, authorsData, onAuthorClick, theme }) => {
 // =============================================================================
 // COMPONENTE: CollectionsView
 // =============================================================================
-const CollectionsView = ({ collections, books, onCollectionClick, theme }) => {
-  const t = THEMES[theme];
-  
-  // Contar libros por coleccion
-  const getCollectionCount = (collection) => {
-    // Si tiene bookIds, usar directamente
-    if (collection.bookIds && collection.bookIds.length > 0) {
-      return collection.bookIds.filter(id => books.some(b => b && b.id === id)).length;
-    }
-    // Fallback a count si existe
-    if (collection.count) return collection.count;
-    // Fallback a criteria
-    const criteria = collection.criteria;
-    if (!criteria) return 0;
-    return books.filter(book => {
-      if (!book) return false;
+const resolveCollectionBooks = (collection, books, awardedBookIds = new Set()) => {
+  const safeBooks = Array.isArray(books) ? books.filter(Boolean) : [];
+  const byId = new Map(safeBooks.map((book) => [book.id, book]));
+
+  let resolved = [];
+
+  if (Array.isArray(collection?.bookIds) && collection.bookIds.length > 0) {
+    resolved = collection.bookIds
+      .map((id) => byId.get(id))
+      .filter(Boolean);
+  } else {
+    const criteria = collection?.criteria;
+    if (!criteria) return [];
+
+    resolved = safeBooks.filter((book) => {
       const authors = book.a || book.authors || [];
-      const awards = book.aw || book.awards || [];
       const vibes = book.v || book.vibes || [];
       const series = book.s || book.series;
       const pages = book.pg || book.pages || 300;
       const difficulty = book.d || book.difficulty || 'medio';
-      
-      if (criteria.authors && criteria.authors.some(a => authors.includes(a))) return true;
-      if (criteria.awards && criteria.awards.some(a => awards.some(aw => aw && aw.includes(a)))) return true;
-      if (criteria.vibes && criteria.vibes.some(v => vibes.includes(v))) return true;
+
+      if (criteria.authors && criteria.authors.some((author) => authors.includes(author))) return true;
+      if (criteria.awards && awardedBookIds.has(book.id)) return true;
+      if (criteria.vibes && criteria.vibes.some((vibe) => vibes.includes(vibe))) return true;
       if (criteria.series && series === criteria.series) return true;
       if (criteria.difficulty && difficulty === criteria.difficulty) {
         if (criteria.maxPages && pages > criteria.maxPages) return false;
@@ -1686,15 +1745,30 @@ const CollectionsView = ({ collections, books, onCollectionClick, theme }) => {
       }
       if (criteria.maxPages && !criteria.difficulty && pages <= criteria.maxPages) return true;
       if (criteria.minPages && pages >= criteria.minPages) return true;
-      
+
       return false;
-    }).length;
+    });
+  }
+
+  if (isAwardCollection(collection)) {
+    return resolved.filter((book) => awardedBookIds.has(book.id));
+  }
+
+  return resolved;
+};
+
+const CollectionsView = ({ collections, books, awardedBookIds, onCollectionClick, theme }) => {
+  const t = THEMES[theme];
+  
+  // Contar libros por coleccion
+  const getCollectionCount = (collection) => {
+    return resolveCollectionBooks(collection, books, awardedBookIds).length;
   };
   
   // Agrupar colecciones por tipo
   const grouped = {
     regions: collections.filter(c => ['🇫🇷', '🇺🇸', '🇪🇸', '🇷🇺', '🇯🇵', '🇮🇹', '🇬🇧'].includes(c.emoji)),
-    awards: collections.filter(c => ['🏆', '📚', '🎖️'].includes(c.emoji)),
+    awards: collections.filter(c => isAwardCollection(c)),
     genres: collections.filter(c => ['🔍', '✨', '🏛️', '🚀', '📝', '😄'].includes(c.emoji)),
     series: collections.filter(c => ['🥸', '🕵️', '🦁'].includes(c.emoji)),
     difficulty: collections.filter(c => ['☀️', '🧠', '⚡', '📖'].includes(c.emoji))
@@ -1791,38 +1865,13 @@ const CollectionsView = ({ collections, books, onCollectionClick, theme }) => {
 // =============================================================================
 // COMPONENTE: CollectionDetailView
 // =============================================================================
-const CollectionDetailView = ({ collection, books, onBookClick, onBack, theme, getListStatus }) => {
+const CollectionDetailView = ({ collection, books, awardedBookIds, onBookClick, onBack, theme, getListStatus }) => {
   const t = THEMES[theme];
   
   // Filtrar libros según criterios
   const filteredBooks = useMemo(() => {
-    if (collection.bookIds && collection.bookIds.length > 0) {
-      return books.filter(book => book && collection.bookIds.includes(book.id));
-    }
-    const criteria = collection.criteria;
-    if (!criteria) return [];
-    return books.filter(book => {
-      const authors = book.a || book.authors || [];
-      const awards = book.aw || book.awards || [];
-      const vibes = book.v || book.vibes || [];
-      const series = book.s || book.series;
-      const pages = book.pg || book.pages || 300;
-      const difficulty = book.d || book.difficulty || 'medio';
-      
-      if (criteria.authors && criteria.authors.some(a => authors.includes(a))) return true;
-      if (criteria.awards && criteria.awards.some(a => awards.some(aw => aw.includes(a)))) return true;
-      if (criteria.vibes && criteria.vibes.some(v => vibes.includes(v))) return true;
-      if (criteria.series && series === criteria.series) return true;
-      if (criteria.difficulty && difficulty === criteria.difficulty) {
-        if (criteria.maxPages && pages > criteria.maxPages) return false;
-        return true;
-      }
-      if (criteria.maxPages && !criteria.difficulty && pages <= criteria.maxPages) return true;
-      if (criteria.minPages && pages >= criteria.minPages) return true;
-      
-      return false;
-    });
-  }, [collection, books]);
+    return resolveCollectionBooks(collection, books, awardedBookIds);
+  }, [collection, books, awardedBookIds]);
   
   return (
     <div>
@@ -2113,13 +2162,14 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
   const [synopsisExpanded, setSynopsisExpanded] = useState(false);
   const [spoilerLevel, setSpoilerLevel] = useLocalStorage('nextread_spoiler_level', 'vibes');
   const t = THEMES[theme];
+  useEscapeKey(onClose);
   
   if (!book) return null;
   
   const coverUrl = `/portadas/${book.id}.jpg`;
   const title = book.t || book.title || 'Sin título';
   const authors = book.a || book.authors || ['Desconocido'];
-  const awards = book.aw || book.awards || [];
+  const awards = useMemo(() => getBookAwardLabels(book, bookHook || {}), [book, bookHook]);
   const vibes = book.v || book.vibes || [];
   const series = book.s || book.series;
   const seriesIndex = book.si || book.series_index;
@@ -2171,6 +2221,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
   return (
     <div 
       onClick={onClose}
+      role="presentation"
       style={{
         position: 'fixed',
         inset: 0,
@@ -2179,26 +2230,27 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
         alignItems: 'flex-end',
         justifyContent: 'center',
         background: t.overlay,
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        animation: 'fadeIn 0.25s ease'
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        animation: 'fadeIn 0.2s ease'
       }}
     >
       <div 
         onClick={e => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Detalle de ${title}`}
         style={{
           width: '100%',
           maxWidth: '420px',
           maxHeight: '90vh',
           overflowY: 'auto',
-          borderRadius: '24px 24px 0 0',
-          background: t.glass?.bgStrong || t.bg.elevated,
-          backdropFilter: 'blur(40px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-          border: `1px solid ${t.glass?.border || t.border.subtle}`,
+          borderRadius: '16px 16px 0 0',
+          background: t.bg.primary,
+          border: `1px solid ${t.border.default}`,
           borderBottom: 'none',
-          boxShadow: t.glass?.shadowElevated || '0 -8px 32px rgba(0,0,0,0.3)',
-          animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
+          boxShadow: '0 -16px 32px rgba(0,0,0,0.18)',
+          animation: 'slideUp 0.24s cubic-bezier(0.2, 0, 0, 1)'
         }}
       >
         {/* Handle de arrastre */}
@@ -2221,22 +2273,13 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
         <div style={{ padding: '8px 24px 0', position: 'relative' }}>
           <button 
             onClick={onClose}
+            aria-label="Cerrar detalle del libro"
             style={{
               position: 'absolute', top: '0', right: '16px',
-              width: '32px', height: '32px',
-              borderRadius: '50%',
-              border: 'none',
-              background: t.glass?.bg || t.bg.tertiary,
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)',
-              color: t.text.secondary,
-              cursor: 'pointer',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: '16px',
-              transition: 'all 150ms ease'
+              ...getModalCloseButtonStyle(t)
             }}
-            onMouseEnter={e => { e.target.style.background = t.bg.tertiary; e.target.style.transform = 'scale(1.1)'; }}
-            onMouseLeave={e => { e.target.style.background = t.glass?.bg || t.bg.tertiary; e.target.style.transform = 'scale(1)'; }}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.opacity = '0.95'; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.opacity = '1'; }}
           >
             ✕
           </button>
@@ -2277,18 +2320,26 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
               <p style={{ fontSize: '14px', color: t.text.secondary, marginBottom: '8px' }}>
                 {authors.map((author, i) => (
                   <span key={author}>
-                    <span 
+                    <button
+                      type="button"
+                      aria-label={`Abrir autor ${author}`}
                       onClick={(e) => { e.stopPropagation(); onAuthorClick?.(author); }}
                       style={{ 
+                        font: 'inherit',
+                        background: 'transparent',
+                        border: 'none',
+                        padding: 0,
+                        margin: 0,
                         cursor: 'pointer',
                         borderBottom: `1px dotted ${t.text.tertiary}`,
+                        color: t.text.secondary,
                         transition: 'color 0.15s ease'
                       }}
-                      onMouseEnter={e => e.target.style.color = t.accent}
-                      onMouseLeave={e => e.target.style.color = t.text.secondary}
+                      onMouseEnter={e => e.currentTarget.style.color = t.accent}
+                      onMouseLeave={e => e.currentTarget.style.color = t.text.secondary}
                     >
                       {author}
-                    </span>
+                    </button>
                     {i < authors.length - 1 && ', '}
                   </span>
                 ))}
@@ -3237,15 +3288,17 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
 // =============================================================================
 // COMPONENTE: StatsModal
 // =============================================================================
-const StatsModal = ({ books, onClose, theme }) => {
+const StatsModal = ({ books, awardedBookIds, onClose, theme }) => {
   const t = THEMES[theme];
   
   const stats = useMemo(() => {
     const totalPages = books.reduce((sum, b) => sum + (b.pg || b.pages || 250), 0);
     const totalHours = Math.round(totalPages / 40);
-    const awarded = books.filter(b => (b.aw || b.awards || []).length > 0).length;
+    const awarded = awardedBookIds instanceof Set
+      ? awardedBookIds.size
+      : books.filter(b => (b.aw || b.awards || []).length > 0).length;
     return { total: books.length, pages: totalPages.toLocaleString(), hours: totalHours.toLocaleString(), awarded };
-  }, [books]);
+  }, [books, awardedBookIds]);
   
   return (
     <div 
@@ -5521,6 +5574,25 @@ export default function App() {
     () => buildTodayPicks({ books, hooks, lists, count: 3 }),
     [books, hooks, lists]
   );
+  const awardMetaByBookId = useMemo(() => {
+    const next = {};
+    books.forEach((book) => {
+      const hook = hooks[String(book.id)] || {};
+      const labels = getBookAwardLabels(book, hook);
+      next[book.id] = {
+        labels,
+        isAwarded: labels.length > 0
+      };
+    });
+    return next;
+  }, [books, hooks]);
+  const awardedBookIds = useMemo(() => {
+    const ids = new Set();
+    Object.entries(awardMetaByBookId).forEach(([bookId, meta]) => {
+      if (meta?.isAwarded) ids.add(Number(bookId));
+    });
+    return ids;
+  }, [awardMetaByBookId]);
   const originalLanguageByBookId = useMemo(() => {
     const next = {};
     books.forEach((book) => {
@@ -5595,6 +5667,20 @@ export default function App() {
       return { ...prev, [bookId]: listId };
     });
   }, [setLists]);
+
+  const getBookAwardLabel = useCallback((book) => {
+    const labels = awardMetaByBookId[book.id]?.labels || [];
+    return labels[0] || null;
+  }, [awardMetaByBookId]);
+
+  const selectedCollectionBookIds = useMemo(() => {
+    if (!selectedCollection) return null;
+    const ids = new Set();
+    resolveCollectionBooks(selectedCollection, books, awardedBookIds).forEach((book) => {
+      ids.add(book.id);
+    });
+    return ids;
+  }, [selectedCollection, books, awardedBookIds]);
   
   // Filtrado
   const filteredBooks = useMemo(() => {
@@ -5602,12 +5688,12 @@ export default function App() {
 
     return books.filter(book => {
       // Filtro por colección
-      if (selectedCollection?.bookIds && !selectedCollection.bookIds.includes(book.id)) return false;
+      if (selectedCollectionBookIds && !selectedCollectionBookIds.has(book.id)) return false;
 
       const bookHook = hooks[String(book.id)] || {};
       const bookMood = book.m;
       const bookVibes = Array.isArray(book.v) ? book.v : [];
-      const bookAwards = (book.aw || book.awards || []);
+      const isAwardedBook = awardMetaByBookId[book.id]?.isAwarded || false;
 
       // Búsqueda por texto
       if (searchLower) {
@@ -5628,7 +5714,7 @@ export default function App() {
 
       // Filtros clásicos
       if (filters.difficulty && String(book.d || book.difficulty || '').toLowerCase() !== filters.difficulty) return false;
-      if (filters.hasAwards && bookAwards.length === 0) return false;
+      if (filters.hasAwards && !isAwardedBook) return false;
       if (filters.mood && book.m !== filters.mood) return false;
       if (filters.genres.length > 0 && !filters.genres.some(g => bookVibes.includes(g))) return false;
       if (filters.minAcclaim && parseAcclaim(book) < filters.minAcclaim) return false;
@@ -5680,7 +5766,14 @@ export default function App() {
 
       return true;
     });
-  }, [books, hooks, debouncedSearch, filters, selectedCollection, originalLanguageByBookId]);
+  }, [books, hooks, debouncedSearch, filters, selectedCollectionBookIds, originalLanguageByBookId, awardMetaByBookId]);
+
+  const selectedCollectionCount = useMemo(() => {
+    return selectedCollectionBookIds ? selectedCollectionBookIds.size : 0;
+  }, [selectedCollectionBookIds]);
+  const getCollectionCount = useCallback((collection) => (
+    resolveCollectionBooks(collection, books, awardedBookIds).length
+  ), [books, awardedBookIds]);
   
   const visibleBooks = useMemo(() => filteredBooks.slice(0, visibleCount), [filteredBooks, visibleCount]);
   
@@ -5692,44 +5785,111 @@ export default function App() {
     const booksWithHooks = books.filter(b => hooks[String(b.id)]);
     
     if (booksWithHooks.length === 0) return null;
+
+    const pickUniqueByAuthor = (scoredBooks, limit = 8) => {
+      const picked = [];
+      const seenAuthors = new Set();
+
+      scoredBooks.forEach((item) => {
+        const primaryAuthor = (item.book.a || [])[0] || `book-${item.book.id}`;
+        if (picked.length >= limit) return;
+        if (seenAuthors.has(primaryAuthor)) return;
+        seenAuthors.add(primaryAuthor);
+        picked.push(item.book);
+      });
+
+      if (picked.length < limit) {
+        scoredBooks.forEach((item) => {
+          if (picked.length >= limit) return;
+          if (!picked.some((book) => book.id === item.book.id)) {
+            picked.push(item.book);
+          }
+        });
+      }
+
+      return picked;
+    };
     
     // Hero: libro aleatorio con hook (cambia cada render)
     const heroIndex = Math.floor(Math.random() * booksWithHooks.length);
     const heroBook = booksWithHooks[heroIndex];
     const heroHook = hooks[String(heroBook.id)];
+    const candidates = booksWithHooks.filter((book) => book.id !== heroBook.id);
+    const cantPutDownExperience = new Set([
+      'absorbente', 'perturbador', 'tenso', 'intrigante', 'vertiginoso', 'hipnótico',
+      'adictivo', 'intenso', 'escalofriante', 'oscuro', 'visceral'
+    ]);
     
     // "Libros que cambiaron todo" - con why_matters fuerte
-    const changedEverything = booksWithHooks
-      .filter(b => {
-        const h = hooks[String(b.id)];
-        return h?.why_matters && h.why_matters.length > 50;
-      })
-      .filter(b => b.id !== heroBook.id)
-      .slice(0, 8);
+    const changedEverything = pickUniqueByAuthor(
+      candidates
+        .map((book) => {
+          const h = hooks[String(book.id)];
+          const whyLength = h?.why_matters ? h.why_matters.length : 0;
+          const acclaim = parseAcclaim(book);
+          const awardBoost = awardMetaByBookId[book.id]?.isAwarded ? 28 : 0;
+          const themesBoost = Array.isArray(h?.themes) ? h.themes.length * 2 : 0;
+          const score = (whyLength * 0.35) + (acclaim * 14) + awardBoost + themesBoost;
+          return { book, score, whyLength };
+        })
+        .filter((item) => item.whyLength >= 45 || item.score >= 35)
+        .sort((a, b) => b.score - a.score)
+    );
     
-    // "Para una tarde" - cortos (<300pp) con hook
-    const forAnAfternoon = booksWithHooks
-      .filter(b => (b.pg || 300) < 300)
-      .filter(b => b.id !== heroBook.id)
-      .slice(0, 8);
+    // "Para una tarde" - compactos y abordables, pero de calidad
+    const forAnAfternoon = pickUniqueByAuthor(
+      candidates
+        .map((book) => {
+          const pages = parsePages(book);
+          const difficulty = String(book.d || '').toLowerCase();
+          const hook = hooks[String(book.id)] || {};
+          const awardBoost = awardMetaByBookId[book.id]?.isAwarded ? 14 : 0;
+          const acclaim = parseAcclaim(book);
+          const distanceToIdeal = pages > 0 ? Math.abs(pages - 190) : 999;
+          const paceBoost = pages > 0 && pages <= 280 ? 24 : 0;
+          const readabilityBoost = difficulty === 'ligero' ? 12 : difficulty === 'medio' ? 7 : -5;
+          const score = paceBoost + readabilityBoost + awardBoost + (acclaim * 8) - (distanceToIdeal * 0.06) +
+            (hook.experience === 'adictivo' ? 5 : 0);
+          return { book, score, pages, difficulty };
+        })
+        .filter((item) => item.pages >= 80 && item.pages <= 300 && item.difficulty !== 'denso')
+        .sort((a, b) => b.score - a.score)
+    );
     
-    // "No podrás soltarlo" - intensos, absorbentes
-    const cantPutDown = booksWithHooks
-      .filter(b => {
-        const h = hooks[String(b.id)];
-        return ['absorbente', 'perturbador', 'tenso', 'intrigante', 'vertiginoso', 'hipnótico'].includes(h?.experience);
-      })
-      .filter(b => b.id !== heroBook.id)
-      .slice(0, 8);
+    // "No podrás soltarlo" - señal narrativa fuerte + intensidad
+    const cantPutDown = pickUniqueByAuthor(
+      candidates
+        .map((book) => {
+          const hook = hooks[String(book.id)] || {};
+          const exp = String(hook.experience || '').toLowerCase();
+          const mood = String(book.m || '').toLowerCase();
+          const acclaim = parseAcclaim(book);
+          const awardBoost = awardMetaByBookId[book.id]?.isAwarded ? 10 : 0;
+          const hookText = `${hook.hook || ''} ${hook.why_matters || ''}`.toLowerCase();
+          const hookIntensity = /(adictiv|imposible soltar|vertigin|intrig|tensi|obsesi)/.test(hookText) ? 8 : 0;
+          const expBoost = cantPutDownExperience.has(exp) ? 20 : 0;
+          const moodBoost = ['tenso', 'inquietante', 'oscuro'].includes(mood) ? 8 : 0;
+          const score = expBoost + moodBoost + hookIntensity + (acclaim * 9) + awardBoost;
+          return { book, score, exp, mood };
+        })
+        .filter((item) => cantPutDownExperience.has(item.exp) || ['tenso', 'inquietante', 'oscuro'].includes(item.mood))
+        .sort((a, b) => b.score - a.score)
+    );
     
     // "Viaje interior" - contemplativos, íntimos
-    const innerJourney = booksWithHooks
+    const innerJourney = pickUniqueByAuthor(
+      candidates
       .filter(b => {
         const h = hooks[String(b.id)];
         return ['contemplativo', 'melancólico', 'íntimo', 'nostálgico', 'evocador', 'trascendente'].includes(h?.experience);
       })
-      .filter(b => b.id !== heroBook.id)
-      .slice(0, 8);
+      .map((book) => {
+        const h = hooks[String(book.id)] || {};
+        const score = (h.why_matters ? h.why_matters.length * 0.2 : 0) + (parseAcclaim(book) * 8);
+        return { book, score };
+      })
+      .sort((a, b) => b.score - a.score)
+    );
     
     return { 
       heroBook, 
@@ -5739,7 +5899,7 @@ export default function App() {
       cantPutDown, 
       innerJourney 
     };
-  }, [books, hooks, viewMode, selectedCollection]);
+  }, [books, hooks, viewMode, selectedCollection, awardMetaByBookId]);
   
   const moods = useMemo(() => {
     const moodSet = new Set(books.map(b => b.m).filter(Boolean));
@@ -6245,6 +6405,7 @@ export default function App() {
                 selectedCollection={selectedCollection}
                 onSelectCollection={setSelectedCollection}
                 theme={theme}
+                getCollectionCount={getCollectionCount}
               />
             )}
             
@@ -6254,6 +6415,7 @@ export default function App() {
                 collection={selectedCollection}
                 onClear={() => setSelectedCollection(null)}
                 theme={theme}
+                countOverride={selectedCollectionCount}
               />
             )}
             
@@ -6278,6 +6440,7 @@ export default function App() {
                           onClick={setSelectedBook}
                           theme={theme}
                           listStatus={getListStatus(book.id)}
+                          hasAwardOverride={awardMetaByBookId[book.id]?.isAwarded}
                         />
                       ))}
                     </div>
@@ -6330,6 +6493,7 @@ export default function App() {
                     hooks={hooks}
                     onBookClick={setSelectedBook}
                     theme={theme}
+                    getBookAwardLabel={getBookAwardLabel}
                   />
                 )}
                 
@@ -6342,6 +6506,7 @@ export default function App() {
                     hooks={hooks}
                     onBookClick={setSelectedBook}
                     theme={theme}
+                    getBookAwardLabel={getBookAwardLabel}
                   />
                 )}
                 
@@ -6354,6 +6519,7 @@ export default function App() {
                     hooks={hooks}
                     onBookClick={setSelectedBook}
                     theme={theme}
+                    getBookAwardLabel={getBookAwardLabel}
                   />
                 )}
                 
@@ -6366,6 +6532,7 @@ export default function App() {
                     hooks={hooks}
                     onBookClick={setSelectedBook}
                     theme={theme}
+                    getBookAwardLabel={getBookAwardLabel}
                   />
                 )}
                 
@@ -6374,6 +6541,7 @@ export default function App() {
                   collections={collections}
                   onSelect={setSelectedCollection}
                   theme={theme}
+                  getCollectionCount={getCollectionCount}
                 />
               </>
             )}
@@ -6399,6 +6567,7 @@ export default function App() {
                           onClick={setSelectedBook}
                           theme={theme}
                           listStatus={getListStatus(book.id)}
+                          hasAwardOverride={awardMetaByBookId[book.id]?.isAwarded}
                         />
                       ))}
                     </div>
@@ -6460,6 +6629,7 @@ export default function App() {
           <CollectionsView
             collections={collections}
             books={books}
+            awardedBookIds={awardedBookIds}
             onCollectionClick={setSelectedCollection}
             theme={theme}
           />
@@ -6470,6 +6640,7 @@ export default function App() {
           <CollectionDetailView
             collection={selectedCollection}
             books={books}
+            awardedBookIds={awardedBookIds}
             onBookClick={setSelectedBook}
             onBack={() => setSelectedCollection(null)}
             theme={theme}
@@ -6557,7 +6728,7 @@ export default function App() {
       )}
       
       {showStats && (
-        <StatsModal books={books} onClose={() => setShowStats(false)} theme={theme} />
+        <StatsModal books={books} awardedBookIds={awardedBookIds} onClose={() => setShowStats(false)} theme={theme} />
       )}
       
       {showWizard && (
