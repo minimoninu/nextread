@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useCallback, useRef, memo } from 'react';
+import { applyOptionToPreferences, buildPreferencesFromAnswers } from './wizardPreferences.js';
 
 // =============================================================================
 // CONFIGURACIÓN
@@ -4420,45 +4421,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
     setAnswers(newAnswers);
     
     // Acumular preferencias de esta opción
-    const newPrefs = { ...preferences };
-    
-    if (option.themes) {
-      newPrefs.themes = [...(newPrefs.themes || []), ...option.themes];
-    }
-    if (option.experiences) {
-      newPrefs.experiences = [...(newPrefs.experiences || []), ...option.experiences];
-    }
-    if (option.vibes) {
-      newPrefs.vibes = [...(newPrefs.vibes || []), ...option.vibes];
-    }
-    if (option.moods) {
-      newPrefs.moods = [...(newPrefs.moods || []), ...option.moods];
-    }
-    if (option.keywords) {
-      newPrefs.keywords = [...(newPrefs.keywords || []), ...option.keywords];
-    }
-    if (option.pages) {
-      newPrefs.pages = option.pages;
-    }
-    if (option.difficulty) {
-      newPrefs.difficulty = option.difficulty;
-    }
-    if (option.standalone !== undefined) {
-      newPrefs.standalone = option.standalone;
-    }
-    if (option.wantsSeries !== undefined) {
-      newPrefs.wantsSeries = option.wantsSeries;
-    }
-    if (option.riskLevel) {
-      newPrefs.riskLevel = option.riskLevel;
-    }
-    if (option.filter) {
-      newPrefs.filter = option.filter;
-    }
-    if (option.boost) {
-      newPrefs.boost = option.boost;
-    }
-    
+    const newPrefs = applyOptionToPreferences(preferences, option);
     setPreferences(newPrefs);
     
     // Si es sorpresa total, generar resultado inmediato
@@ -4490,6 +4453,9 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
       const newAnswers = { ...answers };
       delete newAnswers[lastKey];
       setAnswers(newAnswers);
+      
+      const rebuiltPreferences = buildPreferencesFromAnswers(newAnswers, newPath, WIZARD_QUESTIONS);
+      setPreferences(rebuiltPreferences);
       
       setPath(newPath);
     }

@@ -48,8 +48,11 @@ if git diff --cached --quiet; then
   exit 0
 fi
 
-echo "Validando datos (books/hooks/collections)..."
-npm run check:data
+echo "Validando datos (books/hooks/collections) en modo estricto..."
+npm run check:data:strict
+
+echo "Compilando app antes de publicar..."
+npm run build
 
 TS=$(date '+%Y-%m-%d %H:%M')
 
