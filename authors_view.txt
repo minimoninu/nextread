@@ -1,0 +1,221 @@
+  1460	const AuthorsView = ({ books, authorsData, onAuthorClick, theme }) => {
+  1461	  const t = THEMES[theme];
+  1462	  const [searchQuery, setSearchQuery] = useState('');
+  1463
+  1464	  // Obtener autores únicos de la biblioteca con conteo de libros
+  1465	  const libraryAuthors = useMemo(() => {
+  1466	    const authorMap = {};
+  1467	    books.forEach(book => {
+  1468	      const bookAuthors = book.a || book.authors || [];
+  1469	      bookAuthors.forEach(author => {
+  1470	        if (!authorMap[author]) {
+  1471	          authorMap[author] = { name: author, bookCount: 0, hasData: !!authorsData[author] };
+  1472	        }
+  1473	        authorMap[author].bookCount++;
+  1474	      });
+  1475	    });
+  1476	    return Object.values(authorMap).sort((a, b) => {
+  1477	      // Primero los que tienen datos, luego por cantidad de libros
+  1478	      if (a.hasData !== b.hasData) return b.hasData - a.hasData;
+  1479	      return b.bookCount - a.bookCount;
+  1480	    });
+  1481	  }, [books, authorsData]);
+  1482
+  1483	  // Filtrar por búsqueda
+  1484	  const filteredAuthors = useMemo(() => {
+  1485	    if (!searchQuery) return libraryAuthors;
+  1486	    const query = searchQuery.toLowerCase();
+  1487	    return libraryAuthors.filter(a => a.name.toLowerCase().includes(query));
+  1488	  }, [libraryAuthors, searchQuery]);
+  1489
+  1490	  // Separar autores con y sin biografía
+  1491	  const authorsWithBio = filteredAuthors.filter(a => a.hasData);
+  1492	  const authorsWithoutBio = filteredAuthors.filter(a => !a.hasData);
+  1493
+  1494	  const AuthorCard = ({ author }) => {
+  1495	    const data = authorsData[author.name];
+  1496	    return (
+  1497	      <div
+  1498	        onClick={() => onAuthorClick(author.name)}
+  1499	        style={{
+  1500	          padding: '16px',
+  1501	          borderRadius: '12px',
+  1502	          background: t.bg.secondary,
+  1503	          cursor: 'pointer',
+  1504	          transition: 'all 0.2s ease',
+  1505	          border: `1px solid ${t.border.subtle}`
+  1506	        }}
+  1507	        onMouseEnter={e => {
+  1508	          e.currentTarget.style.background = t.bg.tertiary;
+  1509	          e.currentTarget.style.transform = 'translateY(-2px)';
+  1510	        }}
+  1511	        onMouseLeave={e => {
+  1512	          e.currentTarget.style.background = t.bg.secondary;
+  1513	          e.currentTarget.style.transform = 'translateY(0)';
+  1514	        }}
+  1515	      >
+  1516	        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
+  1517	          <h3 style={{
+  1518	            fontFamily: t.typography.display,
+  1519	            fontSize: '16px',
+  1520	            fontWeight: 600,
+  1521	            color: t.text.primary,
+  1522	            flex: 1
+  1523	          }}>
+  1524	            {author.name}
+  1525	          </h3>
+  1526	          <span style={{
+  1527	            fontSize: '12px',
+  1528	            color: t.accent,
+  1529	            background: t.accentMuted,
+  1530	            padding: '2px 8px',
+  1531	            borderRadius: '10px',
+  1532	            marginLeft: '8px'
+  1533	          }}>
+  1534	            {author.bookCount} {author.bookCount === 1 ? 'libro' : 'libros'}
+  1535	          </span>
+  1536	        </div>
+  1537
+  1538	        {data && (
+  1539	          <>
+  1540	            <p style={{ fontSize: '12px', color: t.text.tertiary, marginBottom: '8px' }}>
+  1541	              {data.years} · {data.nationality}
+  1542	            </p>
+  1543	            <p style={{
+  1544	              fontSize: '13px',
+  1545	              color: t.text.secondary,
+  1546	              lineHeight: 1.5,
+  1547	              display: '-webkit-box',
+  1548	              WebkitLineClamp: 2,
+  1549	              WebkitBoxOrient: 'vertical',
+  1550	              overflow: 'hidden'
+  1551	            }}>
+  1552	              {data.bio}
+  1553	            </p>
+  1554	          </>
+  1555	        )}
+  1556
+  1557	        {!data && (
+  1558	          <p style={{ fontSize: '13px', color: t.text.muted, fontStyle: 'italic' }}>
+  1559	            Toca para ver sus libros
+  1560	          </p>
+  1561	        )}
+  1562	      </div>
+  1563	    );
+  1564	  };
+  1565
+  1566	  return (
+  1567	    <div>
+  1568	      {/* Búsqueda */}
+  1569	      <div style={{ marginBottom: '24px' }}>
+  1570	        <input
+  1571	          type="text"
+  1572	          placeholder="Buscar autor..."
+  1573	          value={searchQuery}
+  1574	          onChange={e => setSearchQuery(e.target.value)}
+  1575	          style={{
+  1576	            width: '100%',
+  1577	            padding: '12px 16px',
+  1578	            borderRadius: '12px',
+  1579	            border: `1px solid ${t.border.default}`,
+  1580	            background: t.bg.secondary,
+  1581	            color: t.text.primary,
+  1582	            fontSize: '14px',
+  1583	            outline: 'none'
+  1584	          }}
+  1585	        />
+  1586	      </div>
+  1587
+  1588	      {/* Stats */}
+  1589	      <div style={{
+  1590	        display: 'flex',
+  1591	        gap: '12px',
+  1592	        marginBottom: '24px',
+  1593	        padding: '16px',
+  1594	        background: t.bg.secondary,
+  1595	        borderRadius: '12px'
+  1596	      }}>
+  1597	        <div style={{ flex: 1, textAlign: 'center' }}>
+  1598	          <div style={{ fontSize: '24px', fontWeight: 600, color: t.text.primary }}>{libraryAuthors.length}</div>
+  1599	          <div style={{ fontSize: '11px', color: t.text.tertiary }}>autores en biblioteca</div>
+  1600	        </div>
+  1601	        <div style={{ width: '1px', background: t.border.default }} />
+  1602	        <div style={{ flex: 1, textAlign: 'center' }}>
+  1603	          <div style={{ fontSize: '24px', fontWeight: 600, color: t.accent }}>{authorsWithBio.length}</div>
+  1604	          <div style={{ fontSize: '11px', color: t.text.tertiary }}>con biografía</div>
+  1605	        </div>
+  1606	      </div>
+  1607
+  1608	      {/* Autores con biografía */}
+  1609	      {authorsWithBio.length > 0 && (
+  1610	        <section style={{ marginBottom: '32px' }}>
+  1611	          <h2 style={{
+  1612	            fontFamily: t.typography.display,
+  1613	            fontSize: '18px',
+  1614	            color: t.text.primary,
+  1615	            marginBottom: '16px'
+  1616	          }}>
+  1617	            Autores destacados
+  1618	          </h2>
+  1619	          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+  1620	            {authorsWithBio.slice(0, 20).map(author => (
+  1621	              <AuthorCard key={author.name} author={author} />
+  1622	            ))}
+  1623	          </div>
+  1624	          {authorsWithBio.length > 20 && (
+  1625	            <p style={{ fontSize: '13px', color: t.text.tertiary, textAlign: 'center', marginTop: '16px' }}>
+  1626	              Y {authorsWithBio.length - 20} autores más...
+  1627	            </p>
+  1628	          )}
+  1629	        </section>
+  1630	      )}
+  1631
+  1632	      {/* Autores sin biografía */}
+  1633	      {authorsWithoutBio.length > 0 && (
+  1634	        <section>
+  1635	          <h2 style={{
+  1636	            fontFamily: t.typography.display,
+  1637	            fontSize: '18px',
+  1638	            color: t.text.primary,
+  1639	            marginBottom: '16px'
+  1640	          }}>
+  1641	            Otros autores ({authorsWithoutBio.length})
+  1642	          </h2>
+  1643	          <div style={{
+  1644	            display: 'flex',
+  1645	            flexWrap: 'wrap',
+  1646	            gap: '8px'
+  1647	          }}>
+  1648	            {authorsWithoutBio.slice(0, 50).map(author => (
+  1649	              <button
+  1650	                key={author.name}
+  1651	                onClick={() => onAuthorClick(author.name)}
+  1652	                style={{
+  1653	                  padding: '6px 12px',
+  1654	                  borderRadius: '16px',
+  1655	                  border: `1px solid ${t.border.default}`,
+  1656	                  background: t.bg.tertiary,
+  1657	                  color: t.text.secondary,
+  1658	                  fontSize: '13px',
+  1659	                  cursor: 'pointer',
+  1660	                  transition: 'all 0.15s ease'
+  1661	                }}
+  1662	              >
+  1663	                {author.name} ({author.bookCount})
+  1664	              </button>
+  1665	            ))}
+  1666	          </div>
+  1667	          {authorsWithoutBio.length > 50 && (
+  1668	            <p style={{ fontSize: '13px', color: t.text.tertiary, textAlign: 'center', marginTop: '16px' }}>
+  1669	              Y {authorsWithoutBio.length - 50} autores más...
+  1670	            </p>
+  1671	          )}
+  1672	        </section>
+  1673	      )}
+  1674
+  1675	      {filteredAuthors.length === 0 && (
+  1676	        <div style={{ textAlign: 'center', padding: '48px 0' }}>
+  1677	          <p style={{ fontSize: '16px', color: t.text.secondary }}>No se encontraron autores</p>
+  1678	        </div>
+  1679	      )}
+  1680	    </div>
