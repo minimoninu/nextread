@@ -55,7 +55,10 @@ const isValidEvidence = (text) => {
 export const getBookAwardLabels = (book = {}, hook = {}) => {
   const labels = new Set();
 
-  const explicitAwards = Array.isArray(book.aw || book.awards) ? (book.aw || book.awards) : [];
+  const safeBook = book || {};
+  const safeHook = hook || {};
+
+  const explicitAwards = Array.isArray(safeBook.aw || safeBook.awards) ? (safeBook.aw || safeBook.awards) : [];
   explicitAwards.forEach((award) => {
     const normalized = normalize(award);
     if (!isValidEvidence(normalized)) return;
@@ -73,10 +76,10 @@ export const getBookAwardLabels = (book = {}, hook = {}) => {
   });
 
   const evidenceTexts = [
-    hook?.why_matters,
-    hook?.hook,
-    book?.hook,
-    book?.why_matters
+    safeHook.why_matters,
+    safeHook.hook,
+    safeBook.hook,
+    safeBook.why_matters
   ];
 
   evidenceTexts.forEach((text) => {
