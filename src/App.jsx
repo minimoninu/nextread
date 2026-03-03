@@ -2220,7 +2220,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           border: `1px solid ${t.border.default}`,
           borderBottom: 'none',
           boxShadow: '0 -16px 32px rgba(0,0,0,0.18)',
-          animation: 'slideUp 0.24s cubic-bezier(0.2, 0, 0, 1)'
+          animation: 'bookOpen3D 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
         }}
       >
         {/* Handle de arrastre */}
@@ -5974,6 +5974,24 @@ export default function App() {
         to { opacity: 1; transform: scale(1); } 
       }
       
+      @keyframes bookOpen3D {
+        0% {
+          opacity: 0;
+          transform: perspective(1200px) translateZ(-300px) translateY(50px) rotateY(-90deg) scale(0.8);
+          transform-origin: left center;
+        }
+        40% {
+          opacity: 1;
+          transform: perspective(1200px) translateZ(50px) translateY(-10px) rotateY(-20deg) scale(1.02);
+          transform-origin: left center;
+        }
+        100% {
+          opacity: 1;
+          transform: perspective(1200px) translateZ(0px) translateY(0px) rotateY(0deg) scale(1);
+          transform-origin: left center;
+        }
+      }
+
       @keyframes shimmer { 
         0% { background-position: -200% 0; } 
         100% { background-position: 200% 0; } 
