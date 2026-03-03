@@ -5531,10 +5531,12 @@ export default function App() {
     books.forEach((book) => {
       const hook = hooks[String(book.id)] || {};
       const labels = getBookAwardLabels(book, hook);
-      next[book.id] = {
-        labels,
-        isAwarded: labels.length > 0
-      };
+      if (labels.length > 0) {
+        next[book.id] = {
+          labels,
+          isAwarded: true
+        };
+      }
     });
     return next;
   }, [books, hooks]);
@@ -6483,7 +6485,7 @@ export default function App() {
                           onClick={setSelectedBook}
                           theme={theme}
                           listStatus={getListStatus(book.id)}
-                          hasAwardOverride={awardMetaByBookId[book.id]?.isAwarded}
+                          hasAwardOverride={awardMetaByBookId[book.id]?.isAwarded || false}
                         />
                       ))}
                     </div>
@@ -6632,7 +6634,7 @@ export default function App() {
                           onClick={setSelectedBook}
                           theme={theme}
                           listStatus={getListStatus(book.id)}
-                          hasAwardOverride={awardMetaByBookId[book.id]?.isAwarded}
+                          hasAwardOverride={awardMetaByBookId[book.id]?.isAwarded || false}
                         />
                       ))}
                     </div>
