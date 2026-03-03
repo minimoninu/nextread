@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useCallback, useRef, memo } from 'react';
+import { useState, useMemo, useEffect, useCallback, useRef, memo } from 'react';
 import WizardPsicologico from './WizardPsicologico';
 import BibliotecaStats from './BibliotecaStats';
 

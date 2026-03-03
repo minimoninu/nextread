@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useCallback, useRef, memo } from 'react';
+import { useState, useMemo, useEffect, useCallback, useRef, memo } from 'react';
 import { applyOptionToPreferences, buildPreferencesFromAnswers } from './wizardPreferences.js';
 import { buildTodayPicks } from './todayPicks.js';
 import { getBookAwardLabels, isAwardCollection } from './bookAwards.js';

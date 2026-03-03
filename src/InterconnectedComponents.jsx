@@ -1,4 +1,4 @@
-import React, { useState, useMemo, memo } from 'react';
+import { useState, useMemo, memo } from 'react';
 
 // =============================================================================
 // SISTEMA DE INTERCONEXIÓN - Toque Apple
