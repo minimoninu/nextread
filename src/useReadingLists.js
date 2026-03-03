@@ -52,7 +52,29 @@ export const useReadingLists = () => {
   const [lists, setLists] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      return saved ? JSON.parse(saved) : {};
+      if (!saved) return {};
+
+      const parsed = JSON.parse(saved);
+      if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
+        return {};
+      }
+
+      const validLists = Object.keys(LIST_CONFIG);
+      const cleanLists = {};
+
+      for (const [bookId, listId] of Object.entries(parsed)) {
+        if (
+          typeof bookId === 'string' &&
+          bookId.trim() !== '' &&
+          bookId !== '__proto__' &&
+          bookId !== 'constructor' &&
+          bookId !== 'prototype' &&
+          validLists.includes(listId)
+        ) {
+          cleanLists[bookId] = listId;
+        }
+      }
+      return cleanLists;
     } catch {
       return {};
     }
