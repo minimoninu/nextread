@@ -4739,21 +4739,28 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
   // OBTENER RECOMENDACIONES CON POOL DIVERSIFICADO
   // ═══════════════════════════════════════════════════════════════════════════
   const getRecommendations = useCallback(() => {
-    // Calcular score para todos los libros
-    const scored = books.map(book => {
+    // Calcular score evitando crear objetos innecesarios
+    const valid = [];
+    let hasValid = false;
+    const backup = [];
+    
+    for (let i = 0; i < books.length; i++) {
+      const book = books[i];
       const { score, matchDetails } = calculateScore(book);
-      return { book, score, matchDetails };
-    });
+
+      if (score > 0) {
+        valid.push({ book, score, matchDetails });
+        hasValid = true;
+      } else if (!hasValid) {
+        backup.push({ book, score, matchDetails });
+      }
+    }
     
-    // Ordenar por score
-    scored.sort((a, b) => b.score - a.score);
-    
-    // Filtrar los que tienen score muy negativo
-    const valid = scored.filter(s => s.score > 0);
-    
-    if (valid.length === 0) {
-      // Si no hay válidos, tomar los mejores de todos modos
-      return scored.slice(0, 8);
+    if (valid.length > 0) {
+      valid.sort((a, b) => b.score - a.score);
+    } else {
+      backup.sort((a, b) => b.score - a.score);
+      return backup.slice(0, 8);
     }
     
     // Pool diversificado
