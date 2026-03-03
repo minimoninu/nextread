@@ -702,7 +702,14 @@ def merge_libraries(existing, new_books):
 def copy_covers(books, output_path):
     """Copia las portadas de los libros al directorio de portadas"""
     
-    portadas_dir = Path(output_path)
+    # Validar que output_path esté dentro del directorio actual para prevenir path traversal
+    portadas_dir = Path(output_path).resolve()
+    base_dir = Path.cwd().resolve()
+
+    if not portadas_dir.is_relative_to(base_dir):
+        print(f"⚠️ Error de seguridad: El directorio de portadas '{output_path}' está fuera del límite permitido.")
+        return 0, [b.get('t', 'Desconocido') for b in books]
+
     portadas_dir.mkdir(parents=True, exist_ok=True)
     
     copied = 0
@@ -711,7 +718,15 @@ def copy_covers(books, output_path):
     for book in books:
         cover_src = book.get('_cover_path')
         if cover_src and Path(cover_src).exists():
-            cover_dst = portadas_dir / f"{book['id']}.jpg"
+            # Construir ruta de destino de forma segura
+            safe_id = str(book['id']).replace('/', '').replace('\\', '').replace('..', '')
+            cover_dst = portadas_dir / f"{safe_id}.jpg"
+
+            # Verificación adicional de seguridad contra path traversal
+            if not cover_dst.resolve().is_relative_to(portadas_dir.resolve()):
+                print(f"⚠️ Alerta de seguridad: Intento de path traversal detectado para el libro {book.get('t', 'Desconocido')} (id: {book.get('id')})")
+                missing.append(book['t'])
+                continue
             
             try:
                 # Copiar y redimensionar si es necesario
