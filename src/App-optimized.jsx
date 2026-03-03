@@ -353,7 +353,6 @@ export default function App() {
         console.log(`✅ ${data.length} libros cargados`);
       })
       .catch(err => {
-        console.error('Error cargando libros:', err);
         setLoading(false);
       });
   }, []);
