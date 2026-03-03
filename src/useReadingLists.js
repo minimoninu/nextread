@@ -63,7 +63,7 @@ export const useReadingLists = () => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(lists));
     } catch (e) {
-      console.warn('Error saving lists to localStorage:', e);
+      // Ignore localStorage errors in production
     }
   }, [lists]);
 
