@@ -1674,6 +1674,7 @@ const AuthorsView = ({ books, authorsData, onAuthorClick, theme }) => {
       
       {filteredAuthors.length === 0 && (
         <div style={{ textAlign: 'center', padding: '48px 0' }}>
+          <div aria-hidden="true" style={{ fontSize: '48px', marginBottom: '16px', opacity: 0.5 }}>👤</div>
           <p style={{ fontSize: '16px', color: t.text.secondary }}>No se encontraron autores</p>
         </div>
       )}
@@ -5304,6 +5305,7 @@ const TodayMode = ({ picks, onBookClick, onExit, theme, getListStatus }) => {
           padding: '24px',
           textAlign: 'center'
         }}>
+          <div aria-hidden="true" style={{ fontSize: '48px', marginBottom: '16px', opacity: 0.5 }}>📅</div>
           <p style={{ fontSize: '14px', color: t.text.secondary, marginBottom: '12px' }}>
             No hay recomendaciones disponibles para hoy.
           </p>
@@ -6510,6 +6512,7 @@ export default function App() {
                   </>
                 ) : (
                   <div style={{ textAlign: 'center', padding: '48px 0' }}>
+                    <div aria-hidden="true" style={{ fontSize: '48px', marginBottom: '16px', opacity: 0.5 }}>📂</div>
                     <p style={{ fontSize: '16px', color: t.text.secondary }}>No hay libros en esta colección</p>
                   </div>
                 )}
@@ -6659,6 +6662,7 @@ export default function App() {
                   </>
                 ) : (
                   <div style={{ textAlign: 'center', padding: '64px 0' }}>
+                    <div aria-hidden="true" style={{ fontSize: '48px', marginBottom: '16px', opacity: 0.5 }}>🔍</div>
                     <p style={{ fontSize: '18px', color: t.text.secondary, marginBottom: '8px' }}>{COPY.noResults}</p>
                     <p style={{ fontSize: '14px', color: t.text.tertiary }}>{COPY.noResultsHint}</p>
                   </div>
