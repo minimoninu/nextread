@@ -1085,7 +1085,7 @@ const BottomNav = ({ activeTab, onTabChange, theme, savedCount }) => {
   ];
   
   return (
-    <nav style={{
+    <nav role="tablist" style={{
       position: 'fixed',
       bottom: 0,
       left: 0,
@@ -1102,6 +1102,8 @@ const BottomNav = ({ activeTab, onTabChange, theme, savedCount }) => {
       {tabs.map(tab => (
         <button
           key={tab.id}
+          role="tab"
+          aria-selected={activeTab === tab.id}
           onClick={() => onTabChange(tab.id)}
           style={{
             flex: 1,
