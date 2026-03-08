@@ -6194,6 +6194,7 @@ export default function App() {
                 {/* Santuario */}
                 <button 
                   onClick={() => setSanctuaryMode(true)}
+                  aria-label={COPY.sanctuary.enter}
                   style={{
                     width: '40px', height: '40px',
                     borderRadius: '8px',
@@ -6212,6 +6213,7 @@ export default function App() {
                 {/* Theme toggle */}
                 <button 
                   onClick={() => setTheme(theme === 'night' ? 'day' : 'night')}
+                  aria-label={THEMES[theme === 'night' ? 'day' : 'night'].name}
                   style={{
                     width: '40px', height: '40px',
                     borderRadius: '8px',
@@ -6230,6 +6232,7 @@ export default function App() {
                 {/* Modo Hoy */}
                 <button
                   onClick={toggleTodayMode}
+                  aria-label={todayMode ? 'Salir de Hoy' : 'Que leer hoy'}
                   style={{
                     width: '40px', height: '40px',
                     borderRadius: '8px',
@@ -6250,6 +6253,7 @@ export default function App() {
                 {!isMobile && (
                   <button 
                     onClick={() => setShowStats(true)}
+                    aria-label="Estadísticas"
                     style={{
                       width: '40px', height: '40px',
                       borderRadius: '8px',
@@ -6270,6 +6274,7 @@ export default function App() {
                 {!isMobile && (
                   <button 
                     onClick={() => setActiveTab('authors')}
+                    aria-label="Autores"
                     style={{
                       width: '40px', height: '40px',
                       borderRadius: '8px',
@@ -6290,6 +6295,7 @@ export default function App() {
                 {activeTab === 'library' && !todayMode && (
                   <button 
                     onClick={() => setShowFilters(true)}
+                    aria-label="Filtros"
                     style={{
                       width: '40px', height: '40px',
                       borderRadius: '8px',
@@ -6309,6 +6315,7 @@ export default function App() {
                 {!isMobile && (
                   <button 
                     onClick={() => { setShowWizard(true); haptic.medium(); }}
+                    aria-label="Asistente de recomendación"
                     style={{
                       padding: '10px 16px',
                       borderRadius: '8px',
