@@ -440,6 +440,28 @@ def transform_to_nextread(calibre_book, new_id):
     # Calcular vibes desde tags
     vibes = calculate_vibes(tags)
     
+    # Identificar géneros y microgéneros desde vibes y tags
+    genres = list(vibes)
+
+    # Usar los tags restantes como microgéneros (excluyendo los que ya están en géneros)
+    # y los que se mapean a géneros principales
+    main_genres_lower = set(v.lower() for v in vibes)
+    for key, val in GENRE_TO_VIBE.items():
+        main_genres_lower.add(key.lower())
+        main_genres_lower.add(val.lower())
+
+    microgenres = []
+    for tag in tags:
+        tag_lower = tag.lower().strip()
+        if tag_lower not in main_genres_lower:
+            # Ignorar tags muy largos o irrelevantes (limpiar un poco los datos en bruto)
+            if len(tag_lower) <= 30 and tag_lower not in ["to read", "unread", "tbr", "read", "favorites"]:
+                # Normalizar la capitalización del microgénero
+                microgenres.append(tag.strip().title())
+
+    # Evitar duplicados en microgéneros manteniendo el orden
+    microgenres = list(dict.fromkeys(microgenres))
+
     # Calcular dificultad
     difficulty = calculate_difficulty(pages, authors, tags)
     
@@ -460,6 +482,8 @@ def transform_to_nextread(calibre_book, new_id):
         't': title,
         'a': authors,
         'v': vibes,
+        'g': genres,
+        'mg': microgenres,
         's': series,
         'si': series_index,
         'd': difficulty,

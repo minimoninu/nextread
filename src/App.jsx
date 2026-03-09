@@ -356,6 +356,7 @@ const DEFAULT_FILTERS = {
   moment: null,
   theme: null,
   genres: [],
+  microgenres: [],
   minAcclaim: null,
   length: null,
   language: null
@@ -397,6 +398,7 @@ const NATIONALITY_LANGUAGE_PATTERNS = {
 const normalizeFilters = (value = {}) => {
   const next = { ...DEFAULT_FILTERS, ...value };
   next.genres = Array.isArray(next.genres) ? next.genres.filter(Boolean) : [];
+  next.microgenres = Array.isArray(next.microgenres) ? next.microgenres.filter(Boolean) : [];
   next.minAcclaim = Number.isFinite(Number(next.minAcclaim)) ? Number(next.minAcclaim) : null;
   return next;
 };
@@ -2164,13 +2166,17 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
   const loreVisualTokens = useMemo(() => {
     const tokens = [];
     const hookThemes = Array.isArray(bookHook?.themes) ? bookHook.themes : [];
-    const safeVibes = Array.isArray(vibes) ? vibes : [];
-    safeVibes.slice(0, 3).forEach((vibe) => tokens.push({ label: vibe, accent: false }));
+    const safeGenres = Array.isArray(book.g) ? book.g : (Array.isArray(vibes) ? vibes : []);
+    const safeMicrogenres = Array.isArray(book.mg) ? book.mg : [];
+
+    safeGenres.slice(0, 2).forEach((g) => tokens.push({ label: g, accent: false }));
+    safeMicrogenres.slice(0, 2).forEach((mg) => tokens.push({ label: mg, accent: false }));
+
     hookThemes.slice(0, 3).forEach((thm) => tokens.push({ label: thm, accent: true }));
     if (book.m) tokens.push({ label: `Mood: ${book.m}`, accent: false });
     if (difficulty) tokens.push({ label: `Dificultad: ${difficulty}`, accent: false });
-    return tokens.slice(0, 6);
-  }, [bookHook, vibes, book.m, difficulty]);
+    return tokens.slice(0, 8);
+  }, [bookHook, book.g, book.mg, vibes, book.m, difficulty]);
 
   useEffect(() => {
     if (SPOILER_RANK[spoilerLevel] === undefined) {
@@ -2418,18 +2424,29 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           )}
         </div>
         
-        {/* Vibes */}
-        {vibes.length > 0 && (
+        {/* Géneros y Microgéneros */}
+        {(book.g?.length > 0 || book.mg?.length > 0 || vibes.length > 0) && (
           <div style={{ padding: '0 24px 16px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-            {vibes.slice(0, 4).map((vibe, i) => (
-              <span key={i} style={{
+            {(book.g || vibes).slice(0, 2).map((genre, i) => (
+              <span key={`g-${i}`} style={{
                 fontSize: '12px',
                 padding: '4px 10px',
                 borderRadius: '6px',
                 background: t.bg.tertiary,
                 color: t.text.secondary
               }}>
-                {vibe}
+                🏷 {genre}
+              </span>
+            ))}
+            {(book.mg || []).slice(0, 3).map((mg, i) => (
+              <span key={`mg-${i}`} style={{
+                fontSize: '12px',
+                padding: '4px 10px',
+                borderRadius: '6px',
+                background: t.bg.tertiary,
+                color: t.text.secondary
+              }}>
+                🔬 {mg}
               </span>
             ))}
           </div>
@@ -2784,7 +2801,7 @@ const SOUL_FILTERS = {
   }
 };
 
-const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => {
+const FilterSheet = ({ filters, setFilters, moods, genres, microgenres, onClose, theme }) => {
   const t = THEMES[theme];
   const [activeSection, setActiveSection] = useState('experience');
   useEscapeKey(onClose);
@@ -2837,7 +2854,8 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
   const hasAnyFilter = filters.experience || filters.moment || filters.theme ||
     filters.difficulty || filters.hasAwards || filters.mood ||
     filters.length || filters.language || filters.minAcclaim ||
-    (filters.genres && filters.genres.length > 0);
+    (filters.genres && filters.genres.length > 0) ||
+    (filters.microgenres && filters.microgenres.length > 0);
 
   const getActiveFiltersSummary = () => {
     const parts = [];
@@ -2856,6 +2874,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
     if (filters.difficulty) parts.push(`⚡ ${filters.difficulty}`);
     if (filters.hasAwards) parts.push('🏆 premiados');
     if (filters.genres.length > 0) parts.push(`🏷 ${filters.genres.length} generos`);
+    if (filters.microgenres.length > 0) parts.push(`🔬 ${filters.microgenres.length} microgéneros`);
     if (filters.minAcclaim) parts.push(`⭐ ${filters.minAcclaim}+ critica`);
     if (filters.length) {
       const lengthLabel = LENGTH_FILTER_OPTIONS.find(o => o.id === filters.length)?.label;
@@ -3052,7 +3071,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
             <div>
               <div style={{ marginBottom: '24px' }}>
                 <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
-                  Genero
+                  Género
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {genres.slice(0, 24).map(g => (
@@ -3071,6 +3090,30 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
                   ))}
                 </div>
               </div>
+
+              {microgenres && microgenres.length > 0 && (
+                <div style={{ marginBottom: '24px' }}>
+                  <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
+                    Microgénero
+                  </p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                    {microgenres.slice(0, 24).map(mg => (
+                      <ChipButton
+                        key={mg}
+                        active={filters.microgenres.includes(mg)}
+                        onClick={() => setFilters(f => ({
+                          ...f,
+                          microgenres: f.microgenres.includes(mg)
+                            ? f.microgenres.filter(item => item !== mg)
+                            : [...f.microgenres, mg]
+                        }))}
+                      >
+                        {mg}
+                      </ChipButton>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div style={{ marginBottom: '24px' }}>
                 <p style={{ ...SECTION_TITLE_STYLE(t), marginBottom: '12px' }}>
@@ -5648,6 +5691,8 @@ export default function App() {
 
       const bookHook = hooks[String(book.id)] || {};
       const bookMood = book.m;
+      const bookGenres = Array.isArray(book.g) ? book.g : (Array.isArray(book.v) ? book.v : []);
+      const bookMicrogenres = Array.isArray(book.mg) ? book.mg : [];
       const bookVibes = Array.isArray(book.v) ? book.v : [];
       const isAwardedBook = awardMetaByBookId[book.id]?.isAwarded || false;
 
@@ -5656,7 +5701,9 @@ export default function App() {
         const searchableText = [
           book.t || book.title || '',
           (book.a || book.authors || []).join(' '),
-          (Array.isArray(book.v) ? book.v : []).join(' '),
+          bookVibes.join(' '),
+          bookGenres.join(' '),
+          bookMicrogenres.join(' '),
           (Array.isArray(book.themes) ? book.themes : []).join(' '),
           book.syn || '',
           bookHook.hook || '',
@@ -5672,7 +5719,8 @@ export default function App() {
       if (filters.difficulty && String(book.d || book.difficulty || '').toLowerCase() !== filters.difficulty) return false;
       if (filters.hasAwards && !isAwardedBook) return false;
       if (filters.mood && book.m !== filters.mood) return false;
-      if (filters.genres.length > 0 && !filters.genres.some(g => bookVibes.includes(g))) return false;
+      if (filters.genres.length > 0 && !filters.genres.some(g => bookGenres.includes(g))) return false;
+      if (filters.microgenres.length > 0 && !filters.microgenres.some(mg => bookMicrogenres.includes(mg))) return false;
       if (filters.minAcclaim && parseAcclaim(book) < filters.minAcclaim) return false;
       if (filters.length && !matchesLengthFilter(book, filters.length)) return false;
       if (filters.language && (originalLanguageByBookId[book.id] || 'unknown') !== filters.language) return false;
@@ -5935,7 +5983,7 @@ export default function App() {
   const genres = useMemo(() => {
     const counts = new Map();
     books.forEach((book) => {
-      const bookGenres = Array.isArray(book.v) ? book.v : [];
+      const bookGenres = Array.isArray(book.g) ? book.g : (Array.isArray(book.v) ? book.v : []);
       bookGenres.forEach((genre) => {
         if (!genre) return;
         counts.set(genre, (counts.get(genre) || 0) + 1);
@@ -5945,6 +5993,20 @@ export default function App() {
       .sort((a, b) => b[1] - a[1])
       .map(([genre]) => genre);
   }, [books]);
+
+  const microgenres = useMemo(() => {
+    const counts = new Map();
+    books.forEach((book) => {
+      const bookMicrogenres = Array.isArray(book.mg) ? book.mg : [];
+      bookMicrogenres.forEach((mg) => {
+        if (!mg) return;
+        counts.set(mg, (counts.get(mg) || 0) + 1);
+      });
+    });
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([mg]) => mg);
+  }, [books]);
   
   const handleLoadMore = useCallback(() => {
     setVisibleCount(prev => Math.min(prev + LOAD_MORE_COUNT, filteredBooks.length));
@@ -5953,7 +6015,8 @@ export default function App() {
   const hasFiltersActive = filters.difficulty || filters.mood || filters.hasAwards ||
     filters.experience || filters.moment || filters.theme || debouncedSearch ||
     filters.length || filters.language || filters.minAcclaim ||
-    (filters.genres && filters.genres.length > 0);
+    (filters.genres && filters.genres.length > 0) ||
+    (filters.microgenres && filters.microgenres.length > 0);
   
   // CSS global para microinteracciones minimalistas
   useEffect(() => {
@@ -6787,6 +6850,7 @@ export default function App() {
           setFilters={setFilters} 
           moods={moods}
           genres={genres}
+          microgenres={microgenres}
           onClose={() => setShowFilters(false)}
           theme={theme}
         />
