@@ -1568,6 +1568,7 @@ const AuthorsView = ({ books, authorsData, onAuthorClick, theme }) => {
       {/* Búsqueda */}
       <div style={{ marginBottom: '24px' }}>
         <input
+          aria-label="Buscar autor"
           type="text"
           placeholder="Buscar autor..."
           value={searchQuery}
@@ -6169,6 +6170,7 @@ export default function App() {
               {/* Búsqueda (solo si estamos en biblioteca) */}
               {activeTab === 'library' && !todayMode && (
                 <input
+                  aria-label="Buscar en biblioteca"
                   type="text"
                   placeholder="Buscar titulo, autor, tema o hook..."
                   value={filters.search}
@@ -6193,6 +6195,7 @@ export default function App() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 {/* Santuario */}
                 <button 
+                  aria-label="Santuario"
                   onClick={() => setSanctuaryMode(true)}
                   style={{
                     width: '40px', height: '40px',
@@ -6211,6 +6214,7 @@ export default function App() {
                 
                 {/* Theme toggle */}
                 <button 
+                  aria-label="Cambiar tema"
                   onClick={() => setTheme(theme === 'night' ? 'day' : 'night')}
                   style={{
                     width: '40px', height: '40px',
@@ -6229,6 +6233,7 @@ export default function App() {
 
                 {/* Modo Hoy */}
                 <button
+                  aria-label={todayMode ? 'Salir de Hoy' : 'Que leer hoy'}
                   onClick={toggleTodayMode}
                   style={{
                     width: '40px', height: '40px',
@@ -6249,6 +6254,7 @@ export default function App() {
                 {/* Stats (solo desktop) */}
                 {!isMobile && (
                   <button 
+                    aria-label="Estadísticas"
                     onClick={() => setShowStats(true)}
                     style={{
                       width: '40px', height: '40px',
@@ -6269,6 +6275,7 @@ export default function App() {
                 {/* Autores (solo desktop) */}
                 {!isMobile && (
                   <button 
+                    aria-label="Autores"
                     onClick={() => setActiveTab('authors')}
                     style={{
                       width: '40px', height: '40px',
@@ -6289,6 +6296,7 @@ export default function App() {
                 {/* Filtros (solo en biblioteca) */}
                 {activeTab === 'library' && !todayMode && (
                   <button 
+                    aria-label="Filtros"
                     onClick={() => setShowFilters(true)}
                     style={{
                       width: '40px', height: '40px',
@@ -6339,6 +6347,7 @@ export default function App() {
             {/* Búsqueda móvil */}
             {isMobile && activeTab === 'library' && !todayMode && (
               <input
+                aria-label="Buscar en biblioteca"
                 type="text"
                 placeholder="Buscar titulo, autor, tema o hook..."
                 value={filters.search}
