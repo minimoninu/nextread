@@ -6290,6 +6290,8 @@ export default function App() {
                 {activeTab === 'library' && !todayMode && (
                   <button 
                     onClick={() => setShowFilters(true)}
+                    aria-label="Filtros"
+                    title="Filtros"
                     style={{
                       width: '40px', height: '40px',
                       borderRadius: '8px',
