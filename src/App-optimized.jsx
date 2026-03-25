@@ -498,6 +498,7 @@ export default function App() {
                 onClick={() => setShowStats(true)}
                 className="bg-zinc-800 hover:bg-zinc-700 text-white px-3 py-2 rounded-xl font-semibold text-sm whitespace-nowrap btn-interactive"
                 title="Estadísticas"
+                aria-label="Estadísticas"
               >
                 📊
               </button>

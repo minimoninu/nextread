@@ -670,6 +670,7 @@ const ThemeToggle = ({ theme, setTheme }) => (
     onClick={() => setTheme(theme === 'night' ? 'day' : 'night')}
     className="btn-ghost"
     title={theme === 'night' ? 'Modo día' : 'Modo noche'}
+    aria-label={theme === 'night' ? 'Modo día' : 'Modo noche'}
   >
     {theme === 'night' ? '☀' : '☾'}
   </button>
@@ -813,12 +814,13 @@ export default function App() {
             {/* Acciones */}
             <div className="flex items-center gap-2">
               <ThemeToggle theme={theme} setTheme={setTheme} />
-              <button onClick={() => setShowStats(true)} className="btn-ghost" title="Estadísticas">◔</button>
+              <button onClick={() => setShowStats(true)} className="btn-ghost" title="Estadísticas" aria-label="Estadísticas">◔</button>
               <button 
                 onClick={() => setShowFilters(true)} 
                 className="btn-ghost"
                 style={hasFiltersActive ? { background: 'var(--accent-bg)', color: 'var(--accent)' } : {}}
                 title="Filtros"
+                aria-label="Filtros"
               >
                 ⚙
               </button>
