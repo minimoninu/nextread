@@ -1191,8 +1191,9 @@ const SanctuaryButton = ({ onExit, theme }) => {
       onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.opacity = '1'; }}
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.opacity = '0.8'; }}
       title={COPY.sanctuary.exit}
+      aria-label={COPY.sanctuary.exit}
     >
-      ✕
+      <span aria-hidden="true">✕</span>
     </button>
   );
 };
@@ -6205,8 +6206,9 @@ export default function App() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                   }}
                   title={COPY.sanctuary.enter}
+                  aria-label={COPY.sanctuary.enter}
                 >
-                  ○
+                  <span aria-hidden="true">○</span>
                 </button>
                 
                 {/* Theme toggle */}
@@ -6223,8 +6225,9 @@ export default function App() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                   }}
                   title={THEMES[theme === 'night' ? 'day' : 'night'].name}
+                  aria-label={THEMES[theme === 'night' ? 'day' : 'night'].name}
                 >
-                  {THEMES[theme].icon}
+                  <span aria-hidden="true">{THEMES[theme].icon}</span>
                 </button>
 
                 {/* Modo Hoy */}
@@ -6242,8 +6245,9 @@ export default function App() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                   }}
                   title={todayMode ? 'Salir de Hoy' : 'Que leer hoy'}
+                  aria-label={todayMode ? 'Salir de Hoy' : 'Que leer hoy'}
                 >
-                  H
+                  <span aria-hidden="true">H</span>
                 </button>
                 
                 {/* Stats (solo desktop) */}
@@ -6261,8 +6265,9 @@ export default function App() {
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
                     title="Estadísticas"
+                    aria-label="Estadísticas"
                   >
-                    ◔
+                    <span aria-hidden="true">◔</span>
                   </button>
                 )}
                 
@@ -6281,8 +6286,9 @@ export default function App() {
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
                     title="Autores"
+                    aria-label="Autores"
                   >
-                    👤
+                    <span aria-hidden="true">👤</span>
                   </button>
                 )}
                 
@@ -6300,8 +6306,10 @@ export default function App() {
                       cursor: 'pointer',
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
+                    title="Filtros"
+                    aria-label="Filtros"
                   >
-                    ⚙
+                    <span aria-hidden="true">⚙</span>
                   </button>
                 )}
                 
