@@ -1,0 +1,3 @@
+## 2026-03-29 - Synchronizing tooltips and screen reader announcements
+**Learning:** When using visual tooltips (`title`) on icon-only interactive elements, screen reader users miss that exact localized context if the `aria-label` is missing or divergent. Also, raw text emojis or geometric shapes (like ○ or ◔) can be confusingly pronounced by screen readers if left exposed.
+**Action:** Always bind both `title` and `aria-label` to the identical localized string variable (e.g. `COPY.sanctuary.enter`) to guarantee an equitable experience. Furthermore, wrap the visual-only icon or emoji in a `<span aria-hidden="true">` to suppress its chaotic native pronunciation in favor of the clean `aria-label`.
