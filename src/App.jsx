@@ -1168,6 +1168,7 @@ const SanctuaryButton = ({ onExit, theme }) => {
   return (
     <button
       onClick={onExit}
+      aria-label={COPY.sanctuary.exit}
       style={{
         position: 'fixed',
         bottom: '24px',
@@ -6205,6 +6206,7 @@ export default function App() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                   }}
                   title={COPY.sanctuary.enter}
+                  aria-label={COPY.sanctuary.enter}
                 >
                   ○
                 </button>
@@ -6223,6 +6225,7 @@ export default function App() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                   }}
                   title={THEMES[theme === 'night' ? 'day' : 'night'].name}
+                  aria-label={THEMES[theme === 'night' ? 'day' : 'night'].name}
                 >
                   {THEMES[theme].icon}
                 </button>
@@ -6242,6 +6245,7 @@ export default function App() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                   }}
                   title={todayMode ? 'Salir de Hoy' : 'Que leer hoy'}
+                  aria-label={todayMode ? 'Salir de Hoy' : 'Que leer hoy'}
                 >
                   H
                 </button>
@@ -6261,6 +6265,7 @@ export default function App() {
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
                     title="Estadísticas"
+                    aria-label="Estadísticas"
                   >
                     ◔
                   </button>
@@ -6281,6 +6286,7 @@ export default function App() {
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
                     title="Autores"
+                    aria-label="Autores"
                   >
                     👤
                   </button>
@@ -6300,6 +6306,8 @@ export default function App() {
                       cursor: 'pointer',
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
+                    title="Filtros"
+                    aria-label="Filtros"
                   >
                     ⚙
                   </button>
