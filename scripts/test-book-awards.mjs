@@ -40,5 +40,14 @@ assert.ok(labels.includes('Premio Goncourt'), 'Debe detectar Premio Goncourt en 
 
 assert.equal(isAwardCollection({ id: 'pulitzer', title: 'Ganadores Pulitzer', emoji: '🏆' }), true, 'Pulitzer sí es colección de premios');
 assert.equal(isAwardCollection({ id: 'premio-nobel', title: 'Premio Nobel', emoji: '🏅' }), false, 'Nobel no debe contarse como premio de libro');
+assert.equal(isAwardCollection({}), false, 'Empty object should return false');
+assert.equal(isAwardCollection({ id: 'some-id', title: 'Some Title', subtitle: 'Some Subtitle' }), false, 'No matching criteria, keywords, or emoji should return false');
+assert.equal(isAwardCollection({ id: 'normal', criteria: { awards: ['Some Award'] } }), true, 'criteria.awards with items should return true');
+assert.equal(isAwardCollection({ id: 'normal', criteria: { awards: [] } }), false, 'criteria.awards empty should return false');
+assert.equal(isAwardCollection({ id: 'booker-collection' }), true, 'Keyword in id should return true');
+assert.equal(isAwardCollection({ title: 'Best Prize Winners' }), true, 'Keyword in title should return true');
+assert.equal(isAwardCollection({ subtitle: 'An award collection' }), true, 'Keyword in subtitle should return true');
+assert.equal(isAwardCollection({ id: 'normal-collection', emoji: '🏆' }), true, 'Emoji 🏆 should return true even without keywords');
+assert.equal(isAwardCollection({ title: 'Nobel Prize Winners' }), false, 'Nobel should return false even if it contains the word Prize');
 
 console.log('test:book-awards OK');
