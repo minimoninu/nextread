@@ -6,7 +6,15 @@
       "Éric Vuillard"
     ],
     "v": [
-      "ficción"
+      "histórico",
+      "emocional"
+    ],
+    "genres": [
+      "Ficción histórica"
+    ],
+    "microgenres": [
+      "Revolución francesa",
+      "Crónica de abajo hacia arriba"
     ],
     "s": null,
     "si": null,
@@ -31,7 +39,15 @@
       "Niklas Natt och Dag"
     ],
     "v": [
-      "ficción"
+      "oscuro",
+      "tenso"
+    ],
+    "genres": [
+      "Misterio/Thriller"
+    ],
+    "microgenres": [
+      "Noir histórico",
+      "Procedimental"
     ],
     "s": "Bellman noir",
     "si": 1.0,
@@ -56,7 +72,15 @@
       "Niklas Natt och Dag"
     ],
     "v": [
-      "ficción"
+      "oscuro",
+      "tenso"
+    ],
+    "genres": [
+      "Misterio/Thriller"
+    ],
+    "microgenres": [
+      "Noir histórico",
+      "Procedimental"
     ],
     "s": "Bellman noir",
     "si": 2.0,
