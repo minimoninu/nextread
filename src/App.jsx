@@ -436,16 +436,26 @@ const detectLanguageFromNationality = (nationality) => {
   if (!normalized) return null;
 
   const score = { es: 0, en: 0, fr: 0, it: 0, pt: 0, de: 0 };
+  let bestLang = null;
+  let maxScore = 0;
+  let isTie = false;
+
   Object.entries(NATIONALITY_LANGUAGE_PATTERNS).forEach(([lang, patterns]) => {
     patterns.forEach((pattern) => {
       if (normalized.includes(pattern)) score[lang] += 1;
     });
+
+    if (score[lang] > maxScore) {
+      maxScore = score[lang];
+      bestLang = lang;
+      isTie = false;
+    } else if (score[lang] === maxScore && maxScore > 0) {
+      isTie = true;
+    }
   });
 
-  const ranked = Object.entries(score).sort((a, b) => b[1] - a[1]);
-  if (!ranked[0] || ranked[0][1] === 0) return null;
-  if (ranked[1] && ranked[0][1] === ranked[1][1]) return null;
-  return ranked[0][0];
+  if (maxScore === 0 || isTie) return null;
+  return bestLang;
 };
 
 const getBookOriginalLanguage = (book, authorsData) => {
