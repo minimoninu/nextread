@@ -1403,9 +1403,21 @@ const SavedView = ({ books, lists, onBookClick, theme, getListStatus }) => {
   const t = THEMES[theme];
   
   const savedBooks = useMemo(() => {
-    const reading = books.filter(b => lists[b.id] === 'reading');
-    const want = books.filter(b => lists[b.id] === 'want');
-    const read = books.filter(b => lists[b.id] === 'read');
+    const reading = [];
+    const want = [];
+    const read = [];
+
+    for (const b of books) {
+      const status = lists[b.id];
+      if (status === 'reading') {
+        reading.push(b);
+      } else if (status === 'want') {
+        want.push(b);
+      } else if (status === 'read') {
+        read.push(b);
+      }
+    }
+
     return { reading, want, read };
   }, [books, lists]);
   
