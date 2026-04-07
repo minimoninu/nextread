@@ -41,4 +41,20 @@ assert.ok(labels.includes('Premio Goncourt'), 'Debe detectar Premio Goncourt en 
 assert.equal(isAwardCollection({ id: 'pulitzer', title: 'Ganadores Pulitzer', emoji: '🏆' }), true, 'Pulitzer sí es colección de premios');
 assert.equal(isAwardCollection({ id: 'premio-nobel', title: 'Premio Nobel', emoji: '🏅' }), false, 'Nobel no debe contarse como premio de libro');
 
+// Negative Award Hints Tests
+const shortlistAwardBook = { id: 6, aw: ['Booker Prize shortlist'] };
+assert.deepEqual(getBookAwardLabels(shortlistAwardBook, {}), [], 'Debe ignorar shortlist en book.aw');
+
+const candidatoAwardBook = { id: 7, awards: ['Candidato al Premio Planeta'] };
+assert.deepEqual(getBookAwardLabels(candidatoAwardBook, {}), [], 'Debe ignorar candidato en book.awards');
+
+const finalistaHookObj = { why_matters: 'Fue finalista del Premio Nadal.' };
+assert.deepEqual(getBookAwardLabels({}, finalistaHookObj), [], 'Debe ignorar finalista en hook.why_matters');
+
+const longlistHookObj = { hook: 'Longlisted for the Women\'s Prize for Fiction' };
+assert.deepEqual(getBookAwardLabels({}, longlistHookObj), [], 'Debe ignorar longlist en hook.hook');
+
+const mixedHookObj = { why_matters: 'Finalista del Premio Booker 2020' };
+assert.deepEqual(getBookAwardLabels({}, mixedHookObj), [], 'Debe ignorar si la evidencia tiene hint negativo incluso con palabras clave de premio');
+
 console.log('test:book-awards OK');
