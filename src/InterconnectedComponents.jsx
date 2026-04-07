@@ -84,16 +84,31 @@ export const AuthorPanel = memo(({
 }) => {
   const t = theme;
   
+  // Pre-calcular índice de libros por autor para búsqueda rápida
+  // Esto hace que cambiar de autor sea O(1) en lugar de O(N)
+  const authorIndex = useMemo(() => {
+    const index = new Map();
+    books.forEach(b => {
+      (b.a || []).forEach(a => {
+        if (!index.has(a)) index.set(a, []);
+        index.get(a).push(b);
+      });
+    });
+    return index;
+  }, [books]);
+
   // Obtener libros del autor
   const authorBooks = useMemo(() => {
-    return books.filter(b => (b.a || []).includes(author)).sort((a, b) => {
+    const booksForAuthor = authorIndex.get(author) || [];
+    // Hacemos una copia para no mutar el array del índice al ordenar
+    return [...booksForAuthor].sort((a, b) => {
       // Ordenar por premiados primero, luego por año
       const aAwarded = (a.aw || []).length;
       const bAwarded = (b.aw || []).length;
       if (aAwarded !== bAwarded) return bAwarded - aAwarded;
       return (b.y || 0) - (a.y || 0);
     });
-  }, [books, author]);
+  }, [authorIndex, author]);
   
   // Calcular estadísticas del autor
   const stats = useMemo(() => {
