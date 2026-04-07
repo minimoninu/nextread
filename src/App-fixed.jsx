@@ -760,7 +760,10 @@ export default function App() {
   }, [books, viewMode]);
   
   const moods = useMemo(() => {
-    return [...new Set(books.map(b => b.m).filter(Boolean))].sort();
+    return Array.from(books.reduce((acc, b) => {
+      if (b.m) acc.add(b.m);
+      return acc;
+    }, new Set())).sort();
   }, [books]);
   
   const handleLoadMore = useCallback(() => {
