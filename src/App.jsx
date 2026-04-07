@@ -1167,6 +1167,7 @@ const SanctuaryButton = ({ onExit, theme }) => {
   
   return (
     <button
+      aria-label={COPY.sanctuary.exit}
       onClick={onExit}
       style={{
         position: 'fixed',
