@@ -3347,9 +3347,13 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
   // Obtener libros de este autor
   const authorBooks = useMemo(() => {
     if (!authorName) return [];
+    const targetLower = authorName.toLowerCase();
     return books.filter(book => {
       const bookAuthors = book.a || book.authors || [];
-      return bookAuthors.some(a => a.toLowerCase() === authorName.toLowerCase());
+      for (let i = 0; i < bookAuthors.length; i++) {
+        if (bookAuthors[i].toLowerCase() === targetLower) return true;
+      }
+      return false;
     });
   }, [authorName, books]);
   
