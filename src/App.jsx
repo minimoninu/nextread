@@ -6300,6 +6300,8 @@ export default function App() {
                       cursor: 'pointer',
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
+                    title="Filtros"
+                    aria-label="Filtros"
                   >
                     ⚙
                   </button>
