@@ -191,36 +191,38 @@ const BibliotecaStats = ({ books, onClose }) => {
   
   // Mini donut chart (CSS puro)
   const DonutChart = ({ data, colors }) => {
-    const total = Object.values(data).reduce((a, b) => a + b, 0);
-    let cumulative = 0;
+    let total = 0;
+    const entries = Object.entries(data);
+    for (let i = 0; i < entries.length; i++) {
+      total += entries[i][1];
+    }
     
-    const segments = Object.entries(data).map(([key, value], i) => {
-      const percentage = (value / total) * 100;
-      const rotation = (cumulative / total) * 360;
+    let cumulative = 0;
+    const segments = entries.map(([key, value], i) => {
+      const percentage = total > 0 ? (value / total) * 100 : 0;
+      const rotation = total > 0 ? (cumulative / total) * 360 : 0;
+      const offset = total > 0 ? (cumulative / total) * 100 : 0;
       cumulative += value;
-      return { key, value, percentage, rotation, color: colors[i] };
+      return { key, value, percentage, rotation, offset, color: colors[i] };
     });
     
     return (
       <div className="relative w-32 h-32 mx-auto">
         <svg viewBox="0 0 36 36" className="w-full h-full transform -rotate-90">
-          {segments.map((seg, i) => {
-            const offset = segments.slice(0, i).reduce((a, s) => a + s.percentage, 0);
-            return (
-              <circle
-                key={seg.key}
-                cx="18"
-                cy="18"
-                r="15.91549430918954"
-                fill="transparent"
-                stroke={seg.color}
-                strokeWidth="3"
-                strokeDasharray={`${seg.percentage} ${100 - seg.percentage}`}
-                strokeDashoffset={-offset}
-                className="transition-all duration-500"
-              />
-            );
-          })}
+          {segments.map((seg) => (
+            <circle
+              key={seg.key}
+              cx="18"
+              cy="18"
+              r="15.91549430918954"
+              fill="transparent"
+              stroke={seg.color}
+              strokeWidth="3"
+              strokeDasharray={`${seg.percentage} ${100 - seg.percentage}`}
+              strokeDashoffset={-seg.offset}
+              className="transition-all duration-500"
+            />
+          ))}
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
           <span className="text-2xl font-bold text-white">{total}</span>
