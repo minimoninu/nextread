@@ -1727,6 +1727,11 @@ const resolveCollectionBooks = (collection, books, awardedBookIds = new Set()) =
   return resolved;
 };
 
+const REGION_EMOJIS = new Set(['🇫🇷', '🇺🇸', '🇪🇸', '🇷🇺', '🇯🇵', '🇮🇹', '🇬🇧']);
+const GENRE_EMOJIS = new Set(['🔍', '✨', '🏛️', '🚀', '📝', '😄']);
+const SERIES_EMOJIS = new Set(['🥸', '🕵️', '🦁']);
+const DIFFICULTY_EMOJIS = new Set(['☀️', '🧠', '⚡', '📖']);
+
 const CollectionsView = ({ collections, books, awardedBookIds, onCollectionClick, theme }) => {
   const t = THEMES[theme];
   
@@ -1736,13 +1741,16 @@ const CollectionsView = ({ collections, books, awardedBookIds, onCollectionClick
   };
   
   // Agrupar colecciones por tipo
-  const grouped = {
-    regions: collections.filter(c => ['🇫🇷', '🇺🇸', '🇪🇸', '🇷🇺', '🇯🇵', '🇮🇹', '🇬🇧'].includes(c.emoji)),
-    awards: collections.filter(c => isAwardCollection(c)),
-    genres: collections.filter(c => ['🔍', '✨', '🏛️', '🚀', '📝', '😄'].includes(c.emoji)),
-    series: collections.filter(c => ['🥸', '🕵️', '🦁'].includes(c.emoji)),
-    difficulty: collections.filter(c => ['☀️', '🧠', '⚡', '📖'].includes(c.emoji))
-  };
+  const grouped = useMemo(() => {
+    return collections.reduce((acc, c) => {
+      if (REGION_EMOJIS.has(c.emoji)) acc.regions.push(c);
+      if (isAwardCollection(c)) acc.awards.push(c);
+      if (GENRE_EMOJIS.has(c.emoji)) acc.genres.push(c);
+      if (SERIES_EMOJIS.has(c.emoji)) acc.series.push(c);
+      if (DIFFICULTY_EMOJIS.has(c.emoji)) acc.difficulty.push(c);
+      return acc;
+    }, { regions: [], awards: [], genres: [], series: [], difficulty: [] });
+  }, [collections]);
   
   const Section = ({ title, items }) => {
     if (!items || items.length === 0) return null;
