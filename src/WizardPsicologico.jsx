@@ -562,6 +562,7 @@ const WizardPsicologico = ({ books, onSelect, onClose }) => {
           <button 
             onClick={onClose} 
             className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-zinc-800/50 text-zinc-400 hover:text-white hover:bg-zinc-700 transition-all"
+            aria-label="Cerrar"
           >
             ×
           </button>
