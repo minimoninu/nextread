@@ -1736,13 +1736,13 @@ const CollectionsView = ({ collections, books, awardedBookIds, onCollectionClick
   };
   
   // Agrupar colecciones por tipo
-  const grouped = {
+  const grouped = useMemo(() => ({
     regions: collections.filter(c => ['🇫🇷', '🇺🇸', '🇪🇸', '🇷🇺', '🇯🇵', '🇮🇹', '🇬🇧'].includes(c.emoji)),
     awards: collections.filter(c => isAwardCollection(c)),
     genres: collections.filter(c => ['🔍', '✨', '🏛️', '🚀', '📝', '😄'].includes(c.emoji)),
     series: collections.filter(c => ['🥸', '🕵️', '🦁'].includes(c.emoji)),
     difficulty: collections.filter(c => ['☀️', '🧠', '⚡', '📖'].includes(c.emoji))
-  };
+  }), [collections]);
   
   const Section = ({ title, items }) => {
     if (!items || items.length === 0) return null;
