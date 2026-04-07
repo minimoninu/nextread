@@ -4779,11 +4779,15 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
     result = result.sort(() => Math.random() - 0.5);
     
     // Asegurar que tenemos al menos 8
-    while (result.length < 8 && valid.length > result.length) {
-      const remaining = valid.filter(v => !result.some(r => r.book.id === v.book.id));
-      if (remaining.length > 0) {
-        result.push(remaining[0]);
-      } else break;
+    if (result.length < 8) {
+      const resultIds = new Set(result.map(r => r.book.id));
+      for (let i = 0; i < valid.length && result.length < 8; i++) {
+        const v = valid[i];
+        if (!resultIds.has(v.book.id)) {
+          result.push(v);
+          resultIds.add(v.book.id);
+        }
+      }
     }
     
     return result.slice(0, 8);
