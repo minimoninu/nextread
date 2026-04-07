@@ -5928,7 +5928,10 @@ export default function App() {
   }, [books, hooks, viewMode, selectedCollection, awardMetaByBookId, curationSeed]);
   
   const moods = useMemo(() => {
-    const moodSet = new Set(books.map(b => b.m).filter(Boolean));
+    const moodSet = books.reduce((acc, b) => {
+      if (b.m) acc.add(b.m);
+      return acc;
+    }, new Set());
     return Array.from(moodSet).sort();
   }, [books]);
 
