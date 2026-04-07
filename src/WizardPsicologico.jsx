@@ -488,8 +488,13 @@ const WizardPsicologico = ({ books, onSelect, onClose }) => {
       
       // Rellenar si hay pocos
       if (selected.length < 5) {
-        const remaining = scoredBooks.filter(s => !selected.includes(s));
-        selected.push(...remaining.slice(0, 5 - selected.length));
+        const selectedSet = new Set(selected);
+        for (const item of scoredBooks) {
+          if (!selectedSet.has(item)) {
+            selected.push(item);
+            if (selected.length >= 5) break;
+          }
+        }
       }
       
       setResults(selected.slice(0, 10));
