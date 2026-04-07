@@ -11,7 +11,8 @@
     "check:data": "node scripts/check-data.mjs",
     "check:data:strict": "CHECK_DATA_STRICT=1 node scripts/check-data.mjs",
     "test:today-picks": "node scripts/test-today-picks.mjs",
-    "test:book-awards": "node scripts/test-book-awards.mjs"
+    "test:book-awards": "node scripts/test-book-awards.mjs",
+    "test:use-reading-lists": "node scripts/test-use-reading-lists.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",
