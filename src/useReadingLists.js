@@ -135,17 +135,6 @@ export const useReadingLists = () => {
     return JSON.stringify(lists, null, 2);
   }, [lists]);
 
-  // Importar datos
-  const importData = useCallback((jsonString) => {
-    try {
-      const data = JSON.parse(jsonString);
-      setLists(data);
-      return true;
-    } catch {
-      return false;
-    }
-  }, []);
-
   return {
     lists,
     getBookList,
@@ -157,7 +146,6 @@ export const useReadingLists = () => {
     isInAnyList,
     clearAllLists,
     exportData,
-    importData,
     LIST_CONFIG
   };
 };
