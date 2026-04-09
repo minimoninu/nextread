@@ -1191,6 +1191,7 @@ const SanctuaryButton = ({ onExit, theme }) => {
       onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.opacity = '1'; }}
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.opacity = '0.8'; }}
       title={COPY.sanctuary.exit}
+      aria-label={COPY.sanctuary.exit}
     >
       ✕
     </button>
