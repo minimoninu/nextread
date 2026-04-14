@@ -1191,6 +1191,7 @@ const SanctuaryButton = ({ onExit, theme }) => {
       onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.opacity = '1'; }}
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.opacity = '0.8'; }}
       title={COPY.sanctuary.exit}
+      aria-label={COPY.sanctuary.exit}
     >
       ✕
     </button>
@@ -2244,6 +2245,7 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
           <button 
             onClick={onClose}
             aria-label="Cerrar detalle del libro"
+            title="Cerrar detalle del libro"
             style={{
               position: 'absolute', top: '0', right: '16px',
               ...getModalCloseButtonStyle(t)
@@ -2929,6 +2931,7 @@ const FilterSheet = ({ filters, setFilters, moods, genres, onClose, theme }) => 
             <button
               onClick={onClose}
               aria-label="Cerrar filtros"
+              title="Cerrar filtros"
               style={getModalCloseButtonStyle(t)}
             >
               ✕
@@ -3293,6 +3296,7 @@ const StatsModal = ({ books, awardedBookIds, onClose, theme }) => {
           <button
             onClick={onClose}
             aria-label="Cerrar estadísticas"
+            title="Cerrar estadísticas"
             style={getModalCloseButtonStyle(t)}
           >
             ✕
@@ -3425,6 +3429,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
             <button
               onClick={onClose}
               aria-label="Cerrar autor"
+              title="Cerrar autor"
               style={getModalCloseButtonStyle(t)}
             >
               ✕
@@ -3736,6 +3741,7 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
           <button
             onClick={onClose}
             aria-label="Cerrar tema"
+            title="Cerrar tema"
             style={{
               ...getModalCloseButtonStyle(t),
               position: 'absolute',
@@ -3950,6 +3956,7 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
           <button
             onClick={onClose}
             aria-label="Cerrar experiencia"
+            title="Cerrar experiencia"
             style={{
               ...getModalCloseButtonStyle(t),
               position: 'absolute',
@@ -4955,7 +4962,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
               <p style={{ fontSize: '12px', color: t.accent, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>
                 Tu próxima lectura
               </p>
-              <button onClick={onClose} aria-label="Cerrar wizard" style={getModalCloseButtonStyle(t)}>✕</button>
+              <button onClick={onClose} aria-label="Cerrar wizard" title="Cerrar wizard" style={getModalCloseButtonStyle(t)}>✕</button>
             </div>
             
             {/* Portada y título */}
@@ -5176,7 +5183,7 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
               ← Atrás
             </button>
           ) : <div />}
-          <button onClick={onClose} aria-label="Cerrar wizard" style={getModalCloseButtonStyle(t)}>✕</button>
+          <button onClick={onClose} aria-label="Cerrar wizard" title="Cerrar wizard" style={getModalCloseButtonStyle(t)}>✕</button>
         </div>
         
         {/* Progress visual (camino recorrido) */}
@@ -6205,6 +6212,7 @@ export default function App() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                   }}
                   title={COPY.sanctuary.enter}
+                  aria-label={COPY.sanctuary.enter}
                 >
                   ○
                 </button>
@@ -6223,6 +6231,7 @@ export default function App() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                   }}
                   title={THEMES[theme === 'night' ? 'day' : 'night'].name}
+                  aria-label={THEMES[theme === 'night' ? 'day' : 'night'].name}
                 >
                   {THEMES[theme].icon}
                 </button>
@@ -6242,6 +6251,7 @@ export default function App() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                   }}
                   title={todayMode ? 'Salir de Hoy' : 'Que leer hoy'}
+                  aria-label={todayMode ? 'Salir de Hoy' : 'Que leer hoy'}
                 >
                   H
                 </button>
@@ -6261,6 +6271,7 @@ export default function App() {
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
                     title="Estadísticas"
+                    aria-label="Estadísticas"
                   >
                     ◔
                   </button>
@@ -6281,6 +6292,7 @@ export default function App() {
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
                     title="Autores"
+                    aria-label="Autores"
                   >
                     👤
                   </button>
@@ -6300,6 +6312,8 @@ export default function App() {
                       cursor: 'pointer',
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
+                    title="Filtros"
+                    aria-label="Filtros"
                   >
                     ⚙
                   </button>
