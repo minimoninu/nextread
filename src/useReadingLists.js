@@ -103,9 +103,12 @@ export const useReadingLists = () => {
 
   // Obtener todos los libros de una lista específica
   const getBooksInList = useCallback((listId) => {
-    return Object.entries(lists)
-      .filter(([_, list]) => list === listId)
-      .map(([bookId]) => bookId);
+    return Object.entries(lists).reduce((acc, [bookId, list]) => {
+      if (list === listId) {
+        acc.push(bookId);
+      }
+      return acc;
+    }, []);
   }, [lists]);
 
   // Estadísticas
