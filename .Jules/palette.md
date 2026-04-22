@@ -1,0 +1,3 @@
+## 2024-04-22 - Missing ARIA labels in Header Navigation
+**Learning:** Found multiple icon-only navigation buttons in the primary application header without `aria-label` attributes. This prevents screen reader users from understanding the purpose of critical navigational features such as 'Modo Santuario', 'Modo Hoy', and filter menus, reducing the application's overall accessibility. Using title is insufficient for screen readers.
+**Action:** Always verify that every icon-only button contains a localized `aria-label` attribute matching its visual tooltip or `title` to ensure accessible navigation.
