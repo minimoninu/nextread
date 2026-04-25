@@ -6193,6 +6193,7 @@ export default function App() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 {/* Santuario */}
                 <button 
+                  aria-label={COPY.sanctuary.enter}
                   onClick={() => setSanctuaryMode(true)}
                   style={{
                     width: '40px', height: '40px',
@@ -6211,6 +6212,7 @@ export default function App() {
                 
                 {/* Theme toggle */}
                 <button 
+                  aria-label={THEMES[theme === 'night' ? 'day' : 'night'].name}
                   onClick={() => setTheme(theme === 'night' ? 'day' : 'night')}
                   style={{
                     width: '40px', height: '40px',
@@ -6229,6 +6231,7 @@ export default function App() {
 
                 {/* Modo Hoy */}
                 <button
+                  aria-label={todayMode ? 'Salir de Hoy' : 'Que leer hoy'}
                   onClick={toggleTodayMode}
                   style={{
                     width: '40px', height: '40px',
@@ -6249,6 +6252,7 @@ export default function App() {
                 {/* Stats (solo desktop) */}
                 {!isMobile && (
                   <button 
+                    aria-label="Estadísticas"
                     onClick={() => setShowStats(true)}
                     style={{
                       width: '40px', height: '40px',
@@ -6269,6 +6273,7 @@ export default function App() {
                 {/* Autores (solo desktop) */}
                 {!isMobile && (
                   <button 
+                    aria-label="Autores"
                     onClick={() => setActiveTab('authors')}
                     style={{
                       width: '40px', height: '40px',
@@ -6289,6 +6294,7 @@ export default function App() {
                 {/* Filtros (solo en biblioteca) */}
                 {activeTab === 'library' && !todayMode && (
                   <button 
+                    aria-label="Filtros"
                     onClick={() => setShowFilters(true)}
                     style={{
                       width: '40px', height: '40px',
