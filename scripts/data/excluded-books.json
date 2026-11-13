@@ -1,5 +1,122 @@
 [
   {
+    "id": 186,
+    "t": "Diarios de damas de la corte Heian",
+    "a": [
+      "AA. VV."
+    ],
+    "calibreId": 186,
+    "motivo": "diario"
+  },
+  {
+    "id": 874,
+    "t": "La Perla número 17",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 874,
+    "motivo": "revista"
+  },
+  {
+    "id": 875,
+    "t": "La Perla número 18",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 875,
+    "motivo": "revista"
+  },
+  {
+    "id": 877,
+    "t": "La Perla número 16",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 877,
+    "motivo": "revista"
+  },
+  {
+    "id": 878,
+    "t": "La Perla número 15",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 878,
+    "motivo": "revista"
+  },
+  {
+    "id": 879,
+    "t": "La Perla número 14",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 879,
+    "motivo": "revista"
+  },
+  {
+    "id": 880,
+    "t": "La Perla número 13",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 880,
+    "motivo": "revista"
+  },
+  {
+    "id": 881,
+    "t": "La Perla número 12",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 881,
+    "motivo": "revista"
+  },
+  {
+    "id": 882,
+    "t": "La Perla número 11",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 882,
+    "motivo": "revista"
+  },
+  {
+    "id": 883,
+    "t": "La Perla número 9",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 883,
+    "motivo": "revista"
+  },
+  {
+    "id": 884,
+    "t": "La Perla número 10",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 884,
+    "motivo": "revista"
+  },
+  {
+    "id": 885,
+    "t": "La Perla número 8",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 885,
+    "motivo": "revista"
+  },
+  {
+    "id": 886,
+    "t": "La Perla número 7",
+    "a": [
+      "Anónimo"
+    ],
+    "calibreId": 886,
+    "motivo": "revista"
+  },
+  {
     "id": 1152,
     "t": "Anatomía Para el Movimiento (Blandine Calais-Germanin) (Z-Library)",
     "a": [
@@ -154,6 +271,15 @@
     "motivo": "negocios"
   },
   {
+    "id": 1257,
+    "t": "Querida Dolly",
+    "a": [
+      "Dolly Alderton"
+    ],
+    "calibreId": 1257,
+    "motivo": "consultorio"
+  },
+  {
     "id": 1260,
     "t": "Psycho-Cybernetics: Updated and Expanded",
     "a": [
@@ -181,6 +307,15 @@
     "motivo": "manual profesional"
   },
   {
+    "id": 1263,
+    "t": "Scandinavian Design (Charlotte Fiell, Peter Fiell) (Z-Library)",
+    "a": [
+      "Desconocido"
+    ],
+    "calibreId": 1263,
+    "motivo": "libro de consulta"
+  },
+  {
     "id": 1264,
     "t": "Designing Commercial Interiors (Christine M. Piotrowski) (Z-Library)",
     "a": [
@@ -188,6 +323,24 @@
     ],
     "calibreId": 1264,
     "motivo": "manual profesional"
+  },
+  {
+    "id": 1285,
+    "t": "Artículos 2021",
+    "a": [
+      "Rosa Montero"
+    ],
+    "calibreId": 1285,
+    "motivo": "columnas de prensa"
+  },
+  {
+    "id": 1287,
+    "t": "Artículos 2020",
+    "a": [
+      "Rosa Montero"
+    ],
+    "calibreId": 1287,
+    "motivo": "columnas de prensa"
   },
   {
     "id": 1304,
@@ -238,6 +391,51 @@
     "motivo": "autoayuda"
   },
   {
+    "id": 1329,
+    "t": "Historia del mundo mapa a mapa",
+    "a": [
+      "DK"
+    ],
+    "calibreId": 1329,
+    "motivo": "libro de consulta"
+  },
+  {
+    "id": 1363,
+    "t": "Viviendo la economía: ayer, hoy y mañana (Spanish Edition)",
+    "a": [
+      "Peter J. Boettke"
+    ],
+    "calibreId": 1363,
+    "motivo": "manual"
+  },
+  {
+    "id": 1645,
+    "t": "Diarios. A ratos perdidos 5 y 6",
+    "a": [
+      "Rafael Chirbes"
+    ],
+    "calibreId": 1645,
+    "motivo": "diario"
+  },
+  {
+    "id": 1646,
+    "t": "Diarios. A ratos perdidos 3 y 4",
+    "a": [
+      "Rafael Chirbes"
+    ],
+    "calibreId": 1646,
+    "motivo": "diario"
+  },
+  {
+    "id": 1647,
+    "t": "Diarios. A ratos perdidos 1 y 2",
+    "a": [
+      "Rafael Chirbes"
+    ],
+    "calibreId": 1647,
+    "motivo": "diario"
+  },
+  {
     "id": 1662,
     "t": "Sopa de pollo para el alma",
     "a": [
@@ -246,6 +444,33 @@
     ],
     "calibreId": 1662,
     "motivo": "autoayuda"
+  },
+  {
+    "id": 1874,
+    "t": "Los diarios de Emilio Renzi. Un día en la vida",
+    "a": [
+      "Ricardo Piglia"
+    ],
+    "calibreId": 1874,
+    "motivo": "diario"
+  },
+  {
+    "id": 1875,
+    "t": "Los diarios de Emilio Renzi. Años de formación",
+    "a": [
+      "Ricardo Piglia"
+    ],
+    "calibreId": 1875,
+    "motivo": "diario"
+  },
+  {
+    "id": 1876,
+    "t": "Los diarios de Emilio Renzi. Los años felices",
+    "a": [
+      "Ricardo Piglia"
+    ],
+    "calibreId": 1876,
+    "motivo": "diario"
   },
   {
     "id": 1930,
@@ -282,6 +507,24 @@
     ],
     "calibreId": 2038,
     "motivo": "autoayuda"
+  },
+  {
+    "id": 2100,
+    "t": "The Science of Plants: Inside their Secret World",
+    "a": [
+      "Dorling Kindersley"
+    ],
+    "calibreId": 2100,
+    "motivo": "libro de consulta"
+  },
+  {
+    "id": 2104,
+    "t": "Entender la arquitectura",
+    "a": [
+      "Leland M. Roth"
+    ],
+    "calibreId": 2104,
+    "motivo": "libro de consulta"
   },
   {
     "id": 2109,

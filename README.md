@@ -3,8 +3,8 @@
 App visual de recomendación de libros con interfaz inspirada en Netflix/Tinder.
 
 ## Características
-- 🎯 1818 hooks narrativos para libros
-- 📖 1818 libros con metadatos completos
+- 🎯 1791 hooks narrativos para libros
+- 📖 1791 libros con metadatos completos
 - 🧭 Ruta de lectura: 200 obras en orden cronológico con progreso
 - 🎨 Interfaz visual con covers
 - 🧙 Wizard de recomendaciones inteligente

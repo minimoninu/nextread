@@ -1211,12 +1211,6 @@
     "experience": "fragmentado",
     "why_matters": "Smith experimental"
   },
-  "186": {
-    "hook": "Damas de la corte japonesa del siglo X escriben sus vidas. El mundo flotante de Heian en primera persona.",
-    "perfect_for": "Fascinados por el Japón clásico",
-    "why_matters": "Voces femeninas milenarias",
-    "experience": "exquisito"
-  },
   "187": {
     "hook": "Zambia desde la independencia hasta hoy a través de tres familias. Serpell escribió la novela africana del siglo.",
     "perfect_for": "Lectores de narrativa africana contemporánea",
@@ -7541,24 +7535,6 @@
     "experience": "vertiginoso",
     "why_matters": "Hugo y Nebula"
   },
-  "874": {
-    "hook": "Otra entrega de la revista erótica victoriana.",
-    "perfect_for": "Lectores de La Perla",
-    "why_matters": "Serie histórica",
-    "experience": "libertino"
-  },
-  "875": {
-    "hook": "Un escritor encuentra un cuaderno rojo que cambia su vida. Auster sobre el azar y la escritura.",
-    "perfect_for": "Escritores que creen en las coincidencias",
-    "themes": [
-      "escritura",
-      "azar",
-      "cuaderno",
-      "vida"
-    ],
-    "experience": "misterioso",
-    "why_matters": "Auster sobre su oficio"
-  },
   "876": {
     "hook": "Un hombre desaparece de su vida perfecta. Auster escribió sobre la necesidad de borrarse y empezar de nuevo.",
     "perfect_for": "Quien haya querido desaparecer",
@@ -7570,90 +7546,6 @@
     ],
     "experience": "inquietante",
     "why_matters": "Auster sobre la fuga"
-  },
-  "877": {
-    "hook": "La historia de América contada a través de sus errores. Auster pensador: el país que pudo ser y no fue.",
-    "perfect_for": "Críticos de América que la aman",
-    "themes": [
-      "América",
-      "historia",
-      "fracaso",
-      "esperanza"
-    ],
-    "experience": "reflexivo",
-    "why_matters": "Auster sobre su país"
-  },
-  "878": {
-    "hook": "La Perla continúa con sus historias clandestinas.",
-    "perfect_for": "Coleccionistas de erotismo victoriano",
-    "why_matters": "Documento histórico",
-    "experience": "transgresor"
-  },
-  "879": {
-    "hook": "Más historias de La Perla victoriana.",
-    "perfect_for": "Lectores de erotismo clásico",
-    "why_matters": "Erotismo de época",
-    "experience": "provocador"
-  },
-  "880": {
-    "hook": "Un miniaturista es asesinado en el Estambul del siglo XVI. Pamuk escribió un thriller en el corazón del Imperio Otomano.",
-    "perfect_for": "Fans del thriller histórico",
-    "themes": [
-      "Estambul",
-      "arte",
-      "asesinato",
-      "Otomano"
-    ],
-    "experience": "suntuoso",
-    "why_matters": "El Pamuk más accesible"
-  },
-  "881": {
-    "hook": "Un poeta turco busca la nieve y encuentra la política. Pamuk escribió sobre Turquía entre Oriente y Occidente.",
-    "perfect_for": "Interesados en Turquía contemporánea",
-    "themes": [
-      "Turquía",
-      "política",
-      "identidad",
-      "Islam"
-    ],
-    "experience": "complejo",
-    "why_matters": "Pamuk sobre su país"
-  },
-  "882": {
-    "hook": "Un hombre obsesionado con una mujer que apenas conoce. Pamuk escribió la novela de amor más intensa de su carrera.",
-    "perfect_for": "Románticos obsesivos",
-    "themes": [
-      "amor",
-      "obsesión",
-      "Estambul",
-      "museo"
-    ],
-    "experience": "obsesivo",
-    "why_matters": "Pamuk creó un museo real basado en esta novela"
-  },
-  "883": {
-    "hook": "Más relatos de la revista erótica victoriana.",
-    "perfect_for": "Coleccionistas",
-    "why_matters": "Historia literaria",
-    "experience": "transgresor"
-  },
-  "884": {
-    "hook": "Erotismo victoriano de La Perla, revista clandestina del siglo XIX.",
-    "perfect_for": "Curiosos de erotismo histórico",
-    "why_matters": "Historia del erotismo",
-    "experience": "picante"
-  },
-  "885": {
-    "hook": "La Perla y sus relatos prohibidos.",
-    "perfect_for": "Lectores de erotismo histórico",
-    "why_matters": "Literatura clandestina",
-    "experience": "atrevido"
-  },
-  "886": {
-    "hook": "Historias de La Perla victoriana.",
-    "perfect_for": "Fans de erotismo clásico",
-    "why_matters": "Colección completa",
-    "experience": "picante"
   },
   "887": {
     "hook": "Un puente une y separa a los pueblos de Bosnia. Andrić escribió la novela que ganó el Nobel.",
@@ -10557,12 +10449,6 @@
     "experience": "sardónico",
     "why_matters": "McEwan en modo satírico"
   },
-  "1257": {
-    "hook": "Querida Dolly: consejos de vida. Alderton respondiendo cartas.",
-    "perfect_for": "Fans de Alderton",
-    "why_matters": "Alderton consejera",
-    "experience": "cálido"
-  },
   "1258": {
     "hook": "Y él no entiende por qué ella ha dejado de quererlo.",
     "themes": [],
@@ -10575,16 +10461,6 @@
     "perfect_for": "Fans de Alderton",
     "why_matters": "Alderton sobre el amor",
     "experience": "honesto"
-  },
-  "1263": {
-    "hook": "Scandinavian Design (Charlotte Fiell, Peter Fiell) (Z-Library) ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
   },
   "1265": {
     "hook": "Un día en la vida de un prisionero soviético. Solzhenitsyn escribió la novela que hizo temblar a la URSS.",
@@ -10780,18 +10656,6 @@
     "experience": "fascinante",
     "why_matters": "Montero periodista e historiadora"
   },
-  "1285": {
-    "hook": "Columnas del 2021: la resaca de la pandemia y lo que vino después. Montero sigue cronificando la realidad.",
-    "perfect_for": "Seguidores de su columna en El País",
-    "themes": [
-      "actualidad",
-      "crónica",
-      "España",
-      "vida"
-    ],
-    "experience": "actual",
-    "why_matters": "Montero periodista incansable"
-  },
   "1286": {
     "hook": "Cuentos que parecen verdad, verdades que parecen cuento. Montero mezcla realidad y ficción en relatos que sorprenden.",
     "perfect_for": "Lectores que disfrutan la ambigüedad",
@@ -10803,18 +10667,6 @@
     ],
     "experience": "sorprendente",
     "why_matters": "Montero en formato breve"
-  },
-  "1287": {
-    "hook": "Columnas del 2020: pandemia, política, vida. Montero como cronista de un año que cambió todo.",
-    "perfect_for": "Quien quiera recordar (o entender) 2020",
-    "themes": [
-      "pandemia",
-      "actualidad",
-      "crónica",
-      "España"
-    ],
-    "experience": "actual",
-    "why_matters": "Montero testigo de la pandemia"
   },
   "1288": {
     "hook": "Un thriller sobre el auge del fascismo en Europa. Montero advierte sobre los peligros que regresan.",
@@ -11023,18 +10875,6 @@
     "why_matters": "El Balzac que la academia prefiere ignorar",
     "experience": "libertino"
   },
-  "1329": {
-    "hook": "Toda la historia de la humanidad contada a través de mapas. Cada página es un viaje visual: imperios que nacen y mueren, rutas comerciales, migraciones, guerras. La historia como nunca la habías visto.",
-    "perfect_for": "Visuales que prefieren ver la historia que leerla",
-    "themes": [
-      "historia",
-      "geografía",
-      "civilización",
-      "visual"
-    ],
-    "experience": "fascinante",
-    "why_matters": "DK en su mejor formato"
-  },
   "1330": {
     "hook": "Un psiquiatra nigeriano camina por Manhattan observando todo. Cole escribió la novela de Nueva York más contemplativa del siglo XXI.",
     "perfect_for": "Flaneurs literarios y amantes de Nueva York",
@@ -11161,12 +11001,6 @@
     "perfect_for": "Ilustradores y amantes del arte gráfico",
     "why_matters": "Lo último en ilustración mundial",
     "experience": "inspirador"
-  },
-  "1363": {
-    "hook": "La economía explicada para vivirla. Ayer, hoy y mañana.",
-    "perfect_for": "Lectores de economía accesible",
-    "why_matters": "Economía para todos",
-    "experience": "práctico"
   },
   "1364": {
     "hook": "Animación explicada. De Disney a Pixar a la animación independiente, cómo se hace la magia.",
@@ -12699,30 +12533,6 @@
     "experience": "amargo",
     "why_matters": "Premio Nacional de Narrativa"
   },
-  "1645": {
-    "hook": "Una familia valenciana atraviesa el franquismo. Chirbes escribió sobre la memoria y el silencio español.",
-    "perfect_for": "Interesados en la posguerra española",
-    "themes": [
-      "franquismo",
-      "Valencia",
-      "familia",
-      "silencio"
-    ],
-    "experience": "sombrío",
-    "why_matters": "Chirbes sobre el pasado"
-  },
-  "1646": {
-    "hook": "Los diarios de Chirbes continúan. Más reflexiones, más España, más lucidez incómoda.",
-    "perfect_for": "Lectores del primer volumen de diarios",
-    "why_matters": "Chirbes sin filtros, continuación",
-    "experience": "punzante"
-  },
-  "1647": {
-    "hook": "Chirbes escribe su diario: literatura, España, vida cotidiana. El escritor más lúcido de su generación sin ficción.",
-    "perfect_for": "Fans de Chirbes que quieran al hombre",
-    "why_matters": "Chirbes íntimo",
-    "experience": "revelador"
-  },
   "1648": {
     "hook": "Especuladores inmobiliarios en la España del boom. Chirbes diseccionando la corrupción y la podredumbre moral del país.",
     "perfect_for": "Lectores de la España corrupta",
@@ -14157,24 +13967,6 @@
     "why_matters": "Confesiones",
     "experience": "revelador"
   },
-  "1874": {
-    "hook": "Un día en la vida de Piglia. Los diarios en su forma más concentrada.",
-    "perfect_for": "Fans de Piglia",
-    "why_matters": "Piglia cotidiano",
-    "experience": "íntimo"
-  },
-  "1875": {
-    "hook": "Los diarios de Piglia: formación de un escritor. El crítico como autobiógrafo.",
-    "perfect_for": "Fans de Piglia",
-    "why_matters": "Piglia íntimo",
-    "experience": "formativo"
-  },
-  "1876": {
-    "hook": "Piglia continúa sus diarios. Los años de madurez.",
-    "perfect_for": "Lectores de Piglia",
-    "why_matters": "Piglia maduro",
-    "experience": "reflexivo"
-  },
   "1877": {
     "hook": "Un poeta mira un autorretrato de Parmigianino y escribe sobre el arte, el yo, el tiempo. Ashbery en su poema más célebre y accesible.",
     "perfect_for": "Lectores de poesía americana contemporánea",
@@ -15205,16 +14997,6 @@
     "perfect_for": "Curiosos de lugares olvidados de España",
     "why_matters": "Torrijos cartografiando la España invisible"
   },
-  "2100": {
-    "hook": "The Science of Plants: Inside their Secret World, de Dorling Kindersley, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
   "2101": {
     "hook": "Un perfumista busca las esencias más raras del mundo. Aventura olfativa por bosques remotos.",
     "perfect_for": "Fascinados por los perfumes y la naturaleza",
@@ -15232,12 +15014,6 @@
     "perfect_for": "Historiadores del arte y amantes del pensamiento medieval",
     "why_matters": "Clásico de la historia del arte",
     "experience": "iluminador"
-  },
-  "2104": {
-    "hook": "Arquitectura explicada desde los fundamentos. Roth enseñando a ver edificios.",
-    "perfect_for": "Estudiantes de arquitectura y curiosos",
-    "why_matters": "Manual clásico de arquitectura",
-    "experience": "formativo"
   },
   "2105": {
     "hook": "Millás y Arsuaga sobre la vida. Ciencia y literatura en diálogo.",
