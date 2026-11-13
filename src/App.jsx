@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useCallback, useRef, memo } from '
 import { applyOptionToPreferences, buildPreferencesFromAnswers } from './wizardPreferences.js';
 import { buildTodayPicks } from './todayPicks.js';
 import { getBookAwardLabels, isAwardCollection } from './bookAwards.js';
+import { buildListsBackup, parseListsBackup, mergeLists } from './listsBackup.js';
 
 // =============================================================================
 // CONFIGURACIÓN
@@ -141,24 +142,6 @@ const haptic = {
       navigator.vibrate([50, 30, 50, 30, 50]);
     }
   }
-};
-
-// =============================================================================
-// HOOK: useTouchAnimation - Estado de presión para animaciones
-// =============================================================================
-const useTouchAnimation = () => {
-  const [isPressed, setIsPressed] = useState(false);
-  
-  const touchProps = {
-    onMouseDown: () => setIsPressed(true),
-    onMouseUp: () => setIsPressed(false),
-    onMouseLeave: () => setIsPressed(false),
-    onTouchStart: () => { setIsPressed(true); haptic.light(); },
-    onTouchEnd: () => setIsPressed(false),
-    onTouchCancel: () => setIsPressed(false),
-  };
-  
-  return { isPressed, touchProps };
 };
 
 // =============================================================================
@@ -343,7 +326,10 @@ const COPY = {
     emptyHint: 'Explora la biblioteca y guarda los que te interesen',
     reading: 'Leyendo',
     want: 'Quiero leer',
-    read: 'Leídos'
+    read: 'Leídos',
+    backupHint: 'Tus listas solo viven en este dispositivo.',
+    export: 'Exportar copia',
+    import: 'Importar copia'
   }
 };
 
@@ -1397,9 +1383,82 @@ const CollectionHeader = ({ collection, onClear, theme, countOverride }) => {
 }
 
 // =============================================================================
+// COMPONENTE: ListsBackupBar - exportar / importar listas a un archivo JSON
+// =============================================================================
+const ListsBackupBar = ({ lists, onImport, theme }) => {
+  const t = THEMES[theme];
+  const fileRef = useRef(null);
+  const [message, setMessage] = useState(null);
+  const savedTotal = Object.keys(lists).length;
+
+  const handleExport = () => {
+    const backup = buildListsBackup(lists);
+    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `nextread-listas-${backup.exportedAt.slice(0, 10)}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+    setMessage({ ok: true, text: `Copia exportada (${Object.keys(backup.lists).length} libros).` });
+  };
+
+  const handleFile = async (event) => {
+    const file = event.target.files?.[0];
+    event.target.value = '';
+    if (!file) return;
+    try {
+      const { lists: imported, count } = parseListsBackup(await file.text());
+      onImport(imported);
+      setMessage({ ok: true, text: `Copia importada: ${count} libros combinados con tus listas.` });
+    } catch (error) {
+      setMessage({ ok: false, text: error.message || 'No se pudo importar la copia.' });
+    }
+  };
+
+  const buttonStyle = {
+    padding: '8px 14px',
+    borderRadius: '999px',
+    border: `1px solid ${t.border.default}`,
+    background: 'transparent',
+    color: t.text.secondary,
+    fontSize: '13px',
+    fontFamily: FONT_STACK_BODY,
+    cursor: 'pointer'
+  };
+
+  return (
+    <div style={{ margin: '32px 24px 0', paddingTop: '20px', borderTop: `1px solid ${t.border.subtle}`, textAlign: 'center' }}>
+      <p style={{ fontSize: '13px', color: t.text.tertiary, marginBottom: '12px' }}>{COPY.saved.backupHint}</p>
+      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <button
+          type="button"
+          onClick={handleExport}
+          disabled={savedTotal === 0}
+          style={{ ...buttonStyle, opacity: savedTotal === 0 ? 0.45 : 1, cursor: savedTotal === 0 ? 'default' : 'pointer' }}
+        >
+          {COPY.saved.export}
+        </button>
+        <button type="button" onClick={() => fileRef.current?.click()} style={buttonStyle}>
+          {COPY.saved.import}
+        </button>
+        <input ref={fileRef} type="file" accept="application/json,.json" onChange={handleFile} style={{ display: 'none' }} />
+      </div>
+      {message && (
+        <p role="status" style={{ fontSize: '13px', marginTop: '12px', color: message.ok ? t.success : t.accent }}>
+          {message.text}
+        </p>
+      )}
+    </div>
+  );
+};
+
+// =============================================================================
 // COMPONENTE: SavedView (vista de guardados)
 // =============================================================================
-const SavedView = ({ books, lists, onBookClick, theme, getListStatus }) => {
+const SavedView = ({ books, lists, onBookClick, theme, getListStatus, onImportLists }) => {
   const t = THEMES[theme];
   
   const savedBooks = useMemo(() => {
@@ -1417,6 +1476,7 @@ const SavedView = ({ books, lists, onBookClick, theme, getListStatus }) => {
         <div style={{ fontSize: '48px', marginBottom: '16px', opacity: 0.5 }}>♡</div>
         <p style={{ fontSize: '18px', color: t.text.secondary, marginBottom: '8px' }}>{COPY.saved.empty}</p>
         <p style={{ fontSize: '14px', color: t.text.tertiary }}>{COPY.saved.emptyHint}</p>
+        <ListsBackupBar lists={lists} onImport={onImportLists} theme={theme} />
       </div>
     );
   }
@@ -1450,6 +1510,7 @@ const SavedView = ({ books, lists, onBookClick, theme, getListStatus }) => {
           getListStatus={getListStatus}
         />
       )}
+      <ListsBackupBar lists={lists} onImport={onImportLists} theme={theme} />
     </div>
   );
 };
@@ -1954,7 +2015,7 @@ const CollectionDetailView = ({ collection, books, awardedBookIds, onBookClick, 
 // =============================================================================
 // COMPONENTE: RelatedBooksSection - Libros relacionados inline
 // =============================================================================
-const RelatedBooksSection = memo(({ currentBook, books, hooks, onBookClick, theme, t }) => {
+const RelatedBooksSection = memo(({ currentBook, books, hooks, onBookClick, t }) => {
   const currentHook = hooks[String(currentBook.id)];
   
   // Encontrar libros relacionados por múltiples criterios
@@ -2134,13 +2195,11 @@ const BookModal = memo(({ book, onClose, theme, currentList, onListChange, onAut
   const t = THEMES[theme];
   useEscapeKey(onClose);
   
-  if (!book) return null;
-  
   const coverUrl = `/portadas/${book.id}.jpg`;
   const title = book.t || book.title || 'Sin título';
   const authors = book.a || book.authors || ['Desconocido'];
   const awards = useMemo(() => getBookAwardLabels(book, bookHook || {}), [book, bookHook]);
-  const vibes = book.v || book.vibes || [];
+  const vibes = useMemo(() => book.v || book.vibes || [], [book]);
   const series = book.s || book.series;
   const seriesIndex = book.si || book.series_index;
   const pages = book.pg || book.pages || 300;
@@ -4571,7 +4630,6 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
   // Pregunta actual basada en el path
   const currentQuestionKey = path[path.length - 1];
   const currentQuestion = WIZARD_QUESTIONS[currentQuestionKey];
-  const isComplete = !currentQuestion || currentQuestion.key === 'risk_preference' && answers[currentQuestion.key];
   
   // Contar preguntas respondidas
   const questionsAnswered = Object.keys(answers).length;
@@ -4909,7 +4967,6 @@ const Wizard = ({ books, hooks, onSelect, onClose, theme }) => {
   // ═══════════════════════════════════════════════════════════════════════════
   if (result && result.length > 0) {
     const { book, matchDetails } = result[resultIndex];
-    const bookHook = hooks[String(book.id)];
     const reason = generateReason(book, matchDetails);
     const coverUrl = `/portadas/${book.id}.jpg`;
     const pages = book.pg || 300;
@@ -5622,6 +5679,10 @@ export default function App() {
       }
       return { ...prev, [bookId]: listId };
     });
+  }, [setLists]);
+
+  const handleImportLists = useCallback((imported) => {
+    setLists(prev => mergeLists(prev, imported));
   }, [setLists]);
 
   const getBookAwardLabel = useCallback((book) => {
@@ -6676,6 +6737,7 @@ export default function App() {
             onBookClick={setSelectedBook}
             theme={theme}
             getListStatus={getListStatus}
+            onImportLists={handleImportLists}
           />
         )}
         
