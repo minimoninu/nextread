@@ -48,6 +48,10 @@ if git diff --cached --quiet; then
   exit 0
 fi
 
+echo "Generando miniaturas de portadas nuevas..."
+npm run build:thumbs
+git add -A -- public/portadas/thumbs
+
 echo "Validando datos (books/hooks/collections) en modo estricto..."
 npm run check:data:strict
 

@@ -6,3 +6,9 @@
 
 # macOS
 .DS_Store
+
+# Datos personales de Kindle (no publicar)
+/kindle-catalogo
+
+# Datos derivados (npm run build:data)
+/public/data

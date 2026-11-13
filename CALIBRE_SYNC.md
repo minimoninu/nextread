@@ -6,12 +6,12 @@ Cuando añadas nuevos libros a tu biblioteca de Calibre, sigue estos pasos para 
 
 ```bash
 # 1. Ve al directorio del proyecto
-cd /Users/kemberly/Documents/nextread
+cd "/Users/kemberly/Documents/proyectos apps/nextread"
 
 # 2. Ejecuta el script de sincronización
 python3 scripts/calibre_sync.py --calibre-path "/Users/kemberly/Documents/Calibre" --copy-covers --generate-hooks
 # 3. Sube los cambios
-git add .
+git add public scripts src
 git commit -m "Sync: nuevos libros desde Calibre"
 git push
 ```
@@ -33,10 +33,10 @@ Añade tus nuevos libros a Calibre como siempre. Asegúrate de:
 ### Paso 2: Ejecuta el script de sincronización
 
 ```bash
-cd /Users/kemberly/Documents/nextread
+cd "/Users/kemberly/Documents/proyectos apps/nextread"
 
 python scripts/calibre_sync.py \
-  --calibre-path "/Users/kemberly/Calibre Library" \
+  --calibre-path "/Users/kemberly/Documents/Calibre" \
   --copy-covers \
   --generate-hooks
 ```
@@ -83,7 +83,7 @@ Tengo estos libros nuevos sin hooks de calidad: [lista]
 ### Paso 5: Sube los cambios
 
 ```bash
-git add .
+git add public scripts src
 git commit -m "Sync: añadidos X libros nuevos"
 git push
 ```
@@ -185,15 +185,15 @@ Puedes crear un script que se ejecute automáticamente:
 #!/bin/bash
 # sync_calibre.sh
 
-cd /Users/kemberly/Documents/nextread
+cd "/Users/kemberly/Documents/proyectos apps/nextread"
 
 echo "🔄 Sincronizando Calibre..."
 python scripts/calibre_sync.py \
-  --calibre-path "/Users/kemberly/Calibre Library" \
+  --calibre-path "/Users/kemberly/Documents/Calibre" \
   --copy-covers
 
 echo "📤 Subiendo cambios..."
-git add .
+git add public scripts src
 git commit -m "Auto-sync: $(date +%Y-%m-%d)"
 git push
 

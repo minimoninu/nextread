@@ -1211,12 +1211,6 @@
     "experience": "fragmentado",
     "why_matters": "Smith experimental"
   },
-  "186": {
-    "hook": "Damas de la corte japonesa del siglo X escriben sus vidas. El mundo flotante de Heian en primera persona.",
-    "perfect_for": "Fascinados por el Japón clásico",
-    "why_matters": "Voces femeninas milenarias",
-    "experience": "exquisito"
-  },
   "187": {
     "hook": "Zambia desde la independencia hasta hoy a través de tres familias. Serpell escribió la novela africana del siglo.",
     "perfect_for": "Lectores de narrativa africana contemporánea",
@@ -7541,24 +7535,6 @@
     "experience": "vertiginoso",
     "why_matters": "Hugo y Nebula"
   },
-  "874": {
-    "hook": "Otra entrega de la revista erótica victoriana.",
-    "perfect_for": "Lectores de La Perla",
-    "why_matters": "Serie histórica",
-    "experience": "libertino"
-  },
-  "875": {
-    "hook": "Un escritor encuentra un cuaderno rojo que cambia su vida. Auster sobre el azar y la escritura.",
-    "perfect_for": "Escritores que creen en las coincidencias",
-    "themes": [
-      "escritura",
-      "azar",
-      "cuaderno",
-      "vida"
-    ],
-    "experience": "misterioso",
-    "why_matters": "Auster sobre su oficio"
-  },
   "876": {
     "hook": "Un hombre desaparece de su vida perfecta. Auster escribió sobre la necesidad de borrarse y empezar de nuevo.",
     "perfect_for": "Quien haya querido desaparecer",
@@ -7570,90 +7546,6 @@
     ],
     "experience": "inquietante",
     "why_matters": "Auster sobre la fuga"
-  },
-  "877": {
-    "hook": "La historia de América contada a través de sus errores. Auster pensador: el país que pudo ser y no fue.",
-    "perfect_for": "Críticos de América que la aman",
-    "themes": [
-      "América",
-      "historia",
-      "fracaso",
-      "esperanza"
-    ],
-    "experience": "reflexivo",
-    "why_matters": "Auster sobre su país"
-  },
-  "878": {
-    "hook": "La Perla continúa con sus historias clandestinas.",
-    "perfect_for": "Coleccionistas de erotismo victoriano",
-    "why_matters": "Documento histórico",
-    "experience": "transgresor"
-  },
-  "879": {
-    "hook": "Más historias de La Perla victoriana.",
-    "perfect_for": "Lectores de erotismo clásico",
-    "why_matters": "Erotismo de época",
-    "experience": "provocador"
-  },
-  "880": {
-    "hook": "Un miniaturista es asesinado en el Estambul del siglo XVI. Pamuk escribió un thriller en el corazón del Imperio Otomano.",
-    "perfect_for": "Fans del thriller histórico",
-    "themes": [
-      "Estambul",
-      "arte",
-      "asesinato",
-      "Otomano"
-    ],
-    "experience": "suntuoso",
-    "why_matters": "El Pamuk más accesible"
-  },
-  "881": {
-    "hook": "Un poeta turco busca la nieve y encuentra la política. Pamuk escribió sobre Turquía entre Oriente y Occidente.",
-    "perfect_for": "Interesados en Turquía contemporánea",
-    "themes": [
-      "Turquía",
-      "política",
-      "identidad",
-      "Islam"
-    ],
-    "experience": "complejo",
-    "why_matters": "Pamuk sobre su país"
-  },
-  "882": {
-    "hook": "Un hombre obsesionado con una mujer que apenas conoce. Pamuk escribió la novela de amor más intensa de su carrera.",
-    "perfect_for": "Románticos obsesivos",
-    "themes": [
-      "amor",
-      "obsesión",
-      "Estambul",
-      "museo"
-    ],
-    "experience": "obsesivo",
-    "why_matters": "Pamuk creó un museo real basado en esta novela"
-  },
-  "883": {
-    "hook": "Más relatos de la revista erótica victoriana.",
-    "perfect_for": "Coleccionistas",
-    "why_matters": "Historia literaria",
-    "experience": "transgresor"
-  },
-  "884": {
-    "hook": "Erotismo victoriano de La Perla, revista clandestina del siglo XIX.",
-    "perfect_for": "Curiosos de erotismo histórico",
-    "why_matters": "Historia del erotismo",
-    "experience": "picante"
-  },
-  "885": {
-    "hook": "La Perla y sus relatos prohibidos.",
-    "perfect_for": "Lectores de erotismo histórico",
-    "why_matters": "Literatura clandestina",
-    "experience": "atrevido"
-  },
-  "886": {
-    "hook": "Historias de La Perla victoriana.",
-    "perfect_for": "Fans de erotismo clásico",
-    "why_matters": "Colección completa",
-    "experience": "picante"
   },
   "887": {
     "hook": "Un puente une y separa a los pueblos de Bosnia. Andrić escribió la novela que ganó el Nobel.",
@@ -9855,149 +9747,6 @@
     "why_matters": "Premio Pulitzer, clásico del western",
     "experience": "salvaje"
   },
-  "1152": {
-    "hook": "Anatomía Para el Movimiento (Blandine Calais-Germanin) (Z-Library) ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1153": {
-    "hook": "Professional Practice ForInterior Designers, de Christine M. Piotrowski, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1154": {
-    "hook": "Cómo escalar tu empresa. Manual de crecimiento empresarial.",
-    "perfect_for": "Emprendedores y ejecutivos",
-    "why_matters": "Guía de escalamiento",
-    "experience": "práctico"
-  },
-  "1155": {
-    "hook": "Studio Shape Up, de Streifeneder, Chelsea;, ofrece una experiencia tierno.",
-    "perfect_for": "Lectores que buscan una lectura corta, fluida y accesible.",
-    "experience": "tierno",
-    "why_matters": "Ideal para retomar ritmo de lectura sin friccion."
-  },
-  "1156": {
-    "hook": "Anatomía del Pilates. Cómo funcionan los ejercicios en tu cuerpo.",
-    "perfect_for": "Practicantes de Pilates",
-    "why_matters": "Referencia técnica",
-    "experience": "instructivo"
-  },
-  "1157": {
-    "hook": "La ganancia es primero by Mike Michalowicz (z-lib.org) ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1158": {
-    "hook": "Gerber publicóÂ El mito revisado, del cual se han vendido más de 4 millones de copias en todo el mundo y se ha traducido a más de 20 idiomas.",
-    "themes": [],
-    "experience": "inmersivo",
-    "perfect_for": "Emprendedores que quieran sistematizar su negocio",
-    "why_matters": "El libro de negocios que cambió a millones de pymes"
-  },
-  "1159": {
-    "hook": "B00AXS5EAK EBOK, de Berman, Karen, ofrece una experiencia revelador.",
-    "perfect_for": "Lectores que buscan una lectura de ritmo medio, equilibrada.",
-    "experience": "revelador",
-    "why_matters": "Amplia tu biblioteca personal con una opcion solida para este momento."
-  },
-  "1160": {
-    "hook": "Todo lo que puede salir mal al emprender. Trías de Bes advirtiendo con honestidad brutal.",
-    "perfect_for": "Emprendedores que quieran la verdad",
-    "why_matters": "El libro de emprendimiento más honesto",
-    "experience": "revelador"
-  },
-  "1161": {
-    "hook": "9781592538492, de Linda O'Shea, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura de ritmo medio, equilibrada y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Amplia tu biblioteca personal con una opcion solida para este momento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1162": {
-    "hook": "Professional Practice for Interior Designers, de Christine M. Piotrowski, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1163": {
-    "hook": "Interior Lighting (Gary Gordon) (Z-Library) ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1164": {
-    "hook": "Marketing de guerrilla para emprendedores valientes (Fuera de colección) (Spanish Edition), de Carlos Bravo, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura corta, equilibrada y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Amplia tu biblioteca personal con una opcion solida para este momento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1165": {
-    "hook": "EL MITO DEL EMPRENDEDOR, de Laserfiche Client, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1166": {
-    "hook": "El Plan de Marketing de 1-Página: Consigue Nuevos Clientes, Gana Más Dinero, Y Destaca Entre La Multitud (Spanish Edition), de Dib, Allan, ofrece una experiencia revelador.",
-    "perfect_for": "Lectores que buscan una lectura de ritmo medio, equilibrada.",
-    "experience": "revelador",
-    "why_matters": "Amplia tu biblioteca personal con una opcion solida para este momento."
-  },
-  "1167": {
-    "hook": "El método Pilates la guía más moderna de desarrollo muscular, estiramiento y tonificación corporal para practicar en casa y... (Brooke Siler Joan Carles Guix) (Z-Library) ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1168": {
-    "hook": "Tribus, de Seth Godin, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura corta, fluida y accesible y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Ideal para retomar ritmo de lectura sin friccion.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
   "1173": {
     "hook": "Cuentos del oeste de Irlanda. Barrett escribiendo el paisaje y las vidas marginales con precisión devastadora.",
     "perfect_for": "Fans del cuento irlandés contemporáneo",
@@ -10700,12 +10449,6 @@
     "experience": "sardónico",
     "why_matters": "McEwan en modo satírico"
   },
-  "1257": {
-    "hook": "Querida Dolly: consejos de vida. Alderton respondiendo cartas.",
-    "perfect_for": "Fans de Alderton",
-    "why_matters": "Alderton consejera",
-    "experience": "cálido"
-  },
   "1258": {
     "hook": "Y él no entiende por qué ella ha dejado de quererlo.",
     "themes": [],
@@ -10718,58 +10461,6 @@
     "perfect_for": "Fans de Alderton",
     "why_matters": "Alderton sobre el amor",
     "experience": "honesto"
-  },
-  "1260": {
-    "hook": "Tu mente tiene un termostato que determina tu éxito. Maltz, cirujano plástico, descubrió que cambiar la cara no bastaba: había que cambiar la imagen interna. El libro que inventó la visualización creativa.",
-    "perfect_for": "Quien quiera reprogramar su autoimagen",
-    "themes": [
-      "mente",
-      "autoimagen",
-      "éxito",
-      "visualización"
-    ],
-    "experience": "transformador",
-    "why_matters": "El clásico que inspiró toda la autoayuda moderna"
-  },
-  "1261": {
-    "hook": "Vivir sin jefe El libro que hara que ames trabajar por tu cuenta (Sergio Fernandez, Juan Carlos Cubeiro) (Z-Library) ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, equilibrada y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Amplia tu biblioteca personal con una opcion solida para este momento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1262": {
-    "hook": "DESIGNING COMMERCIAL INTERIORS THIRD EDITION,CHRISTINE M.PIOTROWSKI,FASID,IIDA (WILEY, Piotrowski, Christine M. etc.) (Z-Library) ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1263": {
-    "hook": "Scandinavian Design (Charlotte Fiell, Peter Fiell) (Z-Library) ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
-  "1264": {
-    "hook": "Designing Commercial Interiors (Christine M. Piotrowski) (Z-Library) ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
   },
   "1265": {
     "hook": "Un día en la vida de un prisionero soviético. Solzhenitsyn escribió la novela que hizo temblar a la URSS.",
@@ -10965,18 +10656,6 @@
     "experience": "fascinante",
     "why_matters": "Montero periodista e historiadora"
   },
-  "1285": {
-    "hook": "Columnas del 2021: la resaca de la pandemia y lo que vino después. Montero sigue cronificando la realidad.",
-    "perfect_for": "Seguidores de su columna en El País",
-    "themes": [
-      "actualidad",
-      "crónica",
-      "España",
-      "vida"
-    ],
-    "experience": "actual",
-    "why_matters": "Montero periodista incansable"
-  },
   "1286": {
     "hook": "Cuentos que parecen verdad, verdades que parecen cuento. Montero mezcla realidad y ficción en relatos que sorprenden.",
     "perfect_for": "Lectores que disfrutan la ambigüedad",
@@ -10988,18 +10667,6 @@
     ],
     "experience": "sorprendente",
     "why_matters": "Montero en formato breve"
-  },
-  "1287": {
-    "hook": "Columnas del 2020: pandemia, política, vida. Montero como cronista de un año que cambió todo.",
-    "perfect_for": "Quien quiera recordar (o entender) 2020",
-    "themes": [
-      "pandemia",
-      "actualidad",
-      "crónica",
-      "España"
-    ],
-    "experience": "actual",
-    "why_matters": "Montero testigo de la pandemia"
   },
   "1288": {
     "hook": "Un thriller sobre el auge del fascismo en Europa. Montero advierte sobre los peligros que regresan.",
@@ -11116,40 +10783,6 @@
     "why_matters": "Bestseller coreano traducido al mundo",
     "experience": "tierno"
   },
-  "1304": {
-    "hook": "El libro que fundó la PNL. Grinder y Bandler enseñando a reprogramar la mente.",
-    "perfect_for": "Interesados en desarrollo personal y comunicación",
-    "why_matters": "El origen de la programación neurolingüística",
-    "experience": "transformador"
-  },
-  "1305": {
-    "hook": "Crea, mide, aprende. El método que cambió cómo se construyen startups.",
-    "perfect_for": "Emprendedores y product managers",
-    "why_matters": "El libro que definió las startups modernas",
-    "experience": "práctico"
-  },
-  "1306": {
-    "hook": "Segunda parte de la estructura mágica del lenguaje. PNL avanzada.",
-    "perfect_for": "Practicantes de PNL",
-    "why_matters": "PNL nivel avanzado",
-    "experience": "técnico"
-  },
-  "1307": {
-    "hook": "Los patrones del lenguaje que controlan la mente. Bandler y Grinder fundando la PNL.",
-    "perfect_for": "Terapeutas y comunicadores",
-    "why_matters": "El manual original de PNL",
-    "experience": "técnico"
-  },
-  "1308": {
-    "hook": "Microsoft Word - PSICOCIBERNETICA, de Gerson O. Suárez, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura corta, equilibrada y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Amplia tu biblioteca personal con una opcion solida para este momento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
   "1317": {
     "hook": "Soldados americanos en Irak. Powers escribió la novela de la guerra que nadie quería.",
     "perfect_for": "Lectores de novela bélica contemporánea",
@@ -11241,18 +10874,6 @@
     "perfect_for": "Lectores de clásicos eróticos franceses",
     "why_matters": "El Balzac que la academia prefiere ignorar",
     "experience": "libertino"
-  },
-  "1329": {
-    "hook": "Toda la historia de la humanidad contada a través de mapas. Cada página es un viaje visual: imperios que nacen y mueren, rutas comerciales, migraciones, guerras. La historia como nunca la habías visto.",
-    "perfect_for": "Visuales que prefieren ver la historia que leerla",
-    "themes": [
-      "historia",
-      "geografía",
-      "civilización",
-      "visual"
-    ],
-    "experience": "fascinante",
-    "why_matters": "DK en su mejor formato"
   },
   "1330": {
     "hook": "Un psiquiatra nigeriano camina por Manhattan observando todo. Cole escribió la novela de Nueva York más contemplativa del siglo XXI.",
@@ -11380,12 +11001,6 @@
     "perfect_for": "Ilustradores y amantes del arte gráfico",
     "why_matters": "Lo último en ilustración mundial",
     "experience": "inspirador"
-  },
-  "1363": {
-    "hook": "La economía explicada para vivirla. Ayer, hoy y mañana.",
-    "perfect_for": "Lectores de economía accesible",
-    "why_matters": "Economía para todos",
-    "experience": "práctico"
   },
   "1364": {
     "hook": "Animación explicada. De Disney a Pixar a la animación independiente, cómo se hace la magia.",
@@ -12918,30 +12533,6 @@
     "experience": "amargo",
     "why_matters": "Premio Nacional de Narrativa"
   },
-  "1645": {
-    "hook": "Una familia valenciana atraviesa el franquismo. Chirbes escribió sobre la memoria y el silencio español.",
-    "perfect_for": "Interesados en la posguerra española",
-    "themes": [
-      "franquismo",
-      "Valencia",
-      "familia",
-      "silencio"
-    ],
-    "experience": "sombrío",
-    "why_matters": "Chirbes sobre el pasado"
-  },
-  "1646": {
-    "hook": "Los diarios de Chirbes continúan. Más reflexiones, más España, más lucidez incómoda.",
-    "perfect_for": "Lectores del primer volumen de diarios",
-    "why_matters": "Chirbes sin filtros, continuación",
-    "experience": "punzante"
-  },
-  "1647": {
-    "hook": "Chirbes escribe su diario: literatura, España, vida cotidiana. El escritor más lúcido de su generación sin ficción.",
-    "perfect_for": "Fans de Chirbes que quieran al hombre",
-    "why_matters": "Chirbes íntimo",
-    "experience": "revelador"
-  },
   "1648": {
     "hook": "Especuladores inmobiliarios en la España del boom. Chirbes diseccionando la corrupción y la podredumbre moral del país.",
     "perfect_for": "Lectores de la España corrupta",
@@ -13055,12 +12646,6 @@
     "perfect_for": "Fans de Bryce y la narrativa peruana",
     "why_matters": "Bryce en su registro más romántico",
     "experience": "tierno"
-  },
-  "1662": {
-    "hook": "Historias que reconfortan el alma. El fenómeno de autoayuda que conquistó el mundo.",
-    "perfect_for": "Lectores de inspiración",
-    "why_matters": "Bestseller global",
-    "experience": "reconfortante"
   },
   "1663": {
     "hook": "Un niño salvaje encontrado en el bosque. Boyle novelando un caso real del siglo XVIII.",
@@ -14382,24 +13967,6 @@
     "why_matters": "Confesiones",
     "experience": "revelador"
   },
-  "1874": {
-    "hook": "Un día en la vida de Piglia. Los diarios en su forma más concentrada.",
-    "perfect_for": "Fans de Piglia",
-    "why_matters": "Piglia cotidiano",
-    "experience": "íntimo"
-  },
-  "1875": {
-    "hook": "Los diarios de Piglia: formación de un escritor. El crítico como autobiógrafo.",
-    "perfect_for": "Fans de Piglia",
-    "why_matters": "Piglia íntimo",
-    "experience": "formativo"
-  },
-  "1876": {
-    "hook": "Piglia continúa sus diarios. Los años de madurez.",
-    "perfect_for": "Lectores de Piglia",
-    "why_matters": "Piglia maduro",
-    "experience": "reflexivo"
-  },
   "1877": {
     "hook": "Un poeta mira un autorretrato de Parmigianino y escribe sobre el arte, el yo, el tiempo. Ashbery en su poema más célebre y accesible.",
     "perfect_for": "Lectores de poesía americana contemporánea",
@@ -14899,12 +14466,6 @@
     "experience": "íntimo",
     "why_matters": "Coetzee autobiográfico"
   },
-  "1930": {
-    "hook": "El diccionario de la RAE completo. Todas las palabras del español en su edición oficial.",
-    "perfect_for": "Quien necesite la referencia definitiva",
-    "why_matters": "La autoridad del español",
-    "experience": "referencial"
-  },
   "1931": {
     "hook": "La infancia de Coetzee en Sudáfrica. El Nobel recuerda su formación.",
     "perfect_for": "Lectores de memorias de infancia",
@@ -15271,30 +14832,6 @@
     "why_matters": "Bloom enseñando a leer",
     "experience": "formativo"
   },
-  "2036": {
-    "hook": "Técnicas de venta para quienes odian vender. Marketing sin manipulación, conexión sin presión.",
-    "perfect_for": "Emprendedores que detestan la venta tradicional",
-    "why_matters": "Ventas para introvertidos",
-    "experience": "práctico"
-  },
-  "2037": {
-    "hook": "La psicología del dinero: no es matemáticas, es comportamiento. Housel explica por qué tomamos decisiones financieras irracionales.",
-    "perfect_for": "Quien quiera entender su relación con el dinero",
-    "why_matters": "El libro de finanzas personales del momento",
-    "experience": "revelador"
-  },
-  "2038": {
-    "hook": "Deja que la gente sea quien es. Deja que las cosas sean como son. Robbins propone una filosofía radical: soltar el control sobre lo que no puedes cambiar. Libertad a través de la aceptación.",
-    "perfect_for": "Quien esté agotado de intentar cambiar a los demás",
-    "themes": [
-      "aceptación",
-      "control",
-      "libertad",
-      "relaciones"
-    ],
-    "experience": "liberador",
-    "why_matters": "El método que está cambiando vidas en 2024"
-  },
   "2057": {
     "hook": "Dortmunder y su banda de incompetentes asaltan un banco. Pero este banco es muy extraño. Westlake escribiendo heist cómico con su genio habitual.",
     "perfect_for": "Fans de Westlake y las comedias de atracos",
@@ -15460,16 +14997,6 @@
     "perfect_for": "Curiosos de lugares olvidados de España",
     "why_matters": "Torrijos cartografiando la España invisible"
   },
-  "2100": {
-    "hook": "The Science of Plants: Inside their Secret World, de Dorling Kindersley, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
   "2101": {
     "hook": "Un perfumista busca las esencias más raras del mundo. Aventura olfativa por bosques remotos.",
     "perfect_for": "Fascinados por los perfumes y la naturaleza",
@@ -15487,12 +15014,6 @@
     "perfect_for": "Historiadores del arte y amantes del pensamiento medieval",
     "why_matters": "Clásico de la historia del arte",
     "experience": "iluminador"
-  },
-  "2104": {
-    "hook": "Arquitectura explicada desde los fundamentos. Roth enseñando a ver edificios.",
-    "perfect_for": "Estudiantes de arquitectura y curiosos",
-    "why_matters": "Manual clásico de arquitectura",
-    "experience": "formativo"
   },
   "2105": {
     "hook": "Millás y Arsuaga sobre la vida. Ciencia y literatura en diálogo.",
@@ -15518,18 +15039,6 @@
     "perfect_for": "Curiosos de la estética y la ciencia",
     "why_matters": "Divulgación original",
     "experience": "fascinante"
-  },
-  "2109": {
-    "hook": "Plantas medicinales y sus usos. Guía práctica de fitoterapia.",
-    "perfect_for": "Interesados en medicina natural",
-    "why_matters": "Referencia de plantas",
-    "experience": "práctico"
-  },
-  "2110": {
-    "hook": "Guía completa de plantas de interior. Cuidados, especies, decoración con verde.",
-    "perfect_for": "Amantes de las plantas en casa",
-    "why_matters": "Referencia de plantas de interior",
-    "experience": "práctico"
   },
   "2111": {
     "hook": "Ann Druyan continúa el legado de Carl Sagan. El universo, la vida, nuestro futuro. Ciencia con poesía.",
@@ -15602,18 +15111,6 @@
     "perfect_for": "Fascinados por la historia de Asia Central",
     "why_matters": "La biografía que cambió cómo vemos a Khan",
     "experience": "épico"
-  },
-  "2170": {
-    "hook": "La Resistencia es esa voz que te dice que mañana empiezas. Pressfield le pone nombre al enemigo de todo creador y te enseña a vencerlo. El libro que ha salvado más proyectos creativos que ningún otro.",
-    "perfect_for": "Creativos bloqueados, procrastinadores crónicos, soñadores paralizados",
-    "themes": [
-      "creatividad",
-      "resistencia",
-      "disciplina",
-      "arte"
-    ],
-    "experience": "motivador",
-    "why_matters": "El clásico sobre vencer el bloqueo creativo"
   },
   "2171": {
     "hook": "Las Termópilas: 300 espartanos contra Persia. Pressfield novelando la batalla más famosa.",
@@ -15730,12 +15227,6 @@
     "why_matters": "Reid en su novela más ambiciosa",
     "experience": "épico"
   },
-  "2270": {
-    "hook": "Artículos del diario El País. Periodismo de referencia en español, ventana al mundo hispanohablante.",
-    "perfect_for": "Quien quiera mantenerse informado con periodismo de calidad",
-    "why_matters": "El diario en español más influyente del mundo",
-    "experience": "informativo"
-  },
   "2271": {
     "hook": "Durante siglos, los kekoneses lo han extraído de las entrañas de la tierra, han comerciado con él, lo han robado y han matado por él.",
     "themes": [],
@@ -15755,16 +15246,6 @@
     "why_matters": "Lee final",
     "experience": "grandioso"
   },
-  "2274": {
-    "hook": "El Plan de Marketing de 1-Página: Consigue Nuevos Clientes, Gana Más Dinero, Y Destaca Entre La Multitud (Spanish Edition), de Dib, Allan, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
   "2275": {
     "hook": "Una joven cuyo poder lo cambiará todoâ€¦ Agnieszka tiene un don: es capaz de romper, manchar o perder cualquier cosa que lleve puesta en cuestión de segundos.",
     "themes": [],
@@ -15772,31 +15253,11 @@
     "perfect_for": "Fans de Novik y cuentos de hadas oscuros",
     "why_matters": "Novik reinventando el cuento clásico"
   },
-  "2276": {
-    "hook": "B00AXS5EAK EBOK, de Berman, Karen, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura extensa, con foco y profundidad y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Aporta profundidad y recorrido para una lectura de largo aliento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
-  },
   "2277": {
     "hook": "La hija de la diosa de la luna. Fantasía con mitología china.",
     "perfect_for": "Fans de fantasía asiática",
     "why_matters": "Mitología china novelada",
     "experience": "mágico"
-  },
-  "2278": {
-    "hook": "Studio Shape Up, de Streifeneder, Chelsea;, ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura corta, equilibrada y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Amplia tu biblioteca personal con una opcion solida para este momento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
   },
   "2279": {
     "hook": "Hermione despierta después de la guerra sin recuerdos. Draco Malfoy es el único que sabe la verdad. El fanfiction de Harry Potter más famoso del mundo, ahora en tu biblioteca. 900 páginas de romance oscuro y redención.",
@@ -15815,15 +15276,5 @@
     "perfect_for": "Fans de fantasía diversa",
     "why_matters": "Chakraborty debut",
     "experience": "deslumbrante"
-  },
-  "2281": {
-    "hook": "README ofrece una experiencia conmovedor en clave ficción y una atmosfera emotivo.",
-    "perfect_for": "Lectores que buscan una lectura de ritmo medio, equilibrada y con tono ficción.",
-    "experience": "conmovedor",
-    "why_matters": "Amplia tu biblioteca personal con una opcion solida para este momento.",
-    "themes": [
-      "ficción",
-      "emotivo"
-    ]
   }
 }

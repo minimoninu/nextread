@@ -1,0 +1,13 @@
+{
+  "_doc": "Correspondencias manuales entre obras de la ruta (por número) y títulos de la biblioteca. 'same' = misma obra con otro título; 'in' = la obra está incluida en ese volumen.",
+  "same": {
+    "7": "Eugénie Grandet",
+    "75": "Fiesta",
+    "87": "Rebeca",
+    "118": "Todo se derrumba"
+  },
+  "in": {
+    "12": { "title": "Cuentos completos (Penguin Clásicos)", "author": "Poe" },
+    "115": { "title": "Cuentos completos", "author": "O’Connor" }
+  }
+}

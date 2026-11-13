@@ -24,7 +24,7 @@
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │  4. SUBIR A GITHUB                                              │
-│     git add . && git commit -m "Sync" && git push               │
+│     ./publicar.command  (valida, compila y publica)             │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -37,7 +37,7 @@ Este script añade **páginas, géneros y sinopsis** directamente a tu bibliotec
 ```bash
 # Cierra Calibre primero!
 
-cd /Users/kemberly/Documents/nextread
+cd "/Users/kemberly/Documents/proyectos apps/nextread"
 
 # Enriquecer toda la biblioteca
 python3 scripts/calibre_enricher.py \
@@ -65,7 +65,7 @@ python3 scripts/calibre_enricher.py \
 ## Paso 2: Sincronizar con NextRead
 
 ```bash
-cd /Users/kemberly/Documents/nextread
+cd "/Users/kemberly/Documents/proyectos apps/nextread"
 
 python3 scripts/calibre_sync.py \
   --calibre-path "/Users/kemberly/Documents/Calibre" \
@@ -87,7 +87,7 @@ python3 scripts/calibre_sync.py \
 ## Paso 3: Subir cambios
 
 ```bash
-git add .
+git add public scripts src
 git commit -m "Añadidos X libros nuevos"
 git push
 ```
