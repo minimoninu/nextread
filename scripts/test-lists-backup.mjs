@@ -23,4 +23,10 @@ assert.throws(() => parseListsBackup('null'), /no es una copia/);
 assert.deepEqual(mergeLists({ 1: 'want', 2: 'read' }, { 2: 'reading', 3: 'want' }), { 1: 'want', 2: 'reading', 3: 'want' });
 assert.deepEqual(mergeLists(null, { 3: 'want' }), { 3: 'want' });
 
+// Progreso de la ruta dentro de la copia
+const withRoute = buildListsBackup({ 1: 'want' }, new Date(), { 3: true, 9: false, x: true });
+assert.deepEqual(withRoute.routeDone, { 3: true });
+assert.deepEqual(parseListsBackup(JSON.stringify(withRoute)).routeDone, { 3: true });
+assert.equal(parseListsBackup('{"kind":"nextread-lists","lists":{},"routeDone":{"4":true}}').count, 0);
+
 console.log('test:lists-backup OK');

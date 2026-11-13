@@ -15,14 +15,25 @@ const sanitizeLists = (value) => {
   return clean;
 };
 
-export const buildListsBackup = (lists, now = new Date()) => ({
+// Progreso de la ruta de lectura: { numeroDeObra: true }
+export const sanitizeRouteDone = (value) => {
+  const clean = {};
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return clean;
+  Object.entries(value).forEach(([n, done]) => {
+    if (/^\d+$/.test(String(n)) && done === true) clean[String(n)] = true;
+  });
+  return clean;
+};
+
+export const buildListsBackup = (lists, now = new Date(), routeDone = {}) => ({
   kind: BACKUP_KIND,
   version: BACKUP_VERSION,
   exportedAt: now.toISOString(),
-  lists: sanitizeLists(lists)
+  lists: sanitizeLists(lists),
+  routeDone: sanitizeRouteDone(routeDone)
 });
 
-// Devuelve { lists, count } o lanza Error con un mensaje apto para mostrar.
+// Devuelve { lists, count, routeDone } o lanza Error con un mensaje apto para mostrar.
 export const parseListsBackup = (text) => {
   let data;
   try {
@@ -34,11 +45,12 @@ export const parseListsBackup = (text) => {
     throw new Error('El archivo no es una copia de listas de NextRead.');
   }
   const lists = sanitizeLists(data.lists);
+  const routeDone = sanitizeRouteDone(data.routeDone);
   const count = Object.keys(lists).length;
-  if (count === 0) {
+  if (count === 0 && Object.keys(routeDone).length === 0) {
     throw new Error('La copia no contiene ningún libro guardado.');
   }
-  return { lists, count };
+  return { lists, count, routeDone };
 };
 
 // Las entradas importadas ganan sobre las actuales; el resto se conserva.

@@ -13,6 +13,7 @@ import { FilterSheet } from './components/FilterSheet.jsx';
 import { HeroBook } from './components/HeroBook.jsx';
 import { NarrativeShelf } from './components/NarrativeShelf.jsx';
 import { SanctuaryButton } from './components/SanctuaryButton.jsx';
+import { RouteView } from './components/RouteView.jsx';
 import { SavedView } from './components/SavedView.jsx';
 import { StatsModal } from './components/StatsModal.jsx';
 import { ThemeModal } from './components/ThemeModal.jsx';
@@ -21,8 +22,8 @@ import { Wizard } from './components/Wizard.jsx';
 import { haptic } from './components/ui.jsx';
 import { useDebounce, useLocalStorage, useIsMobile } from './hooks.js';
 import { normalizeFilters, parsePages, parseAcclaim, getBookOriginalLanguage, matchesLengthFilter, resolveCollectionBooks } from './lib/bookUtils.js';
-import { BOOKS_URL, SYNOPSES_URL, AUTHORS_URL, COLLECTIONS_URL, HOOKS_URL, INITIAL_LOAD, LOAD_MORE_COUNT, COPY, DEFAULT_FILTERS, SOUL_FILTERS } from './lib/constants.js';
-import { mergeLists } from './listsBackup.js';
+import { BOOKS_URL, SYNOPSES_URL, ROUTE_URL, AUTHORS_URL, COLLECTIONS_URL, HOOKS_URL, INITIAL_LOAD, LOAD_MORE_COUNT, COPY, DEFAULT_FILTERS, SOUL_FILTERS } from './lib/constants.js';
+import { mergeLists, sanitizeRouteDone } from './listsBackup.js';
 import { FONT_STACK_BODY, THEMES } from './theme.js';
 import { buildTodayPicks } from './todayPicks.js';
 
@@ -47,6 +48,8 @@ export default function App() {
   const [theme, setTheme] = useLocalStorage('nextread_theme', 'night');
   const [lists, setLists] = useLocalStorage('nextread_lists', {});
   const [storedFilters, setStoredFilters] = useLocalStorage('nextread_filters', DEFAULT_FILTERS);
+  const [routeDone, setRouteDone] = useLocalStorage('nextread_route_done', {});
+  const [routeItems, setRouteItems] = useState([]);
   const [activeTab, setActiveTab] = useState('library');
   const [sanctuaryMode, setSanctuaryMode] = useState(false);
   const [curationSeed, setCurationSeed] = useState(() => Date.now());
@@ -195,9 +198,44 @@ export default function App() {
     });
   }, [setLists]);
 
-  const handleImportLists = useCallback((imported) => {
+  const handleImportLists = useCallback((imported, importedRoute) => {
     setLists(prev => mergeLists(prev, imported));
-  }, [setLists]);
+    if (importedRoute) {
+      setRouteDone(prev => ({ ...sanitizeRouteDone(prev), ...sanitizeRouteDone(importedRoute) }));
+    }
+  }, [setLists, setRouteDone]);
+
+  // La ruta se descarga la primera vez que se abre su pestaña.
+  useEffect(() => {
+    if (activeTab !== 'route' || routeItems.length > 0) return;
+    let cancelled = false;
+    fetch(ROUTE_URL).then(r => r.json()).then((data) => {
+      if (!cancelled) setRouteItems(data);
+    }).catch(() => {});
+    return () => { cancelled = true; };
+  }, [activeTab, routeItems.length]);
+
+  // Marcar una obra de la ruta también la mueve a "Leídos" si está en la biblioteca.
+  const handleToggleRouteDone = useCallback((item) => {
+    const wasDone = Boolean(routeDone[item.n]) || (item.bookId != null && lists[item.bookId] === 'read');
+    setRouteDone(prev => {
+      const next = { ...prev };
+      if (wasDone) delete next[item.n];
+      else next[item.n] = true;
+      return next;
+    });
+    if (item.bookId != null) {
+      setLists(prev => {
+        const next = { ...prev };
+        if (wasDone) {
+          if (next[item.bookId] === 'read') delete next[item.bookId];
+        } else {
+          next[item.bookId] = 'read';
+        }
+        return next;
+      });
+    }
+  }, [routeDone, lists, setRouteDone, setLists]);
 
   const getBookAwardLabel = useCallback((book) => {
     const labels = awardMetaByBookId[book.id]?.labels || [];
@@ -820,6 +858,26 @@ export default function App() {
                 >
                   H
                 </button>
+
+                {/* Ruta de lectura */}
+                <button
+                  onClick={() => setActiveTab(activeTab === 'route' ? 'library' : 'route')}
+                  style={{
+                    width: '40px', height: '40px',
+                    borderRadius: '8px',
+                    border: `1px solid ${activeTab === 'route' ? t.accent : t.border.default}`,
+                    background: activeTab === 'route' ? t.accentMuted : t.bg.elevated,
+                    color: activeTab === 'route' ? t.accent : t.text.secondary,
+                    fontSize: '18px',
+                    cursor: 'pointer',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                  }}
+                  title="Ruta de lectura"
+                  aria-label="Ruta de lectura"
+                  aria-pressed={activeTab === 'route'}
+                >
+                  🧭
+                </button>
                 
                 {/* Stats (solo desktop) */}
                 {!isMobile && (
@@ -1252,6 +1310,20 @@ export default function App() {
             theme={theme}
             getListStatus={getListStatus}
             onImportLists={handleImportLists}
+            routeDone={routeDone}
+          />
+        )}
+
+        {/* VISTA RUTA DE LECTURA */}
+        {!sanctuaryMode && activeTab === 'route' && (
+          <RouteView
+            items={routeItems}
+            books={books}
+            lists={lists}
+            routeDone={routeDone}
+            onToggleDone={handleToggleRouteDone}
+            onBookClick={setSelectedBook}
+            theme={theme}
           />
         )}
         

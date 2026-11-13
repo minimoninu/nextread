@@ -7,14 +7,14 @@ import { FONT_STACK_BODY, THEMES } from '../theme.js';
 // =============================================================================
 // COMPONENTE: ListsBackupBar - exportar / importar listas a un archivo JSON
 // =============================================================================
-export const ListsBackupBar = ({ lists, onImport, theme }) => {
+export const ListsBackupBar = ({ lists, routeDone, onImport, theme }) => {
   const t = THEMES[theme];
   const fileRef = useRef(null);
   const [message, setMessage] = useState(null);
-  const savedTotal = Object.keys(lists).length;
+  const savedTotal = Object.keys(lists).length + Object.keys(routeDone || {}).length;
 
   const handleExport = () => {
-    const backup = buildListsBackup(lists);
+    const backup = buildListsBackup(lists, new Date(), routeDone);
     const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -32,9 +32,13 @@ export const ListsBackupBar = ({ lists, onImport, theme }) => {
     event.target.value = '';
     if (!file) return;
     try {
-      const { lists: imported, count } = parseListsBackup(await file.text());
-      onImport(imported);
-      setMessage({ ok: true, text: `Copia importada: ${count} libros combinados con tus listas.` });
+      const { lists: imported, count, routeDone: importedRoute } = parseListsBackup(await file.text());
+      onImport(imported, importedRoute);
+      const routeCount = Object.keys(importedRoute).length;
+      setMessage({
+        ok: true,
+        text: `Copia importada: ${count} libros combinados con tus listas${routeCount ? ` y ${routeCount} obras de la ruta` : ''}.`
+      });
     } catch (error) {
       setMessage({ ok: false, text: error.message || 'No se pudo importar la copia.' });
     }
@@ -80,7 +84,7 @@ export const ListsBackupBar = ({ lists, onImport, theme }) => {
 // =============================================================================
 // COMPONENTE: SavedView (vista de guardados)
 // =============================================================================
-export const SavedView = ({ books, lists, onBookClick, theme, getListStatus, onImportLists }) => {
+export const SavedView = ({ books, lists, routeDone, onBookClick, theme, getListStatus, onImportLists }) => {
   const t = THEMES[theme];
   
   const savedBooks = useMemo(() => {
@@ -98,7 +102,7 @@ export const SavedView = ({ books, lists, onBookClick, theme, getListStatus, onI
         <div style={{ fontSize: '48px', marginBottom: '16px', opacity: 0.5 }}>♡</div>
         <p style={{ fontSize: '18px', color: t.text.secondary, marginBottom: '8px' }}>{COPY.saved.empty}</p>
         <p style={{ fontSize: '14px', color: t.text.tertiary }}>{COPY.saved.emptyHint}</p>
-        <ListsBackupBar lists={lists} onImport={onImportLists} theme={theme} />
+        <ListsBackupBar lists={lists} routeDone={routeDone} onImport={onImportLists} theme={theme} />
       </div>
     );
   }
@@ -132,7 +136,7 @@ export const SavedView = ({ books, lists, onBookClick, theme, getListStatus, onI
           getListStatus={getListStatus}
         />
       )}
-      <ListsBackupBar lists={lists} onImport={onImportLists} theme={theme} />
+      <ListsBackupBar lists={lists} routeDone={routeDone} onImport={onImportLists} theme={theme} />
     </div>
   );
 };

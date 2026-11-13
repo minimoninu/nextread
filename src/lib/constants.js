@@ -5,6 +5,7 @@
 export const BOOKS_URL = '/data/books-core.json';
 
 export const SYNOPSES_URL = '/data/synopses.json';
+export const ROUTE_URL = '/data/reading-route.json';
 
 export const AUTHORS_URL = '/authors.json';
 

@@ -850,6 +850,18 @@ Ejemplos:
         transformed_books.append(transformed)
     
     print(f"   Libros transformados: {len(transformed_books)}")
+
+    # 3b. Descartar libros excluidos a propósito (manuales, autoayuda, periódicos...)
+    excluded_path = Path(__file__).parent / 'data' / 'excluded-books.json'
+    if excluded_path.exists():
+        with open(excluded_path, 'r', encoding='utf-8') as f:
+            excluded_titles = {str(item.get('t', '')).lower().strip() for item in json.load(f)}
+        before = len(transformed_books)
+        transformed_books = [
+            book for book in transformed_books
+            if str(book.get('t', '')).lower().strip() not in excluded_titles
+        ]
+        print(f"   Excluidos (scripts/data/excluded-books.json): {before - len(transformed_books)}")
     
     # 4. Merge
     print("\n🔀 Haciendo merge de bibliotecas...")
