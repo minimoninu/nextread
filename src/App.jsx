@@ -7,12 +7,15 @@ import { buildListsBackup, parseListsBackup, mergeLists } from './listsBackup.js
 // =============================================================================
 // CONFIGURACIÓN
 // =============================================================================
-const BOOKS_URL = '/biblioteca_app.json';
+// Derivados de biblioteca_app.json por scripts/build-data.mjs
+const BOOKS_URL = '/data/books-core.json';
+const SYNOPSES_URL = '/data/synopses.json';
 const AUTHORS_URL = '/authors.json';
 const COLLECTIONS_URL = '/collections.json';
 const HOOKS_URL = '/hooks.json';
 const INITIAL_LOAD = 42;
 const LOAD_MORE_COUNT = 21;
+const coverThumbUrl = (bookId) => `/portadas/thumbs/${bookId}.webp`;
 const FONT_STACK_BODY = "'Sora', 'Avenir Next', 'Segoe UI', sans-serif";
 const FONT_STACK_DISPLAY = "'DM Serif Display', 'Iowan Old Style', 'Baskerville', serif";
 
@@ -567,7 +570,7 @@ const BookCover = memo(({ book, onClick, theme, listStatus, sanctuary, hasAwardO
   const [isPressed, setIsPressed] = useState(false);
   
   const t = THEMES[theme];
-  const coverUrl = `/portadas/${book.id}.jpg`;
+  const coverUrl = coverThumbUrl(book.id);
   const title = book.t || book.title || 'Sin título';
   const authors = book.a || book.authors || ['Desconocido'];
   const hasAward = typeof hasAwardOverride === 'boolean'
@@ -890,7 +893,7 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme, get
       }}>
         {books.map(book => {
           const hook = hooks[String(book.id)];
-          const coverUrl = `/portadas/${book.id}.jpg`;
+          const coverUrl = coverThumbUrl(book.id);
           const title = book.t || 'Sin título';
           const authors = (book.a || []).join(', ');
           const awardLabel = typeof getBookAwardLabel === 'function' ? getBookAwardLabel(book) : null;
@@ -929,6 +932,8 @@ const NarrativeShelf = ({ title, subtitle, books, hooks, onBookClick, theme, get
               }}>
                 <img
                   src={coverUrl}
+                  loading="lazy"
+                  decoding="async"
                   alt={title}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   onError={(event) => { event.currentTarget.style.display = 'none'; }}
@@ -1964,7 +1969,9 @@ const CollectionDetailView = ({ collection, books, awardedBookIds, onBookClick, 
               style={{ cursor: 'pointer', position: 'relative' }}
             >
               <img
-                src={`/portadas/${book.id}.jpg`}
+                src={coverThumbUrl(book.id)}
+                loading="lazy"
+                decoding="async"
                 alt={book.t || book.title}
                 style={{
                   width: '100%',
@@ -2112,7 +2119,9 @@ const RelatedBooksSection = memo(({ currentBook, books, hooks, onBookClick, t })
               background: t.bg.tertiary
             }}>
               <img 
-                src={`/portadas/${book.id}.jpg`}
+                src={coverThumbUrl(book.id)}
+                loading="lazy"
+                decoding="async"
                 alt={book.t}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 onError={(e) => { 
@@ -3650,7 +3659,7 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
                   paddingRight: '24px'
                 }}>
                   {authorBooks.slice(0, 10).map(book => {
-                    const coverUrl = `/portadas/${book.id}.jpg`;
+                    const coverUrl = coverThumbUrl(book.id);
                     const title = book.t || book.title || 'Sin título';
                     return (
                       <div 
@@ -3675,6 +3684,8 @@ const AuthorModal = ({ authorName, authorData, books, hooks, onClose, onBookClic
                         }}>
                           <img 
                             src={coverUrl} 
+                            loading="lazy"
+                            decoding="async"
                             alt={title}
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                           />
@@ -3878,7 +3889,9 @@ const ThemeModal = ({ themeName, books, hooks, onClose, onBookClick, onExperienc
                       background: t.bg.elevated
                     }}>
                       <img 
-                        src={`/portadas/${book.id}.jpg`}
+                        src={coverThumbUrl(book.id)}
+                        loading="lazy"
+                        decoding="async"
                         alt={book.t}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         onError={(e) => { e.target.style.display = 'none'; }}
@@ -4066,7 +4079,9 @@ const ExperienceModal = ({ experience, books, hooks, onClose, onBookClick, onAut
                     background: t.bg.elevated
                   }}>
                     <img 
-                      src={`/portadas/${book.id}.jpg`}
+                      src={coverThumbUrl(book.id)}
+                      loading="lazy"
+                      decoding="async"
                       alt={book.t}
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       onError={(e) => { e.target.style.display = 'none'; }}
@@ -5612,18 +5627,36 @@ export default function App() {
   
   // Cargar libros, autores, colecciones y hooks
   useEffect(() => {
+    let cancelled = false;
+    const mergeSynopses = (book, synopses) => {
+      const syn = synopses[book.id];
+      return syn ? { ...book, syn } : book;
+    };
+
+    // Carga inicial: lo mínimo para pintar la biblioteca.
     Promise.all([
       fetch(BOOKS_URL).then(r => r.json()),
-      fetch(AUTHORS_URL).then(r => r.json()).catch(() => ({})),
       fetch(COLLECTIONS_URL).then(r => r.json()).catch(() => []),
       fetch(HOOKS_URL).then(r => r.json()).catch(() => ({}))
-    ]).then(([booksData, authorsJson, collectionsData, hooksData]) => {
+    ]).then(([booksData, collectionsData, hooksData]) => {
+      if (cancelled) return;
       setBooks(booksData);
-      setAuthorsData(authorsJson);
       setCollections(collectionsData);
       setHooks(hooksData);
       setLoading(false);
-    }).catch(() => setLoading(false));
+
+      // En segundo plano: sinopsis (la parte más pesada) y autores.
+      fetch(SYNOPSES_URL).then(r => r.json()).then((synopses) => {
+        if (cancelled) return;
+        setBooks(prev => prev.map(book => mergeSynopses(book, synopses)));
+        setSelectedBook(prev => (prev ? mergeSynopses(prev, synopses) : prev));
+      }).catch(() => {});
+      fetch(AUTHORS_URL).then(r => r.json()).then((authorsJson) => {
+        if (!cancelled) setAuthorsData(authorsJson);
+      }).catch(() => {});
+    }).catch(() => { if (!cancelled) setLoading(false); });
+
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {

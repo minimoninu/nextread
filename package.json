@@ -16,7 +16,11 @@
     "test:wizard-preferences": "node scripts/test-wizard-preferences.mjs",
     "test:lists-backup": "node scripts/test-lists-backup.mjs",
     "test": "npm run test:today-picks && npm run test:book-awards && npm run test:wizard-preferences && npm run test:lists-backup",
-    "verify": "npm run lint && npm run check:data:strict && npm test && npm run build"
+    "verify": "npm run lint && npm run check:data:strict && npm test && npm run build",
+    "build:thumbs": "node scripts/build-thumbs.mjs",
+    "build:data": "node scripts/build-data.mjs",
+    "predev": "npm run build:data",
+    "prebuild": "npm run build:data"
   },
   "dependencies": {
     "lucide-react": "^0.263.1",
@@ -32,6 +36,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "globals": "^17.14.0",
     "postcss": "^8.4.24",
+    "sharp": "^0.35.5",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.9"
   }

@@ -100,6 +100,22 @@ if (errors.length === 0) {
   }
 }
 
+// Cada portada debe tener su miniatura WebP (npm run build:thumbs)
+const coversDir = path.join(publicDir, 'portadas');
+const thumbsDir = path.join(coversDir, 'thumbs');
+if (fs.existsSync(coversDir)) {
+  const thumbs = new Set(fs.existsSync(thumbsDir) ? fs.readdirSync(thumbsDir) : []);
+  const missingThumbs = fs
+    .readdirSync(coversDir)
+    .filter((name) => /^\d+\.jpg$/.test(name))
+    .filter((name) => !thumbs.has(name.replace(/\.jpg$/, '.webp')));
+  if (missingThumbs.length > 0) {
+    errors.push(
+      `portadas: ${missingThumbs.length} portadas sin miniatura (ej: ${sample(missingThumbs, 5)}). Ejecuta: npm run build:thumbs`
+    );
+  }
+}
+
 console.log('check:data resumen');
 console.log(`- strict mode: ${strictMode ? 'on' : 'off'}`);
 console.log(`- errores: ${errors.length}`);
