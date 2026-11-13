@@ -35,7 +35,7 @@ import re
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # Rutas por defecto (ajustar según tu configuración)
-DEFAULT_CALIBRE_PATH = "/Users/kemberly/Calibre Library"  # Cambiar a tu ruta
+DEFAULT_CALIBRE_PATH = "/Users/kemberly/Documents/Calibre"  # Cambiar a tu ruta
 NEXTREAD_PUBLIC_PATH = "./public"  # Ruta relativa al proyecto NextRead
 PORTADAS_PATH = "./public/portadas"
 
